@@ -19,213 +19,262 @@ export default function ContactPage() {
 
   return (
     <>
-      <section style={{ background: "#000", padding: "4rem 1.5rem 3rem" }}>
+      {/* Top band */}
+      <section
+        style={{
+          background: "var(--dark)",
+          padding: "5rem 1.5rem 4rem",
+          borderBottom: "1px solid var(--border)",
+        }}
+      >
         <div className="container">
-          <h1 style={{ fontSize: "clamp(2rem, 6vw, 3.5rem)", fontWeight: 700, marginBottom: "1rem" }}>LET&apos;S GO!</h1>
-          <h3 style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.5rem)", fontWeight: 400, color: "#ccc" }}>
-            Let&apos;s Start The Conversation
-          </h3>
+          <span className="section-label">Get In Touch</span>
+          <h1
+            style={{
+              fontSize: "clamp(2.5rem, 8vw, 5rem)",
+              fontWeight: 900,
+              marginBottom: "1rem",
+              lineHeight: 1.0,
+            }}
+          >
+            LET&apos;S GO!
+          </h1>
+          <p style={{ fontSize: "1.15rem", color: "var(--light)", maxWidth: "600px", lineHeight: 1.7 }}>
+            Let&apos;s start the conversation. Fill out the form and we&apos;ll be back in touch.
+          </p>
         </div>
       </section>
 
-      <section style={{ background: "#111", padding: "4rem 1.5rem" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <p style={{ fontSize: "1.05rem", marginBottom: "2.5rem", color: "#ccc" }}>
-            Fill out this form and we will be back in touch.
-          </p>
-
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            style={{ display: "grid", gap: "1.5rem" }}
+      <section style={{ background: "var(--deep)", padding: "5rem 1.5rem" }}>
+        <div className="container" style={{ maxWidth: "1100px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "4rem",
+              alignItems: "start",
+            }}
           >
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-              <div>
-                <label style={{ display: "block", fontSize: "0.85rem", marginBottom: "0.4rem", color: "#aaa" }}>
-                  First Name*
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your first name"
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "0.75rem",
-                    background: "#000",
-                    border: "1px solid #333",
-                    color: "#fff",
-                    fontSize: "1rem",
-                  }}
-                />
-              </div>
-              <div>
-                <label style={{ display: "block", fontSize: "0.85rem", marginBottom: "0.4rem", color: "#aaa" }}>
-                  Last Name*
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your last name"
-                  required
-                  style={{
-                    width: "100%",
-                    padding: "0.75rem",
-                    background: "#000",
-                    border: "1px solid #333",
-                    color: "#fff",
-                    fontSize: "1rem",
-                  }}
-                />
-              </div>
+            {/* Form */}
+            <div>
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                style={{ display: "grid", gap: "1.5rem" }}
+              >
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
+                      FIRST NAME
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your first name"
+                      required
+                      style={{
+                        width: "100%",
+                        padding: "0.85rem 1rem",
+                        background: "var(--navy)",
+                        border: "1px solid var(--border)",
+                        color: "#fff",
+                        fontSize: "1rem",
+                        outline: "none",
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
+                      LAST NAME
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your last name"
+                      required
+                      style={{
+                        width: "100%",
+                        padding: "0.85rem 1rem",
+                        background: "var(--navy)",
+                        border: "1px solid var(--border)",
+                        color: "#fff",
+                        fontSize: "1rem",
+                        outline: "none",
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
+                    EMAIL
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    required
+                    style={{
+                      width: "100%",
+                      padding: "0.85rem 1rem",
+                      background: "var(--navy)",
+                      border: "1px solid var(--border)",
+                      color: "#fff",
+                      fontSize: "1rem",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
+                    I&apos;M INTERESTED IN
+                  </label>
+                  <select
+                    style={{
+                      width: "100%",
+                      padding: "0.85rem 1rem",
+                      background: "var(--navy)",
+                      border: "1px solid var(--border)",
+                      color: "#fff",
+                      fontSize: "1rem",
+                      outline: "none",
+                    }}
+                  >
+                    <option value="technical">Technical Training</option>
+                    <option value="foundational">Foundational Training</option>
+                    <option value="specialties">Specialties / MINIS</option>
+                    <option value="dan">DAN Emergency Training</option>
+                    <option value="coaching">Coaching</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
+                    MESSAGE
+                  </label>
+                  <textarea
+                    placeholder="Tell us about your goals, experience level, and what you're hoping to get out of training..."
+                    rows={5}
+                    style={{
+                      width: "100%",
+                      padding: "0.85rem 1rem",
+                      background: "var(--navy)",
+                      border: "1px solid var(--border)",
+                      color: "#fff",
+                      fontSize: "1rem",
+                      resize: "vertical",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+
+                <div>
+                  <button type="submit" className="btn" style={{ width: "100%", textAlign: "center" }}>
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
 
+            {/* Call / Social */}
             <div>
-              <label style={{ display: "block", fontSize: "0.85rem", marginBottom: "0.4rem", color: "#aaa" }}>
-                Email*
-              </label>
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                required
-                style={{
-                  width: "100%",
-                  padding: "0.75rem",
-                  background: "#000",
-                  border: "1px solid #333",
-                  color: "#fff",
-                  fontSize: "1rem",
-                }}
-              />
-            </div>
+              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1.5rem" }}>
+                PREFER THE DIRECT ROUTE?
+              </h2>
+              <p style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "3rem" }}>
+                <Link href="tel:+16198800684" style={{ color: "var(--white)" }}>
+                  +1 (619) 880-0684
+                </Link>
+              </p>
 
-            <div>
-              <label style={{ display: "block", fontSize: "0.85rem", marginBottom: "0.4rem", color: "#aaa" }}>
-                I&apos;m interested in:*
-              </label>
-              <select
+              <div className="divider" style={{ marginBottom: "2.5rem" }} />
+
+              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1rem" }}>
+                FIND US ONLINE
+              </h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                {[
+                  { label: "@GardnerUnderwater", href: "https://www.instagram.com/gardnerunderwater/" },
+                  { label: "Facebook / GardnerUnderwater", href: "https://www.facebook.com/gardnerunderwater/" },
+                  { label: "YouTube / @thedivetable", href: "https://www.youtube.com/@thedivetable" },
+                  { label: "The Dive Table Podcast", href: "https://www.thedivetable.com/" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--gray)", fontSize: "1rem" }}
+                  >
+                    {link.label} ↗
+                  </Link>
+                ))}
+              </div>
+
+              <div className="divider" style={{ margin: "2.5rem 0" }} />
+
+              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1.5rem" }}>
+                TESTIMONIALS
+              </h2>
+              <div
                 style={{
-                  width: "100%",
-                  padding: "0.75rem",
-                  background: "#000",
-                  border: "1px solid #333",
-                  color: "#fff",
-                  fontSize: "1rem",
+                  background: "var(--navy)",
+                  border: "1px solid var(--border)",
+                  padding: "2rem",
                 }}
               >
-                <option value="technical">Technical Training</option>
-                <option value="foundational">Foundational Training</option>
-                <option value="specialties">Specialties/MINIS</option>
-                <option value="dan">DAN Emergency Training</option>
-                <option value="coaching">Coaching</option>
-                <option value="other">Other</option>
-              </select>
+                <p
+                  style={{
+                    fontSize: "1rem",
+                    lineHeight: 1.85,
+                    marginBottom: "1.25rem",
+                    fontStyle: "italic",
+                    color: "var(--light)",
+                  }}
+                >
+                  &ldquo;{testimonials[current].text}&rdquo;
+                </p>
+                <p style={{ fontWeight: 700, color: "var(--gray)", fontSize: "0.9rem" }}>
+                  — {testimonials[current].author}
+                </p>
+                <div style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
+                  <button
+                    onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
+                    style={{
+                      background: "transparent",
+                      border: "1px solid var(--border)",
+                      color: "var(--gray)",
+                      padding: "0.4rem 1rem",
+                      cursor: "pointer",
+                      fontSize: "0.8rem",
+                    }}
+                  >
+                    ← Prev
+                  </button>
+                  <button
+                    onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
+                    style={{
+                      background: "transparent",
+                      border: "1px solid var(--border)",
+                      color: "var(--gray)",
+                      padding: "0.4rem 1rem",
+                      cursor: "pointer",
+                      fontSize: "0.8rem",
+                    }}
+                  >
+                    Next →
+                  </button>
+                </div>
+              </div>
             </div>
-
-            <div>
-              <label style={{ display: "block", fontSize: "0.85rem", marginBottom: "0.4rem", color: "#aaa" }}>
-                Message
-              </label>
-              <textarea
-                placeholder="Write your message..."
-                rows={5}
-                style={{
-                  width: "100%",
-                  padding: "0.75rem",
-                  background: "#000",
-                  border: "1px solid #333",
-                  color: "#fff",
-                  fontSize: "1rem",
-                  resize: "vertical",
-                }}
-              />
-            </div>
-
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <input type="checkbox" id="not-robot" />
-              <label htmlFor="not-robot" style={{ fontSize: "0.9rem", color: "#aaa" }}>
-                I am not a Robot
-              </label>
-            </div>
-
-            <button type="submit" className="btn" style={{ alignSelf: "flex-start" }}>
-              SEND
-            </button>
-          </form>
-        </div>
-      </section>
-
-      {/* Call / Social */}
-      <section style={{ background: "#000", padding: "4rem 1.5rem", borderTop: "1px solid #222" }}>
-        <div className="container" style={{ maxWidth: "700px" }}>
-          <h2 style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", marginBottom: "1rem" }}>MAKE THE CALL...</h2>
-          <p style={{ fontSize: "1.05rem", marginBottom: "2rem", color: "#ccc" }}>
-            Call us &apos;old fashioned&apos; but it&apos;s the most direct option.
-          </p>
-          <p style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "3rem" }}>+1 (619) 880-0684</p>
-
-          <h2 style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", marginBottom: "1rem" }}>BE SOCIAL...</h2>
-          <p style={{ fontSize: "1.05rem", marginBottom: "0.75rem", color: "#ccc" }}>
-            Not ready for direct contact yet...you can still browse online.
-          </p>
-          <p style={{ fontSize: "1.05rem", marginBottom: "0.4rem" }}>@GardnerUnderwater</p>
-          <p style={{ fontSize: "1.05rem", marginBottom: "0.4rem" }}>
-            <Link href="https://www.facebook.com/gardnerunderwater" target="_blank" rel="noopener noreferrer">
-              facebook.com/gardnerunderwater
-            </Link>
-          </p>
-          <p style={{ fontSize: "1.05rem" }}>
-            <Link href="https://www.youtube.com/@thedivetable" target="_blank" rel="noopener noreferrer">
-              @thedivetable
-            </Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section style={{ background: "#111", padding: "4rem 1.5rem", borderTop: "1px solid #222" }}>
-        <div className="container" style={{ maxWidth: "800px" }}>
-          <h2 style={{ fontSize: "clamp(1.2rem, 3vw, 1.6rem)", marginBottom: "2.5rem", textAlign: "center" }}>
-            TESTIMONIALS
-          </h2>
-          <div style={{ background: "#1a1a1a", border: "1px solid #333", padding: "2.5rem", textAlign: "center", minHeight: "200px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-            <p style={{ fontSize: "1.1rem", lineHeight: 1.8, marginBottom: "1.5rem", fontStyle: "italic", color: "#ddd" }}>
-              &ldquo;{testimonials[current].text}&rdquo;
-            </p>
-            <p style={{ fontWeight: 700, color: "#888" }}>— {testimonials[current].author}</p>
-          </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginTop: "1.5rem" }}>
-            <button
-              onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
-              style={{
-                background: "transparent",
-                border: "1px solid #444",
-                color: "#fff",
-                padding: "0.5rem 1rem",
-                cursor: "pointer",
-                fontSize: "0.85rem",
-              }}
-            >
-              ← Prev
-            </button>
-            <button
-              onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
-              style={{
-                background: "transparent",
-                border: "1px solid #444",
-                color: "#fff",
-                padding: "0.5rem 1rem",
-                cursor: "pointer",
-                fontSize: "0.85rem",
-              }}
-            >
-              Next →
-            </button>
           </div>
         </div>
       </section>
 
-      <section style={{ background: "#000", padding: "4rem 1.5rem", textAlign: "center" }}>
-        <Link href="/contact" className="btn">
-          Book Your Course
-        </Link>
+      <section style={{ background: "var(--navy)", padding: "3rem 1.5rem" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <Link href="/courses" style={{ color: "var(--muted)", fontSize: "0.9rem" }}>
+            Browse courses →
+          </Link>
+        </div>
       </section>
     </>
   );

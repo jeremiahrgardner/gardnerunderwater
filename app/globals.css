@@ -2,11 +2,17 @@
 
 :root {
   --black: #000000;
+  --deep: #050810;
+  --dark: #0a0f1a;
+  --navy: #111827;
+  --border: #1e2a3a;
+  --muted: #6b7280;
+  --gray: #9ca3af;
+  --light: #d1d5db;
   --white: #ffffff;
-  --gray-dark: #111111;
-  --gray-mid: #222222;
-  --gray-light: #888888;
-  --accent: #ffffff;
+  --ocean: #0ea5e9;
+  --ocean-dim: #0369a1;
+  --amber: #f59e0b;
 }
 
 * {
@@ -20,13 +26,11 @@ html {
 }
 
 body {
-  background: #000000;
-  color: #ffffff;
+  background: var(--deep);
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 a {
@@ -40,12 +44,11 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+main {
+  min-height: calc(100vh - 120px);
 }
 
 .container {
@@ -54,31 +57,123 @@ img {
   padding: 0 1.5rem;
 }
 
+/* ── Buttons ── */
 .btn {
   display: inline-block;
-  background: #ffffff;
-  color: #000000;
+  background: var(--white);
+  color: var(--deep);
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.75rem;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
   transition: opacity 0.2s;
-}
-
-.btn:hover {
-  opacity: 0.85;
   text-decoration: none;
 }
 
-.btn-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+.btn:hover {
+  opacity: 0.88;
+  text-decoration: none;
 }
 
-main {
+/* ── Section labels ── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--ocean);
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* ── Dividers ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 0;
+}
+
+/* ── Page hero (no image) ── */
+.page-hero {
+  background: var(--dark);
+  padding: 5rem 1.5rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Underwater gradient band ── */
+.ocean-gradient {
+  background: linear-gradient(180deg, var(--deep) 0%, var(--navy) 50%, var(--deep) 100%);
+}
+
+/* ── Card grid ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Course card ── */
+.course-card {
+  background: var(--navy);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  transition: border-color 0.2s;
+}
+
+.course-card:hover {
+  border-color: var(--ocean-dim);
+}
+
+/* ── Hero with photo background ── */
+.hero-photo {
+  position: relative;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(5, 8, 16, 0.3) 0%,
+    rgba(5, 8, 16, 0.7) 50%,
+    rgba(5, 8, 16, 0.95) 100%
+  );
+}
+
+.hero-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Horizontal rule with label ── */
+.labeled-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.labeled-rule::before,
+.labeled-rule::after {
+  content: '';
   flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Responsive helpers ── */
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none;
+  }
 }
