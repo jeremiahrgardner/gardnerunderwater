@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/training", label: "TRAINING" },
@@ -12,10 +13,17 @@ const navLinks = [
 
 export function Nav() {
   return (
-    <header style={{ background: "#000", borderBottom: "1px solid #222", padding: "1rem 0" }}>
+    <header style={{ background: "#000", borderBottom: "1px solid #222", padding: "0.75rem 0" }}>
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem" }}>
-        <Link href="/" style={{ fontWeight: 700, fontSize: "1.25rem", letterSpacing: "0.05em" }}>
-          GARDNER UNDERWATER
+        <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+          <Image
+            src="/logo.png"
+            alt="Gardner Underwater"
+            width={48}
+            height={50}
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </Link>
         <nav>
           <ul style={{ display: "flex", listStyle: "none", gap: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
