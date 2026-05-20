@@ -1,174 +1,417 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
-const courses = [
-  // TECHNICAL TRAINING
+export const metadata: Metadata = {
+  title: "Courses",
+  description:
+    "The full Gardner Underwater course curriculum: UTD fundamentals, technical diving, CCR, cave diving, sidemount, and leadership programs.",
+};
+
+type Course = {
+  category: string;
+  level: string;
+  title: string;
+  duration: string;
+  desc: string;
+  bullets: string[];
+  cert: string;
+  prerequisites: string;
+};
+
+const courses: Course[] = [
   {
-    category: "TECHNICAL TRAINING",
-    items: [
-      {
-        title: "Essentials of Technical Diving",
-        subtitle: "Tranistion From Recreational To Technical",
-        description:
-          "The Essentials of Technical Diving is the first step to move you from 'Recreational' diver to 'Technical' Diver and gives you all the personal skills you need to move to a technical training program. Essentials of Tec is a personal skills class that prepares you for technical depths by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and deco bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
-        duration: "Course Duration: 4 Days*",
-      },
-      {
-        title: "Doubles (Backmount or Sidemount)",
-        subtitle: "Learn To Dive Doubles",
-        description:
-          "The Purpose of the Doubles MINI is to introduce and train a diver in the use of either double tank back mount or side mount configurations. The course focuses on cultivating the practical, normal, and emergency skills required by all double tank divers, including buoyancy control, emergency procedures, and care and maintenance.",
-        duration: "Course Duration: 1-2 Days*",
-      },
+    category: "Fundamentals",
+    level: "All Levels",
+    title: "UTD Basic / Essentials",
+    duration: "2–3 days",
+    desc: "The foundation everything else is built on. If you are new to diving or want to rebuild your fundamentals from scratch, this is where you start. Buoyancy, trim, situational awareness, and the habits that keep you alive.",
+    bullets: [
+      "Buoyancy and trim fundamentals",
+      " situational awareness protocols",
+      "Team diving basics",
+      "Problem recognition and management",
+      "Proper equipment configuration",
     ],
+    cert: "UTD Essentials / Basic",
+    prerequisites: "Open Water (or equivalent)",
   },
-  // DAN
   {
-    category: "DAN FIRST AID TRAINING",
-    items: [
-      {
-        title: "Diving First Aid for Professional Divers (DFA Pro)",
-        subtitle: "",
-        description:
-          "DAN's Diving First Aid for Professional Divers course is designed for commercial, professional, aquarium, and scientific divers, and it provides knowledge and first aid skills specifically for these work environments. DFA Pro includes all elements of the DAN BLS and EO2 courses and includes material on neurological assessment and first aid for hazardous marine life injuries.",
-        duration: "",
-      },
-      {
-        title: "Basic Life Support: CPR and First Aid (BLS)",
-        subtitle: "",
-        description:
-          "This fundamental course prepares you to provide proper care for life-threatening illnesses or injuries until professional emergency medical care is available. The life-support skills taught in this course include one- and two-rescuer CPR for adults, children and infants. Use of automatic external defibrillators, bleeding management, assisting a choking victims and responding to a person in shock. The first aid skills taught include conducting secondary assessments, splinting and responding to medical emergencies.",
-        duration: "",
-      },
-      {
-        title: "Emergency Oxygen for Scuba Diving Injuries (EO2)",
-        subtitle: "",
-        description:
-          "The DAN Emergency Oxygen for Scuba Diving Injuries course teaches you how to administer life-saving oxygen first aid to divers who may be suffering from decompression illness (DCI). Additionally, this course will teach you how to recognize the signs and symptoms of decompression illness and respond to them accordingly.",
-        duration: "",
-      },
+    category: "Fundamentals",
+    level: "Intermediate",
+    title: "UTD Level 1 / Certec",
+    duration: "3–4 days",
+    desc: "Proper breathing, stage management, and team protocols. The first real step into technical diving methodology — the kind of training that changes how you think about every dive.",
+    bullets: [
+      "Stage breathing and gas management",
+      "Primary / backup team protocols",
+      "Hovering trim with stage bottles",
+      "Simulated deco procedures",
+      "Underwater communication systems",
     ],
+    cert: "UTD Level 1 / Certec",
+    prerequisites: "UTD Basic or equivalent",
   },
-  // SCOUTING / COACHING
   {
-    category: "SCOUTING COACHING",
-    items: [
-      {
-        title: "Scuba Coaching",
-        subtitle: "",
-        description:
-          "Coaching is a unique training model built for all levels of divers wanting to achieve gains in their diving. Great scuba training does not have to be focused on the outcome. It can be about the process. Utilizing a thorough, structured, and weekly process, coaching includes all the aspects to make you a better, well rounded diver including:",
-        bullets: [
-          "Weekly foundational diving training program",
-          "Access to all of the Recreational online course content",
-          "Regular communication with your coach",
-          "Video review and feedback",
-        ],
-        duration: "",
-      },
+    category: "Technical",
+    level: "Advanced",
+    title: "UTD Tech 1",
+    duration: "4–5 days",
+    desc: "Your first real decompression diving. We go beyond no-decompression limits, train proper deco procedures, and build the habits that make deco diving routine rather than scary.",
+    bullets: [
+      "Full deco procedures and planning",
+      "Multiple gas management",
+      "Altitude and flying after diving protocols",
+      "SOR / bailout procedures",
+      "Team abort criteria and execution",
     ],
+    cert: "UTD Tech 1",
+    prerequisites: "UTD Level 1, 25 logged dives",
   },
-  // FOUNDATIONAL TRAINING
   {
-    category: "FOUNDATIONAL TRAINING",
-    items: [
-      {
-        title: "Essentials of Recreational Diving",
-        subtitle: 'Become a "Thinking Diver"',
-        description:
-          "Essentials of Rec is a skills class for certified divers. It brings you into the UTD diving system training you in all the techniques we use – proper buoyancy control through breathing, horizontal trim in the water, propulsion techniques that give you precise control, and much more.",
-        duration: "Course Duration: 3-days*",
-      },
-      {
-        title: "Open Water Diver / Recreational 1",
-        subtitle: "Become a Scuba Diver",
-        description:
-          "The Open Water Diver course is an entry level class designed to teach NON-certified divers to be safe and comfortable while enjoying the wonders of our oceans, lakes and other waters. This class is structured to prepare divers for recreational diving using proper equipment and proper diving techniques. Recreational 1 adds Nitrox as a breathing gas.",
-        duration: "Course Duration: 4-days*",
-      },
-      {
-        title: "Recreational 2 / Advanced Open Water",
-        subtitle: "Expand Your Diving To Deeper Depths, Night, and Navigation",
-        description:
-          "The Recreational 2 and Advanced Open Water Diver (Rec 2 and AOW) course is the next step for recreational divers to expand their diving to slightly deeper depths with more advanced gases. Rec 2/AOW is a modular class structured to prepare divers for a wider range of environmental conditions and more advanced recreational diving using proper equipment, diving techniques and breathing mixtures including a thorough knowledge of the use of Nitrox.",
-        duration: "Course Duration: 2-3 Days*",
-      },
-      {
-        title: "Rescue Diver",
-        subtitle: "Be Prepared and Ready To Handle Emergencies",
-        description:
-          "Rescue and Emergency Procedures may be one of the most valuable courses any diver can take. The Rescue Diver course is designed to prepare the student for a variety of emergency situations and is centered around both self-rescue and buddy-rescue. The Prerequisites for the UTD Rescue Diver course include First Aid/CPR/AED/Oxygen administration certifications.",
-        duration: "Course Duration: 2-3 Days*",
-      },
-      {
-        title: "ESM — Efficient Sound Mindset",
-        subtitle: "",
-        description:
-          "The ESM (Efficient Sound Mindset) course is a foundational mindset and personal development course for divers who want to build the mental skills that support peak performance in diving and in life.",
-        duration: "",
-      },
-      {
-        title: "Cave Diving Training",
-        subtitle: "",
-        description:
-          "Comprehensive cave diving courses following UTD protocols. Cavern, Full Cave, and stage-dependent cave training available for divers ready to explore the underwater cave environment.",
-        duration: "",
-      },
+    category: "Technical",
+    level: "Advanced",
+    title: "UTD Tech 2",
+    duration: "4–5 days",
+    desc: "Advanced deco diving including pure O2 and high-oxygen deco procedures. Longer bottoms, more complex planning, greater team demands.",
+    bullets: [
+      "Pure O2 deco procedures",
+      "Advanced gas planning (fly / soar)",
+      "Multi-gas CCR crossover",
+      "Deep stop protocols",
+      "Complex team management",
     ],
+    cert: "UTD Tech 2",
+    prerequisites: "UTD Tech 1, 50 logged dives",
+  },
+  {
+    category: "CCR",
+    level: "Technical",
+    title: "CCR — JJ-CCR Fundamentals",
+    duration: "4–5 days",
+    desc: "Closed-circuit rebreather diving from first breath. The JJ-CCR is one of the most reliable recreational CCRs and a legitimate pathway to extended technical diving. You learn the scrubber, the loop, the bailout — the whole thing.",
+    bullets: [
+      "CCR equipment and configuration",
+      "Breathing loop management",
+      "Scrubber duration planning",
+      "Bailout procedures and totals",
+      "Dive planning for CCR",
+    ],
+    cert: "CCR Basic / Normoxic",
+    prerequisites: "UTD Tech 1 or equivalent",
+  },
+  {
+    category: "CCR",
+    level: "Technical",
+    title: "CCR — KISS Side Mount CCR",
+    duration: "3–4 days",
+    desc: "KISS-side-mount CCR training for maximum flexibility and minimum drag. Ideal for shallow deco diving and a perfect complement to a sidemount cave configuration.",
+    bullets: [
+      "KISS-side-mount CCR configuration",
+      "In-water bubble checking",
+      "Loop management in sidemount",
+      "Bailout procedures",
+      "Dive planning and gas management",
+    ],
+    cert: "KISS CCR Certified",
+    prerequisites: "Sidemount certified, 30 logged dives",
+  },
+  {
+    category: "Cave",
+    level: "Expert",
+    title: "IANTD / UTD Full Cave",
+    duration: "6–8 days",
+    desc: "The definitive cave diving certification. This is the training that separates overhead environment diving from everything else. Permanent primary lights, reel use, jump / gap procedures, complex line circuits, gas management in zero visibility.",
+    bullets: [
+      "Permanent primary light configuration",
+      "Tricky and gap procedures",
+      "Complex line circuits",
+      "Zero-visibility search procedures",
+      "Full cave team protocols",
+    ],
+    cert: "IANTD Full Cave / UTD Cave 1",
+    prerequisites: "Full cave prerequisites apply — contact for assessment",
+  },
+  {
+    category: "Sidemount",
+    level: "Intermediate+",
+    title: "Sidemount Specialist",
+    duration: "2–3 days",
+    desc: "Maximum flexibility, minimum drag. From basic sidemount configuration to cave-ready setups. Sidemount is not just about comfort — it changes how you manage gas, navigate, and interact with the environment.",
+    bullets: [
+      "Sidemount harness and rig configuration",
+      "Gas management in sidemount",
+      "Tank switching procedures",
+      "Sidemount in restricted spaces",
+      "Cave-ready sidemount setups",
+    ],
+    cert: "Sidemount Specialist",
+    prerequisites: "Open Water or equivalent",
+  },
+  {
+    category: "Leadership",
+    level: "Intermediate",
+    title: "Rescue Diver",
+    duration: "3 days",
+    desc: "Problem recognition, management, and resolution in a team context. The course that makes you useful to your team — not just competent as an individual.",
+    bullets: [
+      "Problem recognition protocols",
+      "Panicked diver management",
+      "Unconscious diver rescue",
+      "Emergency equipment deployment",
+      "Team rescue coordination",
+    ],
+    cert: "UTD / RAID Rescue Diver",
+    prerequisites: "UTD Level 1 or equivalent, 30 logged dives",
+  },
+  {
+    category: "Leadership",
+    level: "Leadership",
+    title: "Instructor Development",
+    duration: "5–7 days",
+    desc: "For divers who want to teach. We do not train instructors to check boxes — we train instructors who can actually convey skill and judgment to students. Contact Jay directly to discuss requirements.",
+    bullets: [
+      "Instructional methodology",
+      "Confined water teaching skills",
+      "Open water teaching evaluation",
+      "Risk management for instructors",
+      "Student evaluation and feedback",
+    ],
+    cert: "UTD / IANTD Instructor",
+    prerequisites: "Varies by agency — contact for assessment",
   },
 ];
+
+const categories = [...new Set(courses.map((c) => c.category))];
 
 export default function CoursesPage() {
   return (
     <>
-      <section style={{ background: "#000", padding: "4rem 1.5rem 3rem" }}>
+      {/* ── Page hero ── */}
+      <section className="page-hero" style={{ background: "var(--void)" }}>
         <div className="container">
-          <h1 style={{ fontSize: "clamp(2rem, 6vw, 3.5rem)", fontWeight: 700, marginBottom: "1rem" }}>COURSES</h1>
-          <h2 style={{ fontSize: "clamp(1.2rem, 3vw, 1.8rem)", fontWeight: 400, color: "#ccc" }}>The Courses</h2>
+          <span className="section-label">Full Curriculum</span>
+          <h1
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(2.5rem, 7vw, 6rem)",
+              fontWeight: 800,
+              lineHeight: 0.95,
+              letterSpacing: "-0.04em",
+              color: "var(--white)",
+              maxWidth: "18ch",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Courses built for actual skill.
+          </h1>
+          <p
+            style={{
+              fontSize: "1.05rem",
+              color: "var(--muted)",
+              maxWidth: "54ch",
+              lineHeight: 1.75,
+            }}
+          >
+            Every course here is designed to produce real competence — not to check a box on the way to
+            the next certification level. Look through the curriculum. If you are not sure where to start,
+            contact Jay.
+          </p>
         </div>
       </section>
 
-      {courses.map((section) => (
-        <section key={section.category} style={{ background: "#000", padding: "4rem 1.5rem", borderTop: "1px solid #222" }}>
-          <div className="container" style={{ maxWidth: "900px" }}>
-            <h2 style={{ fontSize: "clamp(1.3rem, 3vw, 2rem)", marginBottom: "2.5rem", borderBottom: "1px solid #333", paddingBottom: "0.75rem" }}>
-              {section.category}
-            </h2>
-            <div style={{ display: "grid", gap: "3rem" }}>
-              {section.items.map((course) => (
-                <div key={course.title}>
-                  <h3 style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", marginBottom: "0.5rem" }}>{course.title}</h3>
-                  {course.subtitle && (
-                    <p style={{ color: "#aaa", marginBottom: "0.75rem", fontSize: "0.95rem" }}>
-                      <strong>{course.subtitle}</strong>
-                    </p>
-                  )}
-                  <p style={{ lineHeight: 1.8, marginBottom: "1rem", color: "#ccc" }}>{course.description}</p>
-                  {"bullets" in course && Array.isArray((course as { bullets?: string[] }).bullets) && (
-                    <ul style={{ marginBottom: "1rem", paddingLeft: "1.5rem", color: "#ccc" }}>
-                      {(course as { bullets: string[] }).bullets.map((b) => (
-                        <li key={b} style={{ marginBottom: "0.4rem" }}>{b}</li>
-                      ))}
-                    </ul>
-                  )}
-                  {course.duration && (
-                    <p style={{ fontStyle: "italic", color: "#888", fontSize: "0.9rem" }}>{course.duration}</p>
-                  )}
-                  <div style={{ marginTop: "1.25rem" }}>
-                    <Link href="/contact" className="btn" style={{ fontSize: "0.8rem" }}>
-                      BOOK NOW
-                    </Link>
-                  </div>
+      {/* ── Course listing ── */}
+      <section className="section">
+        <div className="container">
+          {categories.map((cat) => {
+            const catCourses = courses.filter((c) => c.category === cat);
+            return (
+              <div key={cat} style={{ marginBottom: "clamp(4rem, 8vw, 7rem)" }}>
+                {/* Category header */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1.5rem",
+                    marginBottom: "2rem",
+                  }}
+                >
+                  <h2
+                    style={{
+                      fontFamily: "'Syne', sans-serif",
+                      fontSize: "clamp(1.4rem, 2.5vw, 1.8rem)",
+                      fontWeight: 800,
+                      color: "var(--white)",
+                    }}
+                  >
+                    {cat}
+                  </h2>
+                  <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
 
-      <section style={{ background: "#111", padding: "4rem 1.5rem", textAlign: "center" }}>
-        <Link href="/contact" className="btn">
-          Book Your Course
-        </Link>
+                {/* Cards */}
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+                    gap: "1.5rem",
+                  }}
+                >
+                  {catCourses.map((course) => (
+                    <div key={course.title} className="card">
+                      <div className="card-body">
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "flex-start",
+                            marginBottom: "0.75rem",
+                            flexWrap: "wrap",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              fontSize: "0.62rem",
+                              letterSpacing: "0.15em",
+                              textTransform: "uppercase",
+                              color: "var(--teal)",
+                            }}
+                          >
+                            {course.category}
+                          </span>
+                          <span
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              fontSize: "0.6rem",
+                              letterSpacing: "0.1em",
+                              color: "var(--dim)",
+                              background: "var(--navy)",
+                              padding: "0.2rem 0.5rem",
+                              borderRadius: "2px",
+                            }}
+                          >
+                            {course.level}
+                          </span>
+                        </div>
+
+                        <h3
+                          style={{
+                            fontFamily: "'Syne', sans-serif",
+                            fontSize: "1.15rem",
+                            fontWeight: 700,
+                            color: "var(--white)",
+                            marginBottom: "0.35rem",
+                            lineHeight: 1.2,
+                          }}
+                        >
+                          {course.title}
+                        </h3>
+
+                        <p
+                          style={{
+                            fontFamily: "'JetBrains Mono', monospace",
+                            fontSize: "0.62rem",
+                            color: "var(--muted)",
+                            marginBottom: "0.75rem",
+                          }}
+                        >
+                          {course.duration} · {course.cert}
+                        </p>
+
+                        <p
+                          style={{
+                            fontSize: "0.85rem",
+                            color: "var(--muted)",
+                            lineHeight: 1.7,
+                            marginBottom: "1rem",
+                          }}
+                        >
+                          {course.desc}
+                        </p>
+
+                        <ul
+                          style={{
+                            listStyle: "none",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.35rem",
+                            marginBottom: "1.25rem",
+                          }}
+                        >
+                          {course.bullets.map((b) => (
+                            <li
+                              key={b}
+                              style={{
+                                display: "flex",
+                                gap: "0.5rem",
+                                fontSize: "0.82rem",
+                                color: "var(--muted)",
+                              }}
+                            >
+                              <span style={{ color: "var(--teal)", flexShrink: 0 }}>→</span>
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div
+                          style={{
+                            borderTop: "1px solid var(--border-dim)",
+                            paddingTop: "0.85rem",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            flexWrap: "wrap",
+                            gap: "0.5rem",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              fontSize: "0.6rem",
+                              letterSpacing: "0.1em",
+                              textTransform: "uppercase",
+                              color: "var(--dim)",
+                            }}
+                          >
+                            Req: {course.prerequisites}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="section section--dark" style={{ textAlign: "center" }}>
+        <div className="container--narrow">
+          <span className="section-label" style={{ justifyContent: "center" }}>
+            Not Sure Where to Start?
+          </span>
+          <h2
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+              fontWeight: 800,
+              marginBottom: "1rem",
+            }}
+          >
+            Let&apos;s talk about your goals.
+          </h2>
+          <p style={{ fontSize: "0.95rem", color: "var(--muted)", marginBottom: "2rem", lineHeight: 1.7 }}>
+            I do a free 15-minute call with prospective students before booking. Tell me where you are
+            and where you want to go — I will tell you what it takes to get there.
+          </p>
+          <Link href="/contact" className="btn btn-primary">
+            Request a Call
+          </Link>
+        </div>
       </section>
     </>
   );

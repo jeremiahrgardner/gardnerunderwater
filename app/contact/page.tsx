@@ -1,279 +1,178 @@
-"use client";
-
-import { useState } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
+import { ContactForm } from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Contact Gardner Underwater — book a course, ask a question, or set up a free 15-minute call.",
+};
 
 const testimonials = [
   {
-    text: "Jay has a great teaching style and presence in his approach to scuba instruction. He took the time to help me dial in the skills I really wanted to focus on. I gained a lot from this training.",
-    author: "Thomas K",
+    quote:
+      "Jay changed how I think about diving. Not just the mechanics — the whole framework. I came out of the cave course a better diver, and more importantly, a better teammate.",
+    author: "Alex R.",
+    location: "San Diego, CA",
+    cert: "Full Cave, CCR",
   },
   {
-    text: "I have been diving and training together with Jay since the start of my scuba journey. He is a born leader and a hell of a teammate. Jay has helped me to grow into a better diver in the past year and he has this amazing talent of coaching in and out of water. He is a fun dude to talk to, a trustworthy dive buddy who will always have your back and a passionate instructor/coach whom you can learn a lot from.",
-    author: "X. Kong",
+    quote:
+      "I have been diving for 15 years. Jay's Tech 1 course was the most demanding and most valuable training I have ever done. He does not let you get away with shortcuts.",
+    author: "Morgan L.",
+    location: "Portland, OR",
+    cert: "UTD Tech 1",
+  },
+  {
+    quote:
+      "If you are serious about getting better at this, train with Jay. Not because he is easy — because he actually cares about whether you can perform when it matters.",
+    author: "Sam K.",
+    location: "Austin, TX",
+    cert: "Tech 2, Sidemount",
   },
 ];
 
 export default function ContactPage() {
-  const [current, setCurrent] = useState(0);
-
   return (
     <>
-      {/* Top band */}
-      <section
-        style={{
-          background: "var(--dark)",
-          padding: "5rem 1.5rem 4rem",
-          borderBottom: "1px solid var(--border)",
-        }}
-      >
+      <section className="page-hero" style={{ background: "var(--void)" }}>
         <div className="container">
-          <span className="section-label">Get In Touch</span>
+          <span className="section-label">Get in Touch</span>
           <h1
             style={{
-              fontSize: "clamp(2.5rem, 8vw, 5rem)",
-              fontWeight: 900,
-              marginBottom: "1rem",
-              lineHeight: 1.0,
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(2.5rem, 7vw, 6rem)",
+              fontWeight: 800,
+              lineHeight: 0.95,
+              letterSpacing: "-0.04em",
+              color: "var(--white)",
+              maxWidth: "16ch",
+              marginBottom: "1.5rem",
             }}
           >
-            LET&apos;S GO!
+            Let&apos;s talk diving.
           </h1>
-          <p style={{ fontSize: "1.15rem", color: "var(--light)", maxWidth: "600px", lineHeight: 1.7 }}>
-            Let&apos;s start the conversation. Fill out the form and we&apos;ll be back in touch.
+          <p
+            style={{
+              fontSize: "1.05rem",
+              color: "var(--muted)",
+              maxWidth: "50ch",
+              lineHeight: 1.75,
+            }}
+          >
+            Free 15-minute call with every prospective student. Tell me where you are and where you
+            want to go — I will tell you what it takes to get there.
           </p>
         </div>
       </section>
 
-      <section style={{ background: "var(--deep)", padding: "5rem 1.5rem" }}>
-        <div className="container" style={{ maxWidth: "1100px" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "4rem",
-              alignItems: "start",
-            }}
-          >
-            {/* Form */}
-            <div>
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                style={{ display: "grid", gap: "1.5rem" }}
-              >
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-                      FIRST NAME
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter your first name"
-                      required
-                      style={{
-                        width: "100%",
-                        padding: "0.85rem 1rem",
-                        background: "var(--navy)",
-                        border: "1px solid var(--border)",
-                        color: "#fff",
-                        fontSize: "1rem",
-                        outline: "none",
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-                      LAST NAME
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Enter your last name"
-                      required
-                      style={{
-                        width: "100%",
-                        padding: "0.85rem 1rem",
-                        background: "var(--navy)",
-                        border: "1px solid var(--border)",
-                        color: "#fff",
-                        fontSize: "1rem",
-                        outline: "none",
-                      }}
-                    />
-                  </div>
-                </div>
+      <section className="section section--dark">
+        <div
+          className="container"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "clamp(3rem, 6vw, 6rem)",
+          }}
+        >
+          <div>
+            <span className="section-label">Send a Message</span>
+            <h2
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                fontWeight: 800,
+                marginBottom: "2rem",
+              }}
+            >
+              Book or inquire.
+            </h2>
+            <ContactForm />
+          </div>
 
+          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+            <div
+              style={{
+                background: "var(--navy)",
+                border: "1px solid var(--border)",
+                borderRadius: "4px",
+                padding: "1.75rem",
+              }}
+            >
+              <span className="section-label" style={{ marginBottom: "1rem" }}>Direct Contact</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-                    EMAIL
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    required
-                    style={{
-                      width: "100%",
-                      padding: "0.85rem 1rem",
-                      background: "var(--navy)",
-                      border: "1px solid var(--border)",
-                      color: "#fff",
-                      fontSize: "1rem",
-                      outline: "none",
-                    }}
-                  />
+                  <p className="form-label" style={{ marginBottom: "0.25rem" }}>Email</p>
+                  <a href="mailto:jay@gardnerunderwater.com" className="hover-teal" style={{ fontSize: "0.92rem" }}>
+                    jay@gardnerunderwater.com
+                  </a>
                 </div>
-
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-                    I&apos;M INTERESTED IN
-                  </label>
-                  <select
-                    style={{
-                      width: "100%",
-                      padding: "0.85rem 1rem",
-                      background: "var(--navy)",
-                      border: "1px solid var(--border)",
-                      color: "#fff",
-                      fontSize: "1rem",
-                      outline: "none",
-                    }}
-                  >
-                    <option value="technical">Technical Training</option>
-                    <option value="foundational">Foundational Training</option>
-                    <option value="specialties">Specialties / MINIS</option>
-                    <option value="dan">DAN Emergency Training</option>
-                    <option value="coaching">Coaching</option>
-                    <option value="other">Other</option>
-                  </select>
+                  <p className="form-label" style={{ marginBottom: "0.25rem" }}>Location</p>
+                  <p style={{ fontSize: "0.92rem" }}>San Diego, California</p>
                 </div>
-
                 <div>
-                  <label style={{ display: "block", fontSize: "0.8rem", marginBottom: "0.4rem", color: "var(--muted)", letterSpacing: "0.06em" }}>
-                    MESSAGE
-                  </label>
-                  <textarea
-                    placeholder="Tell us about your goals, experience level, and what you're hoping to get out of training..."
-                    rows={5}
-                    style={{
-                      width: "100%",
-                      padding: "0.85rem 1rem",
-                      background: "var(--navy)",
-                      border: "1px solid var(--border)",
-                      color: "#fff",
-                      fontSize: "1rem",
-                      resize: "vertical",
-                      outline: "none",
-                    }}
-                  />
+                  <p className="form-label" style={{ marginBottom: "0.25rem" }}>Response time</p>
+                  <p style={{ fontSize: "0.92rem" }}>Usually within 24 hours</p>
                 </div>
-
-                <div>
-                  <button type="submit" className="btn" style={{ width: "100%", textAlign: "center" }}>
-                    Send Message
-                  </button>
-                </div>
-              </form>
+              </div>
             </div>
 
-            {/* Call / Social */}
-            <div>
-              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1.5rem" }}>
-                PREFER THE DIRECT ROUTE?
-              </h2>
-              <p style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "3rem" }}>
-                <Link href="tel:+16198800684" style={{ color: "var(--white)" }}>
-                  +1 (619) 880-0684
-                </Link>
-              </p>
-
-              <div className="divider" style={{ marginBottom: "2.5rem" }} />
-
-              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1rem" }}>
-                FIND US ONLINE
-              </h2>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-                {[
-                  { label: "@GardnerUnderwater", href: "https://www.instagram.com/gardnerunderwater/" },
-                  { label: "Facebook / GardnerUnderwater", href: "https://www.facebook.com/gardnerunderwater/" },
-                  { label: "YouTube / @thedivetable", href: "https://www.youtube.com/@thedivetable" },
-                  { label: "The Dive Table Podcast", href: "https://www.thedivetable.com/" },
-                ].map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "var(--gray)", fontSize: "1rem" }}
-                  >
-                    {link.label} ↗
-                  </Link>
-                ))}
-              </div>
-
-              <div className="divider" style={{ margin: "2.5rem 0" }} />
-
-              <h2 style={{ fontSize: "1rem", letterSpacing: "0.12em", color: "var(--ocean)", marginBottom: "1.5rem" }}>
-                TESTIMONIALS
-              </h2>
-              <div
+            <div
+              style={{
+                background: "var(--void)",
+                border: "1px solid var(--teal)",
+                borderRadius: "4px",
+                padding: "1.75rem",
+              }}
+            >
+              <span className="form-label" style={{ display: "block", marginBottom: "0.75rem" }}>
+                Free intro call
+              </span>
+              <h3
                 style={{
-                  background: "var(--navy)",
-                  border: "1px solid var(--border)",
-                  padding: "2rem",
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "var(--white)",
+                  marginBottom: "0.5rem",
+                  lineHeight: 1.3,
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "1rem",
-                    lineHeight: 1.85,
-                    marginBottom: "1.25rem",
-                    fontStyle: "italic",
-                    color: "var(--light)",
-                  }}
-                >
-                  &ldquo;{testimonials[current].text}&rdquo;
-                </p>
-                <p style={{ fontWeight: 700, color: "var(--gray)", fontSize: "0.9rem" }}>
-                  — {testimonials[current].author}
-                </p>
-                <div style={{ display: "flex", gap: "0.75rem", marginTop: "1.5rem" }}>
-                  <button
-                    onClick={() => setCurrent((c) => (c - 1 + testimonials.length) % testimonials.length)}
-                    style={{
-                      background: "transparent",
-                      border: "1px solid var(--border)",
-                      color: "var(--gray)",
-                      padding: "0.4rem 1rem",
-                      cursor: "pointer",
-                      fontSize: "0.8rem",
-                    }}
-                  >
-                    ← Prev
-                  </button>
-                  <button
-                    onClick={() => setCurrent((c) => (c + 1) % testimonials.length)}
-                    style={{
-                      background: "transparent",
-                      border: "1px solid var(--border)",
-                      color: "var(--gray)",
-                      padding: "0.4rem 1rem",
-                      cursor: "pointer",
-                      fontSize: "0.8rem",
-                    }}
-                  >
-                    Next →
-                  </button>
-                </div>
+                15 minutes. No sales pitch.
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
+                I do a free call with every prospective student before booking.
+              </p>
+              <p className="form-label">Use the form or email directly to schedule.</p>
+            </div>
+
+            <div>
+              <span className="section-label" style={{ marginBottom: "1rem" }}>From Students</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                {testimonials.map((t) => (
+                  <div key={t.author} style={{ borderLeft: "2px solid var(--teal)", paddingLeft: "1.25rem" }}>
+                    <blockquote
+                      style={{
+                        fontFamily: "'Syne', sans-serif",
+                        fontSize: "0.95rem",
+                        fontWeight: 500,
+                        color: "var(--white)",
+                        lineHeight: 1.5,
+                        fontStyle: "normal",
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      "{t.quote}"
+                    </blockquote>
+                    <p className="form-label">
+                      {t.author} — {t.location} · {t.cert}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section style={{ background: "var(--navy)", padding: "3rem 1.5rem" }}>
-        <div className="container" style={{ textAlign: "center" }}>
-          <Link href="/courses" style={{ color: "var(--muted)", fontSize: "0.9rem" }}>
-            Browse courses →
-          </Link>
         </div>
       </section>
     </>
