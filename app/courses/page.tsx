@@ -12,9 +12,25 @@ const courses = [
   // ── Technical Training ─────────────────────────────────────────────
   {
     category: "Technical Training",
-    title: "Essentials of Technical Diving",
-    tagline: "Transition From Recreational To Technical",
-    desc: "The Essentials of Technical Diving is the first step to move you from 'Recreational' diver to 'Technical' Diver and gives you all the personal skills you need to move to a technical training program. Essentials of Tec is a personal skills class that prepares you for technical depths by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and deco bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
+    title: "Tech 1",
+    tagline: "",
+    desc: "Tech 1 is the next step beyond Techreational, expanding your abilities into deeper decompression diving while introducing Oxygen as a dedicated decompression gas. As depth and decompression obligations increase, so do the demands of proper gas management, team awareness, and precision execution. This course uses a critical skills approach where dives are treated as real dives with real objectives and evolving failures that require the team to problem-solve together under pressure. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills, and handling failures away from the bottom — building the comfort, awareness, and confidence required for more advanced technical diving. Prerequisites include Techreational certification or equivalent, strong foundational technical skills, and comfort diving a twinset. Divers needing additional refinement may benefit from completing an Essentials of Tech course beforehand.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Technical Training",
+    title: "Techreational",
+    tagline: "",
+    desc: "Techreational is the entry point into technical diving, introducing the theory, equipment, and in-water skills required for decompression diving. Despite the name and conservative limits, this is one of the most demanding courses in diving because the focus is not simply on depth, but on precision, awareness, and team performance under pressure. Training is built around critical skills dives where teams are given real objectives and unexpected failures that must be solved together in the water. The course develops advanced buoyancy, trim, propulsion, gas management, valve drills, ascent strategies, and decompression discipline while building the mindset and confidence required for safe technical diving. Students should already be comfortable with foundational technical skills such as frog kick, back kick, valve drills, and gas-switching procedures. Divers needing additional refinement are encouraged to complete an Essentials of Tech course beforehand.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Technical Training",
+    title: "Essentials of Tech",
+    tagline: "",
+    desc: "Essentials of Tech is a personal skills class that prepares you for technical diving by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and decompression bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
     duration: "4 Days*",
     bullets: null,
   },
