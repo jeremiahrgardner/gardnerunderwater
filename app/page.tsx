@@ -11,7 +11,7 @@ export default function HomePage() {
       <section
         className="hero"
         style={{
-          backgroundImage: "url('/hero-dive.jpg')",
+          backgroundImage: "url('/hero-cave.jpg')",
           paddingBottom: "clamp(4rem, 8vw, 7rem)",
         }}
       >
