@@ -40,34 +40,28 @@ export function Nav() {
           right: 0,
           zIndex: 100,
           transition: "background 0.3s, border-color 0.3s",
-          background: scrolled ? "rgba(10, 8, 4, 0.98)" : "transparent",
-          borderBottom: scrolled ? "1px solid var(--gold-border)" : "1px solid transparent",
+          background: scrolled ? "rgba(11, 9, 5, 0.98)" : "transparent",
+          borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
         }}
       >
-        <div
-          style={{
-            maxWidth: "1240px",
-            margin: "0 auto",
-            padding: "0 clamp(1.25rem, 4vw, 3rem)",
-            height: "70px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+        <div style={{
+          maxWidth: "1240px",
+          margin: "0 auto",
+          padding: "0 clamp(1.25rem, 4vw, 3rem)",
+          height: "70px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}>
           {/* Logo */}
-          <Link
-            href="/"
-            aria-label="Gardner Underwater — home"
-            style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}
-          >
+          <Link href="/" aria-label="Gardner Underwater — home" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
             <div style={{ position: "relative", width: "40px", height: "40px", flexShrink: 0 }}>
               <Image src="/logo.png" alt="Gardner Underwater" fill style={{ objectFit: "contain" }} priority />
             </div>
             <span style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "1rem",
-              letterSpacing: "0.08em",
+              fontFamily: "'Anton', sans-serif",
+              fontSize: "1.05rem",
+              letterSpacing: "0.06em",
               color: "var(--cream)",
               textTransform: "uppercase",
               lineHeight: 1,
@@ -77,7 +71,7 @@ export function Nav() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Main navigation" className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "0" }}>
+          <nav aria-label="Main navigation" className="desktop-nav" style={{ display: "flex", alignItems: "center" }}>
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -104,7 +98,7 @@ export function Nav() {
                   {isActive && (
                     <span style={{
                       position: "absolute",
-                      bottom: "2px",
+                      bottom: "1px",
                       left: "0.75rem",
                       right: "0.75rem",
                       height: "1px",
@@ -116,12 +110,8 @@ export function Nav() {
             })}
           </nav>
 
-          {/* Desktop CTA */}
-          <Link
-            href="/contact"
-            className="btn btn-primary hide-mobile"
-            style={{ fontSize: "0.55rem", padding: "0.7rem 1.5rem" }}
-          >
+          {/* CTA */}
+          <Link href="/contact" className="btn btn-primary hide-mobile" style={{ fontSize: "0.55rem", padding: "0.7rem 1.4rem" }}>
             Book Now
           </Link>
 
@@ -131,15 +121,7 @@ export function Nav() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen(!menuOpen)}
             className="hamburger"
-            style={{
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              padding: "0.5rem",
-              display: "flex",
-              flexDirection: "column",
-              gap: "5px",
-            }}
+            style={{ background: "none", border: "none", cursor: "pointer", padding: "0.5rem", display: "flex", flexDirection: "column", gap: "5px" }}
           >
             <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "transform 0.3s", transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
             <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "opacity 0.3s", opacity: menuOpen ? 0 : 1 }} />
@@ -156,7 +138,7 @@ export function Nav() {
           position: "fixed",
           inset: 0,
           zIndex: 99,
-          background: "rgba(0,0,0,0.9)",
+          background: "rgba(0, 0, 0, 0.92)",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "all" : "none",
           transition: "opacity 0.3s",
@@ -169,13 +151,11 @@ export function Nav() {
         aria-label="Navigation menu"
         style={{
           position: "fixed",
-          top: 0,
-          right: 0,
-          bottom: 0,
+          top: 0, right: 0, bottom: 0,
           width: "min(320px, 90vw)",
           zIndex: 100,
-          background: "var(--black)",
-          borderLeft: "1px solid var(--gold-border)",
+          background: "var(--void)",
+          borderLeft: "1px solid var(--border)",
           padding: "5rem 2.5rem 2.5rem",
           display: "flex",
           flexDirection: "column",
@@ -194,12 +174,12 @@ export function Nav() {
               onClick={() => setMenuOpen(false)}
               aria-current={isActive ? "page" : undefined}
               style={{
-                fontFamily: "'Bebas Neue', sans-serif",
-                fontSize: "2rem",
-                letterSpacing: "0.05em",
+                fontFamily: "'Anton', sans-serif",
+                fontSize: "2.2rem",
+                letterSpacing: "0.04em",
                 color: isActive ? "var(--gold)" : "var(--cream)",
-                padding: "0.75rem 0",
-                borderBottom: "1px solid var(--gold-border)",
+                padding: "0.65rem 0",
+                borderBottom: "1px solid var(--border)",
                 textDecoration: "none",
                 textTransform: "uppercase",
               }}
@@ -208,12 +188,7 @@ export function Nav() {
             </Link>
           );
         })}
-        <Link
-          href="/contact"
-          onClick={() => setMenuOpen(false)}
-          className="btn btn-primary"
-          style={{ marginTop: "2rem", justifyContent: "center" }}
-        >
+        <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn btn-primary" style={{ marginTop: "2rem", justifyContent: "center" }}>
           Book Your Course
         </Link>
       </div>
