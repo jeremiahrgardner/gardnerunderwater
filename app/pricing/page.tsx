@@ -4,296 +4,339 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Gardner Underwater course pricing. Training designed to advance your skills, your control, and your brain.",
+    "Gardner Underwater pricing: upfront, no hidden fees, no upselling. Training, coaching, and DAN emergency courses.",
 };
-
-const pricingTiers = [
-  {
-    name: "Fundamentals",
-    desc: "Build a foundation that everything else depends on.",
-    price: "$550",
-    unit: "per person",
-    courses: [
-      "UTD Basic / Essentials",
-      "Sidemount Specialist",
-    ],
-    cta: "Book Essentials",
-  },
-  {
-    name: "Technical",
-    desc: "The full technical diving progression — deco, CCR, and beyond.",
-    price: "Varies",
-    unit: "per course",
-    courses: [
-      "UTD Level 1 / Certec",
-      "UTD Tech 1",
-      "UTD Tech 2",
-      "CCR (JJ-CCR)",
-    ],
-    cta: "Contact for Pricing",
-    highlight: true,
-  },
-  {
-    name: "Cave & CCR",
-    desc: "The highest-level training available — full cave, side-mount CCR.",
-    price: "By inquiry",
-    unit: "6–8 day programs",
-    courses: [
-      "Full Cave Certification",
-      "CCR Full Cave",
-      "KISS Side Mount CCR",
-    ],
-    cta: "Contact Jay",
-  },
-];
 
 export default function PricingPage() {
   return (
     <>
-      {/* ── Page hero ── */}
+      {/* ── Hero ── */}
       <section className="page-hero" style={{ background: "var(--void)" }}>
         <div className="container">
-          <span className="section-label">Pricing</span>
+          <span className="section-label">Transparent Pricing</span>
           <h1
             style={{
               fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(2.5rem, 7vw, 6rem)",
+              fontSize: "clamp(2.5rem, 6vw, 5rem)",
               fontWeight: 800,
-              lineHeight: 0.95,
-              letterSpacing: "-0.04em",
+              lineHeight: 1,
               color: "var(--white)",
-              maxWidth: "16ch",
               marginBottom: "1.5rem",
             }}
           >
-            What it costs to train for real.
+            THE PRICING
           </h1>
           <p
             style={{
-              fontSize: "1.05rem",
-              color: "var(--muted)",
-              maxWidth: "52ch",
-              lineHeight: 1.75,
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "1.1rem",
+              fontWeight: 700,
+              color: "var(--gold)",
+              marginBottom: "1rem",
             }}
           >
-            Good training is an investment. These are guide prices — exact costs depend on course
-            configuration, student-to-instructor ratio, and location. Contact Jay for a specific quote.
+            Paying For Value
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              maxWidth: "64ch",
+              marginBottom: "1rem",
+            }}
+          >
+            At Gardner Underwater, our prices reflect the value we deliver. We stand by the following
+            principles to guide our pricing.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              maxWidth: "64ch",
+              marginBottom: "1rem",
+            }}
+          >
+            No one likes to talk about money. As such,{" "}
+            <strong style={{ color: "var(--white)" }}>let&apos;s be up front about money</strong>. No hidden
+            fees, upselling, fine print, false discounts, sunshine taxes, or other means of being
+            shady about money.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              maxWidth: "64ch",
+              marginBottom: "1rem",
+            }}
+          >
+            Great training should be priced to{" "}
+            <strong style={{ color: "var(--gold)" }}>reflect the same value</strong> a student receives
+            in the knowledge, skills, and techniques gained in their training which carry on through
+            the career of a diver.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              maxWidth: "64ch",
+              marginBottom: "1rem",
+            }}
+          >
+            Great training should reflect a{" "}
+            <strong style={{ color: "var(--gold)" }}>living wage</strong> for the expertise and
+            commitment of a great instructor.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              maxWidth: "64ch",
+              marginBottom: "2rem",
+            }}
+          >
+            Scuba Diving is, by its very nature, a risky sport. Bargain shopping for the cheapest and
+            fastest training in other inherently risky sports like BASE jumping, or big wave surfing,
+            or high-altitude mountaineering would be{" "}
+            <strong style={{ color: "var(--gold)" }}>considered senseless</strong>. Scuba diving is the
+            same.
           </p>
         </div>
       </section>
 
-      {/* ── Pricing tiers ── */}
+      {/* ── Course & Equipment Fees ── */}
       <section className="section">
         <div className="container">
+          <h2
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1.4rem, 3vw, 2rem)",
+              fontWeight: 800,
+              color: "var(--white)",
+              marginBottom: "2.5rem",
+            }}
+          >
+            COURSE &amp; EQUIPMENT FEES
+          </h2>
+
           <div
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "1.5rem",
-              alignItems: "start",
+              gap: "2rem",
             }}
           >
-            {pricingTiers.map((tier) => (
-              <div
-                key={tier.name}
+            {/* Training */}
+            <div
+              style={{
+                border: "1px solid var(--border)",
+                borderRadius: "4px",
+                padding: "2rem",
+              }}
+            >
+              <span
                 style={{
-                  background: tier.highlight ? "var(--navy)" : "var(--abyss)",
-                  border: tier.highlight ? "1px solid var(--gold)" : "1px solid var(--border)",
-                  borderRadius: "4px",
-                  padding: "clamp(1.75rem, 3vw, 2.5rem)",
-                  display: "flex",
-                  flexDirection: "column",
-                  boxShadow: tier.highlight ? "0 0 40px rgba(13, 148, 136, 0.08)" : "none",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.62rem",
+                  letterSpacing: "0.15em",
+                  color: "var(--gold)",
+                  display: "block",
+                  marginBottom: "0.75rem",
                 }}
               >
-                {tier.highlight && (
-                  <span
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.6rem",
-                      letterSpacing: "0.15em",
-                      textTransform: "uppercase",
-                      color: "var(--void)",
-                      background: "var(--gold)",
-                      padding: "0.25rem 0.6rem",
-                      borderRadius: "2px",
-                      alignSelf: "flex-start",
-                      marginBottom: "0.75rem",
-                    }}
-                  >
-                    Most popular
-                  </span>
-                )}
-
-                <h3
-                  style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "1.3rem",
-                    fontWeight: 800,
-                    color: "var(--white)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {tier.name}
-                </h3>
-
-                <p
-                  style={{
-                    fontSize: "0.85rem",
-                    color: "var(--muted)",
-                    lineHeight: 1.65,
-                    marginBottom: "1.5rem",
-                  }}
-                >
-                  {tier.desc}
-                </p>
-
-                <div style={{ marginBottom: "1.5rem" }}>
-                  <p
-                    style={{
-                      fontFamily: "'Syne', sans-serif",
-                      fontSize: "clamp(1.8rem, 3vw, 2.2rem)",
-                      fontWeight: 800,
-                      color: tier.highlight ? "var(--gold)" : "var(--white)",
-                      lineHeight: 1,
-                    }}
-                  >
-                    {tier.price}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.62rem",
-                      color: "var(--muted)",
-                      letterSpacing: "0.05em",
-                      marginTop: "0.25rem",
-                    }}
-                  >
-                    {tier.unit}
-                  </p>
-                </div>
-
-                <div className="divider" style={{ marginBottom: "1.25rem" }} />
-
-                <ul
-                  style={{
-                    listStyle: "none",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.5rem",
-                    flex: 1,
-                    marginBottom: "1.75rem",
-                  }}
-                >
-                  {tier.courses.map((course) => (
-                    <li
-                      key={course}
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.5rem",
-                        fontSize: "0.85rem",
-                        color: "var(--muted)",
-                      }}
-                    >
-                      <span style={{ color: "var(--gold)", fontSize: "0.7rem" }}>◆</span>
-                      {course}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/contact"
-                  className={`btn ${tier.highlight ? "btn-primary" : "btn-outline"}`}
-                  style={{ justifyContent: "center" }}
-                >
-                  {tier.cta}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Notes ── */}
-      <section className="section section--dark">
-        <div className="container--narrow">
-          <span className="section-label">Pricing Notes</span>
-          <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            {[
-              {
-                title: "What's included",
-                body: "Instructor time, in-water training, course materials, and certification fees. Equipment rental available separately — contact Jay for rental pricing.",
-              },
-              {
-                title: "What's not included",
-                body: "Gases (nitrox, trimix where used), entrance fees, travel, accommodation, and meals. These vary by location and program.",
-              },
-              {
-                title: "Group discounts",
-                body: "Two or more students booking together receive a 10% discount on most courses. Small group training is better training — book with a teammate.",
-              },
-              {
-                title: "Payment terms",
-                body: "A 50% deposit is required to book a course. Balance due before the course start date. Payment via cash, check, or Square invoice.",
-              },
-              {
-                title: "Cancellation",
-                body: "Full refund with 14+ days notice. 50% refund with 7–14 days. No refund within 7 days of the course start (except in exceptional circumstances).",
-              },
-            ].map((note) => (
-              <div
-                key={note.title}
+                TRAINING
+              </span>
+              <h3
                 style={{
-                  borderBottom: "1px solid var(--border-dim)",
-                  paddingBottom: "1.25rem",
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "var(--white)",
+                  marginBottom: "0.5rem",
                 }}
               >
-                <h4
-                  style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "1rem",
-                    fontWeight: 700,
-                    color: "var(--white)",
-                    marginBottom: "0.35rem",
-                  }}
-                >
-                  {note.title}
-                </h4>
-                <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                  {note.body}
-                </p>
-              </div>
-            ))}
+                TRAINING
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1rem" }}>
+                In Water Courses &amp; Training
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "2rem",
+                  fontWeight: 800,
+                  color: "var(--gold)",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                $300 / DAY
+              </p>
+              <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+                Minimum 1 Day
+              </p>
+              <Link href="/contact" className="btn btn-primary" style={{ width: "100%", textAlign: "center" }}>
+                Book Now
+              </Link>
+            </div>
+
+            {/* Coaching */}
+            <div
+              style={{
+                border: "1px solid var(--border)",
+                borderRadius: "4px",
+                padding: "2rem",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.62rem",
+                  letterSpacing: "0.15em",
+                  color: "var(--gold)",
+                  display: "block",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                COACHING
+              </span>
+              <h3
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "var(--white)",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                COACHING
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1rem" }}>
+                Foundational Scuba Coaching.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "2rem",
+                  fontWeight: 800,
+                  color: "var(--gold)",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                $129 / MO
+              </p>
+              <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+                No Minimum Commitment
+              </p>
+              <Link href="/contact" className="btn btn-primary" style={{ width: "100%", textAlign: "center" }}>
+                Book Now
+              </Link>
+            </div>
+
+            {/* DAN Training */}
+            <div
+              style={{
+                border: "1px solid var(--border)",
+                borderRadius: "4px",
+                padding: "2rem",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.62rem",
+                  letterSpacing: "0.15em",
+                  color: "var(--gold)",
+                  display: "block",
+                  marginBottom: "0.75rem",
+                }}
+              >
+                DAN TRAINING
+              </span>
+              <h3
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "var(--white)",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                DAN Training
+              </h3>
+              <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1rem" }}>
+                In Person Emergency Training
+              </p>
+              <p
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "2rem",
+                  fontWeight: 800,
+                  color: "var(--gold)",
+                  marginBottom: "0.25rem",
+                }}
+              >
+                $300 / COURSE
+              </p>
+              <p style={{ fontSize: "0.8rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+                Typically 1 Day
+              </p>
+              <Link href="/contact" className="btn btn-primary" style={{ width: "100%", textAlign: "center" }}>
+                Book Now
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── CTA ── */}
-      <section className="section section--void" style={{ textAlign: "center" }}>
+      <section className="section section--dark" style={{ textAlign: "center" }}>
         <div className="container--narrow">
-          <h2
+          <p
             style={{
               fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
+              fontSize: "clamp(1.4rem, 3vw, 2rem)",
               fontWeight: 800,
-              marginBottom: "1rem",
+              color: "var(--white)",
+              marginBottom: "1.5rem",
             }}
           >
-            Ready to start?
-          </h2>
-          <p style={{ fontSize: "0.95rem", color: "var(--muted)", marginBottom: "2rem", lineHeight: 1.7 }}>
-            Tell me what you want to accomplish. I will tell you what it takes to get there and what it
-            will cost.
+            +1 (619) 880-0684
           </p>
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/contact" className="btn btn-primary">
-              Contact Jay
-            </Link>
-            <Link href="/courses" className="btn btn-outline">
-              View All Courses
-            </Link>
+          <div
+            style={{
+              display: "flex",
+              gap: "1.5rem",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              marginBottom: "2rem",
+            }}
+          >
+            <a
+              href="https://www.facebook.com/gardnerunderwater/"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/gardnerunderwater/"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.youtube.com/@thedivetable"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              YouTube
+            </a>
           </div>
+          <Link href="/contact" className="btn btn-primary btn-lg">
+            Book Your Course
+          </Link>
         </div>
       </section>
     </>

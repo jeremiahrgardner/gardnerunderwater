@@ -6,434 +6,292 @@ export default function HomePage() {
     <>
       {/* ── Hero ── */}
       <section
-        className="hero"
         style={{
           backgroundImage: "url('/hero-dive.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "85vh",
+          display: "flex",
+          alignItems: "center",
+          position: "relative",
         }}
       >
-        <div className="container" style={{ paddingBottom: "clamp(3rem, 6vw, 5rem)" }}>
-          <p className="hero-kicker">San Diego · Scuba Instruction</p>
-          <h1 className="hero-title">
-            Training<br />Built for<br />Dedicated<br />Divers.
-          </h1>
-          <p className="hero-sub">
-            Precision instruction in technical diving, CCR, and cave training.
-            No shortcuts. No fluff. Just real skill development.
-          </p>
-          <div className="hero-actions">
-            <Link href="/courses" className="btn btn-primary">
-              View Courses
-            </Link>
-            <Link href="/about" className="btn btn-outline">
-              Meet the Instructor
-            </Link>
-          </div>
-
-          <div className="scroll-indicator">
-            <span>Scroll</span>
-            <div className="scroll-line" />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Philosophy strip ── */}
-      <section style={{ background: "var(--abyss)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
         <div
           style={{
-            maxWidth: "1240px",
-            margin: "0 auto",
-            padding: "clamp(2.5rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem)",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "clamp(1.5rem, 4vw, 3rem)",
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(135deg, rgba(2,5,10,0.85) 0%, rgba(2,5,10,0.5) 100%)",
           }}
-        >
-          {[
-            {
-              num: "01",
-              title: "Eyes Open",
-              body: "Situational awareness is not optional. You learn to see everything — environment, team, gas, self.",
-            },
-            {
-              num: "02",
-              title: "Brain On",
-              body: "Thinking through problems before they become emergencies. Diving is a cognitive practice first.",
-            },
-            {
-              num: "03",
-              title: "Unified Team",
-              body: "A team that communicates effortlessly. Training to be a better teammate makes you a better diver.",
-            },
-          ].map((item) => (
-            <div key={item.num}>
-              <span
-                style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: "0.62rem",
-                  letterSpacing: "0.2em",
-                  color: "var(--gold)",
-                  display: "block",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {item.num}
-              </span>
-              <h3
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)",
-                  fontWeight: 700,
-                  color: "var(--white)",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                {item.title}
-              </h3>
-              <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                {item.body}
-              </p>
-            </div>
-          ))}
+        />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <h1
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(2.5rem, 8vw, 7rem)",
+              fontWeight: 800,
+              lineHeight: 0.95,
+              letterSpacing: "-0.04em",
+              color: "var(--white)",
+              marginBottom: "1.5rem",
+            }}
+          >
+            READY TO{" "}
+            <span style={{ color: "var(--gold)" }}>UNLOCK</span>
+            <br />
+            YOUR DIVING
+            <br />
+            <span style={{ color: "var(--gold)" }}>POTENTIAL</span>?
+          </h1>
+          <p
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1rem, 2vw, 1.25rem)",
+              fontWeight: 600,
+              color: "var(--white)",
+              maxWidth: "52ch",
+              lineHeight: 1.4,
+              marginBottom: "2rem",
+            }}
+          >
+            Training Designed To Advance Your Skills, Your Control, and Your Brain.
+          </p>
+          <Link href="/contact" className="btn btn-primary btn-lg">
+            Start Your Training Journey
+          </Link>
         </div>
       </section>
 
-      {/* ── Core Training ── */}
-      <section className="section">
+      {/* ── The Why ── */}
+      <section className="section section--dark">
         <div className="container">
-          <span className="section-label">What We Train</span>
-          <div
+          <h2
             style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-end",
-              marginBottom: "clamp(2.5rem, 5vw, 4rem)",
-              flexWrap: "wrap",
-              gap: "1rem",
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1.8rem, 4vw, 3rem)",
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: "var(--white)",
+              marginBottom: "2rem",
             }}
           >
-            <h2
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(2rem, 4.5vw, 3.5rem)",
-                fontWeight: 800,
-                maxWidth: "16ch",
-                lineHeight: 1.05,
-              }}
-            >
-              Serious training for serious divers.
-            </h2>
-            <Link href="/courses" className="btn btn-ghost">
-              All Courses →
+            The Why
+          </h2>
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "1rem",
+            }}
+          >
+            We&apos;ve all experienced <span style={{ color: "var(--gold)" }}>underwhelming</span>{" "}
+            training.
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "1rem",
+            }}
+          >
+            Training that leaves us with a plastic certification card but without the confidence to
+            apply the skills we&apos;ve now apparently &apos;mastered.&apos; Too often traditional scuba classes
+            leave us disappointed — designed to simply sell you the next class, or the next trip, or
+            more gear.
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "1rem",
+            }}
+          >
+            <strong style={{ color: "var(--white)" }}>Gardner Underwater is built differently.</strong>{" "}
+            Instead of selling certifications, we focus on the{" "}
+            <strong style={{ color: "var(--gold)" }}>training</strong>. Instead of selling the next
+            class, we focus on <strong style={{ color: "var(--gold)" }}>reaching the next plateau</strong>.
+            Instead of selling gear you don&apos;t need, we focus on turning you into a{" "}
+            <strong style={{ color: "var(--gold)" }}>Thinking Diver</strong>.
+          </p>
+          <p
+            style={{
+              fontSize: "1rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "2rem",
+            }}
+          >
+            If you&apos;re tired of getting the next certification card but not truly advancing in your
+            diving confidence, skill, and awareness; you&apos;ve found a home at Gardner Underwater.{" "}
+            <strong style={{ color: "var(--white)" }}>Eyes Open. Brain On. Unified Team.</strong> These are
+            the foundations upon which you will build a scalable platform for reaching the highest
+            levels in your diving. Are you ready to elevate your diving to new places?
+          </p>
+          <Link href="/contact" className="btn btn-primary">
+            Book Your Course
+          </Link>
+        </div>
+      </section>
+
+      {/* ── The Who ── */}
+      <section className="section">
+        <div className="container">
+          <h2
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1.8rem, 4vw, 3rem)",
+              fontWeight: 800,
+              lineHeight: 1.1,
+              color: "var(--white)",
+              marginBottom: "1rem",
+            }}
+          >
+            The Who
+          </h2>
+          <p
+            style={{
+              fontSize: "1.1rem",
+              color: "var(--gold)",
+              fontFamily: "'Syne', sans-serif",
+              fontWeight: 700,
+              marginBottom: "1.5rem",
+              lineHeight: 1.4,
+            }}
+          >
+            Who We Serve: Dedicated Divers. Committed To Growth. Ready To Advance.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "1rem",
+              maxWidth: "68ch",
+            }}
+          >
+            We serve divers who have a desire to be the best they can possibly be and unlock new
+            heights in their diving careers. Divers often come to us knowing they want to improve, but
+            not having a clear path forward.
+          </p>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "var(--muted)",
+              lineHeight: 1.8,
+              marginBottom: "2rem",
+              maxWidth: "68ch",
+            }}
+          >
+            If you&apos;ve been endlessly fumbling around with your gear configuration, or trying to learn
+            a back kick from YouTube, or spending countless hours to dial in the &apos;right&apos; gradient factor;
+            you&apos;re not alone. The divers we serve best understand the importance of great training and
+            are driven to continue to improve.
+          </p>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+            <Link href="/contact" className="btn btn-primary">
+              Book Your Course
+            </Link>
+            <Link href="/courses" className="btn btn-outline">
+              View Courses
             </Link>
           </div>
+        </div>
+      </section>
 
-          {/* Course cards */}
+      {/* ── Course / Training / Pricing / Shop links ── */}
+      <section className="section section--dark">
+        <div className="container">
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-              gap: "1.5rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "2rem",
             }}
           >
             {[
-              {
-                category: "Fundamentals",
-                title: "UTD Basic / Essentials",
-                desc: "The foundation everything else is built on. Buoyancy, trim, situational awareness.",
-                level: "All Levels",
-                href: "/courses",
-              },
-              {
-                category: "Technical",
-                title: "UTD Tech 1 & Tech 2",
-                desc: "Deco procedures, stage breathing, team protocols. The full technical diving path.",
-                level: "Advanced",
-                href: "/courses",
-              },
-              {
-                category: "CCR",
-                title: "Closed-Circuit Rebreather",
-                desc: "JJ-CCR and KISS-side mount CCR training. From first breathe to full cave configuration.",
-                level: "Technical",
-                href: "/courses",
-              },
-              {
-                category: "Cave",
-                title: "Full Cave Certification",
-                desc: "IANTD and UTD full cave training. Cave diving is the ultimate test and the ultimate teacher.",
-                level: "Expert",
-                href: "/courses",
-              },
-              {
-                category: "Sidemount",
-                title: "Sidemount Specialist",
-                desc: "Maximum flexibility, minimum drag. From basic sidemount to full cave sidemount configurations.",
-                level: "Intermediate+",
-                href: "/courses",
-              },
-              {
-                category: " rescue & leadership",
-                title: "Rescue & Leadership",
-                desc: "Problem recognition, management, and resolution. Learning to lead and be led.",
-                level: "Intermediate",
-                href: "/courses",
-              },
-            ].map((course) => (
+              { label: "THE COURSES", href: "/courses", sub: "Find The Right Course For You" },
+              { label: "THE TRAINING", href: "/training", sub: "Learn More About How We Train" },
+              { label: "THE PRICING", href: "/pricing", sub: "Let's Be Upfront About Money" },
+              { label: "THE SHOP", href: "/shop", sub: "Learn More About Our Operation" },
+            ].map((item) => (
               <Link
-                key={course.title}
-                href={course.href}
+                key={item.label}
+                href={item.href}
+                style={{
+                  display: "block",
+                  padding: "2rem",
+                  border: "1px solid var(--border)",
+                  borderRadius: "4px",
+                  textDecoration: "none",
+                  transition: "border-color 0.2s",
+                }}
                 className="card"
-                style={{ textDecoration: "none", display: "flex", flexDirection: "column" }}
               >
-                <div className="card-body" style={{ flex: 1 }}>
-                  <span
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.62rem",
-                      letterSpacing: "0.15em",
-                      textTransform: "uppercase",
-                      color: "var(--gold)",
-                      display: "block",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    {course.category}
-                  </span>
-                  <h3
-                    style={{
-                      fontFamily: "'Syne', sans-serif",
-                      fontSize: "1.1rem",
-                      fontWeight: 700,
-                      color: "var(--white)",
-                      marginBottom: "0.5rem",
-                      lineHeight: 1.25,
-                    }}
-                  >
-                    {course.title}
-                  </h3>
-                  <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.65 }}>
-                    {course.desc}
-                  </p>
-                </div>
-                <div
+                <h3
                   style={{
-                    padding: "0.85rem 1.5rem",
-                    borderTop: "1px solid var(--border-dim)",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
+                    fontFamily: "'Syne', sans-serif",
+                    fontSize: "1.3rem",
+                    fontWeight: 800,
+                    color: "var(--white)",
+                    marginBottom: "0.5rem",
                   }}
                 >
-                  <span
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.62rem",
-                      letterSpacing: "0.1em",
-                      color: "var(--dim)",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    {course.level}
-                  </span>
-                  <span style={{ color: "var(--gold)", fontSize: "0.85rem" }}>Learn more →</span>
-                </div>
+                  {item.label}
+                </h3>
+                <p style={{ fontSize: "0.85rem", color: "var(--muted)" }}>{item.sub}</p>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Photo band ── */}
-      <section
-        style={{
-          position: "relative",
-          height: "clamp(280px, 40vw, 480px)",
-          overflow: "hidden",
-        }}
-      >
-        <Image
-          src="/landscape.jpg"
-          alt="Jay Gardner — instructor"
-          fill
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          sizes="100vw"
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(90deg, rgba(2,5,10,0.7) 0%, transparent 50%, rgba(2,5,10,0.5) 100%)",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            display: "flex",
-            alignItems: "center",
-            padding: "0 clamp(1.25rem, 4vw, 3rem)",
-          }}
-        >
-          <div style={{ maxWidth: "580px" }}>
-            <span className="section-label" style={{ color: "var(--gold)" }}>
-              The Instructor
-            </span>
-            <h2
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                fontWeight: 800,
-                color: "var(--white)",
-                lineHeight: 1.1,
-                marginBottom: "1rem",
-              }}
-            >
-              Jay Gardner has been teaching diving for over a decade.
-            </h2>
-            <Link href="/about" className="btn btn-outline" style={{ marginTop: "0.5rem" }}>
-              About Jay →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why Gardner Underwater ── */}
-      <section className="section section--dark">
-        <div className="container">
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: "clamp(2rem, 5vw, 4rem)",
-              alignItems: "center",
-            }}
-          >
-            <div>
-              <span className="section-label">Why Train Here</span>
-              <h2
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)",
-                  fontWeight: 800,
-                  lineHeight: 1.1,
-                  marginBottom: "1.25rem",
-                }}
-              >
-                Not a resort course. Not a factory.
-              </h2>
-              <div className="accent-line" />
-              <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.75, marginBottom: "1rem" }}>
-                Most dive training is designed to check boxes. Gardner Underwater is designed to
-                actually build skill — the kind that stays with you when everything goes wrong.
-              </p>
-              <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.75, marginBottom: "2rem" }}>
-                Small groups. Real feedback. Training that prioritizes competence over certification
-                count. If you are committed to getting better, you are in the right place.
-              </p>
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <Link href="/contact" className="btn btn-primary">
-                  Book a Dive
-                </Link>
-                <Link href="/training" className="btn btn-outline">
-                  Our Approach
-                </Link>
-              </div>
-            </div>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "1px",
-                background: "var(--border)",
-                borderRadius: "4px",
-                overflow: "hidden",
-              }}
-            >
-              {[
-                { stat: "10+", label: "Years teaching" },
-                { stat: "500+", label: "Students trained" },
-                { stat: "4", label: "Certifying agencies" },
-                { stat: "1", label: "Philosophy" },
-              ].map(({ stat, label }) => (
-                <div
-                  key={label}
-                  style={{
-                    background: "var(--abyss)",
-                    padding: "clamp(1.5rem, 3vw, 2.5rem)",
-                    textAlign: "center",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "'Syne', sans-serif",
-                      fontSize: "clamp(2rem, 4vw, 3rem)",
-                      fontWeight: 800,
-                      color: "var(--gold)",
-                      lineHeight: 1,
-                      marginBottom: "0.35rem",
-                    }}
-                  >
-                    {stat}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: "0.62rem",
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      color: "var(--muted)",
-                    }}
-                  >
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Certifications ── */}
-      <section className="section--sm section--void">
-        <div className="container">
+      {/* ── Contact bar ── */}
+      <section className="section" style={{ textAlign: "center" }}>
+        <div className="container--narrow">
           <p
             style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "0.62rem",
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              color: "var(--dim)",
-              textAlign: "center",
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(1.4rem, 3vw, 2rem)",
+              fontWeight: 800,
+              color: "var(--white)",
               marginBottom: "1.5rem",
             }}
           >
-            Certifications &amp; Affiliations
+            +1 (619) 880-0684
           </p>
           <div
             style={{
               display: "flex",
+              gap: "1.5rem",
               justifyContent: "center",
-              alignItems: "center",
-              gap: "clamp(1.5rem, 4vw, 3.5rem)",
               flexWrap: "wrap",
+              marginBottom: "2rem",
             }}
           >
-            {["UTD", "IANTD", "RAID International", "NSS-CDS", "Cave Divers Association"].map((org) => (
-              <span
-                key={org}
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: "clamp(0.85rem, 1.5vw, 1rem)",
-                  fontWeight: 700,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  color: "var(--dim)",
-                }}
-              >
-                {org}
-              </span>
-            ))}
+            <a
+              href="https://www.facebook.com/gardnerunderwater/"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/gardnerunderwater/"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              Instagram
+            </a>
+            <a
+              href="https://www.youtube.com/@thedivetable"
+              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+            >
+              YouTube
+            </a>
           </div>
+          <Link href="/contact" className="btn btn-primary btn-lg">
+            Book Your Course
+          </Link>
         </div>
       </section>
     </>
