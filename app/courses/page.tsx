@@ -4,180 +4,173 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Courses",
   description:
-    "The full Gardner Underwater course curriculum: UTD fundamentals, technical diving, CCR, cave diving, sidemount, and leadership programs.",
+    "Gardner Underwater course curriculum: foundational, technical, DAN first aid, scuba coaching, and specialty courses.",
 };
 
 type Course = {
   category: string;
-  level: string;
   title: string;
-  duration: string;
+  tagline: string;
   desc: string;
-  bullets: string[];
-  cert: string;
-  prerequisites: string;
+  duration: string;
 };
 
 const courses: Course[] = [
+  // ── Technical Training ─────────────────────────────────────────────
   {
-    category: "Fundamentals",
-    level: "All Levels",
-    title: "UTD Basic / Essentials",
-    duration: "2–3 days",
-    desc: "The foundation everything else is built on. If you are new to diving or want to rebuild your fundamentals from scratch, this is where you start. Buoyancy, trim, situational awareness, and the habits that keep you alive.",
-    bullets: [
-      "Buoyancy and trim fundamentals",
-      " situational awareness protocols",
-      "Team diving basics",
-      "Problem recognition and management",
-      "Proper equipment configuration",
-    ],
-    cert: "UTD Essentials / Basic",
-    prerequisites: "Open Water (or equivalent)",
+    category: "Technical Training",
+    title: "Essentials of Technical Diving",
+    tagline: "Transition From Recreational To Technical",
+    desc: "The Essentials of Technical Diving is the first step to move you from 'Recreational' diver to 'Technical' Diver and gives you all the personal skills you need to move to a technical training program. Essentials of Tec is a personal skills class that prepares you for technical depths by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and deco bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
+    duration: "4 Days*",
   },
   {
-    category: "Fundamentals",
-    level: "Intermediate",
-    title: "UTD Level 1 / Certec",
-    duration: "3–4 days",
-    desc: "Proper breathing, stage management, and team protocols. The first real step into technical diving methodology — the kind of training that changes how you think about every dive.",
-    bullets: [
-      "Stage breathing and gas management",
-      "Primary / backup team protocols",
-      "Hovering trim with stage bottles",
-      "Simulated deco procedures",
-      "Underwater communication systems",
-    ],
-    cert: "UTD Level 1 / Certec",
-    prerequisites: "UTD Basic or equivalent",
+    category: "Technical Training",
+    title: "Doubles (Backmount or Sidemount)",
+    tagline: "Learn To Dive Doubles",
+    desc: "The Purpose of the Doubles MINI is to introduce and train a diver in the use of either double tank back mount or side mount configurations. The course focuses on cultivating the practical, normal, and emergency skills required by all double tank divers, including buoyancy control, emergency procedures, and care and maintenance.",
+    duration: "1–2 Days*",
+  },
+
+  // ── DAN First Aid Training ─────────────────────────────────────────
+  {
+    category: "DAN First Aid Training",
+    title: "Diving First Aid for Professional Divers (DFA Pro)",
+    tagline: "",
+    desc: "DAN's Diving First Aid for Professional Divers course is designed for commercial, professional, aquarium, and scientific divers, and it provides knowledge and first aid skills specifically for these work environments. DFA Pro includes all elements of the DAN BLS and EO2 courses and includes material on neurological assessment and first aid for hazardous marine life injuries.",
+    duration: "",
   },
   {
-    category: "Technical",
-    level: "Advanced",
-    title: "UTD Tech 1",
-    duration: "4–5 days",
-    desc: "Your first real decompression diving. We go beyond no-decompression limits, train proper deco procedures, and build the habits that make deco diving routine rather than scary.",
-    bullets: [
-      "Full deco procedures and planning",
-      "Multiple gas management",
-      "Altitude and flying after diving protocols",
-      "SOR / bailout procedures",
-      "Team abort criteria and execution",
-    ],
-    cert: "UTD Tech 1",
-    prerequisites: "UTD Level 1, 25 logged dives",
+    category: "DAN First Aid Training",
+    title: "Basic Life Support: CPR and First Aid (BLS)",
+    tagline: "",
+    desc: "This fundamental course prepares you to provide proper care for life-threatening illnesses or injuries until professional emergency medical care is available. The life-support skills taught in this course include one- and two-rescuer CPR for adults, children and infants. Use of automatic external defibrillators, bleeding management, assisting a choking victims and responding to a person in shock. The first aid skills taught include conducting secondary assessments, splinting and responding to medical emergencies.",
+    duration: "",
   },
   {
-    category: "Technical",
-    level: "Advanced",
-    title: "UTD Tech 2",
-    duration: "4–5 days",
-    desc: "Advanced deco diving including pure O2 and high-oxygen deco procedures. Longer bottoms, more complex planning, greater team demands.",
-    bullets: [
-      "Pure O2 deco procedures",
-      "Advanced gas planning (fly / soar)",
-      "Multi-gas CCR crossover",
-      "Deep stop protocols",
-      "Complex team management",
-    ],
-    cert: "UTD Tech 2",
-    prerequisites: "UTD Tech 1, 50 logged dives",
+    category: "DAN First Aid Training",
+    title: "Emergency Oxygen for Scuba Diving Injuries (EO2)",
+    tagline: "",
+    desc: "The DAN Emergency Oxygen for Scuba Diving Injuries course teaches you how to administer life-saving oxygen first aid to divers who may be suffering from decompression illness (DCI). Additionally, this course will teach you how to recognize the signs and symptoms of decompression illness and respond to them accordingly.",
+    duration: "",
+  },
+
+  // ── Scuba Coaching ────────────────────────────────────────────────
+  {
+    category: "Scuba Coaching",
+    title: "Scuba Coaching",
+    tagline: "",
+    desc: "Coaching is a unique training model built for all levels of divers wanting to achieve gains in their diving. Great scuba training does not have to be focused on the outcome. It can be about the process. Utilizing a thorough, structured, and weekly process, coaching includes all the aspects to make you a better, well rounded diver.",
+    duration: "",
+  },
+
+  // ── Foundational Training ────────────────────────────────────────
+  {
+    category: "Foundational Training",
+    title: "Essentials of Recreational Diving",
+    tagline: "Become a \"Thinking Diver\"",
+    desc: "Essentials of Rec is a skills class for certified divers. It brings you into the UTD diving system training us in all the techniques we use – proper buoyancy control through breathing, horizontal trim in the water, propulsion techniques that give you precise control, and much more.",
+    duration: "3 Days*",
   },
   {
-    category: "CCR",
-    level: "Technical",
-    title: "CCR — JJ-CCR Fundamentals",
-    duration: "4–5 days",
-    desc: "Closed-circuit rebreather diving from first breath. The JJ-CCR is one of the most reliable recreational CCRs and a legitimate pathway to extended technical diving. You learn the scrubber, the loop, the bailout — the whole thing.",
-    bullets: [
-      "CCR equipment and configuration",
-      "Breathing loop management",
-      "Scrubber duration planning",
-      "Bailout procedures and totals",
-      "Dive planning for CCR",
-    ],
-    cert: "CCR Basic / Normoxic",
-    prerequisites: "UTD Tech 1 or equivalent",
+    category: "Foundational Training",
+    title: "Open Water Diver / Recreational 1",
+    tagline: "Become a Scuba Diver",
+    desc: "The Open Water Diver course is an entry level class designed to teach NON-certified divers to be safe and comfortable while enjoying the wonders of our oceans, lakes and other waters. This class is structured to prepare divers for recreational diving using proper equipment and proper diving techniques. Recreational 1 adds Nitrox as a breathing gas.",
+    duration: "4 Days*",
   },
   {
-    category: "CCR",
-    level: "Technical",
-    title: "CCR — KISS Side Mount CCR",
-    duration: "3–4 days",
-    desc: "KISS-side-mount CCR training for maximum flexibility and minimum drag. Ideal for shallow deco diving and a perfect complement to a sidemount cave configuration.",
-    bullets: [
-      "KISS-side-mount CCR configuration",
-      "In-water bubble checking",
-      "Loop management in sidemount",
-      "Bailout procedures",
-      "Dive planning and gas management",
-    ],
-    cert: "KISS CCR Certified",
-    prerequisites: "Sidemount certified, 30 logged dives",
+    category: "Foundational Training",
+    title: "Recreational 2 / Advanced Open Water",
+    tagline: "Expand Your Diving To Deeper Depths, Night, and Navigation",
+    desc: "The Recreational 2 and Advanced Open Water Diver (Rec 2 and AOW) course is the next step for recreational divers to expand their diving to slightly deeper depths with more advanced gases. Rec 2/AOW is a modular class structured to prepare divers for a wider range of environmental conditions and more advanced recreational diving using proper equipment, diving techniques and breathing mixtures including a thorough knowledge of the use of Nitrox.",
+    duration: "2–3 Days*",
   },
   {
-    category: "Cave",
-    level: "Expert",
-    title: "IANTD / UTD Full Cave",
-    duration: "6–8 days",
-    desc: "The definitive cave diving certification. This is the training that separates overhead environment diving from everything else. Permanent primary lights, reel use, jump / gap procedures, complex line circuits, gas management in zero visibility.",
-    bullets: [
-      "Permanent primary light configuration",
-      "Tricky and gap procedures",
-      "Complex line circuits",
-      "Zero-visibility search procedures",
-      "Full cave team protocols",
-    ],
-    cert: "IANTD Full Cave / UTD Cave 1",
-    prerequisites: "Full cave prerequisites apply — contact for assessment",
-  },
-  {
-    category: "Sidemount",
-    level: "Intermediate+",
-    title: "Sidemount Specialist",
-    duration: "2–3 days",
-    desc: "Maximum flexibility, minimum drag. From basic sidemount configuration to cave-ready setups. Sidemount is not just about comfort — it changes how you manage gas, navigate, and interact with the environment.",
-    bullets: [
-      "Sidemount harness and rig configuration",
-      "Gas management in sidemount",
-      "Tank switching procedures",
-      "Sidemount in restricted spaces",
-      "Cave-ready sidemount setups",
-    ],
-    cert: "Sidemount Specialist",
-    prerequisites: "Open Water or equivalent",
-  },
-  {
-    category: "Leadership",
-    level: "Intermediate",
+    category: "Foundational Training",
     title: "Rescue Diver",
-    duration: "3 days",
-    desc: "Problem recognition, management, and resolution in a team context. The course that makes you useful to your team — not just competent as an individual.",
-    bullets: [
-      "Problem recognition protocols",
-      "Panicked diver management",
-      "Unconscious diver rescue",
-      "Emergency equipment deployment",
-      "Team rescue coordination",
-    ],
-    cert: "UTD / RAID Rescue Diver",
-    prerequisites: "UTD Level 1 or equivalent, 30 logged dives",
+    tagline: "Be Prepared and Ready To Handle Emergencies",
+    desc: "Rescue and Emergency Procedures may be one of the most valuable courses any diver can take. The Rescue Diver course is designed to prepare the student for a variety of emergency situations and is centered around both self-rescue and buddy-rescue. The Prerequisites for the UTD Rescue Diver course include First Aid/CPR/AED/Oxygen administration certifications.",
+    duration: "2–3 Days*",
   },
   {
-    category: "Leadership",
-    level: "Leadership",
-    title: "Instructor Development",
-    duration: "5–7 days",
-    desc: "For divers who want to teach. We do not train instructors to check boxes — we train instructors who can actually convey skill and judgment to students. Contact Jay directly to discuss requirements.",
-    bullets: [
-      "Instructional methodology",
-      "Confined water teaching skills",
-      "Open water teaching evaluation",
-      "Risk management for instructors",
-      "Student evaluation and feedback",
-    ],
-    cert: "UTD / IANTD Instructor",
-    prerequisites: "Varies by agency — contact for assessment",
+    category: "Foundational Training",
+    title: "ESM",
+    tagline: "UTD's Extreme Scuba Makeover",
+    desc: "UTD's Extreme Scuba Makeover is an entry level class designed to teach certified divers the foundational trim, buoyancy, and balance skills to be safe and comfortable in the water. This mini-class is structured to prepare divers for recreational diving and more advanced UTD classes.",
+    duration: "1 Day*",
+  },
+
+  // ── Specialties & Minis ──────────────────────────────────────────
+  {
+    category: "Specialties & Minis",
+    title: "IDC Prep",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Drysuit Diver",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "SMB/Surface Marker Buoy MINI",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Scooter/DPV",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Propulsion MINI and/or Back Kick MINI",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Night Diver MINI",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Navigation MINI",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Cylinder and Valve Technician",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Nitrox Diver",
+    tagline: "",
+    desc: "",
+    duration: "",
+  },
+  {
+    category: "Specialties & Minis",
+    title: "Stage and/or Deco Bottle MINI",
+    tagline: "",
+    desc: "",
+    duration: "",
   },
 ];
 
@@ -202,7 +195,7 @@ export default function CoursesPage() {
               marginBottom: "1.5rem",
             }}
           >
-            Courses built for actual skill.
+            The Courses.
           </h1>
           <p
             style={{
@@ -212,9 +205,8 @@ export default function CoursesPage() {
               lineHeight: 1.75,
             }}
           >
-            Every course here is designed to produce real competence — not to check a box on the way to
-            the next certification level. Look through the curriculum. If you are not sure where to start,
-            contact Jay.
+            Every course here is taught by Jay Gardner. If you are not sure where to start,
+            contact me and we will figure it out together.
           </p>
         </div>
       </section>
@@ -259,41 +251,19 @@ export default function CoursesPage() {
                   {catCourses.map((course) => (
                     <div key={course.title} className="card">
                       <div className="card-body">
-                        <div
+                        <span
                           style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "flex-start",
+                            fontFamily: "'JetBrains Mono', monospace",
+                            fontSize: "0.62rem",
+                            letterSpacing: "0.15em",
+                            textTransform: "uppercase",
+                            color: "var(--gold)",
+                            display: "block",
                             marginBottom: "0.75rem",
-                            flexWrap: "wrap",
-                            gap: "0.5rem",
                           }}
                         >
-                          <span
-                            style={{
-                              fontFamily: "'JetBrains Mono', monospace",
-                              fontSize: "0.62rem",
-                              letterSpacing: "0.15em",
-                              textTransform: "uppercase",
-                              color: "var(--gold)",
-                            }}
-                          >
-                            {course.category}
-                          </span>
-                          <span
-                            style={{
-                              fontFamily: "'JetBrains Mono', monospace",
-                              fontSize: "0.6rem",
-                              letterSpacing: "0.1em",
-                              color: "var(--dim)",
-                              background: "var(--navy)",
-                              padding: "0.2rem 0.5rem",
-                              borderRadius: "2px",
-                            }}
-                          >
-                            {course.level}
-                          </span>
-                        </div>
+                          {course.category}
+                        </span>
 
                         <h3
                           style={{
@@ -308,76 +278,47 @@ export default function CoursesPage() {
                           {course.title}
                         </h3>
 
-                        <p
-                          style={{
-                            fontFamily: "'JetBrains Mono', monospace",
-                            fontSize: "0.62rem",
-                            color: "var(--muted)",
-                            marginBottom: "0.75rem",
-                          }}
-                        >
-                          {course.duration} · {course.cert}
-                        </p>
-
-                        <p
-                          style={{
-                            fontSize: "0.85rem",
-                            color: "var(--muted)",
-                            lineHeight: 1.7,
-                            marginBottom: "1rem",
-                          }}
-                        >
-                          {course.desc}
-                        </p>
-
-                        <ul
-                          style={{
-                            listStyle: "none",
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "0.35rem",
-                            marginBottom: "1.25rem",
-                          }}
-                        >
-                          {course.bullets.map((b) => (
-                            <li
-                              key={b}
-                              style={{
-                                display: "flex",
-                                gap: "0.5rem",
-                                fontSize: "0.82rem",
-                                color: "var(--muted)",
-                              }}
-                            >
-                              <span style={{ color: "var(--gold)", flexShrink: 0 }}>→</span>
-                              {b}
-                            </li>
-                          ))}
-                        </ul>
-
-                        <div
-                          style={{
-                            borderTop: "1px solid var(--border-dim)",
-                            paddingTop: "0.85rem",
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                            flexWrap: "wrap",
-                            gap: "0.5rem",
-                          }}
-                        >
-                          <span
+                        {course.tagline && (
+                          <p
                             style={{
                               fontFamily: "'JetBrains Mono', monospace",
-                              fontSize: "0.6rem",
-                              letterSpacing: "0.1em",
-                              textTransform: "uppercase",
-                              color: "var(--dim)",
+                              fontSize: "0.65rem",
+                              color: "var(--gold)",
+                              marginBottom: "0.75rem",
+                              letterSpacing: "0.05em",
                             }}
                           >
-                            Req: {course.prerequisites}
-                          </span>
-                        </div>
+                            {course.tagline}
+                          </p>
+                        )}
+
+                        {course.desc && (
+                          <p
+                            style={{
+                              fontSize: "0.85rem",
+                              color: "var(--muted)",
+                              lineHeight: 1.7,
+                              marginBottom: "1rem",
+                            }}
+                          >
+                            {course.desc}
+                          </p>
+                        )}
+
+                        {course.duration && (
+                          <p
+                            style={{
+                              fontFamily: "'JetBrains Mono', monospace",
+                              fontSize: "0.62rem",
+                              color: "var(--dim)",
+                              borderTop: "1px solid var(--border-dim)",
+                              paddingTop: "0.85rem",
+                              marginTop: "auto",
+                            }}
+                          >
+                            Course Duration: {course.duration}
+                          </p>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -385,6 +326,21 @@ export default function CoursesPage() {
               </div>
             );
           })}
+
+          {/* Duration footnote */}
+          <p
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              fontSize: "0.62rem",
+              color: "var(--dim)",
+              lineHeight: 1.6,
+              marginTop: "1rem",
+            }}
+          >
+            *The course duration is determined by a baseline of the abilities of the average students and
+            coupled with what we need to comfortably introduce the skills and go over the theory content.
+            Additional training days may be added based on the diver&apos;s need.
+          </p>
         </div>
       </section>
 
@@ -392,7 +348,7 @@ export default function CoursesPage() {
       <section className="section section--dark" style={{ textAlign: "center" }}>
         <div className="container--narrow">
           <span className="section-label" style={{ justifyContent: "center" }}>
-            Not Sure Where to Start?
+            Ready to book?
           </span>
           <h2
             style={{
@@ -409,7 +365,7 @@ export default function CoursesPage() {
             and where you want to go — I will tell you what it takes to get there.
           </p>
           <Link href="/contact" className="btn btn-primary">
-            Request a Call
+            Book Your Course
           </Link>
         </div>
       </section>
