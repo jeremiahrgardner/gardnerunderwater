@@ -40,7 +40,7 @@ export function Nav() {
           right: 0,
           zIndex: 100,
           transition: "background 0.3s, border-color 0.3s",
-          background: scrolled ? "rgba(11, 9, 5, 0.98)" : "transparent",
+          background: scrolled ? "rgba(245, 240, 230, 0.97)" : "transparent",
           borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
         }}
       >
@@ -59,14 +59,15 @@ export function Nav() {
               <Image src="/logo.png" alt="Gardner Underwater" fill style={{ objectFit: "contain" }} priority />
             </div>
             <span style={{
-              fontFamily: "'Anton', sans-serif",
-              fontSize: "1.05rem",
-              letterSpacing: "0.06em",
-              color: "var(--cream)",
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "0.85rem",
+              fontWeight: 800,
+              letterSpacing: "0.04em",
+              color: "var(--ink-dark)",
               textTransform: "uppercase",
-              lineHeight: 1,
+              lineHeight: 1.2,
             }}>
-              Gardner Underwater
+              Gardner<br />Underwater
             </span>
           </Link>
 
@@ -80,12 +81,11 @@ export function Nav() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.55rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    color: isActive ? "var(--gold)" : "var(--ash)",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: "0.78rem",
+                    fontWeight: isActive ? 600 : 400,
+                    letterSpacing: "0.03em",
+                    color: isActive ? "var(--ink-dark)" : "var(--ash)",
                     padding: "0.5rem 0.75rem",
                     transition: "color 0.15s",
                     textDecoration: "none",
@@ -98,10 +98,10 @@ export function Nav() {
                   {isActive && (
                     <span style={{
                       position: "absolute",
-                      bottom: "1px",
+                      bottom: "2px",
                       left: "0.75rem",
                       right: "0.75rem",
-                      height: "1px",
+                      height: "2px",
                       background: "var(--gold)",
                     }} />
                   )}
@@ -123,9 +123,9 @@ export function Nav() {
             className="hamburger"
             style={{ background: "none", border: "none", cursor: "pointer", padding: "0.5rem", display: "flex", flexDirection: "column", gap: "5px" }}
           >
-            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "transform 0.3s", transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
-            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "opacity 0.3s", opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "transform 0.3s", transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none" }} />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--ink-dark)", transition: "transform 0.3s", transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--ink-dark)", transition: "opacity 0.3s", opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--ink-dark)", transition: "transform 0.3s", transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none" }} />
           </button>
         </div>
       </header>
@@ -138,7 +138,7 @@ export function Nav() {
           position: "fixed",
           inset: 0,
           zIndex: 99,
-          background: "rgba(0, 0, 0, 0.92)",
+          background: "rgba(245, 240, 230, 0.85)",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "all" : "none",
           transition: "opacity 0.3s",
@@ -154,7 +154,7 @@ export function Nav() {
           top: 0, right: 0, bottom: 0,
           width: "min(320px, 90vw)",
           zIndex: 100,
-          background: "var(--void)",
+          background: "var(--canvas)",
           borderLeft: "1px solid var(--border)",
           padding: "5rem 2.5rem 2.5rem",
           display: "flex",
@@ -174,10 +174,11 @@ export function Nav() {
               onClick={() => setMenuOpen(false)}
               aria-current={isActive ? "page" : undefined}
               style={{
-                fontFamily: "'Anton', sans-serif",
-                fontSize: "2.2rem",
-                letterSpacing: "0.04em",
-                color: isActive ? "var(--gold)" : "var(--cream)",
+                fontFamily: "'Syne', sans-serif",
+                fontSize: "2rem",
+                fontWeight: 800,
+                letterSpacing: "0.02em",
+                color: isActive ? "var(--gold-dark)" : "var(--ink-dark)",
                 padding: "0.65rem 0",
                 borderBottom: "1px solid var(--border)",
                 textDecoration: "none",
@@ -194,7 +195,7 @@ export function Nav() {
       </div>
 
       <style>{`
-        .nav-link:hover { color: var(--cream) !important; }
+        .nav-link:hover { color: var(--ink-dark) !important; }
         @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
           .hamburger  { display: flex !important; }

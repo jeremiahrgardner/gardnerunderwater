@@ -12,8 +12,8 @@ const footerLinks = [
 export function Footer() {
   return (
     <footer style={{
-      background: "var(--void)",
-      borderTop: "1px solid var(--border)",
+      background: "var(--ink-dark)",
+      borderTop: "1.5px solid var(--border)",
     }}>
       {/* Gold strip */}
       <div className="gold-strip">
@@ -30,19 +30,20 @@ export function Footer() {
           {/* Brand */}
           <div>
             <p style={{
-              fontFamily: "'Anton', sans-serif",
-              fontSize: "1.5rem",
-              letterSpacing: "0.06em",
-              color: "var(--cream)",
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "1.4rem",
+              fontWeight: 800,
+              letterSpacing: "0.04em",
+              color: "var(--canvas)",
               textTransform: "uppercase",
               marginBottom: "1rem",
             }}>
               Gardner Underwater
             </p>
             <p style={{
-              fontFamily: "'Bitter', serif",
+              fontFamily: "'DM Sans', Arial, sans-serif",
               fontSize: "0.85rem",
-              color: "var(--ash)",
+              color: "var(--dim)",
               lineHeight: 1.8,
               maxWidth: "200px",
               marginBottom: "1.5rem",
@@ -50,7 +51,7 @@ export function Footer() {
               Precision scuba instruction for dedicated divers.<br />San Diego, California.
             </p>
             <p style={{
-              fontFamily: "'Space Mono', monospace",
+              fontFamily: "'JetBrains Mono', monospace",
               fontSize: "0.65rem",
               color: "var(--gold)",
               letterSpacing: "0.1em",
@@ -65,7 +66,7 @@ export function Footer() {
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
               {footerLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover-gold" style={{ fontFamily: "'Bitter', serif", fontSize: "0.9rem", color: "var(--ash)", transition: "color 0.15s" }}>
+                  <Link href={link.href} className="hover-gold" style={{ fontFamily: "'DM Sans', Arial, sans-serif", fontSize: "0.9rem", color: "var(--dim)", transition: "color 0.15s" }}>
                     {link.label}
                   </Link>
                 </li>
@@ -79,7 +80,7 @@ export function Footer() {
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
               {["UTD", "IANTD", "RAID", "NSS-CDS"].map((cert) => (
                 <li key={cert}>
-                  <span style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.75rem", color: "var(--ash)", letterSpacing: "0.1em" }}>{cert}</span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.75rem", color: "var(--dim)", letterSpacing: "0.1em" }}>{cert}</span>
                 </li>
               ))}
             </ul>
@@ -94,7 +95,7 @@ export function Footer() {
                 { href: "https://www.instagram.com/gardnerunderwater/", label: "Instagram" },
                 { href: "https://www.youtube.com/@thedivetable", label: "YouTube" },
               ].map((s) => (
-                <a key={s.label} href={s.href} className="hover-gold" style={{ fontFamily: "'Bitter', serif", fontSize: "0.9rem", color: "var(--ash)", transition: "color 0.15s" }}>
+                <a key={s.label} href={s.href} className="hover-gold" style={{ fontFamily: "'DM Sans', Arial, sans-serif", fontSize: "0.9rem", color: "var(--dim)", transition: "color 0.15s" }}>
                   {s.label}
                 </a>
               ))}
@@ -103,7 +104,7 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ height: "1px", background: "var(--border)", marginBottom: "1.5rem" }} />
+        <div style={{ height: "1px", background: "rgba(245, 240, 230, 0.1)", marginBottom: "1.5rem" }} />
 
         {/* Bottom */}
         <div style={{
@@ -114,10 +115,10 @@ export function Footer() {
           gap: "0.75rem",
           paddingBottom: "clamp(1.5rem, 3vw, 2rem)",
         }}>
-          <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.58rem", color: "var(--dim)", letterSpacing: "0.08em" }}>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", color: "rgba(245,240,230,0.3)", letterSpacing: "0.08em" }}>
             © {new Date().getFullYear()} Gardner Underwater
           </p>
-          <p style={{ fontFamily: "'Anton', sans-serif", fontSize: "0.85rem", letterSpacing: "0.2em", color: "var(--gold)", opacity: 0.4 }}>
+          <p style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.8rem", fontWeight: 800, letterSpacing: "0.15em", color: "var(--gold)", opacity: 0.5 }}>
             EYES OPEN · BRAIN ON · UNIFIED TEAM
           </p>
         </div>
