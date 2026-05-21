@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Training",
@@ -13,51 +14,132 @@ export default function TrainingPage() {
       {/* ── Hero ── */}
       <section className="page-hero" style={{ background: "var(--void)" }}>
         <div className="container">
-          <span className="section-label">How We Train</span>
-          <h1
+          <ScrollReveal>
+            <span className="section-label">How We Train</span>
+          </ScrollReveal>
+
+          <div
             style={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: "0",
+            }}
+          >
+            <ScrollReveal delay={80}>
+              <h1
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "clamp(2rem, 5vw, 3.8rem)",
+                  fontWeight: 800,
+                  lineHeight: 1.08,
+                  color: "var(--white)",
+                  maxWidth: "22ch",
+                  marginBottom: "0",
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                Training designed to help you achieve the highest standards of excellence in your
+                diving and unlock your path forward in your diving career.
+              </h1>
+            </ScrollReveal>
+
+            <ScrollReveal delay={160}>
+              <p
+                style={{
+                  fontSize: "1.05rem",
+                  color: "var(--muted)",
+                  maxWidth: "58ch",
+                  lineHeight: 1.8,
+                  marginTop: "2rem",
+                  fontWeight: 300,
+                }}
+              >
+                It starts with a simple philosophy: you pay for{" "}
+                <strong style={{ color: "var(--gold)" }}>training</strong> but you earn certification.
+                Your focus will be on the process of training to meet the highest level of standards.
+                Certification is the outcome.
+              </p>
+            </ScrollReveal>
+          </div>
+
+          {/* Decorative oversized number */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              right: "clamp(1rem, 5vw, 4rem)",
+              bottom: "-1rem",
               fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(2rem, 5vw, 4rem)",
+              fontSize: "clamp(8rem, 18vw, 16rem)",
               fontWeight: 800,
-              lineHeight: 1.05,
-              color: "var(--white)",
-              maxWidth: "28ch",
-              marginBottom: "1.5rem",
+              color: "transparent",
+              WebkitTextStroke: "1px var(--border)",
+              lineHeight: 1,
+              letterSpacing: "-0.06em",
+              userSelect: "none",
+              pointerEvents: "none",
+              zIndex: 0,
             }}
           >
-            Training designed to help you achieve the highest standards of excellence in your
-            diving and unlock your path forward in your diving career.
-          </h1>
-          <p
-            style={{
-              fontSize: "1rem",
-              color: "var(--muted)",
-              maxWidth: "62ch",
-              lineHeight: 1.75,
-            }}
-          >
-            It starts with a simple philosophy: you pay for{" "}
-            <strong style={{ color: "var(--gold)" }}>training</strong> but you earn certification.
-            Your focus will be on the process of training to meet the highest level of standards.
-            Certification is the outcome.
-          </p>
+            01
+          </div>
         </div>
       </section>
 
       {/* ── The How ── */}
-      <section className="section section--dark">
+      <section className="section section--dark" style={{ position: "relative", overflow: "hidden" }}>
+        {/* Background texture line */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "clamp(1.25rem, 4vw, 3rem)",
+            width: "1px",
+            height: "100%",
+            background: "linear-gradient(to bottom, transparent, var(--border) 20%, var(--border) 80%, transparent)",
+          }}
+        />
+
         <div className="container">
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.6rem, 3vw, 2.5rem)",
-              fontWeight: 800,
-              color: "var(--white)",
-              marginBottom: "2.5rem",
-            }}
-          >
-            THE HOW
-          </h2>
+          <ScrollReveal>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                gap: "1.5rem",
+                marginBottom: "4rem",
+                borderBottom: "1px solid var(--border)",
+                paddingBottom: "2rem",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.25em",
+                  color: "var(--gold)",
+                  textTransform: "uppercase",
+                  paddingTop: "0.3rem",
+                }}
+              >
+                02
+              </span>
+              <h2
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
+                  fontWeight: 400,
+                  color: "var(--muted)",
+                  letterSpacing: "0.3em",
+                  textTransform: "uppercase",
+                  margin: 0,
+                }}
+              >
+                THE HOW
+              </h2>
+            </div>
+          </ScrollReveal>
 
           {[
             {
@@ -85,112 +167,311 @@ export default function TrainingPage() {
               body: "We conduct classes either at our homebase (San Diego, CA), your homebase (wherever you call home), or anywhere in the world (wherever you'd like to train).",
             },
           ].map((item, i) => (
-            <div
-              key={item.title}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "auto 1fr",
-                gap: "1.5rem",
-                alignItems: "start",
-                marginBottom: i < 5 ? "2rem" : "0",
-              }}
-            >
-              <span
+            <ScrollReveal key={item.title} delay={i * 80}>
+              <div
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: "0.62rem",
-                  letterSpacing: "0.15em",
-                  color: "var(--gold)",
-                  paddingTop: "0.2rem",
+                  display: "grid",
+                  gridTemplateColumns: "clamp(3rem, 6vw, 4.5rem) 1fr",
+                  gap: "clamp(1rem, 3vw, 2.5rem)",
+                  alignItems: "start",
+                  marginBottom: i < 5 ? "clamp(2rem, 4vw, 3.5rem)" : "0",
+                  position: "relative",
                 }}
               >
-                0{i + 1}.
-              </span>
-              <div>
-                <h3
+                {/* Vertical connector line */}
+                {i < 5 && (
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "clamp(1.1rem, 2vw, 1.6rem)",
+                      top: "clamp(1.8rem, 3vw, 2.4rem)",
+                      width: "1px",
+                      height: "calc(100% + clamp(2rem, 4vw, 3.5rem))",
+                      background:
+                        "linear-gradient(to bottom, var(--gold), var(--border))",
+                      opacity: 0.3,
+                      pointerEvents: "none",
+                    }}
+                  />
+                )}
+
+                <span
                   style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "1.1rem",
-                    fontWeight: 700,
-                    color: "var(--white)",
-                    marginBottom: "0.5rem",
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "clamp(0.55rem, 1vw, 0.7rem)",
+                    letterSpacing: "0.1em",
+                    color: "var(--gold)",
+                    paddingTop: "0.25rem",
+                    fontWeight: 500,
                   }}
                 >
-                  {item.title}
-                </h3>
-                <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.75 }}>
-                  {item.body}
-                </p>
+                  0{i + 1}.
+                </span>
+                <div>
+                  <h3
+                    style={{
+                      fontFamily: "'Syne', sans-serif",
+                      fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)",
+                      fontWeight: 700,
+                      color: "var(--white)",
+                      marginBottom: "0.6rem",
+                      letterSpacing: "-0.01em",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "clamp(0.88rem, 1.2vw, 0.97rem)",
+                      color: "var(--muted)",
+                      lineHeight: 1.8,
+                      maxWidth: "64ch",
+                      fontWeight: 300,
+                    }}
+                  >
+                    {item.body}
+                  </p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* ── The Agencies ── */}
-      <section className="section">
+      <section className="section" style={{ position: "relative" }}>
         <div className="container">
-          <h2
+          <div
             style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.6rem, 3vw, 2.5rem)",
-              fontWeight: 800,
-              color: "var(--white)",
-              marginBottom: "1.5rem",
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: "3rem",
             }}
           >
-            THE AGENCIES
-          </h2>
-          <p
-            style={{
-              fontSize: "0.95rem",
-              color: "var(--muted)",
-              lineHeight: 1.8,
-              marginBottom: "1rem",
-              maxWidth: "68ch",
-            }}
-          >
-            We are proud to be a part of{" "}
-            <strong style={{ color: "var(--white)" }}>Unified Team Diving</strong>, an agency obsessed
-            with training <strong style={{ color: "var(--gold)" }}>Thinking Divers</strong>. UTD&apos;s roots
-            can be found in Hogarthian/DIR diving principles and equipment configuration. UTD has
-            continued to evolve and highlights consistency on multiple diving platforms offering over
-            60 courses from foundational to technical, cave, wreck, CCR, and more.
-          </p>
-          <p
-            style={{
-              fontSize: "0.95rem",
-              color: "var(--muted)",
-              lineHeight: 1.8,
-              marginBottom: "2rem",
-              maxWidth: "68ch",
-            }}
-          >
-            We are proud to be a part of{" "}
-            <strong style={{ color: "var(--white)" }}>Divers Alert Network</strong>, the world's most
-            recognized and respected dive safety organization. DAN promotes diver safety worldwide
-            through research, medicine, education &amp; emergency support.
-          </p>
-          <Link href="/contact" className="btn btn-primary">
-            Book Your Course
-          </Link>
+            <ScrollReveal>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "baseline",
+                  gap: "1.5rem",
+                  marginBottom: "2rem",
+                  borderBottom: "1px solid var(--border)",
+                  paddingBottom: "2rem",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "0.6rem",
+                    letterSpacing: "0.25em",
+                    color: "var(--gold)",
+                    textTransform: "uppercase",
+                    paddingTop: "0.3rem",
+                  }}
+                >
+                  03
+                </span>
+                <h2
+                  style={{
+                    fontFamily: "'Syne', sans-serif",
+                    fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
+                    fontWeight: 400,
+                    color: "var(--muted)",
+                    letterSpacing: "0.3em",
+                    textTransform: "uppercase",
+                    margin: 0,
+                  }}
+                >
+                  THE AGENCIES
+                </h2>
+              </div>
+            </ScrollReveal>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(1.5rem, 3vw, 2.5rem)" }}>
+              <ScrollReveal delay={100}>
+                <div
+                  style={{
+                    background: "var(--abyss)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "4px",
+                    padding: "clamp(1.5rem, 3vw, 2.5rem)",
+                    height: "100%",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: "-1rem",
+                      right: "-1rem",
+                      fontFamily: "'Syne', sans-serif",
+                      fontSize: "5rem",
+                      fontWeight: 800,
+                      color: "transparent",
+                      WebkitTextStroke: "1px var(--border)",
+                      lineHeight: 1,
+                      letterSpacing: "-0.05em",
+                      userSelect: "none",
+                      pointerEvents: "none",
+                    }}
+                  >
+                    UTD
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "clamp(0.9rem, 1.2vw, 0.97rem)",
+                      color: "var(--muted)",
+                      lineHeight: 1.85,
+                      marginBottom: "1.5rem",
+                      maxWidth: "48ch",
+                      fontWeight: 300,
+                      position: "relative",
+                      zIndex: 1,
+                    }}
+                  >
+                    We are proud to be a part of{" "}
+                    <strong style={{ color: "var(--white)" }}>Unified Team Diving</strong>, an agency obsessed
+                    with training <strong style={{ color: "var(--gold)" }}>Thinking Divers</strong>. UTD&apos;s roots
+                    can be found in Hogarthian/DIR diving principles and equipment configuration. UTD has
+                    continued to evolve and highlights consistency on multiple diving platforms offering over
+                    60 courses from foundational to technical, cave, wreck, CCR, and more.
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <div
+                  style={{
+                    background: "var(--abyss)",
+                    border: "1px solid var(--border)",
+                    borderRadius: "4px",
+                    padding: "clamp(1.5rem, 3vw, 2.5rem)",
+                    height: "100%",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: "-1rem",
+                      right: "-1rem",
+                      fontFamily: "'Syne', sans-serif",
+                      fontSize: "5rem",
+                      fontWeight: 800,
+                      color: "transparent",
+                      WebkitTextStroke: "1px var(--border)",
+                      lineHeight: 1,
+                      letterSpacing: "-0.05em",
+                      userSelect: "none",
+                      pointerEvents: "none",
+                    }}
+                  >
+                    DAN
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "clamp(0.9rem, 1.2vw, 0.97rem)",
+                      color: "var(--muted)",
+                      lineHeight: 1.85,
+                      marginBottom: "1.5rem",
+                      maxWidth: "48ch",
+                      fontWeight: 300,
+                      position: "relative",
+                      zIndex: 1,
+                    }}
+                  >
+                    We are proud to be a part of{" "}
+                    <strong style={{ color: "var(--white)" }}>Divers Alert Network</strong>, the world's most
+                    recognized and respected dive safety organization. DAN promotes diver safety worldwide
+                    through research, medicine, education &amp; emergency support.
+                  </p>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <ScrollReveal delay={300}>
+              <Link href="/contact" className="btn btn-primary">
+                Book Your Course
+              </Link>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       {/* ── The Training Philosophy ── */}
-      <section className="section section--dark">
+      <section
+        className="section section--dark"
+        style={{ position: "relative", overflow: "hidden" }}
+      >
+        {/* Oversized background number */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            right: "-2rem",
+            top: "50%",
+            transform: "translateY(-50%)",
+            fontFamily: "'Syne', sans-serif",
+            fontSize: "clamp(10rem, 22vw, 20rem)",
+            fontWeight: 800,
+            color: "transparent",
+            WebkitTextStroke: "1px var(--border)",
+            lineHeight: 1,
+            letterSpacing: "-0.07em",
+            userSelect: "none",
+            pointerEvents: "none",
+            zIndex: 0,
+          }}
+        >
+          04
+        </div>
+
         <div className="container--narrow">
-          <h2
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.6rem, 3vw, 2.5rem)",
-              fontWeight: 800,
-              color: "var(--white)",
-              marginBottom: "2.5rem",
-            }}
-          >
-            THE TRAINING PHILOSOPHY
-          </h2>
+          <ScrollReveal>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                gap: "1.5rem",
+                marginBottom: "4rem",
+                borderBottom: "1px solid var(--border)",
+                paddingBottom: "2rem",
+                position: "relative",
+                zIndex: 1,
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.6rem",
+                  letterSpacing: "0.25em",
+                  color: "var(--gold)",
+                  textTransform: "uppercase",
+                  paddingTop: "0.3rem",
+                }}
+              >
+                04
+              </span>
+              <h2
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
+                  fontWeight: 400,
+                  color: "var(--muted)",
+                  letterSpacing: "0.3em",
+                  textTransform: "uppercase",
+                  margin: 0,
+                }}
+              >
+                THE TRAINING PHILOSOPHY
+              </h2>
+            </div>
+          </ScrollReveal>
 
           {[
             {
@@ -218,97 +499,159 @@ export default function TrainingPage() {
               title: "Feedback Is A Mirror",
               body: "Feedback, which is different from judgment, is the fuel for growth. Feedback is the process of holding a mirror to allow you to see what you can't otherwise see. I will always prioritize feedback as a tool in my coaching.",
             },
-          ].map((item) => (
-            <div
-              key={item.num}
-              style={{
-                borderBottom: "1px solid var(--border)",
-                paddingBottom: "2rem",
-                marginBottom: "2rem",
-              }}
-            >
-              <span
+          ].map((item, i) => (
+            <ScrollReveal key={item.num} delay={i * 100}>
+              <div
                 style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: "0.62rem",
-                  letterSpacing: "0.2em",
-                  color: "var(--gold)",
-                  display: "block",
-                  marginBottom: "0.75rem",
+                  borderBottom: "1px solid var(--border)",
+                  paddingBottom: "clamp(1.75rem, 3.5vw, 2.75rem)",
+                  marginBottom: "clamp(1.75rem, 3.5vw, 2.75rem)",
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
-                {item.num}.
-              </span>
-              <h3
-                style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: "1.25rem",
-                  fontWeight: 800,
-                  color: "var(--white)",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                {item.title}
-              </h3>
-              <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.8 }}>
-                {item.body}
-              </p>
-            </div>
+                <span
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "clamp(0.55rem, 1vw, 0.7rem)",
+                    letterSpacing: "0.2em",
+                    color: "var(--gold)",
+                    display: "block",
+                    marginBottom: "0.85rem",
+                    fontWeight: 500,
+                  }}
+                >
+                  {item.num}.
+                </span>
+                <h3
+                  style={{
+                    fontFamily: "'Syne', sans-serif",
+                    fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
+                    fontWeight: 800,
+                    color: "var(--white)",
+                    marginBottom: "0.85rem",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "clamp(0.88rem, 1.2vw, 0.97rem)",
+                    color: "var(--muted)",
+                    lineHeight: 1.85,
+                    maxWidth: "56ch",
+                    fontWeight: 300,
+                  }}
+                >
+                  {item.body}
+                </p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
 
       {/* ── Contact ── */}
-      <section className="section" style={{ textAlign: "center" }}>
+      <section className="section" style={{ textAlign: "center", position: "relative", overflow: "hidden" }}>
+        {/* Radial glow */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "clamp(20rem, 50vw, 40rem)",
+            height: "clamp(20rem, 50vw, 40rem)",
+            background:
+              "radial-gradient(circle, rgba(241, 194, 51, 0.04) 0%, transparent 70%)",
+            pointerEvents: "none",
+          }}
+        />
+
         <div className="container--narrow">
-          <p
-            style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.4rem, 3vw, 2rem)",
-              fontWeight: 800,
-              color: "var(--white)",
-              marginBottom: "1.5rem",
-            }}
-          >
-            +1 (619) 880-0684
-          </p>
-          <div
-            style={{
-              display: "flex",
-              gap: "1.5rem",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              marginBottom: "2rem",
-            }}
-          >
-            <a
-              href="https://www.facebook.com/gardnerunderwater/"
-              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+          <ScrollReveal>
+            <p
+              style={{
+                fontFamily: "'Syne', sans-serif",
+                fontSize: "clamp(1.3rem, 2.5vw, 2rem)",
+                fontWeight: 800,
+                color: "var(--white)",
+                marginBottom: "1.25rem",
+                letterSpacing: "-0.02em",
+              }}
             >
-              Facebook
-            </a>
-            <a
-              href="https://www.instagram.com/gardnerunderwater/"
-              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
+              +1 (619) 880-0684
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={100}>
+            <div
+              style={{
+                display: "flex",
+                gap: "clamp(1.25rem, 2.5vw, 2rem)",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                marginBottom: "2rem",
+              }}
             >
-              Instagram
-            </a>
-            <a
-              href="https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1"
-              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
-            >
-              Apple Podcasts
-            </a>
-            <a
-              href="https://www.youtube.com/@thedivetable"
-              style={{ color: "var(--muted)", fontSize: "0.85rem" }}
-            >
-              YouTube
-            </a>
-          </div>
-          <Link href="/contact" className="btn btn-primary btn-lg">
-            Book Your Course
-          </Link>
+              <a
+                href="https://www.facebook.com/gardnerunderwater/"
+                style={{
+                  color: "var(--muted)",
+                  fontSize: "0.85rem",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  letterSpacing: "0.08em",
+                  transition: "color 0.2s",
+                }}
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/gardnerunderwater/"
+                style={{
+                  color: "var(--muted)",
+                  fontSize: "0.85rem",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  letterSpacing: "0.08em",
+                  transition: "color 0.2s",
+                }}
+              >
+                Instagram
+              </a>
+              <a
+                href="https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1"
+                style={{
+                  color: "var(--muted)",
+                  fontSize: "0.85rem",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  letterSpacing: "0.08em",
+                  transition: "color 0.2s",
+                }}
+              >
+                Apple Podcasts
+              </a>
+              <a
+                href="https://www.youtube.com/@thedivetable"
+                style={{
+                  color: "var(--muted)",
+                  fontSize: "0.85rem",
+                  fontFamily: "'JetBrains Mono', monospace",
+                  letterSpacing: "0.08em",
+                  transition: "color 0.2s",
+                }}
+              >
+                YouTube
+              </a>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={200}>
+            <Link href="/contact" className="btn btn-primary btn-lg">
+              Book Your Course
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
     </>
