@@ -140,7 +140,7 @@ export default function TrainingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
                     fontWeight: 800,
-                    color: "var(--teal)",
+                    color: "var(--gold)",
                   }}
                 >
                   {item.value}
@@ -195,7 +195,7 @@ export default function TrainingPage() {
                     left: 0,
                     width: "3rem",
                     height: "2px",
-                    background: "var(--teal)",
+                    background: "var(--gold)",
                     marginTop: "clamp(1rem, 2vw, 1.5rem)",
                   }}
                 />
@@ -209,7 +209,7 @@ export default function TrainingPage() {
                     fontSize: "0.62rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "var(--teal)",
+                    color: "var(--gold)",
                     display: "block",
                     marginBottom: "0.5rem",
                   }}
@@ -251,7 +251,7 @@ export default function TrainingPage() {
                 </p>
                 <blockquote
                   style={{
-                    borderLeft: "2px solid var(--teal)",
+                    borderLeft: "2px solid var(--gold)",
                     paddingLeft: "1.25rem",
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "0.95rem",

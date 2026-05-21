@@ -137,7 +137,7 @@ export default function MerchPage() {
                       fontSize: "0.6rem",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       display: "block",
                       marginBottom: "0.4rem",
                     }}
@@ -160,7 +160,7 @@ export default function MerchPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "1.1rem",
                       fontWeight: 700,
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       marginBottom: "0.5rem",
                     }}
                   >
@@ -186,7 +186,7 @@ export default function MerchPage() {
                       fontSize: "0.68rem",
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       transition: "gap 0.2s",
                     }}
                   >

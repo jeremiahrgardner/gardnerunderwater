@@ -139,7 +139,7 @@ export function Nav() {
                         width: "4px",
                         height: "4px",
                         borderRadius: "50%",
-                        background: "var(--teal)",
+                        background: "var(--gold)",
                       }}
                     />
                   )}
@@ -251,7 +251,7 @@ export function Nav() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "1.4rem",
                 fontWeight: 700,
-                color: active ? "var(--teal)" : "var(--text)",
+                color: active ? "var(--gold)" : "var(--text)",
                 padding: "0.75rem 0",
                 borderBottom: "1px solid var(--border-dim)",
                 transition: "color 0.2s",

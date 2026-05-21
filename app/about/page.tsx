@@ -123,7 +123,7 @@ export default function AboutPage() {
                     key={cred}
                     style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}
                   >
-                    <span style={{ color: "var(--teal)", fontSize: "0.8rem" }}>◆</span>
+                    <span style={{ color: "var(--gold)", fontSize: "0.8rem" }}>◆</span>
                     <span style={{ fontSize: "0.88rem", color: "var(--muted)" }}>{cred}</span>
                   </div>
                 ))}
@@ -164,7 +164,7 @@ export default function AboutPage() {
                     fontSize: "0.62rem",
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "var(--teal)",
+                    color: "var(--gold)",
                     display: "block",
                     marginBottom: "0.75rem",
                   }}
@@ -286,7 +286,7 @@ export default function AboutPage() {
                       fontSize: "0.6rem",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       display: "block",
                       marginBottom: "0.5rem",
                     }}
@@ -309,7 +309,7 @@ export default function AboutPage() {
                   </p>
                 </div>
                 <div style={{ padding: "0.85rem 1.5rem", borderTop: "1px solid var(--border-dim)" }}>
-                  <span style={{ color: "var(--teal)", fontSize: "0.85rem" }}>Access →</span>
+                  <span style={{ color: "var(--gold)", fontSize: "0.85rem" }}>Access →</span>
                 </div>
               </a>
             ))}

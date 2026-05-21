@@ -63,7 +63,7 @@ export function Footer() {
                 fontSize: "0.62rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "var(--teal)",
+                color: "var(--gold)",
                 marginBottom: "1rem",
               }}
             >
@@ -95,7 +95,7 @@ export function Footer() {
                 fontSize: "0.62rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "var(--teal)",
+                color: "var(--gold)",
                 marginBottom: "1rem",
               }}
             >
@@ -118,7 +118,7 @@ export function Footer() {
                 fontSize: "0.62rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "var(--teal)",
+                color: "var(--gold)",
                 marginBottom: "1rem",
               }}
             >

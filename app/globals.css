@@ -13,8 +13,8 @@
   --navy:       #0f1f35;   /* elevated surface */
   --border:     #1a3050;   /* subtle borders */
   --border-dim: #0f2040;  /* dim borders */
-  --teal:       #0d9488;   /* primary accent */
-  --teal-glow:  #14b8a6;   /* hover accent */
+  --gold:       #f1c233;   /* primary accent */
+  --gold-bright:  #fcd34d;   /* hover accent */
   --cyan:       #22d3ee;   /* bright accent */
   --amber:      #f59e0b;   /* warm accent */
   --text:       #e2e8f0;   /* primary text */
@@ -82,14 +82,14 @@ img { max-width: 100%; display: block; }
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--void); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--teal); }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
 /* ── Text selection ── */
-::selection { background: var(--teal); color: var(--void); }
+::selection { background: var(--gold); color: var(--void); }
 
 /* ── Focus ── */
 :focus-visible {
-  outline: 2px solid var(--teal);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
   border-radius: 3px;
 }
@@ -120,7 +120,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -131,7 +131,7 @@ img { max-width: 100%; display: block; }
   display: inline-block;
   width: 2rem;
   height: 1px;
-  background: var(--teal);
+  background: var(--gold);
   opacity: 0.6;
 }
 
@@ -167,11 +167,11 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-primary {
-  background: var(--teal);
+  background: var(--gold);
   color: var(--void);
 }
 .btn-primary:hover {
-  background: var(--teal-glow);
+  background: var(--gold-bright);
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(13, 148, 136, 0.3);
 }
@@ -182,8 +182,8 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
 }
 .btn-outline:hover {
-  border-color: var(--teal);
-  color: var(--teal);
+  border-color: var(--gold);
+  color: var(--gold);
   transform: translateY(-2px);
 }
 
@@ -196,8 +196,8 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.1em;
 }
 .btn-ghost:hover {
-  color: var(--teal);
-  border-bottom-color: var(--teal);
+  color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
 /* ── Cards ── */
@@ -209,7 +209,7 @@ img { max-width: 100%; display: block; }
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover {
-  border-color: var(--teal);
+  border-color: var(--gold);
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
@@ -269,7 +269,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.68rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   margin-bottom: 1.5rem;
   opacity: 0;
   animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
@@ -327,7 +327,7 @@ img { max-width: 100%; display: block; }
 .scroll-line {
   width: 1px;
   height: 3rem;
-  background: linear-gradient(to bottom, var(--teal), transparent);
+  background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -376,7 +376,7 @@ img { max-width: 100%; display: block; }
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--teal);
+  border-color: var(--gold);
   box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
 }
 
@@ -410,13 +410,13 @@ img { max-width: 100%; display: block; }
 .accent-line {
   width: 3rem;
   height: 2px;
-  background: var(--teal);
+  background: var(--gold);
   margin: 1rem 0;
 }
 
 /* ── Quote block ── */
 .quote-block {
-  border-left: 2px solid var(--teal);
+  border-left: 2px solid var(--gold);
   padding-left: 1.75rem;
 }
 
@@ -436,8 +436,8 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Hover utilities (CSS-based — no JS required) ── */
-.hover-teal { transition: color 0.2s; }
-.hover-teal:hover { color: var(--teal); }
+.hover-gold { transition: color 0.2s; }
+.hover-gold:hover { color: var(--gold); }
 
 .hover-white { transition: color 0.2s; }
 .hover-white:hover { color: var(--white); }
@@ -454,7 +454,7 @@ a.card {
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 a.card:hover {
-  border-color: var(--teal);
+  border-color: var(--gold);
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   text-decoration: none;
@@ -469,7 +469,7 @@ a.card:hover {
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--gold);
   transition: gap 0.2s;
 }
 .arrow-link:hover { gap: 0.7rem; text-decoration: none; }

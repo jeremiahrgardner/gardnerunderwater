@@ -98,7 +98,7 @@ export default function PricingPage() {
                 key={tier.name}
                 style={{
                   background: tier.highlight ? "var(--navy)" : "var(--abyss)",
-                  border: tier.highlight ? "1px solid var(--teal)" : "1px solid var(--border)",
+                  border: tier.highlight ? "1px solid var(--gold)" : "1px solid var(--border)",
                   borderRadius: "4px",
                   padding: "clamp(1.75rem, 3vw, 2.5rem)",
                   display: "flex",
@@ -114,7 +114,7 @@ export default function PricingPage() {
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
                       color: "var(--void)",
-                      background: "var(--teal)",
+                      background: "var(--gold)",
                       padding: "0.25rem 0.6rem",
                       borderRadius: "2px",
                       alignSelf: "flex-start",
@@ -154,7 +154,7 @@ export default function PricingPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(1.8rem, 3vw, 2.2rem)",
                       fontWeight: 800,
-                      color: tier.highlight ? "var(--teal)" : "var(--white)",
+                      color: tier.highlight ? "var(--gold)" : "var(--white)",
                       lineHeight: 1,
                     }}
                   >
@@ -196,7 +196,7 @@ export default function PricingPage() {
                         color: "var(--muted)",
                       }}
                     >
-                      <span style={{ color: "var(--teal)", fontSize: "0.7rem" }}>◆</span>
+                      <span style={{ color: "var(--gold)", fontSize: "0.7rem" }}>◆</span>
                       {course}
                     </li>
                   ))}

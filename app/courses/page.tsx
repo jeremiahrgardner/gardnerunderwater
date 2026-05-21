@@ -275,7 +275,7 @@ export default function CoursesPage() {
                               fontSize: "0.62rem",
                               letterSpacing: "0.15em",
                               textTransform: "uppercase",
-                              color: "var(--teal)",
+                              color: "var(--gold)",
                             }}
                           >
                             {course.category}
@@ -349,7 +349,7 @@ export default function CoursesPage() {
                                 color: "var(--muted)",
                               }}
                             >
-                              <span style={{ color: "var(--teal)", flexShrink: 0 }}>→</span>
+                              <span style={{ color: "var(--gold)", flexShrink: 0 }}>→</span>
                               {b}
                             </li>
                           ))}

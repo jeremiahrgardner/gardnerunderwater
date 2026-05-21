@@ -103,7 +103,7 @@ export default function ContactPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <div>
                   <p className="form-label" style={{ marginBottom: "0.25rem" }}>Email</p>
-                  <a href="mailto:jay@gardnerunderwater.com" className="hover-teal" style={{ fontSize: "0.92rem" }}>
+                  <a href="mailto:jay@gardnerunderwater.com" className="hover-gold" style={{ fontSize: "0.92rem" }}>
                     jay@gardnerunderwater.com
                   </a>
                 </div>
@@ -121,7 +121,7 @@ export default function ContactPage() {
             <div
               style={{
                 background: "var(--void)",
-                border: "1px solid var(--teal)",
+                border: "1px solid var(--gold)",
                 borderRadius: "4px",
                 padding: "1.75rem",
               }}
@@ -151,7 +151,7 @@ export default function ContactPage() {
               <span className="section-label" style={{ marginBottom: "1rem" }}>From Students</span>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
                 {testimonials.map((t) => (
-                  <div key={t.author} style={{ borderLeft: "2px solid var(--teal)", paddingLeft: "1.25rem" }}>
+                  <div key={t.author} style={{ borderLeft: "2px solid var(--gold)", paddingLeft: "1.25rem" }}>
                     <blockquote
                       style={{
                         fontFamily: "'Syne', sans-serif",

@@ -71,7 +71,7 @@ export default function HomePage() {
                   fontFamily: "'JetBrains Mono', monospace",
                   fontSize: "0.62rem",
                   letterSpacing: "0.2em",
-                  color: "var(--teal)",
+                  color: "var(--gold)",
                   display: "block",
                   marginBottom: "0.75rem",
                 }}
@@ -192,7 +192,7 @@ export default function HomePage() {
                       fontSize: "0.62rem",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       display: "block",
                       marginBottom: "0.5rem",
                     }}
@@ -235,7 +235,7 @@ export default function HomePage() {
                   >
                     {course.level}
                   </span>
-                  <span style={{ color: "var(--teal)", fontSize: "0.85rem" }}>Learn more →</span>
+                  <span style={{ color: "var(--gold)", fontSize: "0.85rem" }}>Learn more →</span>
                 </div>
               </Link>
             ))}
@@ -275,7 +275,7 @@ export default function HomePage() {
           }}
         >
           <div style={{ maxWidth: "580px" }}>
-            <span className="section-label" style={{ color: "var(--teal)" }}>
+            <span className="section-label" style={{ color: "var(--gold)" }}>
               The Instructor
             </span>
             <h2
@@ -368,7 +368,7 @@ export default function HomePage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(2rem, 4vw, 3rem)",
                       fontWeight: 800,
-                      color: "var(--teal)",
+                      color: "var(--gold)",
                       lineHeight: 1,
                       marginBottom: "0.35rem",
                     }}
