@@ -39,10 +39,9 @@ export function Nav() {
           left: 0,
           right: 0,
           zIndex: 100,
-          transition: "background 0.4s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.4s, border-color 0.4s",
-          background: scrolled ? "rgba(5, 13, 24, 0.94)" : "transparent",
-          backdropFilter: scrolled ? "blur(20px)" : "none",
-          borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
+          transition: "background 0.4s, border-color 0.4s",
+          background: scrolled ? "rgba(5, 13, 24, 0.97)" : "transparent",
+          borderBottom: scrolled ? "1px solid var(--border-mid)" : "1px solid transparent",
         }}
       >
         <div
@@ -68,7 +67,7 @@ export function Nav() {
               textDecoration: "none",
             }}
           >
-            <div style={{ position: "relative", width: "36px", height: "36px", flexShrink: 0 }}>
+            <div style={{ position: "relative", width: "38px", height: "38px", flexShrink: 0 }}>
               <Image
                 src="/logo.png"
                 alt="Gardner Underwater"
@@ -80,11 +79,11 @@ export function Nav() {
             <span
               style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: "0.82rem",
-                fontWeight: 700,
-                letterSpacing: "0.04em",
+                fontSize: "0.78rem",
+                fontWeight: 900,
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "var(--white)",
+                color: "var(--off-white)",
                 lineHeight: 1.2,
               }}
             >
@@ -98,7 +97,7 @@ export function Nav() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.15rem",
+              gap: "0.1rem",
             }}
             className="desktop-nav"
           >
@@ -110,36 +109,19 @@ export function Nav() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: "0.8rem",
-                    fontWeight: isActive ? 500 : 400,
-                    color: isActive ? "var(--white)" : "rgba(255,255,255,0.55)",
-                    padding: "0.35rem 0.6rem",
-                    borderRadius: "3px",
-                    transition: "color 0.2s, background 0.2s",
-                    background: isActive ? "rgba(255,255,255,0.06)" : "transparent",
+                    fontFamily: "'JetBrains Mono', monospace",
+                    fontSize: "0.6rem",
+                    fontWeight: isActive ? 700 : 500,
+                    color: isActive ? "var(--gold)" : "rgba(245, 240, 232, 0.5)",
+                    padding: "0.4rem 0.7rem",
+                    transition: "color 0.2s",
                     textDecoration: "none",
-                    position: "relative",
                     whiteSpace: "nowrap",
+                    letterSpacing: "0.08em",
                   }}
                   className="nav-link"
                 >
                   {link.label}
-                  {isActive && (
-                    <span
-                      aria-hidden="true"
-                      style={{
-                        position: "absolute",
-                        bottom: "1px",
-                        left: "50%",
-                        transform: "translateX(-50%)",
-                        width: "4px",
-                        height: "4px",
-                        borderRadius: "50%",
-                        background: "var(--gold)",
-                      }}
-                    />
-                  )}
                 </Link>
               );
             })}
@@ -149,7 +131,7 @@ export function Nav() {
           <Link
             href="/contact"
             className="btn btn-primary hide-mobile"
-            style={{ fontSize: "0.65rem", padding: "0.6rem 1.25rem" }}
+            style={{ fontSize: "0.6rem", padding: "0.65rem 1.4rem" }}
           >
             Book Your Course
           </Link>
@@ -167,25 +149,25 @@ export function Nav() {
               padding: "0.5rem",
               flexDirection: "column",
               gap: "5px",
-              borderRadius: "4px",
+              borderRadius: "0",
             }}
           >
             <span
               style={{
                 display: "block",
-                width: "22px",
-                height: "1.5px",
-                background: "var(--white)",
+                width: "24px",
+                height: "2px",
+                background: "var(--off-white)",
                 transition: "transform 0.3s, opacity 0.3s",
-                transform: menuOpen ? "translateY(6.5px) rotate(45deg)" : "none",
+                transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none",
               }}
             />
             <span
               style={{
                 display: "block",
-                width: "22px",
-                height: "1.5px",
-                background: "var(--white)",
+                width: "24px",
+                height: "2px",
+                background: "var(--off-white)",
                 transition: "opacity 0.3s",
                 opacity: menuOpen ? 0 : 1,
               }}
@@ -193,11 +175,11 @@ export function Nav() {
             <span
               style={{
                 display: "block",
-                width: "22px",
-                height: "1.5px",
-                background: "var(--white)",
+                width: "24px",
+                height: "2px",
+                background: "var(--off-white)",
                 transition: "transform 0.3s, opacity 0.3s",
-                transform: menuOpen ? "translateY(-6.5px) rotate(-45deg)" : "none",
+                transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
               }}
             />
           </button>
@@ -211,7 +193,7 @@ export function Nav() {
           position: "fixed",
           inset: 0,
           zIndex: 99,
-          background: "rgba(2, 5, 10, 0.6)",
+          background: "rgba(2, 5, 10, 0.85)",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "all" : "none",
           transition: "opacity 0.3s",
@@ -232,16 +214,27 @@ export function Nav() {
           width: "min(320px, 88vw)",
           zIndex: 100,
           background: "var(--void)",
-          borderLeft: "1px solid var(--border)",
+          borderLeft: "1px solid var(--border-mid)",
           padding: "5rem 2rem 2rem",
           display: "flex",
           flexDirection: "column",
-          gap: "0.15rem",
+          gap: "0.1rem",
           transform: menuOpen ? "translateX(0)" : "translateX(100%)",
           transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
           overflowY: "auto",
         }}
       >
+        {/* Ornamental top corner */}
+        <div style={{
+          position: "absolute",
+          top: "1.5rem",
+          right: "1.5rem",
+          width: "16px",
+          height: "16px",
+          borderTop: "2px solid var(--gold)",
+          borderRight: "2px solid var(--gold)",
+        }} />
+
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (
@@ -252,12 +245,13 @@ export function Nav() {
               aria-current={isActive ? "page" : undefined}
               style={{
                 fontFamily: "'Syne', sans-serif",
-                fontSize: "1.3rem",
-                fontWeight: 700,
+                fontSize: "1.4rem",
+                fontWeight: 900,
                 color: isActive ? "var(--gold)" : "var(--text)",
-                padding: "0.8rem 0",
-                borderBottom: "1px solid var(--border-dim)",
+                padding: "0.85rem 0",
+                borderBottom: "1px solid var(--border)",
                 textDecoration: "none",
+                letterSpacing: "0.02em",
               }}
             >
               {link.label}
@@ -275,7 +269,7 @@ export function Nav() {
       </div>
 
       <style>{`
-        .nav-link:hover { color: var(--white) !important; background: rgba(255,255,255,0.05) !important; }
+        .nav-link:hover { color: var(--off-white) !important; }
         @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
           .hamburger  { display: flex !important; }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { CourseNav } from "@/components/CourseNav";
 
 export const metadata: Metadata = {
   title: "Courses",
@@ -117,6 +118,88 @@ const courses = [
     duration: "2-3 Days*",
     bullets: null,
   },
+
+  // ── Extensions & Specialties ──────────────────────────────────────
+  {
+    category: "Extensions & Specialties",
+    title: "IDC Prep",
+    tagline: "",
+    desc: "Prepare for instructor development by refining buoyancy, trim, propulsion, basic skills, S-drills, valve drills, SMB deployment, weighting, ascent strategies, and Rock Bottom gas planning to demonstration quality.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Drysuit Diver",
+    tagline: "",
+    desc: "Learn the practical, normal, and emergency skills required for drysuit diving, including buoyancy control, emergency procedures, and suit care and maintenance.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "SMB/Surface Marker Buoy Extension",
+    tagline: "",
+    desc: "Develop the skills to deploy, manage, and recover a surface marker buoy while maintaining buoyancy, control, and safe ascent procedures.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Scooter/DPV",
+    tagline: "",
+    desc: "Learn to safely operate, manage, and maintain a scooter or DPV while improving efficiency, awareness, communication, and team diving skills.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Propulsion and/or Back Kick Extension",
+    tagline: "",
+    desc: "Refine non-silting propulsion and positioning kicks while maintaining neutral buoyancy, trim, and control.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Night Diver Extension",
+    tagline: "",
+    desc: "Build the skills for night diving, including light management, light signals, buoyancy control, emergency procedures, and safe ascents and descents.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Navigation Extension",
+    tagline: "",
+    desc: "Learn underwater navigation using both natural references and compass techniques while maintaining buoyancy, awareness, and emergency readiness.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Cylinder and Valve Technician",
+    tagline: "",
+    desc: "Learn to visually inspect, maintain, and oxygen-clean scuba cylinders and valves using organized procedures and proper safety precautions.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Nitrox Diver",
+    tagline: "",
+    desc: "Learn to safely plan and dive with Nitrox 32, including gas analysis, oxygen exposure, maximum operating depths, gas planning, and safe diving practices.",
+    duration: "",
+    bullets: null,
+  },
+  {
+    category: "Extensions & Specialties",
+    title: "Stage and/or Deco Bottle Extension",
+    tagline: "",
+    desc: "Learn proper stage or deco bottle handling, including rigging, gas management, gas switching, bottle passing, and related emergency procedures.",
+    duration: "",
+    bullets: null,
+  },
 ];
 
 const categories = [...new Set(courses.map((c) => c.category))];
@@ -126,6 +209,7 @@ const categoryNumbers: Record<string, string> = {
   "DAN First Aid Training": "02",
   "Scuba Coaching": "03",
   "Foundational Training": "04",
+  "Extensions & Specialties": "05",
 };
 
 export default function CoursesPage() {
@@ -195,13 +279,74 @@ export default function CoursesPage() {
         </div>
       </section>
 
+      {/* ── Not sure? callout ── */}
+      <div
+        style={{
+          background: "var(--abyss)",
+          borderTop: "1px solid var(--border)",
+          borderBottom: "1px solid var(--border)",
+          padding: "clamp(1.5rem, 4vw, 2.5rem) 0",
+        }}
+      >
+        <div className="container">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "1.5rem",
+              flexWrap: "wrap",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <span
+                style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: "0.62rem",
+                  letterSpacing: "0.15em",
+                  textTransform: "uppercase",
+                  color: "var(--gold)",
+                  flexShrink: 0,
+                }}
+              >
+                Not sure where you fit?
+              </span>
+              <p
+                style={{
+                  fontSize: "clamp(0.85rem, 1.2vw, 0.95rem)",
+                  color: "var(--muted)",
+                  fontWeight: 300,
+                  lineHeight: 1.6,
+                  maxWidth: "52ch",
+                }}
+              >
+                Jay offers a free 15-minute call to help you find the right course for your goals and experience level.
+              </p>
+            </div>
+            <Link href="/contact" className="btn btn-primary" style={{ flexShrink: 0 }}>
+              Book a Free Call
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Sticky section nav ── */}
+      <CourseNav />
+
       {/* ── Course listing ── */}
       <section className="section">
         <div className="container">
           {categories.map((cat, catIndex) => {
             const catCourses = courses.filter((c) => c.category === cat);
+            const sectionIds: Record<string, string> = {
+              "Technical Training": "technical-training",
+              "DAN First Aid Training": "dan-first-aid-training",
+              "Scuba Coaching": "scuba-coaching",
+              "Foundational Training": "foundational-training",
+              "Extensions & Specialties": "extensions-specialties",
+            };
             return (
-              <div key={cat} style={{ marginBottom: "clamp(5rem, 10vw, 8rem)" }}>
+              <div key={cat} id={sectionIds[cat]} style={{ marginBottom: "clamp(5rem, 10vw, 8rem)" }}>
                 {/* Category header */}
                 <ScrollReveal>
                   <div
@@ -370,6 +515,24 @@ export default function CoursesPage() {
                             Course Duration: {course.duration}
                           </div>
                         )}
+
+                        <div
+                          style={{
+                            borderTop: "1px solid var(--border-dim)",
+                            padding: "clamp(0.85rem, 2vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem)",
+                          }}
+                        >
+                          <Link
+                            href="/contact"
+                            className="arrow-link"
+                            style={{ fontSize: "0.65rem" }}
+                          >
+                            Book Now
+                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                              <path d="M1 5h12M8.5 1l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </Link>
+                        </div>
                       </div>
                     </ScrollReveal>
                   ))}
