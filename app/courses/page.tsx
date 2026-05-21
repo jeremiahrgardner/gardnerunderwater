@@ -216,7 +216,7 @@ export default function CoursesPage() {
   return (
     <>
       {/* ── Page hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)" }}>
         <div className="container">
           <ScrollReveal>
             <span className="section-label">Full Curriculum</span>
@@ -230,7 +230,7 @@ export default function CoursesPage() {
                 fontWeight: 800,
                 lineHeight: 0.95,
                 letterSpacing: "-0.04em",
-                color: "var(--white)",
+                color: "var(--canvas)",
                 maxWidth: "18ch",
                 marginBottom: "0",
               }}
@@ -243,7 +243,7 @@ export default function CoursesPage() {
             <p
               style={{
                 fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 maxWidth: "54ch",
                 lineHeight: 1.8,
                 marginTop: "2rem",
@@ -282,7 +282,7 @@ export default function CoursesPage() {
       {/* ── Not sure? callout ── */}
       <div
         style={{
-          background: "var(--abyss)",
+          background: "var(--paper)",
           borderTop: "1px solid var(--border)",
           borderBottom: "1px solid var(--border)",
           padding: "clamp(1.5rem, 4vw, 2.5rem) 0",
@@ -314,7 +314,7 @@ export default function CoursesPage() {
               <p
                 style={{
                   fontSize: "clamp(0.85rem, 1.2vw, 0.95rem)",
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontWeight: 300,
                   lineHeight: 1.6,
                   maxWidth: "52ch",
@@ -376,7 +376,7 @@ export default function CoursesPage() {
                         fontFamily: "'Syne', sans-serif",
                         fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
                         fontWeight: 800,
-                        color: "var(--white)",
+                        color: "var(--canvas)",
                         letterSpacing: "-0.02em",
                       }}
                     >
@@ -424,7 +424,7 @@ export default function CoursesPage() {
                               fontFamily: "'Syne', sans-serif",
                               fontSize: "clamp(1.1rem, 1.8vw, 1.3rem)",
                               fontWeight: 700,
-                              color: "var(--white)",
+                              color: "var(--canvas)",
                               marginBottom: "0.5rem",
                               lineHeight: 1.25,
                               letterSpacing: "-0.01em",
@@ -452,7 +452,7 @@ export default function CoursesPage() {
                             <p
                               style={{
                                 fontSize: "clamp(0.85rem, 1.2vw, 0.95rem)",
-                                color: "var(--muted)",
+                                color: "var(--ash)",
                                 lineHeight: 1.75,
                                 marginBottom: "1.25rem",
                                 fontWeight: 300,
@@ -466,7 +466,7 @@ export default function CoursesPage() {
                             <ul
                               style={{
                                 fontSize: "clamp(0.82rem, 1.1vw, 0.9rem)",
-                                color: "var(--muted)",
+                                color: "var(--ash)",
                                 lineHeight: 1.75,
                                 marginBottom: "1.25rem",
                                 paddingLeft: "1.25rem",
@@ -507,7 +507,7 @@ export default function CoursesPage() {
                               fontFamily: "'JetBrains Mono', monospace",
                               fontSize: "0.6rem",
                               color: "var(--dim)",
-                              borderTop: "1px solid var(--border-dim)",
+                              borderTop: "1px solid var(--border)",
                               padding: "clamp(0.85rem, 2vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem)",
                               letterSpacing: "0.08em",
                             }}
@@ -518,7 +518,7 @@ export default function CoursesPage() {
 
                         <div
                           style={{
-                            borderTop: "1px solid var(--border-dim)",
+                            borderTop: "1px solid var(--border)",
                             padding: "clamp(0.85rem, 2vw, 1.25rem) clamp(1.5rem, 3vw, 2.5rem)",
                           }}
                         >
@@ -569,7 +569,7 @@ export default function CoursesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="section section--dark" style={{ textAlign: "center", position: "relative", overflow: "hidden" }}>
+      <section className="section section--ink" style={{ textAlign: "center", position: "relative", overflow: "hidden" }}>
         <div className="container--narrow">
           <ScrollReveal>
             <span className="section-label" style={{ justifyContent: "center" }}>
@@ -595,7 +595,7 @@ export default function CoursesPage() {
             <p
               style={{
                 fontSize: "clamp(0.95rem, 1.3vw, 1.05rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 marginBottom: "2.5rem",
                 lineHeight: 1.75,
                 fontWeight: 300,

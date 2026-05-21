@@ -25,7 +25,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)" }}>
         <div className="container">
           {/* Oversized section marker */}
           <div
@@ -70,7 +70,7 @@ export default function ContactPage() {
                   fontWeight: 800,
                   lineHeight: 0.95,
                   letterSpacing: "-0.04em",
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   marginBottom: "1.5rem",
                   maxWidth: "14ch",
                 }}
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(1rem, 2vw, 1.3rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
                   marginBottom: "2rem",
@@ -102,7 +102,7 @@ export default function ContactPage() {
               <p
                 style={{
                   fontSize: "1.05rem",
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   maxWidth: "52ch",
                   lineHeight: 1.8,
                   fontWeight: 300,
@@ -168,7 +168,7 @@ export default function ContactPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                     fontWeight: 400,
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     letterSpacing: "0.3em",
                     textTransform: "uppercase",
                     margin: 0,
@@ -204,10 +204,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "0.9rem 1.1rem",
-                      background: "var(--abyss)",
+                      background: "var(--paper)",
                       border: "1px solid var(--border)",
                       borderRadius: "2px",
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       fontSize: "0.95rem",
                       outline: "none",
                       transition: "border-color 0.3s ease",
@@ -237,10 +237,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "0.9rem 1.1rem",
-                      background: "var(--abyss)",
+                      background: "var(--paper)",
                       border: "1px solid var(--border)",
                       borderRadius: "2px",
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       fontSize: "0.95rem",
                       outline: "none",
                       transition: "border-color 0.3s ease",
@@ -270,10 +270,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "0.9rem 1.1rem",
-                      background: "var(--abyss)",
+                      background: "var(--paper)",
                       border: "1px solid var(--border)",
                       borderRadius: "2px",
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       fontSize: "0.95rem",
                       outline: "none",
                       transition: "border-color 0.3s ease",
@@ -300,10 +300,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "0.9rem 1.1rem",
-                      background: "var(--abyss)",
+                      background: "var(--paper)",
                       border: "1px solid var(--border)",
                       borderRadius: "2px",
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       fontSize: "0.95rem",
                       outline: "none",
                       transition: "border-color 0.3s ease",
@@ -339,10 +339,10 @@ export default function ContactPage() {
                     style={{
                       width: "100%",
                       padding: "0.9rem 1.1rem",
-                      background: "var(--abyss)",
+                      background: "var(--paper)",
                       border: "1px solid var(--border)",
                       borderRadius: "2px",
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       fontSize: "0.95rem",
                       outline: "none",
                       resize: "vertical",
@@ -399,7 +399,7 @@ export default function ContactPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(0.6rem, 1vw, 0.75rem)",
                       fontWeight: 400,
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
                       margin: 0,
@@ -411,7 +411,7 @@ export default function ContactPage() {
                 <p
                   style={{
                     fontSize: "0.95rem",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     lineHeight: 1.75,
                     marginBottom: "1rem",
                     maxWidth: "38ch",
@@ -462,7 +462,7 @@ export default function ContactPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(0.6rem, 1vw, 0.75rem)",
                       fontWeight: 400,
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
                       margin: 0,
@@ -488,7 +488,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     style={{
                       fontSize: "0.9rem",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       transition: "color 0.3s ease",
                     }}
                   >
@@ -500,7 +500,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     style={{
                       fontSize: "0.9rem",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       transition: "color 0.3s ease",
                     }}
                   >
@@ -539,7 +539,7 @@ export default function ContactPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(0.6rem, 1vw, 0.75rem)",
                       fontWeight: 400,
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
                       margin: 0,
@@ -560,7 +560,7 @@ export default function ContactPage() {
                       <p
                         style={{
                           fontSize: "0.92rem",
-                          color: "var(--muted)",
+                          color: "var(--ash)",
                           lineHeight: 1.75,
                           fontStyle: "italic",
                           marginBottom: "0.75rem",
@@ -627,7 +627,7 @@ export default function ContactPage() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(1.4rem, 3vw, 2rem)",
                 fontWeight: 800,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "1rem",
                 letterSpacing: "-0.02em",
               }}
@@ -649,7 +649,7 @@ export default function ContactPage() {
               <a
                 href="https://www.facebook.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   letterSpacing: "0.05em",
                   transition: "color 0.3s ease",
@@ -660,7 +660,7 @@ export default function ContactPage() {
               <a
                 href="https://www.instagram.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   letterSpacing: "0.05em",
                   transition: "color 0.3s ease",
@@ -671,7 +671,7 @@ export default function ContactPage() {
               <a
                 href="https://www.youtube.com/@thedivetable"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   letterSpacing: "0.05em",
                   transition: "color 0.3s ease",

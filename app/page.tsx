@@ -16,16 +16,16 @@ export default function HomePage() {
         }}
       >
         <div className="container">
-          {/* Ornamental top corner */}
+          {/* Top-left ornamental corner */}
           <div style={{
             position: "absolute",
             top: "clamp(4rem, 8vw, 6rem)",
-            left: "clamp(1.5rem, 4vw, 3.5rem)",
-            width: "20px",
-            height: "20px",
+            left: "clamp(1.25rem, 4vw, 3rem)",
+            width: "24px",
+            height: "24px",
             borderTop: "2px solid var(--gold)",
             borderLeft: "2px solid var(--gold)",
-            opacity: 0.5,
+            opacity: 0.6,
             zIndex: 10,
           }} />
 
@@ -39,8 +39,8 @@ export default function HomePage() {
           </h1>
 
           <p className="hero-sub">
-            Training designed to advance your skills, your control,
-            and your brain. For dedicated divers who are done coasting.
+            Training designed to advance your skills, your control, and your brain.
+            For dedicated divers who are done coasting.
           </p>
 
           <div className="hero-actions">
@@ -59,76 +59,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── The Why ── */}
-      <section className="section section--ink">
+      {/* ── The Why — paper background ── */}
+      <section className="section section--paper">
         <div className="container">
-          <ScrollReveal>
-            <div className="section-label">The Foundation</div>
-          </ScrollReveal>
-
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(3rem, 6vw, 7rem)", alignItems: "start" }}>
-            {/* Left: heading block */}
-            <ScrollReveal delay={100}>
+            {/* Left: heading + label */}
+            <ScrollReveal>
+              <div className="section-label">The Foundation</div>
               <h2 style={{
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                 fontWeight: 900,
                 lineHeight: 0.95,
-                color: "var(--off-white)",
                 letterSpacing: "-0.03em",
-                marginBottom: "2.5rem",
+                marginBottom: "2rem",
               }}>
                 The<br />
-                <span style={{ color: "var(--gold)" }}>Why</span>
+                <span style={{ color: "var(--gold-dark)" }}>Why</span>
               </h2>
 
               {/* Ornamental rule */}
-              <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-                <div style={{ width: "2rem", height: "2px", background: "var(--gold)", opacity: 0.5 }} />
-                <div style={{ width: "6px", height: "6px", background: "var(--gold)", transform: "rotate(45deg)", opacity: 0.6 }} />
-                <div style={{ flex: 1, height: "1px", background: "var(--border)", opacity: 0.5 }} />
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
+                <div style={{ width: "2rem", height: "1.5px", background: "var(--gold)", opacity: 0.5 }} />
+                <div style={{ width: "5px", height: "5px", background: "var(--gold)", transform: "rotate(45deg)", opacity: 0.6 }} />
+                <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
               </div>
 
-              <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.8, maxWidth: "42ch" }}>
+              <p style={{ fontSize: "0.95rem", color: "var(--ash)", lineHeight: 1.9, maxWidth: "42ch" }}>
                 We serve divers who want to be the best they can possibly be — and are willing to do the work to get there.
               </p>
             </ScrollReveal>
 
-            {/* Right: content */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-              <ScrollReveal delay={150}>
-                <div style={{
-                  borderLeft: "3px solid var(--gold)",
-                  paddingLeft: "1.5rem",
-                }}>
-                  <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85 }}>
+            {/* Right: content block */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "2rem", paddingTop: "clamp(1rem, 3vw, 2.5rem)" }}>
+              <ScrollReveal delay={100}>
+                <div style={{ borderLeft: "3px solid var(--gold)", paddingLeft: "1.5rem" }}>
+                  <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
                     We&apos;ve all experienced{" "}
-                    <span style={{ color: "var(--gold)", fontWeight: 600 }}>underwhelming</span>{" "}
-                    training — the kind that leaves us with a plastic certification card but
-                    without the confidence to actually apply what we&apos;ve &quot;mastered.&quot;
+                    <strong>underwhelming</strong> training — the kind that leaves us with a plastic certification card but without the confidence to actually apply what we&apos;ve &quot;mastered.&quot;
                   </p>
                 </div>
               </ScrollReveal>
 
+              <ScrollReveal delay={150}>
+                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
+                  Too often traditional scuba classes are designed to sell you the next class, the next trip, or more gear. Not here.
+                </p>
+              </ScrollReveal>
+
               <ScrollReveal delay={200}>
-                <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85 }}>
-                  Too often traditional scuba classes are designed to sell you the next class,
-                  the next trip, or more gear. Not here.
+                <p style={{ fontSize: "1rem", color: "var(--ink-dark)", lineHeight: 1.85, fontWeight: 500 }}>
+                  <strong>Gardner Underwater is built differently.</strong> We focus on the{" "}
+                  <span style={{ color: "var(--gold-dark)" }}>training</span>, not the certification.
+                  On reaching the{" "}
+                  <span style={{ color: "var(--gold-dark)" }}>next plateau</span>, not selling you gear you don&apos;t need.
+                  On turning you into a{" "}
+                  <span style={{ color: "var(--gold-dark)" }}>Thinking Diver</span>.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={250}>
-                <p style={{ fontSize: "1.05rem", color: "var(--off-white)", lineHeight: 1.8, fontWeight: 500 }}>
-                  <strong>Gardner Underwater is built differently.</strong> We focus on the{" "}
-                  <span style={{ color: "var(--gold)" }}>training</span>, not the certification.
-                  On reaching the{" "}
-                  <span style={{ color: "var(--gold)" }}>next plateau</span>, not selling you gear
-                  you don&apos;t need. On turning you into a{" "}
-                  <span style={{ color: "var(--gold)" }}>Thinking Diver</span>.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
                 <Link href="/contact" className="btn btn-primary">
                   Book Your Course
                 </Link>
@@ -138,7 +128,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── The Who ── */}
+      {/* ── The Who — cream bg, centered quote ── */}
       <section className="section">
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(3rem, 6vw, 7rem)", alignItems: "start" }}>
@@ -153,56 +143,50 @@ export default function HomePage() {
                   fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                   fontWeight: 900,
                   lineHeight: 0.95,
-                  color: "var(--off-white)",
                   letterSpacing: "-0.03em",
                   marginBottom: "2rem",
                 }}>
                   The<br />
-                  <span style={{ color: "var(--gold)" }}>Who</span>
+                  <span style={{ color: "var(--gold-dark)" }}>Who</span>
                 </h2>
               </ScrollReveal>
 
-              {/* Quote block */}
+              {/* Ornament box quote */}
               <ScrollReveal delay={150}>
-                <div className="ornament-box" style={{ marginTop: "2rem" }}>
+                <div className="ornament-box">
                   <blockquote style={{
                     fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(1.1rem, 2vw, 1.5rem)",
+                    fontSize: "clamp(1rem, 2vw, 1.4rem)",
                     fontWeight: 700,
-                    color: "var(--off-white)",
-                    lineHeight: 1.4,
+                    color: "var(--ink-dark)",
+                    lineHeight: 1.35,
                     fontStyle: "normal",
                   }}>
-                    Dedicated divers. Committed to growth. Ready to advance.
+                    Dedicated divers.<br />
+                    Committed to growth.<br />
+                    Ready to advance.
                   </blockquote>
                 </div>
               </ScrollReveal>
             </div>
 
             {/* Right: content */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", paddingTop: "clamp(1rem, 3vw, 3rem)" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", paddingTop: "clamp(1rem, 3vw, 2.5rem)" }}>
               <ScrollReveal delay={150}>
-                <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85 }}>
-                  Divers often come to us knowing they want to improve, but not having a clear
-                  path forward. They&apos;ve been endlessly fumbling with gear configuration,
-                  trying to learn a back kick from YouTube, or spending countless hours to dial
-                  in the &quot;right&quot; gradient factor.
+                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
+                  Divers often come to us knowing they want to improve, but not having a clear path forward. They&apos;ve been endlessly fumbling with gear configuration, trying to learn a back kick from YouTube, or spending countless hours to dial in the &quot;right&quot; gradient factor.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={200}>
-                <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85 }}>
-                  If you&apos;re tired of getting the next certification card without truly advancing
-                  in your diving confidence, skill, and awareness — you&apos;ve found a home at
-                  Gardner Underwater.
+                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
+                  If you&apos;re tired of getting the next certification card without truly advancing in your diving confidence, skill, and awareness — you&apos;ve found a home at Gardner Underwater.
                 </p>
               </ScrollReveal>
 
               <ScrollReveal delay={250}>
-                <p style={{ fontSize: "1.05rem", color: "var(--off-white)", lineHeight: 1.75, fontWeight: 500 }}>
-                  <strong>Eyes Open. Brain On. Unified Team.</strong> These are the foundations
-                  upon which you will build a scalable platform for reaching the highest levels
-                  in your diving.
+                <p style={{ fontSize: "1rem", color: "var(--ink-dark)", lineHeight: 1.8, fontWeight: 500 }}>
+                  <strong>Eyes Open. Brain On. Unified Team.</strong> These are the foundations upon which you will build a scalable platform for reaching the highest levels in your diving.
                 </p>
               </ScrollReveal>
 
@@ -221,8 +205,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Explore grid ── */}
-      <section className="section section--dark">
+      {/* ── Explore grid — ink bg, paper cards ── */}
+      <section className="section section--ink">
         <div className="container">
           <ScrollReveal>
             <div className="section-label">Explore</div>
@@ -233,90 +217,71 @@ export default function HomePage() {
               fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(1.8rem, 4vw, 3rem)",
               fontWeight: 900,
-              color: "var(--off-white)",
               letterSpacing: "-0.02em",
               marginBottom: "3rem",
+              color: "var(--canvas)",
             }}>
               Discover What Awaits
             </h2>
           </ScrollReveal>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "1px",
-              background: "var(--border-mid)",
-              border: "1px solid var(--border-mid)",
-            }}
-          >
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "1px",
+            background: "rgba(245, 240, 230, 0.08)",
+            border: "1px solid rgba(245, 240, 230, 0.08)",
+          }}>
             {[
-              {
-                label: "THE COURSES",
-                href: "/courses",
-                sub: "Find the right course for your goals",
-                delay: 150,
-              },
-              {
-                label: "THE TRAINING",
-                href: "/training",
-                sub: "How we train, and why it works",
-                delay: 200,
-              },
-              {
-                label: "THE PRICING",
-                href: "/pricing",
-                sub: "Upfront about money. No surprises.",
-                delay: 250,
-              },
-              {
-                label: "THE SHOP",
-                href: "/shop",
-                sub: "Gear, resources, and more",
-                delay: 300,
-              },
+              { label: "THE COURSES", href: "/courses", sub: "Find the right course for your goals" },
+              { label: "THE TRAINING", href: "/training", sub: "How we train, and why it works" },
+              { label: "THE PRICING", href: "/pricing", sub: "Upfront about money. No surprises." },
+              { label: "THE SHOP", href: "/shop", sub: "Gear, resources, and more" },
             ].map((item) => (
-              <ScrollReveal key={item.label} delay={item.delay}>
+              <ScrollReveal key={item.label} delay={150}>
                 <Link
                   href={item.href}
                   style={{
                     display: "block",
-                    padding: "clamp(2rem, 4vw, 3rem)",
-                    background: "var(--abyss)",
+                    padding: "clamp(2rem, 4vw, 2.75rem)",
+                    background: "var(--paper)",
                     textDecoration: "none",
                     height: "100%",
-                    transition: "background 0.3s",
+                    transition: "background 0.25s",
                   }}
                   className="explore-card"
                 >
                   <div style={{
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.58rem",
+                    fontSize: "0.55rem",
                     letterSpacing: "0.22em",
-                    color: "var(--gold)",
-                    marginBottom: "1.25rem",
+                    color: "var(--gold-dark)",
+                    marginBottom: "1rem",
                     opacity: 0.7,
                   }}>
                     {item.label}
                   </div>
                   <h3 style={{
                     fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)",
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
                     fontWeight: 900,
-                    color: "var(--off-white)",
-                    marginBottom: "0.75rem",
+                    color: "var(--ink-dark)",
+                    marginBottom: "0.65rem",
                     lineHeight: 1.1,
                     letterSpacing: "-0.02em",
                   }}>
                     {item.label.replace("THE ", "")}
                   </h3>
                   <p style={{
-                    fontSize: "0.85rem",
-                    color: "var(--muted)",
-                    lineHeight: 1.6,
+                    fontSize: "0.82rem",
+                    color: "var(--ash)",
+                    lineHeight: 1.65,
                   }}>
                     {item.sub}
                   </p>
+
+                  {/* Bottom arrow */}
+                  <div style={{ marginTop: "1.5rem", color: "var(--gold-dark)", fontSize: "1.2rem" }}>→</div>
                 </Link>
               </ScrollReveal>
             ))}
@@ -324,46 +289,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Contact bar ── */}
+      {/* ── Contact bar — paper bg ── */}
       <section
-        className="section section--void"
-        style={{ textAlign: "center", borderTop: "1px solid var(--border-mid)" }}
+        className="section section--paper"
+        style={{ textAlign: "center", borderTop: "1px solid var(--border)" }}
       >
         <div className="container--narrow">
           <ScrollReveal>
+            <div className="section-label" style={{ justifyContent: "center" }}>Ready to Start?</div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={100}>
             <h2 style={{
               fontFamily: "'Syne', sans-serif",
               fontSize: "clamp(2rem, 5vw, 3.5rem)",
               fontWeight: 900,
-              color: "var(--off-white)",
               letterSpacing: "-0.03em",
-              marginBottom: "1.5rem",
+              marginBottom: "1.25rem",
             }}>
-              Ready to dive in?
+              Let&apos;s dive in.
             </h2>
           </ScrollReveal>
 
-          <ScrollReveal delay={100}>
+          <ScrollReveal delay={150}>
             <p style={{
               fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "clamp(1.2rem, 3vw, 2rem)",
+              fontSize: "clamp(1.1rem, 3vw, 1.8rem)",
               fontWeight: 700,
-              color: "var(--gold)",
+              color: "var(--gold-dark)",
               marginBottom: "1.5rem",
-              letterSpacing: "0.05em",
+              letterSpacing: "0.04em",
             }}>
               +1 (619) 880-0684
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={150}>
-            <div style={{
-              display: "flex",
-              gap: "2rem",
-              justifyContent: "center",
-              flexWrap: "wrap",
-              marginBottom: "2.5rem",
-            }}>
+          <ScrollReveal delay={200}>
+            <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "2rem" }}>
               {[
                 { href: "https://www.facebook.com/gardnerunderwater/", label: "Facebook" },
                 { href: "https://www.instagram.com/gardnerunderwater/", label: "Instagram" },
@@ -372,14 +334,16 @@ export default function HomePage() {
                 <a
                   key={s.label}
                   href={s.href}
+                  className="hover-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.72rem",
-                    letterSpacing: "0.12em",
-                    color: "var(--muted)",
-                    transition: "color 0.2s",
+                    fontSize: "0.65rem",
+                    letterSpacing: "0.15em",
+                    color: "var(--ash)",
+                    transition: "color 0.15s",
                   }}
-                  className="hover-gold"
                 >
                   {s.label}
                 </a>
@@ -387,7 +351,7 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          <ScrollReveal delay={200}>
+          <ScrollReveal delay={250}>
             <Link href="/contact" className="btn btn-primary btn-lg">
               Book Your Course
             </Link>
@@ -396,7 +360,10 @@ export default function HomePage() {
       </section>
 
       <style>{`
-        .explore-card:hover { background: var(--ink) !important; }
+        .explore-card:hover { background: var(--ink-dark) !important; }
+        .explore-card:hover h3 { color: var(--canvas); }
+        .explore-card:hover p { color: var(--dim); }
+        .explore-card:hover .arrow-gold { color: var(--gold); }
       `}</style>
     </>
   );

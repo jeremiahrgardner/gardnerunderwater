@@ -12,7 +12,7 @@ export default function PricingPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)", position: "relative", overflow: "hidden" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)", position: "relative", overflow: "hidden" }}>
         {/* Decorative oversized number */}
         <div
           aria-hidden="true"
@@ -54,7 +54,7 @@ export default function PricingPage() {
                   fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
                   fontWeight: 800,
                   lineHeight: 1.05,
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   marginBottom: "0",
                   letterSpacing: "-0.03em",
                   maxWidth: "20ch",
@@ -95,7 +95,7 @@ export default function PricingPage() {
                 <p
                   style={{
                     fontSize: "clamp(0.88rem, 1.2vw, 0.97rem)",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     lineHeight: 1.85,
                     marginBottom: i < 4 ? "1.25rem" : "0",
                     fontWeight: 300,
@@ -111,7 +111,7 @@ export default function PricingPage() {
       </section>
 
       {/* ── Course & Equipment Fees ── */}
-      <section className="section section--dark" style={{ position: "relative", overflow: "hidden" }}>
+      <section className="section section--ink" style={{ position: "relative", overflow: "hidden" }}>
         {/* Background texture line */}
         <div
           aria-hidden="true"
@@ -154,7 +154,7 @@ export default function PricingPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -176,7 +176,7 @@ export default function PricingPage() {
             <ScrollReveal delay={80}>
               <div
                 style={{
-                  background: "var(--abyss)",
+                  background: "var(--paper)",
                   border: "1px solid var(--border)",
                   borderRadius: "4px",
                   padding: "clamp(1.75rem, 3vw, 2.5rem)",
@@ -226,7 +226,7 @@ export default function PricingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(1.1rem, 1.8vw, 1.25rem)",
                     fontWeight: 700,
-                    color: "var(--white)",
+                    color: "var(--canvas)",
                     marginBottom: "0.5rem",
                     letterSpacing: "-0.01em",
                     position: "relative",
@@ -254,7 +254,7 @@ export default function PricingPage() {
                 <p
                   style={{
                     fontSize: "clamp(0.8rem, 1vw, 0.88rem)",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     marginBottom: "2rem",
                     fontWeight: 300,
                     position: "relative",
@@ -283,7 +283,7 @@ export default function PricingPage() {
             <ScrollReveal delay={160}>
               <div
                 style={{
-                  background: "var(--abyss)",
+                  background: "var(--paper)",
                   border: "1px solid var(--border)",
                   borderRadius: "4px",
                   padding: "clamp(1.75rem, 3vw, 2.5rem)",
@@ -333,7 +333,7 @@ export default function PricingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(1.1rem, 1.8vw, 1.25rem)",
                     fontWeight: 700,
-                    color: "var(--white)",
+                    color: "var(--canvas)",
                     marginBottom: "0.5rem",
                     letterSpacing: "-0.01em",
                     position: "relative",
@@ -361,7 +361,7 @@ export default function PricingPage() {
                 <p
                   style={{
                     fontSize: "clamp(0.8rem, 1vw, 0.88rem)",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     marginBottom: "2rem",
                     fontWeight: 300,
                     position: "relative",
@@ -390,7 +390,7 @@ export default function PricingPage() {
             <ScrollReveal delay={240}>
               <div
                 style={{
-                  background: "var(--abyss)",
+                  background: "var(--paper)",
                   border: "1px solid var(--border)",
                   borderRadius: "4px",
                   padding: "clamp(1.75rem, 3vw, 2.5rem)",
@@ -440,7 +440,7 @@ export default function PricingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(1.1rem, 1.8vw, 1.25rem)",
                     fontWeight: 700,
-                    color: "var(--white)",
+                    color: "var(--canvas)",
                     marginBottom: "0.5rem",
                     letterSpacing: "-0.01em",
                     position: "relative",
@@ -468,7 +468,7 @@ export default function PricingPage() {
                 <p
                   style={{
                     fontSize: "clamp(0.8rem, 1vw, 0.88rem)",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     marginBottom: "2rem",
                     fontWeight: 300,
                     position: "relative",
@@ -498,7 +498,7 @@ export default function PricingPage() {
 
       {/* ── CTA ── */}
       <section
-        className="section section--dark"
+        className="section section--ink"
         style={{ position: "relative", overflow: "hidden" }}
       >
         {/* Oversized background number */}
@@ -554,7 +554,7 @@ export default function PricingPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -571,7 +571,7 @@ export default function PricingPage() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.5rem)",
                 fontWeight: 800,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "2rem",
                 letterSpacing: "-0.02em",
               }}
@@ -593,7 +593,7 @@ export default function PricingPage() {
               <a
                 href="https://www.facebook.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
                   fontWeight: 300,
                   transition: "color 0.2s ease",
@@ -604,7 +604,7 @@ export default function PricingPage() {
               <a
                 href="https://www.instagram.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
                   fontWeight: 300,
                   transition: "color 0.2s ease",
@@ -615,7 +615,7 @@ export default function PricingPage() {
               <a
                 href="https://www.youtube.com/@thedivetable"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.8rem, 1vw, 0.9rem)",
                   fontWeight: 300,
                   transition: "color 0.2s ease",

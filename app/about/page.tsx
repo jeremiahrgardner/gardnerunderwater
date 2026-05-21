@@ -20,7 +20,7 @@ export default function AboutPage() {
           display: "flex",
           alignItems: "flex-end",
           overflow: "hidden",
-          background: "var(--abyss)",
+          background: "var(--paper)",
         }}
       >
         <Image
@@ -57,7 +57,7 @@ export default function AboutPage() {
                 fontWeight: 800,
                 lineHeight: 0.92,
                 letterSpacing: "-0.04em",
-                color: "var(--white)",
+                color: "var(--canvas)",
                 maxWidth: "14ch",
                 marginBottom: "1.5rem",
               }}
@@ -82,20 +82,20 @@ export default function AboutPage() {
       </section>
 
       {/* ── Bio ── */}
-      <section className="section section--dark">
+      <section className="section section--ink">
         <div className="container">
           <ScrollReveal>
             <p
               style={{
                 fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
-                color: "var(--text)",
+                color: "var(--ink-dark)",
                 lineHeight: 1.85,
                 maxWidth: "70ch",
                 marginBottom: "1.5rem",
                 fontWeight: 400,
               }}
             >
-              <strong style={{ color: "var(--white)", fontWeight: 600 }}>
+              <strong style={{ color: "var(--canvas)", fontWeight: 600 }}>
                 Jay Gardner is the founder and operator of Gardner Underwater.
               </strong>{" "}
               Jay is co-owner and Director of Development at{" "}
@@ -113,7 +113,7 @@ export default function AboutPage() {
             <p
               style={{
                 fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 lineHeight: 1.85,
                 maxWidth: "70ch",
                 marginBottom: "1.5rem",
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <p
               style={{
                 fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 lineHeight: 1.85,
                 maxWidth: "70ch",
                 marginBottom: "2rem",
@@ -164,7 +164,7 @@ export default function AboutPage() {
                   fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
                   fontWeight: 800,
                   lineHeight: 1.05,
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   letterSpacing: "-0.03em",
                 }}
               >
@@ -194,7 +194,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "clamp(1.05rem, 1.6vw, 1.2rem)",
-                  color: "var(--text)",
+                  color: "var(--ink-dark)",
                   lineHeight: 1.9,
                   marginBottom: "1.5rem",
                   fontStyle: "italic",
@@ -212,7 +212,7 @@ export default function AboutPage() {
               <p
                 style={{
                   fontSize: "clamp(1.05rem, 1.6vw, 1.2rem)",
-                  color: "var(--text)",
+                  color: "var(--ink-dark)",
                   lineHeight: 1.9,
                   marginBottom: "2rem",
                   fontStyle: "italic",
@@ -246,7 +246,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── The Dive Table Podcast ── */}
-      <section className="section section--dark">
+      <section className="section section--ink">
         <div className="container--narrow">
           <ScrollReveal>
             <span className="section-label">Podcast</span>
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 800,
                 lineHeight: 1.05,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 letterSpacing: "-0.03em",
                 marginBottom: "1.5rem",
               }}
@@ -272,7 +272,7 @@ export default function AboutPage() {
             <p
               style={{
                 fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 lineHeight: 1.85,
                 maxWidth: "65ch",
                 marginBottom: "2rem",
@@ -298,7 +298,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Contact ── */}
-      <section className="section" style={{ textAlign: "center", background: "var(--void)" }}>
+      <section className="section" style={{ textAlign: "center", background: "var(--ink-dark)" }}>
         <div className="container--narrow">
           <ScrollReveal>
             <p
@@ -306,7 +306,7 @@ export default function AboutPage() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(1.6rem, 3.5vw, 2.25rem)",
                 fontWeight: 800,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "2rem",
                 letterSpacing: "-0.02em",
               }}
@@ -328,7 +328,7 @@ export default function AboutPage() {
               <a
                 href="https://www.facebook.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.8rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -341,7 +341,7 @@ export default function AboutPage() {
               <a
                 href="https://www.instagram.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.8rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -354,7 +354,7 @@ export default function AboutPage() {
               <a
                 href="https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.8rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -367,7 +367,7 @@ export default function AboutPage() {
               <a
                 href="https://www.youtube.com/@thedivetable"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.8rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -380,7 +380,7 @@ export default function AboutPage() {
               <a
                 href="tel:+16198800684"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.8rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",

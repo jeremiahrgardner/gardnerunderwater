@@ -12,7 +12,7 @@ export default function ShopPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)" }}>
         <div className="container">
           <ScrollReveal>
             <span className="section-label">Gear &amp; Rentals</span>
@@ -32,7 +32,7 @@ export default function ShopPage() {
                   fontSize: "clamp(2.2rem, 6vw, 4.5rem)",
                   fontWeight: 800,
                   lineHeight: 1.05,
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   marginBottom: "0",
                   letterSpacing: "-0.03em",
                   maxWidth: "20ch",
@@ -61,7 +61,7 @@ export default function ShopPage() {
               <p
                 style={{
                   fontSize: "1rem",
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   maxWidth: "58ch",
                   lineHeight: 1.85,
                   marginTop: "2rem",
@@ -100,7 +100,7 @@ export default function ShopPage() {
       </section>
 
       {/* ── Equipment Rentals & Service ── */}
-      <section className="section section--dark" style={{ position: "relative", overflow: "hidden" }}>
+      <section className="section section--ink" style={{ position: "relative", overflow: "hidden" }}>
         {/* Background accent line */}
         <div
           aria-hidden="true"
@@ -143,7 +143,7 @@ export default function ShopPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -200,13 +200,13 @@ export default function ShopPage() {
                         alignItems: "center",
                         paddingTop: "1rem",
                         paddingBottom: "1rem",
-                        borderBottom: i < arr.length - 1 ? "1px solid var(--border-dim)" : "none",
+                        borderBottom: i < arr.length - 1 ? "1px solid var(--border)" : "none",
                       }}
                     >
                       <span
                         style={{
                           fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
-                          color: "var(--muted)",
+                          color: "var(--ash)",
                           fontWeight: 300,
                           lineHeight: 1.5,
                           paddingRight: "1rem",
@@ -265,13 +265,13 @@ export default function ShopPage() {
                         alignItems: "center",
                         paddingTop: "1rem",
                         paddingBottom: "1rem",
-                        borderBottom: i < arr.length - 1 ? "1px solid var(--border-dim)" : "none",
+                        borderBottom: i < arr.length - 1 ? "1px solid var(--border)" : "none",
                       }}
                     >
                       <span
                         style={{
                           fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
-                          color: "var(--muted)",
+                          color: "var(--ash)",
                           fontWeight: 300,
                           lineHeight: 1.5,
                           paddingRight: "1rem",
@@ -322,13 +322,13 @@ export default function ShopPage() {
                         alignItems: "center",
                         paddingTop: "1rem",
                         paddingBottom: "1rem",
-                        borderBottom: i < arr.length - 1 ? "1px solid var(--border-dim)" : "none",
+                        borderBottom: i < arr.length - 1 ? "1px solid var(--border)" : "none",
                       }}
                     >
                       <span
                         style={{
                           fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
-                          color: "var(--muted)",
+                          color: "var(--ash)",
                           fontWeight: 300,
                           lineHeight: 1.5,
                           paddingRight: "1rem",
@@ -388,7 +388,7 @@ export default function ShopPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -405,7 +405,7 @@ export default function ShopPage() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(1.1rem, 1.5vw, 1.2rem)",
                 fontWeight: 700,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "3rem",
               }}
             >
@@ -434,7 +434,7 @@ export default function ShopPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(0.85rem, 1.1vw, 0.95rem)",
                       fontWeight: 700,
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       marginBottom: "0.75rem",
                       textTransform: "uppercase",
                       letterSpacing: "0.08em",
@@ -445,7 +445,7 @@ export default function ShopPage() {
                   <p
                     style={{
                       fontSize: "clamp(0.85rem, 1vw, 0.92rem)",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       lineHeight: 1.7,
                       fontWeight: 300,
                     }}
@@ -466,7 +466,7 @@ export default function ShopPage() {
       </section>
 
       {/* ── Key Relationships ── */}
-      <section className="section section--dark" style={{ position: "relative" }}>
+      <section className="section section--ink" style={{ position: "relative" }}>
         <div className="container--narrow" style={{ textAlign: "center" }}>
           <ScrollReveal>
             <div
@@ -497,7 +497,7 @@ export default function ShopPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -512,7 +512,7 @@ export default function ShopPage() {
             <p
               style={{
                 fontSize: "clamp(0.9rem, 1.1vw, 0.97rem)",
-                color: "var(--muted)",
+                color: "var(--ash)",
                 lineHeight: 1.85,
                 marginBottom: "2.5rem",
                 fontWeight: 300,
@@ -528,7 +528,7 @@ export default function ShopPage() {
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: "clamp(1.4rem, 2.5vw, 1.8rem)",
                 fontWeight: 500,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "2.5rem",
                 letterSpacing: "0.05em",
               }}
@@ -550,7 +550,7 @@ export default function ShopPage() {
               <a
                 href="https://www.facebook.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
                   fontFamily: "'Syne', sans-serif",
                   fontWeight: 400,
@@ -564,7 +564,7 @@ export default function ShopPage() {
               <a
                 href="https://www.instagram.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
                   fontFamily: "'Syne', sans-serif",
                   fontWeight: 400,
@@ -578,7 +578,7 @@ export default function ShopPage() {
               <a
                 href="https://www.youtube.com/@thedivetable"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "clamp(0.82rem, 1vw, 0.9rem)",
                   fontFamily: "'Syne', sans-serif",
                   fontWeight: 400,

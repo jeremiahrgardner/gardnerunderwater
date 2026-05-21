@@ -78,7 +78,7 @@ export default function MerchPage() {
   return (
     <>
       {/* ── Page hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)", position: "relative", overflow: "hidden" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)", position: "relative", overflow: "hidden" }}>
         <div className="container">
           <ScrollReveal>
             <span className="section-label" style={{ display: "block", marginBottom: "0.75rem" }}>Gear &amp; Merch</span>
@@ -93,7 +93,7 @@ export default function MerchPage() {
                   fontWeight: 800,
                   lineHeight: 0.9,
                   letterSpacing: "-0.05em",
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   maxWidth: "14ch",
                   marginBottom: "0",
                 }}
@@ -106,7 +106,7 @@ export default function MerchPage() {
               <p
                 style={{
                   fontSize: "1.1rem",
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   maxWidth: "54ch",
                   lineHeight: 1.8,
                   marginTop: "2rem",
@@ -212,7 +212,7 @@ export default function MerchPage() {
                     style={{
                       aspectRatio: "4 / 5",
                       position: "relative",
-                      background: "var(--navy)",
+                      background: "var(--ink-dark)",
                       overflow: "hidden",
                       marginBottom: "1.75rem",
                     }}
@@ -224,7 +224,7 @@ export default function MerchPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        background: "linear-gradient(160deg, var(--navy) 0%, var(--abyss) 100%)",
+                        background: "linear-gradient(160deg, var(--ink-dark) 0%, var(--paper) 100%)",
                       }}
                     >
                       <div
@@ -246,7 +246,7 @@ export default function MerchPage() {
                         top: "1.25rem",
                         right: "1.25rem",
                         background: "var(--gold)",
-                        color: "var(--void)",
+                        color: "var(--ink-dark)",
                         fontFamily: "'JetBrains Mono', monospace",
                         fontSize: "0.65rem",
                         fontWeight: 700,
@@ -265,7 +265,7 @@ export default function MerchPage() {
                         fontFamily: "'Syne', sans-serif",
                         fontSize: "1.35rem",
                         fontWeight: 800,
-                        color: "var(--white)",
+                        color: "var(--canvas)",
                         marginBottom: "0.5rem",
                         letterSpacing: "-0.02em",
                         lineHeight: 1.1,
@@ -289,7 +289,7 @@ export default function MerchPage() {
                     <p
                       style={{
                         fontSize: "0.88rem",
-                        color: "var(--muted)",
+                        color: "var(--ash)",
                         lineHeight: 1.75,
                         marginBottom: "1.25rem",
                         flex: 1,
@@ -332,7 +332,7 @@ export default function MerchPage() {
       </section>
 
       {/* ── HATS ── */}
-      <section className="section section--dark" style={{ position: "relative", overflow: "hidden" }}>
+      <section className="section section--ink" style={{ position: "relative", overflow: "hidden" }}>
         {/* Background accent line */}
         <div
           aria-hidden="true"
@@ -401,7 +401,7 @@ export default function MerchPage() {
                     style={{
                       aspectRatio: "1 / 1",
                       position: "relative",
-                      background: "var(--navy)",
+                      background: "var(--ink-dark)",
                       overflow: "hidden",
                       marginBottom: "1.5rem",
                     }}
@@ -413,7 +413,7 @@ export default function MerchPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        background: "linear-gradient(160deg, var(--abyss) 0%, var(--navy) 100%)",
+                        background: "linear-gradient(160deg, var(--paper) 0%, var(--ink-dark) 100%)",
                       }}
                     >
                       <div
@@ -435,7 +435,7 @@ export default function MerchPage() {
                         top: "1.25rem",
                         right: "1.25rem",
                         background: "var(--gold)",
-                        color: "var(--void)",
+                        color: "var(--ink-dark)",
                         fontFamily: "'JetBrains Mono', monospace",
                         fontSize: "0.65rem",
                         fontWeight: 700,
@@ -454,7 +454,7 @@ export default function MerchPage() {
                         fontFamily: "'Syne', sans-serif",
                         fontSize: "1.2rem",
                         fontWeight: 800,
-                        color: "var(--white)",
+                        color: "var(--canvas)",
                         marginBottom: "0.75rem",
                         letterSpacing: "-0.02em",
                         lineHeight: 1.1,
@@ -518,7 +518,7 @@ export default function MerchPage() {
                 marginBottom: "1.25rem",
                 letterSpacing: "-0.03em",
                 lineHeight: 1.1,
-                color: "var(--white)",
+                color: "var(--canvas)",
               }}
             >
               Questions about sizing or availability?
@@ -526,7 +526,7 @@ export default function MerchPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <p style={{ fontSize: "1rem", color: "var(--muted)", marginBottom: "2rem", lineHeight: 1.75, maxWidth: "44ch", margin: "0 auto 2rem" }}>
+            <p style={{ fontSize: "1rem", color: "var(--ash)", marginBottom: "2rem", lineHeight: 1.75, maxWidth: "44ch", margin: "0 auto 2rem" }}>
               Email Jay directly — he manages all merch orders personally.
             </p>
           </ScrollReveal>

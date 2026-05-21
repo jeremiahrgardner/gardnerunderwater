@@ -1,24 +1,24 @@
 /* ═══════════════════════════════════════════════════════════════
-   GARDNER UNDERWATER — Design System v6
-   Tattoo flash sheet: cream canvas, black ink, gold accent
-   Fonts: Syne (display/headers) · DM Sans (body) · JetBrains Mono (accents)
+   GARDNER UNDERWATER — Design System v7
+   Premium tattoo flash sheet: cream canvas, black ink, gold accent
+   Fonts: Syne (display) · DM Sans (body) · JetBrains Mono (labels)
    ═══════════════════════════════════════════════════════════════ */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
-/* ── Palette: cream canvas + black ink + gold ── */
+/* ── Palette ── */
 :root {
-  --canvas:    #f5f0e6;   /* primary bg — warm cream */
-  --paper:     #ede8dc;   /* secondary bg */
-  --card:      #e5e0d4;   /* card/section bg */
-  --border:    #d0c9b8;   /* warm border */
-  --ink:       #1a1710;   /* near-black warm text */
-  --ink-dark:  #0f0d0a;   /* darkest text */
-  --ash:       #7a7268;   /* muted text */
-  --dim:       #a49e94;   /* tertiary text */
-  --gold:      #f1c233;   /* primary accent */
-  --gold-dark: #c9a030;   /* darker gold */
-  --gold-dim:  rgba(241, 194, 51, 0.12);
+  --canvas:     #f5f0e6;   /* primary bg — warm cream */
+  --paper:      #ede8dc;   /* secondary bg */
+  --card:       #e5e0d4;   /* card bg */
+  --border:     #d0c9b8;   /* warm border */
+  --ink:        #1a1710;   /* near-black warm text */
+  --ink-dark:   #0f0d0a;   /* darkest bg / headings on light */
+  --ash:        #7a7268;   /* muted body text */
+  --dim:        #a49e94;   /* tertiary */
+  --gold:       #f1c233;   /* primary accent */
+  --gold-dark:  #c9a030;   /* darker gold */
+  --gold-dim:   rgba(241, 194, 51, 0.12);
   --gold-border: rgba(241, 194, 51, 0.35);
 }
 
@@ -41,7 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Warm paper grain ── */
+/* ── Paper grain ── */
 body::before {
   content: '';
   position: fixed;
@@ -67,6 +67,16 @@ h2 { font-size: clamp(2rem, 5vw, 4rem); }
 h3 { font-size: clamp(1.4rem, 3vw, 2.5rem); }
 h4 { font-size: clamp(1.1rem, 2vw, 1.6rem); }
 
+/* Headings on dark backgrounds use canvas color */
+.section--ink h1,
+.section--ink h2,
+.section--ink h3,
+.section--ink h4,
+.section--ink h5,
+.section--ink h6 {
+  color: var(--canvas);
+}
+
 p {
   font-family: 'DM Sans', Arial, sans-serif;
   font-size: clamp(0.9rem, 1.1vw, 1rem);
@@ -76,22 +86,6 @@ p {
 }
 
 strong { font-weight: 700; color: var(--ink-dark); }
-em { font-style: normal; color: var(--gold-dark); font-weight: 600; }
-
-a { color: inherit; text-decoration: none; }
-a:hover { text-decoration: none; }
-img { max-width: 100%; display: block; }
-
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--paper); }
-::-webkit-scrollbar-thumb { background: var(--gold); }
-
-/* ── Selection ── */
-::selection { background: var(--gold); color: var(--ink-dark); }
-
-/* ── Focus ── */
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* ── Layout ── */
 .container {
@@ -99,6 +93,7 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
+
 .container--narrow {
   max-width: 860px;
   margin: 0 auto;
@@ -106,26 +101,11 @@ img { max-width: 100%; display: block; }
 }
 
 /* ── Section spacing ── */
-.section { padding: clamp(4rem, 8vw, 8rem) 0; }
-.section--sm { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+.section      { padding: clamp(4rem, 8vw, 8rem) 0; }
+.section--sm  { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 .section--paper { background: var(--paper); }
 .section--card { background: var(--card); }
-.section--ink { background: var(--ink-dark); }
-
-/* ── Tattoo divider ── */
-.tattoo-rule {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 1rem 0;
-  color: var(--gold);
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.3em;
-  opacity: 0.5;
-}
-.tattoo-rule::before { content: '——'; }
-.tattoo-rule::after { content: '——'; flex: 1; }
+.section--ink  { background: var(--ink-dark); }
 
 /* ── Section label ── */
 .section-label {
@@ -140,6 +120,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 0.6rem;
 }
+
 .section-label::before {
   content: '';
   display: inline-block;
@@ -147,6 +128,22 @@ img { max-width: 100%; display: block; }
   height: 2px;
   background: var(--gold);
 }
+
+/* ── Tattoo divider ── */
+.tattoo-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  color: var(--gold);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  opacity: 0.5;
+}
+
+.tattoo-rule::before { content: '——'; }
+.tattoo-rule::after { content: '——'; flex: 1; }
 
 /* ── Big number ── */
 .big-num {
@@ -183,12 +180,14 @@ img { max-width: 100%; display: block; }
   background: var(--gold);
   color: var(--ink-dark);
 }
+
 .btn-primary:hover {
   background: var(--ink-dark);
   color: var(--canvas);
   transform: translate(-3px, -3px);
   box-shadow: 6px 6px 0 var(--gold);
 }
+
 .btn-primary:active { transform: none; box-shadow: none; }
 
 .btn-outline {
@@ -196,6 +195,7 @@ img { max-width: 100%; display: block; }
   color: var(--ink-dark);
   border: 1.5px solid var(--ink);
 }
+
 .btn-outline:hover {
   border-color: var(--gold);
   color: var(--ink-dark);
@@ -210,9 +210,10 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--border);
   letter-spacing: 0.15em;
 }
+
 .btn-ghost:hover { color: var(--gold-dark); border-bottom-color: var(--gold); }
 
-/* ── Cards (cream paper with ink border) ── */
+/* ── Cards ── */
 .card {
   background: var(--card);
   border: 1.5px solid var(--border);
@@ -220,11 +221,13 @@ img { max-width: 100%; display: block; }
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
+
 .card:hover {
   border-color: var(--gold);
   transform: translate(-4px, -4px);
   box-shadow: 8px 8px 0 var(--gold);
 }
+
 .card:hover::before {
   content: '';
   position: absolute;
@@ -234,13 +237,14 @@ img { max-width: 100%; display: block; }
   border-left: 2.5px solid var(--gold);
 }
 
-/* ── Ornament box (quote block) ── */
+/* ── Ornament box ── */
 .ornament-box {
   background: var(--card);
   border: 1.5px solid var(--gold-border);
   padding: clamp(2rem, 4vw, 3.5rem);
   position: relative;
 }
+
 .ornament-box::before {
   content: '';
   position: absolute;
@@ -249,6 +253,7 @@ img { max-width: 100%; display: block; }
   border-top: 2.5px solid var(--gold);
   border-left: 2.5px solid var(--gold);
 }
+
 .ornament-box::after {
   content: '';
   position: absolute;
@@ -273,6 +278,7 @@ img { max-width: 100%; display: block; }
   background-repeat: no-repeat;
   overflow: hidden;
 }
+
 .hero::before {
   content: '';
   position: absolute;
@@ -280,15 +286,15 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(
     to top,
     rgba(15, 13, 10, 0.97) 0%,
-    rgba(15, 13, 10, 0.65) 40%,
-    rgba(15, 13, 10, 0.25) 70%,
+    rgba(15, 13, 10, 0.6) 40%,
+    rgba(15, 13, 10, 0.2) 70%,
     rgba(15, 13, 10, 0.5) 100%
   );
   z-index: 1;
 }
+
 .hero > * { position: relative; z-index: 2; }
 
-/* ── Hero text ── */
 .hero-kicker {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.58rem;
@@ -330,6 +336,7 @@ img { max-width: 100%; display: block; }
   gap: 0.5rem;
   margin-top: 3rem;
 }
+
 .scroll-indicator span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.52rem;
@@ -338,6 +345,7 @@ img { max-width: 100%; display: block; }
   color: var(--gold);
   opacity: 0.5;
 }
+
 .scroll-line {
   width: 1px;
   height: 3.5rem;
@@ -352,6 +360,7 @@ img { max-width: 100%; display: block; }
   background: var(--ink-dark);
   position: relative;
 }
+
 .page-hero h1,
 .page-hero p { color: var(--canvas); }
 
@@ -382,6 +391,7 @@ img { max-width: 100%; display: block; }
   -webkit-appearance: none;
   appearance: none;
 }
+
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus {
@@ -389,7 +399,9 @@ img { max-width: 100%; display: block; }
   border-color: var(--gold);
   box-shadow: 4px 4px 0 var(--gold-dim);
 }
+
 .form-textarea { resize: vertical; min-height: 130px; }
+
 .form-select {
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%237a7268' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -397,6 +409,7 @@ img { max-width: 100%; display: block; }
   padding-right: 2.5rem;
   cursor: pointer;
 }
+
 .form-select option { background: var(--paper); }
 
 /* ── Gold badge ── */
@@ -426,6 +439,7 @@ img { max-width: 100%; display: block; }
 
 /* ── Quote block ── */
 .quote-block { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
+
 .quote-block blockquote {
   font-family: 'Syne', Arial, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -447,6 +461,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
   transition: border-color 0.2s;
 }
+
 .stat-block:hover { border-color: var(--gold); }
 
 /* ── Gold strip ── */
@@ -455,6 +470,7 @@ img { max-width: 100%; display: block; }
   padding: 0.85rem 0;
   text-align: center;
 }
+
 .gold-strip span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
@@ -475,6 +491,7 @@ a.card {
   transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
 }
+
 a.card:hover {
   border-color: var(--gold);
   transform: translate(-4px, -4px);
@@ -496,7 +513,19 @@ a.card:hover {
   transition: gap 0.2s;
   text-decoration: none;
 }
+
 .arrow-link:hover { gap: 1rem; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: var(--gold); }
+
+/* ── Selection ── */
+::selection { background: var(--gold); color: var(--ink-dark); }
+
+/* ── Focus ── */
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* ── Keyframes ── */
 @keyframes scrollPulse {

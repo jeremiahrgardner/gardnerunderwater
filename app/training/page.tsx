@@ -12,7 +12,7 @@ export default function TrainingPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="page-hero" style={{ background: "var(--void)" }}>
+      <section className="page-hero" style={{ background: "var(--ink-dark)" }}>
         <div className="container">
           <ScrollReveal>
             <span className="section-label">How We Train</span>
@@ -32,7 +32,7 @@ export default function TrainingPage() {
                   fontSize: "clamp(2rem, 5vw, 3.8rem)",
                   fontWeight: 800,
                   lineHeight: 1.08,
-                  color: "var(--white)",
+                  color: "var(--canvas)",
                   maxWidth: "22ch",
                   marginBottom: "0",
                   letterSpacing: "-0.03em",
@@ -47,7 +47,7 @@ export default function TrainingPage() {
               <p
                 style={{
                   fontSize: "1.05rem",
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   maxWidth: "58ch",
                   lineHeight: 1.8,
                   marginTop: "2rem",
@@ -87,7 +87,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ── The How ── */}
-      <section className="section section--dark" style={{ position: "relative", overflow: "hidden" }}>
+      <section className="section section--ink" style={{ position: "relative", overflow: "hidden" }}>
         {/* Background texture line */}
         <div
           aria-hidden="true"
@@ -130,7 +130,7 @@ export default function TrainingPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -214,7 +214,7 @@ export default function TrainingPage() {
                       fontFamily: "'Syne', sans-serif",
                       fontSize: "clamp(1.05rem, 1.8vw, 1.3rem)",
                       fontWeight: 700,
-                      color: "var(--white)",
+                      color: "var(--canvas)",
                       marginBottom: "0.6rem",
                       letterSpacing: "-0.01em",
                     }}
@@ -224,7 +224,7 @@ export default function TrainingPage() {
                   <p
                     style={{
                       fontSize: "clamp(0.88rem, 1.2vw, 0.97rem)",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       lineHeight: 1.8,
                       maxWidth: "64ch",
                       fontWeight: 300,
@@ -277,7 +277,7 @@ export default function TrainingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                     fontWeight: 400,
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     letterSpacing: "0.3em",
                     textTransform: "uppercase",
                     margin: 0,
@@ -292,7 +292,7 @@ export default function TrainingPage() {
               <ScrollReveal delay={100}>
                 <div
                   style={{
-                    background: "var(--abyss)",
+                    background: "var(--paper)",
                     border: "1px solid var(--border)",
                     borderRadius: "4px",
                     padding: "clamp(1.5rem, 3vw, 2.5rem)",
@@ -323,7 +323,7 @@ export default function TrainingPage() {
                   <p
                     style={{
                       fontSize: "clamp(0.9rem, 1.2vw, 0.97rem)",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       lineHeight: 1.85,
                       marginBottom: "1.5rem",
                       maxWidth: "48ch",
@@ -333,7 +333,7 @@ export default function TrainingPage() {
                     }}
                   >
                     We are proud to be a part of{" "}
-                    <strong style={{ color: "var(--white)" }}>Unified Team Diving</strong>, an agency obsessed
+                    <strong style={{ color: "var(--canvas)" }}>Unified Team Diving</strong>, an agency obsessed
                     with training <strong style={{ color: "var(--gold)" }}>Thinking Divers</strong>. UTD&apos;s roots
                     can be found in Hogarthian/DIR diving principles and equipment configuration. UTD has
                     continued to evolve and highlights consistency on multiple diving platforms offering over
@@ -345,7 +345,7 @@ export default function TrainingPage() {
               <ScrollReveal delay={200}>
                 <div
                   style={{
-                    background: "var(--abyss)",
+                    background: "var(--paper)",
                     border: "1px solid var(--border)",
                     borderRadius: "4px",
                     padding: "clamp(1.5rem, 3vw, 2.5rem)",
@@ -376,7 +376,7 @@ export default function TrainingPage() {
                   <p
                     style={{
                       fontSize: "clamp(0.9rem, 1.2vw, 0.97rem)",
-                      color: "var(--muted)",
+                      color: "var(--ash)",
                       lineHeight: 1.85,
                       marginBottom: "1.5rem",
                       maxWidth: "48ch",
@@ -386,7 +386,7 @@ export default function TrainingPage() {
                     }}
                   >
                     We are proud to be a part of{" "}
-                    <strong style={{ color: "var(--white)" }}>Divers Alert Network</strong>, the world's most
+                    <strong style={{ color: "var(--canvas)" }}>Divers Alert Network</strong>, the world's most
                     recognized and respected dive safety organization. DAN promotes diver safety worldwide
                     through research, medicine, education &amp; emergency support.
                   </p>
@@ -405,7 +405,7 @@ export default function TrainingPage() {
 
       {/* ── The Training Philosophy ── */}
       <section
-        className="section section--dark"
+        className="section section--ink"
         style={{ position: "relative", overflow: "hidden" }}
       >
         {/* Oversized background number */}
@@ -462,7 +462,7 @@ export default function TrainingPage() {
                   fontFamily: "'Syne', sans-serif",
                   fontSize: "clamp(0.65rem, 1.2vw, 0.8rem)",
                   fontWeight: 400,
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   letterSpacing: "0.3em",
                   textTransform: "uppercase",
                   margin: 0,
@@ -528,7 +528,7 @@ export default function TrainingPage() {
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
                     fontWeight: 800,
-                    color: "var(--white)",
+                    color: "var(--canvas)",
                     marginBottom: "0.85rem",
                     letterSpacing: "-0.01em",
                   }}
@@ -538,7 +538,7 @@ export default function TrainingPage() {
                 <p
                   style={{
                     fontSize: "clamp(0.88rem, 1.2vw, 0.97rem)",
-                    color: "var(--muted)",
+                    color: "var(--ash)",
                     lineHeight: 1.85,
                     maxWidth: "56ch",
                     fontWeight: 300,
@@ -577,7 +577,7 @@ export default function TrainingPage() {
                 fontFamily: "'Syne', sans-serif",
                 fontSize: "clamp(1.3rem, 2.5vw, 2rem)",
                 fontWeight: 800,
-                color: "var(--white)",
+                color: "var(--canvas)",
                 marginBottom: "1.25rem",
                 letterSpacing: "-0.02em",
               }}
@@ -599,7 +599,7 @@ export default function TrainingPage() {
               <a
                 href="https://www.facebook.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -611,7 +611,7 @@ export default function TrainingPage() {
               <a
                 href="https://www.instagram.com/gardnerunderwater/"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -623,7 +623,7 @@ export default function TrainingPage() {
               <a
                 href="https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
@@ -635,7 +635,7 @@ export default function TrainingPage() {
               <a
                 href="https://www.youtube.com/@thedivetable"
                 style={{
-                  color: "var(--muted)",
+                  color: "var(--ash)",
                   fontSize: "0.85rem",
                   fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: "0.08em",
