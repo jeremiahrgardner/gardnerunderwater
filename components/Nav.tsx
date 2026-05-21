@@ -22,7 +22,7 @@ export function Nav() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
+    const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
@@ -39,9 +39,9 @@ export function Nav() {
           left: 0,
           right: 0,
           zIndex: 100,
-          transition: "background 0.4s, border-color 0.4s",
-          background: scrolled ? "rgba(5, 13, 24, 0.97)" : "transparent",
-          borderBottom: scrolled ? "1px solid var(--border-mid)" : "1px solid transparent",
+          transition: "background 0.3s, border-color 0.3s",
+          background: scrolled ? "rgba(10, 8, 4, 0.98)" : "transparent",
+          borderBottom: scrolled ? "1px solid var(--gold-border)" : "1px solid transparent",
         }}
       >
         <div
@@ -49,7 +49,7 @@ export function Nav() {
             maxWidth: "1240px",
             margin: "0 auto",
             padding: "0 clamp(1.25rem, 4vw, 3rem)",
-            height: "72px",
+            height: "70px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -59,48 +59,25 @@ export function Nav() {
           <Link
             href="/"
             aria-label="Gardner Underwater — home"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.65rem",
-              flexShrink: 0,
-              textDecoration: "none",
-            }}
+            style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}
           >
-            <div style={{ position: "relative", width: "38px", height: "38px", flexShrink: 0 }}>
-              <Image
-                src="/logo.png"
-                alt="Gardner Underwater"
-                fill
-                style={{ objectFit: "contain" }}
-                priority
-              />
+            <div style={{ position: "relative", width: "40px", height: "40px", flexShrink: 0 }}>
+              <Image src="/logo.png" alt="Gardner Underwater" fill style={{ objectFit: "contain" }} priority />
             </div>
-            <span
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "0.78rem",
-                fontWeight: 900,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                color: "var(--off-white)",
-                lineHeight: 1.2,
-              }}
-            >
-              Gardner<br />Underwater
+            <span style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: "1rem",
+              letterSpacing: "0.08em",
+              color: "var(--cream)",
+              textTransform: "uppercase",
+              lineHeight: 1,
+            }}>
+              Gardner Underwater
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav
-            aria-label="Main navigation"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.1rem",
-            }}
-            className="desktop-nav"
-          >
+          <nav aria-label="Main navigation" className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "0" }}>
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -109,19 +86,31 @@ export function Nav() {
                   href={link.href}
                   aria-current={isActive ? "page" : undefined}
                   style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.6rem",
-                    fontWeight: isActive ? 700 : 500,
-                    color: isActive ? "var(--gold)" : "rgba(245, 240, 232, 0.5)",
-                    padding: "0.4rem 0.7rem",
-                    transition: "color 0.2s",
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: "0.55rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.15em",
+                    textTransform: "uppercase",
+                    color: isActive ? "var(--gold)" : "var(--ash)",
+                    padding: "0.5rem 0.75rem",
+                    transition: "color 0.15s",
                     textDecoration: "none",
                     whiteSpace: "nowrap",
-                    letterSpacing: "0.08em",
+                    position: "relative",
                   }}
                   className="nav-link"
                 >
                   {link.label}
+                  {isActive && (
+                    <span style={{
+                      position: "absolute",
+                      bottom: "2px",
+                      left: "0.75rem",
+                      right: "0.75rem",
+                      height: "1px",
+                      background: "var(--gold)",
+                    }} />
+                  )}
                 </Link>
               );
             })}
@@ -131,9 +120,9 @@ export function Nav() {
           <Link
             href="/contact"
             className="btn btn-primary hide-mobile"
-            style={{ fontSize: "0.6rem", padding: "0.65rem 1.4rem" }}
+            style={{ fontSize: "0.55rem", padding: "0.7rem 1.5rem" }}
           >
-            Book Your Course
+            Book Now
           </Link>
 
           {/* Hamburger */}
@@ -147,41 +136,14 @@ export function Nav() {
               border: "none",
               cursor: "pointer",
               padding: "0.5rem",
+              display: "flex",
               flexDirection: "column",
               gap: "5px",
-              borderRadius: "0",
             }}
           >
-            <span
-              style={{
-                display: "block",
-                width: "24px",
-                height: "2px",
-                background: "var(--off-white)",
-                transition: "transform 0.3s, opacity 0.3s",
-                transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none",
-              }}
-            />
-            <span
-              style={{
-                display: "block",
-                width: "24px",
-                height: "2px",
-                background: "var(--off-white)",
-                transition: "opacity 0.3s",
-                opacity: menuOpen ? 0 : 1,
-              }}
-            />
-            <span
-              style={{
-                display: "block",
-                width: "24px",
-                height: "2px",
-                background: "var(--off-white)",
-                transition: "transform 0.3s, opacity 0.3s",
-                transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none",
-              }}
-            />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "transform 0.3s", transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "opacity 0.3s", opacity: menuOpen ? 0 : 1 }} />
+            <span style={{ display: "block", width: "24px", height: "2px", background: "var(--cream)", transition: "transform 0.3s", transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none" }} />
           </button>
         </div>
       </header>
@@ -189,17 +151,16 @@ export function Nav() {
       {/* Mobile backdrop */}
       <div
         aria-hidden="true"
+        onClick={() => setMenuOpen(false)}
         style={{
           position: "fixed",
           inset: 0,
           zIndex: 99,
-          background: "rgba(2, 5, 10, 0.85)",
+          background: "rgba(0,0,0,0.9)",
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? "all" : "none",
           transition: "opacity 0.3s",
-          backdropFilter: "blur(4px)",
         }}
-        onClick={() => setMenuOpen(false)}
       />
 
       {/* Mobile drawer */}
@@ -211,30 +172,19 @@ export function Nav() {
           top: 0,
           right: 0,
           bottom: 0,
-          width: "min(320px, 88vw)",
+          width: "min(320px, 90vw)",
           zIndex: 100,
-          background: "var(--void)",
-          borderLeft: "1px solid var(--border-mid)",
-          padding: "5rem 2rem 2rem",
+          background: "var(--black)",
+          borderLeft: "1px solid var(--gold-border)",
+          padding: "5rem 2.5rem 2.5rem",
           display: "flex",
           flexDirection: "column",
           gap: "0.1rem",
           transform: menuOpen ? "translateX(0)" : "translateX(100%)",
-          transition: "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+          transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
           overflowY: "auto",
         }}
       >
-        {/* Ornamental top corner */}
-        <div style={{
-          position: "absolute",
-          top: "1.5rem",
-          right: "1.5rem",
-          width: "16px",
-          height: "16px",
-          borderTop: "2px solid var(--gold)",
-          borderRight: "2px solid var(--gold)",
-        }} />
-
         {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (
@@ -244,14 +194,14 @@ export function Nav() {
               onClick={() => setMenuOpen(false)}
               aria-current={isActive ? "page" : undefined}
               style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "1.4rem",
-                fontWeight: 900,
-                color: isActive ? "var(--gold)" : "var(--text)",
-                padding: "0.85rem 0",
-                borderBottom: "1px solid var(--border)",
+                fontFamily: "'Bebas Neue', sans-serif",
+                fontSize: "2rem",
+                letterSpacing: "0.05em",
+                color: isActive ? "var(--gold)" : "var(--cream)",
+                padding: "0.75rem 0",
+                borderBottom: "1px solid var(--gold-border)",
                 textDecoration: "none",
-                letterSpacing: "0.02em",
+                textTransform: "uppercase",
               }}
             >
               {link.label}
@@ -269,14 +219,11 @@ export function Nav() {
       </div>
 
       <style>{`
-        .nav-link:hover { color: var(--off-white) !important; }
+        .nav-link:hover { color: var(--cream) !important; }
         @media (max-width: 900px) {
           .desktop-nav { display: none !important; }
           .hamburger  { display: flex !important; }
           .hide-mobile { display: none !important; }
-        }
-        @media (max-width: 480px) {
-          header > div { padding: 0 1rem !important; }
         }
       `}</style>
     </>
