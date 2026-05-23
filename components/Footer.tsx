@@ -129,6 +129,9 @@ export function Footer() {
           <p style={{ fontFamily: "'Syne', sans-serif", fontSize: "0.65rem", fontWeight: 800, letterSpacing: "0.2em", color: "rgba(245,240,230,0.2)", textTransform: "uppercase" }}>
             Eyes Open · Brain On · Unified Team
           </p>
+          <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.5rem", color: "rgba(245,240,230,0.15)", letterSpacing: "0.08em" }}>
+            A Gardner Expedition Co. brand · Part of the Gardner Expedition Co. ecosystem
+          </p>
         </div>
       </div>
     </footer>
