@@ -229,8 +229,8 @@ export default function HomePage() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "1px",
-            background: "rgba(245, 240, 230, 0.08)",
-            border: "1px solid rgba(245, 240, 230, 0.08)",
+            background: "rgba(248, 248, 244, 0.08)",
+            border: "1px solid rgba(248, 248, 244, 0.08)",
           }}>
             {[
               { label: "THE COURSES", href: "/courses", sub: "Find the right course for your goals" },

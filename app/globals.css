@@ -1,25 +1,25 @@
 /* ═══════════════════════════════════════════════════════════════
-   GARDNER UNDERWATER — Design System v7
-   Premium tattoo flash sheet: cream canvas, black ink, gold accent
-   Fonts: Syne (display) · DM Sans (body) · JetBrains Mono (labels)
+   GARDNER UNDERWATER — Design System v8
+   Premium tattoo flash sheet: off-white canvas, graphite ink, goldline accent
+   Fonts: Syne (display) · EB Garamond (body) · JetBrains Mono (labels)
    ═══════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
-/* ── Palette ── */
+/* ── Palette v2 — monochromatic + goldline ── */
 :root {
-  --canvas:     #f5f0e6;   /* primary bg — warm cream */
-  --paper:      #ede8dc;   /* secondary bg */
-  --card:       #e5e0d4;   /* card bg */
-  --border:     #d0c9b8;   /* warm border */
-  --ink:        #1a1710;   /* near-black warm text */
-  --ink-dark:   #0f0d0a;   /* darkest bg / headings on light */
-  --ash:        #7a7268;   /* muted body text */
-  --dim:        #a49e94;   /* tertiary */
-  --gold:       #f1c233;   /* primary accent */
-  --gold-dark:  #c9a030;   /* darker gold */
-  --gold-dim:   rgba(241, 194, 51, 0.12);
-  --gold-border: rgba(241, 194, 51, 0.35);
+  --canvas:      #F8F8F4;   /* primary bg — cool off-white */
+  --paper:       #FAFAF7;   /* secondary bg */
+  --card:        #EDEDEA;   /* card bg */
+  --border:      #E5E2DA;   /* border */
+  --ink:         #171717;   /* body text */
+  --ink-dark:    #0A0A0A;   /* headings, darkest bg */
+  --ink-subtle:  #767676;   /* captions, labels, metadata */
+  --dim:         #EDEDEA;   /* tertiary */
+  --goldline:    #F1C233;   /* primary accent */
+  --goldline-dark: #C9A030; /* darker gold */
+  --goldline-dim:  rgba(241, 194, 51, 0.12);
+  --goldline-border: rgba(241, 194, 51, 0.35);
 }
 
 /* ── Reset ── */
@@ -34,14 +34,14 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   background: var(--canvas);
   color: var(--ink);
-  font-family: 'DM Sans', Arial, sans-serif;
+  font-family: 'EB Garamond', Georgia, serif;
   line-height: 1.75;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── Paper grain ── */
+/* ── Paper grain (subtle, monochrome) ── */
 body::before {
   content: '';
   position: fixed;
@@ -49,7 +49,7 @@ body::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.025;
   mix-blend-mode: multiply;
 }
 
@@ -78,7 +78,7 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.6rem); }
 }
 
 p {
-  font-family: 'DM Sans', Arial, sans-serif;
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: clamp(0.9rem, 1.1vw, 1rem);
   line-height: 1.85;
   color: var(--ink);
@@ -114,7 +114,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-weight: 700;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--gold-dark);
+  color: var(--goldline-dark);
   margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
@@ -126,7 +126,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   display: inline-block;
   width: 1.5rem;
   height: 2px;
-  background: var(--gold);
+  background: var(--goldline);
 }
 
 /* ── Tattoo divider ── */
@@ -135,7 +135,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   align-items: center;
   gap: 0.75rem;
   margin: 1rem 0;
-  color: var(--gold);
+  color: var(--goldline);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.65rem;
   letter-spacing: 0.3em;
@@ -177,7 +177,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 .btn-primary {
-  background: var(--gold);
+  background: var(--goldline);
   color: var(--ink-dark);
 }
 
@@ -185,7 +185,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   background: var(--ink-dark);
   color: var(--canvas);
   transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 var(--gold);
+  box-shadow: 6px 6px 0 var(--goldline);
 }
 
 .btn-primary:active { transform: none; box-shadow: none; }
@@ -197,21 +197,21 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 .btn-outline:hover {
-  border-color: var(--gold);
+  border-color: var(--goldline);
   color: var(--ink-dark);
   transform: translate(-3px, -3px);
-  box-shadow: 4px 4px 0 var(--gold-dim);
+  box-shadow: 4px 4px 0 var(--goldline-dim);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--ash);
+  color: var(--ink-subtle);
   padding: 0.85rem 0;
   border-bottom: 1px solid var(--border);
   letter-spacing: 0.15em;
 }
 
-.btn-ghost:hover { color: var(--gold-dark); border-bottom-color: var(--gold); }
+.btn-ghost:hover { color: var(--goldline-dark); border-bottom-color: var(--goldline); }
 
 /* ── Cards ── */
 .card {
@@ -223,9 +223,9 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 .card:hover {
-  border-color: var(--gold);
+  border-color: var(--goldline);
   transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 var(--gold);
+  box-shadow: 8px 8px 0 var(--goldline);
 }
 
 .card:hover::before {
@@ -233,14 +233,14 @@ strong { font-weight: 700; color: var(--ink-dark); }
   position: absolute;
   top: -1px; left: -1px;
   width: 14px; height: 14px;
-  border-top: 2.5px solid var(--gold);
-  border-left: 2.5px solid var(--gold);
+  border-top: 2.5px solid var(--goldline);
+  border-left: 2.5px solid var(--goldline);
 }
 
 /* ── Ornament box ── */
 .ornament-box {
   background: var(--card);
-  border: 1.5px solid var(--gold-border);
+  border: 1.5px solid var(--goldline-border);
   padding: clamp(2rem, 4vw, 3.5rem);
   position: relative;
 }
@@ -250,8 +250,8 @@ strong { font-weight: 700; color: var(--ink-dark); }
   position: absolute;
   top: -1px; left: -1px;
   width: 18px; height: 18px;
-  border-top: 2.5px solid var(--gold);
-  border-left: 2.5px solid var(--gold);
+  border-top: 2.5px solid var(--goldline);
+  border-left: 2.5px solid var(--goldline);
 }
 
 .ornament-box::after {
@@ -259,8 +259,8 @@ strong { font-weight: 700; color: var(--ink-dark); }
   position: absolute;
   bottom: -1px; right: -1px;
   width: 18px; height: 18px;
-  border-bottom: 2.5px solid var(--gold);
-  border-right: 2.5px solid var(--gold);
+  border-bottom: 2.5px solid var(--goldline);
+  border-right: 2.5px solid var(--goldline);
 }
 
 /* ── Divider ── */
@@ -285,10 +285,10 @@ strong { font-weight: 700; color: var(--ink-dark); }
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 13, 10, 0.97) 0%,
-    rgba(15, 13, 10, 0.6) 40%,
-    rgba(15, 13, 10, 0.2) 70%,
-    rgba(15, 13, 10, 0.5) 100%
+    rgba(10, 10, 10, 0.97) 0%,
+    rgba(10, 10, 10, 0.6) 40%,
+    rgba(10, 10, 10, 0.2) 70%,
+    rgba(10, 10, 10, 0.5) 100%
   );
   z-index: 1;
 }
@@ -301,7 +301,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-weight: 700;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--goldline);
   margin-bottom: 1.5rem;
 }
 
@@ -317,10 +317,10 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 .hero-sub {
-  font-family: 'DM Sans', Arial, sans-serif;
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: clamp(0.9rem, 1.2vw, 1.05rem);
   font-weight: 400;
-  color: rgba(245, 240, 230, 0.65);
+  color: rgba(248, 248, 244, 0.65);
   max-width: 46ch;
   margin-bottom: 2.5rem;
   line-height: 1.8;
@@ -342,14 +342,14 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-size: 0.52rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--goldline);
   opacity: 0.5;
 }
 
 .scroll-line {
   width: 1px;
   height: 3.5rem;
-  background: linear-gradient(to bottom, var(--gold), transparent);
+  background: linear-gradient(to bottom, var(--goldline), transparent);
   animation: scrollPulse 2.5s ease-in-out infinite;
 }
 
@@ -371,7 +371,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--ash);
+  color: var(--ink-subtle);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -383,7 +383,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
   border: 1px solid var(--border);
   border-radius: 0;
   color: var(--ink-dark);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'EB Garamond', sans-serif;
   font-size: 0.9rem;
   padding: 0.85rem 1rem;
   transition: border-color 0.2s, box-shadow 0.2s;
@@ -396,8 +396,8 @@ strong { font-weight: 700; color: var(--ink-dark); }
 .form-textarea:focus,
 .form-select:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 4px 4px 0 var(--gold-dim);
+  border-color: var(--goldline);
+  box-shadow: 4px 4px 0 var(--goldline-dim);
 }
 
 .form-textarea { resize: vertical; min-height: 130px; }
@@ -412,8 +412,8 @@ strong { font-weight: 700; color: var(--ink-dark); }
 
 .form-select option { background: var(--paper); }
 
-/* ── Gold badge ── */
-.gold-badge {
+/* ── Goldline badge ── */
+.goldline-badge {
   display: inline-flex;
   align-items: center;
   font-family: 'JetBrains Mono', monospace;
@@ -421,9 +421,9 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-dark);
-  background: var(--gold-dim);
-  border: 1px solid var(--gold-border);
+  color: var(--goldline-dark);
+  background: var(--goldline-dim);
+  border: 1px solid var(--goldline-border);
   padding: 0.3rem 0.85rem;
 }
 
@@ -432,13 +432,13 @@ strong { font-weight: 700; color: var(--ink-dark); }
   font-family: 'Syne', Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--gold-dark);
+  color: var(--goldline-dark);
   line-height: 1;
   letter-spacing: -0.01em;
 }
 
 /* ── Quote block ── */
-.quote-block { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
+.quote-block { border-left: 3px solid var(--goldline); padding-left: 1.5rem; }
 
 .quote-block blockquote {
   font-family: 'Syne', Arial, sans-serif;
@@ -451,7 +451,7 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 /* ── Accent line ── */
-.accent-line { width: 3rem; height: 2.5px; background: var(--gold); margin: 1rem 0; }
+.accent-line { width: 3rem; height: 2.5px; background: var(--goldline); margin: 1rem 0; }
 
 /* ── Stat block ── */
 .stat-block {
@@ -462,16 +462,16 @@ strong { font-weight: 700; color: var(--ink-dark); }
   transition: border-color 0.2s;
 }
 
-.stat-block:hover { border-color: var(--gold); }
+.stat-block:hover { border-color: var(--goldline); }
 
-/* ── Gold strip ── */
-.gold-strip {
-  background: var(--gold);
+/* ── Goldline strip ── */
+.goldline-strip {
+  background: var(--goldline);
   padding: 0.85rem 0;
   text-align: center;
 }
 
-.gold-strip span {
+.goldline-strip span {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
   font-weight: 700;
@@ -481,8 +481,8 @@ strong { font-weight: 700; color: var(--ink-dark); }
 }
 
 /* ── Hover utilities ── */
-.hover-gold { transition: color 0.15s; }
-.hover-gold:hover { color: var(--gold-dark); }
+.hover-goldline { transition: color 0.15s; }
+.hover-goldline:hover { color: var(--goldline-dark); }
 .hover-ink { transition: color 0.15s; }
 .hover-ink:hover { color: var(--ink-dark); }
 
@@ -493,54 +493,14 @@ a.card {
 }
 
 a.card:hover {
-  border-color: var(--gold);
+  border-color: var(--goldline);
   transform: translate(-4px, -4px);
-  box-shadow: 8px 8px 0 var(--gold);
+  box-shadow: 8px 8px 0 var(--goldline);
   text-decoration: none;
 }
 
-/* ── Arrow link ── */
-.arrow-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--gold-dark);
-  transition: gap 0.2s;
-  text-decoration: none;
-}
-
-.arrow-link:hover { gap: 1rem; }
-
-/* ── Scrollbar ── */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: var(--paper); }
-::-webkit-scrollbar-thumb { background: var(--gold); }
-
-/* ── Selection ── */
-::selection { background: var(--gold); color: var(--ink-dark); }
-
-/* ── Focus ── */
-:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-/* ── Keyframes ── */
+/* ── Scroll pulse ── */
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; }
-  50%       { opacity: 1; }
-}
-
-/* ── Utility ── */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
