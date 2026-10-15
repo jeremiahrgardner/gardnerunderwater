@@ -8,6 +8,7 @@ const roots = [
   "content",
   "scripts",
   "docs/seo/OWNER_INPUTS.md",
+  "docs/brand-assets.md",
 ];
 function files(filename) {
   return fs.statSync(filename).isDirectory()

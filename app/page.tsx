@@ -140,10 +140,10 @@ export default function HomePage() {
       </section>
       <section className="landing-instructor">
         <div className="container landing-instructor-grid">
-          <div className="landing-instructor-image">
+          <div className="landing-instructor-image instructor-surface-photo">
             <Image
-              src="/photos/jay-gardner-underwater.webp"
-              alt="Jay Gardner diving with twin cylinders and a primary light"
+              src="/photos/twin-caves-surface.webp"
+              alt="Jay Gardner beside the boat at the Twin Caves surface entry"
               fill
               sizes="(max-width: 760px) 100vw, 45vw"
             />

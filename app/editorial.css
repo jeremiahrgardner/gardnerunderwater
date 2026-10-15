@@ -1708,3 +1708,9 @@
   .site-header .brand-wordmark { width: 180px; }
   .site-footer .brand-wordmark { width: 210px; }
 }
+
+/* Keep the surface photograph's full frame and embedded photographer credit visible. */
+.landing-instructor-image.instructor-surface-photo { height: auto; aspect-ratio: 6637 / 4425; }
+.instructor-surface-photo > img { object-fit: contain; object-position: center; }
+.training-expedition-photo { height: clamp(300px, 42vw, 600px); }
+.training-expedition-photo > img { object-position: center 60%; }
