@@ -8,7 +8,11 @@ export function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="brand" aria-label="Gardner Underwater home">
+            <Link
+              href="/"
+              className="brand"
+              aria-label="Gardner Underwater home"
+            >
               <Image
                 src="/brand/gu-logo-landscape.png"
                 width={3023}
@@ -19,9 +23,9 @@ export function Footer() {
               />
             </Link>
             <p>
-              Training designed to advance your skills,
+              Mentorship and small-team training
               <br />
-              your control, and your brain.
+              for divers who want more than a card.
             </p>
             <span className="eyebrow">
               San Diego, California · Train anywhere
