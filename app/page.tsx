@@ -17,25 +17,25 @@ export const metadata: Metadata = pageMetadata(
 
 const paths = [
   {
-    label: "Refine your skills",
-    title: "Feel more at home in the water.",
-    text: "Build the buoyancy, trim, and propulsion that make every dive feel more controlled. For certified divers at any stage.",
+    label: "Sharpen the foundation",
+    title: "Make the fundamentals automatic.",
+    text: "Buoyancy, trim, and propulsion taught to one standard, so the basics stop taking up your attention. For certified divers at any stage.",
     href: "/courses/essentials-of-recreational-diving",
     link: "Explore foundational training",
     detail: "Essentials of Recreational Diving",
   },
   {
     label: "Keep progressing",
-    title: "A coach in your corner.",
-    text: "Turn practice into progress with a consistent plan, video review, and honest feedback. Work on the diver you want to become.",
+    title: "A mentor between your dives.",
+    text: "Monthly coaching with a plan, video review, and honest feedback, so your progress doesn’t stall between courses.",
     href: "/courses/scuba-coaching",
     link: "Discover scuba coaching",
     detail: "$129 / month · No minimum commitment",
   },
   {
     label: "Take the next step",
-    title: "Build a foundation for going further.",
-    text: "Prepare for the demands of technical diving through precise personal skills, clear thinking, and a team approach.",
+    title: "Earn your way into technical diving.",
+    text: "Precise personal skills, clear thinking, and a team approach. The foundation for deeper, longer, more demanding dives.",
     href: "/courses/essentials-of-tech",
     link: "Explore technical training",
     detail: "Essentials of Tech · Techreational · Tech 1",
@@ -131,16 +131,17 @@ export default function HomePage() {
         <div className="container">
           <div className="landing-section-heading">
             <div>
-              <span className="eyebrow">Good divers never stop learning</span>
+              <span className="eyebrow">Pick your starting point</span>
               <h2>
-                Where would you
+                What’s your
                 <br />
-                like to feel better?
+                next level?
               </h2>
             </div>
             <p>
-              You’re already a diver. Your next step should match the diving you
-              want to do and the skills you want to improve.
+              You’re already a diver. Your next step should be earned, not sold.
+              Start where your skills are and build toward the diving you want
+              to do.
             </p>
           </div>
           <div className="training-paths-grid">
