@@ -182,17 +182,15 @@ export default function HomePage() {
             />
             <div className="instructor-nameplate">
               <strong>Jay Gardner</strong>
-              <span>Your instructor. Your teammate.</span>
+              <span>Your mentor. Your teammate.</span>
             </div>
           </div>
           <div className="landing-instructor-copy">
-            <span className="eyebrow">
-              Personal training. A real relationship.
-            </span>
+            <span className="eyebrow">Your mentor</span>
             <h2>
-              Someone who sees
+              A mentor who’s been
               <br />
-              the diver in you.
+              where you’re going.
             </h2>
             <p className="large-copy">
               “I teach because I love it.
