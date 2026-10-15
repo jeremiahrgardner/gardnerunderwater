@@ -42,6 +42,21 @@ const paths = [
   },
 ];
 
+const team = [
+  [
+    "Same gear. Same procedures.",
+    "One consistent system means anyone trained this way can dive with you. No renegotiating the basics before every dive.",
+  ],
+  [
+    "Small teams, real bonds",
+    "Three students or fewer. You learn alongside divers who want what you want, and you solve problems together in the water.",
+  ],
+  [
+    "A team that keeps diving",
+    "Training days, local dives, and trips with a community of like-minded thinking divers. The course ends. The team doesn’t.",
+  ],
+];
+
 export default function HomePage() {
   const articles = getArticles().slice(0, 2);
   return (
@@ -218,6 +233,34 @@ export default function HomePage() {
                 Thomas K <span>· Gardner Underwater student</span>
               </figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+      <section className="section" aria-labelledby="team-title">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">The team</div>
+              <h2 id="team-title">
+                Find your
+                <br />
+                crew.
+              </h2>
+            </div>
+            <p>
+              Diving the right way gets lonely when your local crew dives a
+              different way. Here, you join a community of thinking divers who
+              share one standard, in training and long after it.
+            </p>
+          </div>
+          <div className="approach-grid">
+            {team.map(([title, body], i) => (
+              <article key={title} className="approach-card">
+                <span className="eyebrow">0{i + 1}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
