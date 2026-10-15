@@ -1,0 +1,1136 @@
+{
+  "site": "https://gardnerunderwater.com",
+  "generated": "2026-10-14",
+  "notes": [
+    "All articles start as drafts (draft: true). Body copy is written and approved by Jeremiah Gardner; do not generate it.",
+    "demandEstimate and competition are research estimates, not tool data; they will be replaced with Semrush volumes later."
+  ],
+  "clusters": [
+    {
+      "id": "A",
+      "slug": "dir-foundations",
+      "name": "DIR Foundations",
+      "pillar": "what-is-dir-diving"
+    },
+    {
+      "id": "B",
+      "slug": "gear-configuration",
+      "name": "Gear Configuration",
+      "pillar": "dir-gear-configuration"
+    },
+    {
+      "id": "C",
+      "slug": "buoyancy-trim-breathing",
+      "name": "Buoyancy, Trim & Breathing",
+      "pillar": "scuba-buoyancy-control"
+    },
+    {
+      "id": "D",
+      "slug": "propulsion",
+      "name": "Propulsion",
+      "pillar": "scuba-finning-techniques"
+    },
+    {
+      "id": "E",
+      "slug": "gas-planning",
+      "name": "Gas & Dive Planning",
+      "pillar": "scuba-gas-management"
+    },
+    {
+      "id": "F",
+      "slug": "team-procedures",
+      "name": "Team Diving & Procedures",
+      "pillar": "team-diving-vs-buddy-diving"
+    },
+    {
+      "id": "G",
+      "slug": "training-path",
+      "name": "Training Path",
+      "pillar": "how-to-become-a-technical-diver"
+    },
+    {
+      "id": "H",
+      "slug": "san-diego",
+      "name": "San Diego",
+      "pillar": "technical-diving-san-diego"
+    }
+  ],
+  "courses": [
+    {
+      "slug": "essentials-of-recreational-diving",
+      "name": "Essentials of Recreational Diving",
+      "url": "/courses/essentials-of-recreational-diving"
+    },
+    {
+      "slug": "essentials-of-tech",
+      "name": "Essentials of Tech",
+      "url": "/courses/essentials-of-tech"
+    },
+    {
+      "slug": "techreational",
+      "name": "Techreational",
+      "url": "/courses/techreational"
+    },
+    {
+      "slug": "tech-1",
+      "name": "Tech 1",
+      "url": "/courses/tech-1"
+    },
+    {
+      "slug": "doubles",
+      "name": "Doubles (Backmount or Sidemount)",
+      "url": "/courses/doubles"
+    },
+    {
+      "slug": "open-water-rec-1",
+      "name": "Open Water Diver / Recreational 1",
+      "url": "/courses/open-water-rec-1"
+    },
+    {
+      "slug": "rec-2-advanced-open-water",
+      "name": "Recreational 2 / Advanced Open Water",
+      "url": "/courses/rec-2-advanced-open-water"
+    },
+    {
+      "slug": "rescue-diver",
+      "name": "Rescue Diver",
+      "url": "/courses/rescue-diver"
+    },
+    {
+      "slug": "propulsion-back-kick-extension",
+      "name": "Propulsion and/or Back Kick Extension",
+      "url": "/courses/propulsion-back-kick-extension"
+    },
+    {
+      "slug": "drysuit-diver",
+      "name": "Drysuit Diver",
+      "url": "/courses/drysuit-diver"
+    },
+    {
+      "slug": "smb-extension",
+      "name": "SMB/Surface Marker Buoy Extension",
+      "url": "/courses/smb-extension"
+    },
+    {
+      "slug": "scuba-coaching",
+      "name": "Scuba Coaching",
+      "url": "/courses/scuba-coaching"
+    }
+  ],
+  "articles": [
+    {
+      "id": "A1",
+      "title": "What Is DIR Diving? Doing It Right, Explained",
+      "slug": "what-is-dir-diving",
+      "url": "/learn/what-is-dir-diving",
+      "cluster": "dir-foundations",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "dir diving",
+      "secondaryKeywords": [
+        "doing it right diving",
+        "what is dir diving"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low (checked): Wikipedia, forums, one Divein explainer",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "50-word definition first; WKPP cave origins (George Irvine, Jarrod Jablonski); core principles; what DIR is not."
+    },
+    {
+      "id": "A2",
+      "title": "Is DIR Diving Elitist? An Honest Answer From a DIR Instructor",
+      "slug": "is-dir-diving-elitist",
+      "url": "/learn/is-dir-diving-elitist",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 1,
+      "primaryKeyword": "dir elitist",
+      "secondaryKeywords": [
+        "dir diving cult",
+        "dir controversy"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): forum flame threads",
+      "ctaCourse": null,
+      "ctaPage": "/training",
+      "extraLinks": [],
+      "angle": "Own the critique; 'thinking diver, not rule follower'; written to be shared in forums."
+    },
+    {
+      "id": "A3",
+      "title": "DIR for Recreational Divers: What Transfers to a 60-ft Reef Dive",
+      "slug": "dir-for-recreational-divers",
+      "url": "/learn/dir-for-recreational-divers",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 3,
+      "primaryKeyword": "dir recreational diving",
+      "secondaryKeywords": [
+        "dir single tank",
+        "is dir only for tech"
+      ],
+      "demandEstimate": "Low",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Before and after of an ordinary rec dive."
+    },
+    {
+      "id": "A4",
+      "title": "GUE vs UTD vs Hogarthian: How the DIR Family Tree Differs",
+      "slug": "gue-vs-utd-vs-hogarthian",
+      "url": "/learn/gue-vs-utd-vs-hogarthian",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 1,
+      "primaryKeyword": "gue vs utd",
+      "secondaryKeywords": [
+        "utd vs gue",
+        "hogarthian vs dir"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": null,
+      "ctaPage": "/courses",
+      "extraLinks": [],
+      "angle": "Comparison table. Disclose up front that the author teaches UTD and was a UTD owner until 2026. Confirm current course names on both agency sites before publishing."
+    },
+    {
+      "id": "A5",
+      "title": "Hogarthian Configuration Explained",
+      "slug": "hogarthian-configuration",
+      "url": "/learn/hogarthian-configuration",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 2,
+      "primaryKeyword": "hogarthian rig",
+      "secondaryKeywords": [
+        "hogarthian configuration",
+        "hogarthian harness"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): retailer product pages",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/learn/dir-gear-configuration"
+      ],
+      "angle": "Origin (Bill Hogarth Main), the rule set, singles vs doubles."
+    },
+    {
+      "id": "A6",
+      "title": "What Is a \"Thinking Diver\"?",
+      "slug": "what-is-a-thinking-diver",
+      "url": "/learn/what-is-a-thinking-diver",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 3,
+      "primaryKeyword": "thinking diver",
+      "secondaryKeywords": [
+        "utd thinking diver"
+      ],
+      "demandEstimate": "Niche",
+      "competition": "Very low",
+      "ctaCourse": null,
+      "ctaPage": "/training",
+      "extraLinks": [],
+      "angle": "Own the term; tie it to 'Eyes Open. Brain On. Unified Team.'"
+    },
+    {
+      "id": "A7",
+      "title": "The DIR Glossary: 60 Terms in Plain English",
+      "slug": "dir-glossary",
+      "url": "/learn/dir-glossary",
+      "cluster": "dir-foundations",
+      "isPillar": false,
+      "pillar": "what-is-dir-diving",
+      "wave": 2,
+      "primaryKeyword": "dir glossary",
+      "secondaryKeywords": [
+        "rock bottom",
+        "balanced rig",
+        "s-drill",
+        "modified frog kick"
+      ],
+      "demandEstimate": "Long-tail total",
+      "competition": "Low",
+      "ctaCourse": null,
+      "ctaPage": "/courses",
+      "extraLinks": [],
+      "angle": "One-sentence definitions with anchor links per term; link every pillar."
+    },
+    {
+      "id": "B1",
+      "title": "DIR Gear Configuration, Piece by Piece",
+      "slug": "dir-gear-configuration",
+      "url": "/learn/dir-gear-configuration",
+      "cluster": "gear-configuration",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "dir gear configuration",
+      "secondaryKeywords": [
+        "dir equipment setup",
+        "dir rig"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low-Med (checked): Divein, forums",
+      "ctaCourse": "doubles",
+      "ctaPage": null,
+      "extraLinks": [
+        "/shop"
+      ],
+      "angle": "Annotated photos of the author's own single and doubles rigs; the reason for each piece."
+    },
+    {
+      "id": "B2",
+      "title": "Backplate and Wing vs Jacket BCD",
+      "slug": "backplate-and-wing-vs-jacket-bcd",
+      "url": "/learn/backplate-and-wing-vs-jacket-bcd",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 1,
+      "primaryKeyword": "backplate and wing vs bcd",
+      "secondaryKeywords": [
+        "wing vs jacket bcd",
+        "bp/w vs jacket"
+      ],
+      "demandEstimate": "Med-High",
+      "competition": "Med (checked): blogs, retailers, forums",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/shop"
+      ],
+      "angle": "Comparison table; cold-water angle (less lead on the belt)."
+    },
+    {
+      "id": "B3",
+      "title": "Is a Backplate and Wing Good for Beginners?",
+      "slug": "backplate-and-wing-for-beginners",
+      "url": "/learn/backplate-and-wing-for-beginners",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 2,
+      "primaryKeyword": "backplate and wing for beginners",
+      "secondaryKeywords": [
+        "bp/w first bcd"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": "open-water-rec-1",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "A direct yes, with conditions."
+    },
+    {
+      "id": "B4",
+      "title": "Choosing a Backplate and Wing: Plate, Wing Lift, Harness",
+      "slug": "choosing-a-backplate-and-wing",
+      "url": "/learn/choosing-a-backplate-and-wing",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 3,
+      "primaryKeyword": "steel vs aluminum backplate",
+      "secondaryKeywords": [
+        "wing lift",
+        "hogarthian harness"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med: retailers",
+      "ctaCourse": null,
+      "ctaPage": "/shop",
+      "extraLinks": [],
+      "angle": "Decision table by tank, suit and water."
+    },
+    {
+      "id": "B5",
+      "title": "Long Hose Configuration: Why You Donate the Regulator in Your Mouth",
+      "slug": "long-hose-configuration",
+      "url": "/learn/long-hose-configuration",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 1,
+      "primaryKeyword": "long hose configuration",
+      "secondaryKeywords": [
+        "long hose primary",
+        "7 foot hose"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Routing step by step with video; the out-of-air logic."
+    },
+    {
+      "id": "B6",
+      "title": "5-ft vs 7-ft Hose for Single-Tank Diving",
+      "slug": "5-ft-vs-7-ft-long-hose",
+      "url": "/learn/5-ft-vs-7-ft-long-hose",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 2,
+      "primaryKeyword": "5 ft vs 7 ft hose",
+      "secondaryKeywords": [
+        "long hose open water",
+        "long hose without can light"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": null,
+      "ctaPage": "/shop",
+      "extraLinks": [],
+      "angle": "Clear recommendation by body size and environment; stowing it without a canister light."
+    },
+    {
+      "id": "B7",
+      "title": "Bungeed Backup Regulator: Setup and Why",
+      "slug": "bungeed-backup-regulator",
+      "url": "/learn/bungeed-backup-regulator",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 2,
+      "primaryKeyword": "bungee regulator necklace",
+      "secondaryKeywords": [
+        "bungeed backup"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): forums, product pages",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "How to tie one; failure modes."
+    },
+    {
+      "id": "B8",
+      "title": "Fins for Frog Kicking: What Actually Matters",
+      "slug": "fins-for-frog-kicking",
+      "url": "/learn/fins-for-frog-kicking",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 3,
+      "primaryKeyword": "best fins for frog kick",
+      "secondaryKeywords": [
+        "jet fins"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med: retailers, reviews",
+      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaPage": null,
+      "extraLinks": [
+        "/shop"
+      ],
+      "angle": "Criteria over brands; why split fins struggle."
+    },
+    {
+      "id": "B9",
+      "title": "Sidemount vs Backmount Doubles: Which to Learn First",
+      "slug": "sidemount-vs-backmount",
+      "url": "/learn/sidemount-vs-backmount",
+      "cluster": "gear-configuration",
+      "isPillar": false,
+      "pillar": "dir-gear-configuration",
+      "wave": 3,
+      "primaryKeyword": "sidemount vs backmount",
+      "secondaryKeywords": [
+        "utd z system"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med (Z-system checked: forums only)",
+      "ctaCourse": "doubles",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Decision by goal; how UTD's Z-system keeps gas management consistent across both."
+    },
+    {
+      "id": "C1",
+      "title": "How to Master Scuba Buoyancy: Weight, Trim, Breath",
+      "slug": "scuba-buoyancy-control",
+      "url": "/learn/scuba-buoyancy-control",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "how to improve buoyancy scuba",
+      "secondaryKeywords": [
+        "scuba buoyancy control",
+        "perfect buoyancy"
+      ],
+      "demandEstimate": "High",
+      "competition": "High: scubadiving.com, PADI, DAN, magazines",
+      "ctaCourse": "scuba-coaching",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/essentials-of-recreational-diving"
+      ],
+      "angle": "The DIR order of operations: balanced rig, then trim, then breath; the author's own video."
+    },
+    {
+      "id": "C2",
+      "title": "Horizontal Trim: Why Your Feet Sink and How to Fix It",
+      "slug": "horizontal-trim-feet-sinking",
+      "url": "/learn/horizontal-trim-feet-sinking",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 1,
+      "primaryKeyword": "horizontal trim scuba",
+      "secondaryKeywords": [
+        "feet sinking scuba",
+        "scuba trim"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low-Med (checked): forums, two blogs",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/scuba-coaching"
+      ],
+      "angle": "Diagnose, then fix: weight position, tank height, fins, head position."
+    },
+    {
+      "id": "C3",
+      "title": "How Much Weight Do I Need? The End-of-Dive Weight Check",
+      "slug": "how-much-weight-do-i-need-scuba",
+      "url": "/learn/how-much-weight-do-i-need-scuba",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 2,
+      "primaryKeyword": "how much weight do i need scuba",
+      "secondaryKeywords": [
+        "scuba weight check",
+        "buoyancy check"
+      ],
+      "demandEstimate": "High",
+      "competition": "High (checked): scubadiving.com, scuba.com",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Weight for a near-empty tank at the safety stop; body-weight rules only as a start."
+    },
+    {
+      "id": "C4",
+      "title": "What Is a Balanced Rig (and How to Check Yours)",
+      "slug": "balanced-rig",
+      "url": "/learn/balanced-rig",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 2,
+      "primaryKeyword": "balanced rig scuba",
+      "secondaryKeywords": [],
+      "demandEstimate": "Low",
+      "competition": "Low",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "The swim-up test, step by step."
+    },
+    {
+      "id": "C5",
+      "title": "Breathing for Buoyancy: Fine-Tune With Your Lungs, Not Your BCD",
+      "slug": "breathing-for-buoyancy",
+      "url": "/learn/breathing-for-buoyancy",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 3,
+      "primaryKeyword": "breathing buoyancy control",
+      "secondaryKeywords": [
+        "scuba breathing technique"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "scuba-coaching",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Drills for the next dive."
+    },
+    {
+      "id": "C6",
+      "title": "How to Improve Air Consumption",
+      "slug": "improve-air-consumption",
+      "url": "/learn/improve-air-consumption",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 2,
+      "primaryKeyword": "improve air consumption scuba",
+      "secondaryKeywords": [
+        "reduce air consumption",
+        "sac rate"
+      ],
+      "demandEstimate": "High",
+      "competition": "High (checked): SDI/TDI, Dive Magazine, many shops",
+      "ctaCourse": "scuba-coaching",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/essentials-of-recreational-diving"
+      ],
+      "angle": "The system view: weighting, trim and propulsion cut CO2, which slows breathing."
+    },
+    {
+      "id": "C7",
+      "title": "How to Hover Without Using Your Hands",
+      "slug": "hover-without-hands",
+      "url": "/learn/hover-without-hands",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 3,
+      "primaryKeyword": "how to hover scuba",
+      "secondaryKeywords": [
+        "stop using hands scuba"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Why hands creep in; drills to stop it."
+    },
+    {
+      "id": "C8",
+      "title": "Drysuit Buoyancy and Trim: Fixes for Floaty Feet",
+      "slug": "drysuit-buoyancy-and-trim",
+      "url": "/learn/drysuit-buoyancy-and-trim",
+      "cluster": "buoyancy-trim-breathing",
+      "isPillar": false,
+      "pillar": "scuba-buoyancy-control",
+      "wave": 3,
+      "primaryKeyword": "drysuit buoyancy tips",
+      "secondaryKeywords": [
+        "drysuit feet floating",
+        "drysuit weighting"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med (San Diego shops checked)",
+      "ctaCourse": "drysuit-diver",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Cold-water SoCal specifics; air migration and weighting."
+    },
+    {
+      "id": "D1",
+      "title": "Scuba Finning Techniques: The 5 Kicks Every Diver Should Know",
+      "slug": "scuba-finning-techniques",
+      "url": "/learn/scuba-finning-techniques",
+      "cluster": "propulsion",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "scuba finning techniques",
+      "secondaryKeywords": [
+        "scuba kicks",
+        "frog kick"
+      ],
+      "demandEstimate": "Med-High",
+      "competition": "Med (checked): TDI, retailer blogs",
+      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "When to use each kick; one short clip per kick."
+    },
+    {
+      "id": "D2",
+      "title": "How to Frog Kick (and Modified Frog)",
+      "slug": "how-to-frog-kick",
+      "url": "/learn/how-to-frog-kick",
+      "cluster": "propulsion",
+      "isPillar": false,
+      "pillar": "scuba-finning-techniques",
+      "wave": 2,
+      "primaryKeyword": "how to frog kick scuba",
+      "secondaryKeywords": [
+        "modified frog kick"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "The five most common faults and their fixes."
+    },
+    {
+      "id": "D3",
+      "title": "How to Back Kick: Step by Step, Plus Why You Drift Up",
+      "slug": "how-to-back-kick",
+      "url": "/learn/how-to-back-kick",
+      "cluster": "propulsion",
+      "isPillar": false,
+      "pillar": "scuba-finning-techniques",
+      "wave": 1,
+      "primaryKeyword": "how to back kick scuba",
+      "secondaryKeywords": [
+        "back kick diving",
+        "reverse kick"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low-Med (checked): forum threads, one GUE.tv video",
+      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Solve the top complaint (rising while kicking back); no-fin and surface drills."
+    },
+    {
+      "id": "D4",
+      "title": "Helicopter Turn and Modified Flutter: Precision Kicks",
+      "slug": "helicopter-turn-and-modified-flutter",
+      "url": "/learn/helicopter-turn-and-modified-flutter",
+      "cluster": "propulsion",
+      "isPillar": false,
+      "pillar": "scuba-finning-techniques",
+      "wave": 3,
+      "primaryKeyword": "helicopter turn scuba",
+      "secondaryKeywords": [
+        "modified flutter kick"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Med (checked): TDI",
+      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Silt-safe use; video."
+    },
+    {
+      "id": "E1",
+      "title": "Gas Management for Recreational Divers: Rock Bottom, Turn Pressure, Thirds",
+      "slug": "scuba-gas-management",
+      "url": "/learn/scuba-gas-management",
+      "cluster": "gas-planning",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "scuba gas management",
+      "secondaryKeywords": [
+        "gas planning scuba",
+        "minimum gas"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med (checked): DAN, Divernet, forums",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Worked examples in psi for an AL80 at local depths."
+    },
+    {
+      "id": "E2",
+      "title": "Rock Bottom (Minimum Gas) Calculator",
+      "slug": "rock-bottom-calculator",
+      "url": "/learn/rock-bottom-calculator",
+      "cluster": "gas-planning",
+      "isPillar": false,
+      "pillar": "scuba-gas-management",
+      "wave": 1,
+      "primaryKeyword": "rock bottom calculation",
+      "secondaryKeywords": [
+        "minimum gas calculator"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low-Med (checked): forums, planner docs",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/essentials-of-tech"
+      ],
+      "angle": "Interactive calculator (see brief Phase 5); a link magnet other dive sites will cite."
+    },
+    {
+      "id": "E3",
+      "title": "How to Calculate Your SAC Rate and RMV",
+      "slug": "sac-rate-and-rmv",
+      "url": "/learn/sac-rate-and-rmv",
+      "cluster": "gas-planning",
+      "isPillar": false,
+      "pillar": "scuba-gas-management",
+      "wave": 2,
+      "primaryKeyword": "sac rate calculator",
+      "secondaryKeywords": [
+        "how to calculate sac rate",
+        "rmv scuba"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "scuba-coaching",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Calculator plus a logbook method."
+    },
+    {
+      "id": "E4",
+      "title": "The Rule of Thirds: Where It Comes From and When It Isn't Enough",
+      "slug": "rule-of-thirds-diving",
+      "url": "/learn/rule-of-thirds-diving",
+      "cluster": "gas-planning",
+      "isPillar": false,
+      "pillar": "scuba-gas-management",
+      "wave": 3,
+      "primaryKeyword": "rule of thirds diving",
+      "secondaryKeywords": [],
+      "demandEstimate": "Low-Med",
+      "competition": "Low-Med",
+      "ctaCourse": "essentials-of-tech",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Cave origin; why it under-protects mismatched teams."
+    },
+    {
+      "id": "E5",
+      "title": "Gradient Factors Explained Without the Math Headache",
+      "slug": "gradient-factors-explained",
+      "url": "/learn/gradient-factors-explained",
+      "cluster": "gas-planning",
+      "isPillar": false,
+      "pillar": "scuba-gas-management",
+      "wave": 2,
+      "primaryKeyword": "gradient factors explained",
+      "secondaryKeywords": [
+        "best gradient factors"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med: computer makers, blogs",
+      "ctaCourse": "techreational",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "The homepage already names gradient-factor tinkering as a pain point; answer it."
+    },
+    {
+      "id": "E6",
+      "title": "Standard Gases: Why DIR Teams Use the Same Mixes",
+      "slug": "standard-gases",
+      "url": "/learn/standard-gases",
+      "cluster": "gas-planning",
+      "isPillar": false,
+      "pillar": "scuba-gas-management",
+      "wave": 3,
+      "primaryKeyword": "standard gases diving",
+      "secondaryKeywords": [
+        "21/35 trimix"
+      ],
+      "demandEstimate": "Niche",
+      "competition": "Low (checked): no diving pages surfaced",
+      "ctaCourse": "tech-1",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Team logistics rationale; how it simplifies decompression."
+    },
+    {
+      "id": "F1",
+      "title": "Team Diving vs Buddy Diving: How DIR Teams Work",
+      "slug": "team-diving-vs-buddy-diving",
+      "url": "/learn/team-diving-vs-buddy-diving",
+      "cluster": "team-procedures",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 2,
+      "primaryKeyword": "team diving",
+      "secondaryKeywords": [
+        "buddy diving tips",
+        "buddy system scuba"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/rescue-diver"
+      ],
+      "angle": "Positions, roles, communication; the team as 'your backup: gas, equipment and brain.'"
+    },
+    {
+      "id": "F2",
+      "title": "Out-of-Air Drill: How to Donate the Long Hose",
+      "slug": "out-of-air-drill-long-hose",
+      "url": "/learn/out-of-air-drill-long-hose",
+      "cluster": "team-procedures",
+      "isPillar": false,
+      "pillar": "team-diving-vs-buddy-diving",
+      "wave": 2,
+      "primaryKeyword": "out of air drill scuba",
+      "secondaryKeywords": [
+        "air sharing scuba",
+        "s-drill"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low-Med",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/rescue-diver"
+      ],
+      "angle": "Step-by-step video; common mistakes."
+    },
+    {
+      "id": "F3",
+      "title": "The Valve Drill (Shutdown) Explained",
+      "slug": "valve-drill",
+      "url": "/learn/valve-drill",
+      "cluster": "team-procedures",
+      "isPillar": false,
+      "pillar": "team-diving-vs-buddy-diving",
+      "wave": 3,
+      "primaryKeyword": "valve drill scuba",
+      "secondaryKeywords": [
+        "shutdown drill"
+      ],
+      "demandEstimate": "Low",
+      "competition": "Low",
+      "ctaCourse": "doubles",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/essentials-of-tech"
+      ],
+      "angle": "Why and when; how often to practice."
+    },
+    {
+      "id": "F4",
+      "title": "How to Deploy an SMB From Depth",
+      "slug": "how-to-deploy-an-smb",
+      "url": "/learn/how-to-deploy-an-smb",
+      "cluster": "team-procedures",
+      "isPillar": false,
+      "pillar": "team-diving-vs-buddy-diving",
+      "wave": 2,
+      "primaryKeyword": "how to deploy smb",
+      "secondaryKeywords": [
+        "dsmb deployment",
+        "surface marker buoy"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "smb-extension",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Failure modes; spool vs reel."
+    },
+    {
+      "id": "F5",
+      "title": "Light Signals for Dive Teams",
+      "slug": "dive-light-signals",
+      "url": "/learn/dive-light-signals",
+      "cluster": "team-procedures",
+      "isPillar": false,
+      "pillar": "team-diving-vs-buddy-diving",
+      "wave": 3,
+      "primaryKeyword": "scuba light signals",
+      "secondaryKeywords": [
+        "scuba hand signals"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Low for light signals; High for hand signals",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Lead with light signals, where competition is thin."
+    },
+    {
+      "id": "F6",
+      "title": "Pre-Dive Checks That Catch Real Problems",
+      "slug": "pre-dive-checks",
+      "url": "/learn/pre-dive-checks",
+      "cluster": "team-procedures",
+      "isPillar": false,
+      "pillar": "team-diving-vs-buddy-diving",
+      "wave": 3,
+      "primaryKeyword": "pre dive check scuba",
+      "secondaryKeywords": [
+        "buddy check"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "A team check instead of a rote acronym."
+    },
+    {
+      "id": "G1",
+      "title": "How to Become a Technical Diver: The Training Path",
+      "slug": "how-to-become-a-technical-diver",
+      "url": "/learn/how-to-become-a-technical-diver",
+      "cluster": "training-path",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "how to become a technical diver",
+      "secondaryKeywords": [
+        "technical diving training",
+        "intro to tech"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med-High: SSI, PADI, TDI",
+      "ctaCourse": "essentials-of-tech",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/techreational",
+        "/courses/tech-1"
+      ],
+      "angle": "Skills-first path; honest readiness markers before anyone buys doubles."
+    },
+    {
+      "id": "G2",
+      "title": "Recreational vs Technical Diving: What Actually Changes",
+      "slug": "recreational-vs-technical-diving",
+      "url": "/learn/recreational-vs-technical-diving",
+      "cluster": "training-path",
+      "isPillar": false,
+      "pillar": "how-to-become-a-technical-diver",
+      "wave": 3,
+      "primaryKeyword": "recreational vs technical diving",
+      "secondaryKeywords": [
+        "what is technical diving"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "techreational",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Side-by-side table."
+    },
+    {
+      "id": "G3",
+      "title": "UTD Essentials of Recreational Diving: What to Expect",
+      "slug": "utd-essentials-of-recreational-diving",
+      "url": "/learn/utd-essentials-of-recreational-diving",
+      "cluster": "training-path",
+      "isPillar": false,
+      "pillar": "how-to-become-a-technical-diver",
+      "wave": 2,
+      "primaryKeyword": "utd essentials",
+      "secondaryKeywords": [
+        "essentials of recreational diving",
+        "essentials of rec"
+      ],
+      "demandEstimate": "Low",
+      "competition": "Low (checked): UTD product page, forum reviews",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Day-by-day walkthrough, including the video debriefs."
+    },
+    {
+      "id": "G4",
+      "title": "UTD Essentials vs GUE Fundamentals: Which First Step Fits You",
+      "slug": "utd-essentials-vs-gue-fundamentals",
+      "url": "/learn/utd-essentials-vs-gue-fundamentals",
+      "cluster": "training-path",
+      "isPillar": false,
+      "pillar": "how-to-become-a-technical-diver",
+      "wave": 3,
+      "primaryKeyword": "gue fundamentals vs utd essentials",
+      "secondaryKeywords": [
+        "fundies vs essentials"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): forum threads",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/essentials-of-tech"
+      ],
+      "angle": "Fair table with the same disclosure as A4; confirm current course structures on both agency sites first."
+    },
+    {
+      "id": "G5",
+      "title": "Why Divers Plateau After Open Water, and How to Break Through",
+      "slug": "why-divers-plateau",
+      "url": "/learn/why-divers-plateau",
+      "cluster": "training-path",
+      "isPillar": false,
+      "pillar": "how-to-become-a-technical-diver",
+      "wave": 2,
+      "primaryKeyword": "how to become a better scuba diver",
+      "secondaryKeywords": [
+        "improve scuba skills"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "scuba-coaching",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Author's voice: training versus certification; the case for coaching."
+    },
+    {
+      "id": "H1",
+      "title": "DIR and Technical Diving in San Diego: Where to Train and Dive",
+      "slug": "technical-diving-san-diego",
+      "url": "/learn/technical-diving-san-diego",
+      "cluster": "san-diego",
+      "isPillar": true,
+      "pillar": null,
+      "wave": 1,
+      "primaryKeyword": "technical diving san diego",
+      "secondaryKeywords": [
+        "tech diving training san diego",
+        "dir diving san diego"
+      ],
+      "demandEstimate": "Low-Med",
+      "competition": "Low (checked): an aggregator, forum threads",
+      "ctaCourse": null,
+      "ctaPage": "/courses",
+      "extraLinks": [],
+      "angle": "Sites, seasons, gas fills, training options."
+    },
+    {
+      "id": "H2",
+      "title": "La Jolla Shores for Skills Practice",
+      "slug": "la-jolla-shores-skills-practice",
+      "url": "/learn/la-jolla-shores-skills-practice",
+      "cluster": "san-diego",
+      "isPillar": false,
+      "pillar": "technical-diving-san-diego",
+      "wave": 2,
+      "primaryKeyword": "la jolla shores diving",
+      "secondaryKeywords": [
+        "la jolla shores dive",
+        "la jolla canyon dive"
+      ],
+      "demandEstimate": "Med-High",
+      "competition": "Med (checked): shops, aggregators",
+      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaPage": null,
+      "extraLinks": [
+        "/courses/scuba-coaching"
+      ],
+      "angle": "A practice plan by depth, from the sand flats to the canyon edge."
+    },
+    {
+      "id": "H3",
+      "title": "San Diego Water Temperature by Month: When to Dive Dry",
+      "slug": "san-diego-water-temperature-diving",
+      "url": "/learn/san-diego-water-temperature-diving",
+      "cluster": "san-diego",
+      "isPillar": false,
+      "pillar": "technical-diving-san-diego",
+      "wave": 3,
+      "primaryKeyword": "san diego water temperature diving",
+      "secondaryKeywords": [
+        "drysuit san diego"
+      ],
+      "demandEstimate": "Med",
+      "competition": "Med",
+      "ctaCourse": "drysuit-diver",
+      "ctaPage": null,
+      "extraLinks": [],
+      "angle": "Month-by-month table from a cited data source."
+    }
+  ]
+}
