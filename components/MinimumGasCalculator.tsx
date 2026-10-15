@@ -11,9 +11,9 @@ const fields = [
   ["divers", "Divers sharing gas", 1, 1],
   ["sacPerDiver", "Stressed SAC per diver (cu ft/min)", 0.01, 0.1],
   ["problemMinutes", "Problem-solving time (min)", 0, 0.5],
-  ["ascentRate", "Ascent rate (ft/min)", 0.1, 1],
-  ["stopDepth", "Stop depth (ft)", 0, 1],
-  ["stopMinutes", "Stop time (min)", 0, 0.5],
+  ["ascentRate", "Ascent rate to half depth (ft/min)", 0.1, 1],
+  ["stopInterval", "Stop interval (ft)", 1, 1],
+  ["stopMinutes", "Minutes per stop", 0, 0.5],
 ] as const;
 export function MinimumGasCalculator() {
   const [values, setValues] = useState<Record<keyof MinimumGasInputs, string>>(
@@ -60,11 +60,12 @@ export function MinimumGasCalculator() {
   );
   return (
     <section aria-labelledby="gas-title" className="learn-calculator">
-      <h2 id="gas-title">Minimum gas calculator</h2>
+      <h2 id="gas-title">Rock bottom calculator</h2>
       <p>
-        Draft defaults require instructor confirmation. Salt water; pressure
-        rounded up to the next 100 psi, with a {minimumGasDefaults.floorPsi} psi
-        floor.
+        Uses UTD’s method: one minute to solve the problem at depth, an ascent
+        to half your maximum depth, then one-minute stops every 10 feet, for two
+        divers breathing 1.0 cubic foot per minute each. Salt water; rounded up
+        to the next 100 psi.
       </p>
       <div className="calculator-fields">
         <div className="form-field">
@@ -105,9 +106,16 @@ export function MinimumGasCalculator() {
           result && (
             <>
               <h3>
-                Minimum reserve: {result.reservePsi.toLocaleString()} psi /{" "}
+                Rock bottom: {result.reservePsi.toLocaleString()} psi /{" "}
                 {result.reserveBar.toFixed(1)} bar
               </h3>
+              {input.depth > 100 && (
+                <p role="status">
+                  UTD keeps air and nitrox dives to 100 feet. Deeper dives use
+                  helium mixes, and rock bottom is planned to the next gas
+                  source as part of technical training.
+                </p>
+              )}
               {result.exceedsCylinder && (
                 <p role="status">
                   This reserve exceeds the cylinder’s rated pressure. Review the
@@ -120,7 +128,7 @@ export function MinimumGasCalculator() {
                   <tr>
                     <th scope="col">Segment</th>
                     <th scope="col">Minutes</th>
-                    <th scope="col">Average ATA</th>
+                    <th scope="col">ATA</th>
                     <th scope="col">Surface-equivalent min</th>
                     <th scope="col">Gas (cu ft)</th>
                   </tr>
@@ -129,18 +137,19 @@ export function MinimumGasCalculator() {
                   {result.segments.map((s) => (
                     <tr key={s.name}>
                       <th scope="row">{s.name}</th>
-                      <td>{s.minutes.toFixed(3)}</td>
-                      <td>{s.ata.toFixed(3)}</td>
-                      <td>{s.surfaceMinutes.toFixed(3)}</td>
+                      <td>{Number(s.minutes.toFixed(2))}</td>
+                      <td>{s.ata.toFixed(2)}</td>
+                      <td>{s.surfaceMinutes.toFixed(2)}</td>
                       <td>{s.gasCuFt.toFixed(2)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
               <p>
-                Surface-equivalent time: {result.surfaceMinutes.toFixed(3)} min.
-                Total gas: {result.gasCuFt.toFixed(2)} cu ft. Unrounded
-                pressure: {result.rawPsi.toFixed(1)} psi.
+                Ascent time: {Number(result.ascentMinutes.toFixed(2))} min at an
+                average of {result.averageAta.toFixed(2)} ATA. Gas needed:{" "}
+                {result.gasCuFt.toFixed(1)} cu ft. Unrounded pressure:{" "}
+                {result.rawPsi.toFixed(0)} psi.
               </p>
             </>
           )
