@@ -9,11 +9,11 @@ import {
 const fields = [
   ["depth", "Maximum depth (ft)", 0, 1],
   ["divers", "Divers sharing gas", 1, 1],
-  ["sacPerDiver", "Stressed SAC per diver (cu ft/min)", 0.01, 0.1],
+  ["sacPerDiver", "Stressed surface breathing rate per diver (cu ft/min)", 0.01, 0.1],
   ["problemMinutes", "Problem-solving time (min)", 0, 0.5],
   ["ascentRate", "Ascent rate to half depth (ft/min)", 0.1, 1],
   ["stopInterval", "Stop interval (ft)", 1, 1],
-  ["stopMinutes", "Minutes per stop", 0, 0.5],
+  ["stopMinutes", "Minutes per stop interval (including travel)", 0, 0.5],
 ] as const;
 export function MinimumGasCalculator() {
   const [values, setValues] = useState<Record<keyof MinimumGasInputs, string>>(
@@ -62,10 +62,12 @@ export function MinimumGasCalculator() {
     <section aria-labelledby="gas-title" className="learn-calculator">
       <h2 id="gas-title">Rock bottom calculator</h2>
       <p>
-        Uses UTD’s method: one minute to solve the problem at depth, an ascent
-        to half your maximum depth, then one-minute stops every 10 feet, for two
-        divers breathing 1.0 cubic foot per minute each. Salt water; rounded up
-        to the next 100 psi.
+        Illustrates UTD’s reserve-gas formula with a simplified emergency
+        profile: one minute at depth, travel to half maximum depth rounded to a
+        deeper 10-foot stop, then one-minute stop intervals including travel,
+        for two divers breathing 1.0 cubic foot per minute each. Salt water;
+        pressure rounded up to the next 100 psi. This is not a Min Deco or
+        decompression schedule.
       </p>
       <div className="calculator-fields">
         <div className="form-field">
