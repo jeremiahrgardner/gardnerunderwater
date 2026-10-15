@@ -5,7 +5,7 @@ Every actionable owner marker in application code, article stubs and their gener
 ## app/learn/[slug]/page.tsx
 
 ```text
-L184: TODO(jeremiah): Supply an approved author headshot and two-line
+L191: <p>TODO(jeremiah): Supply an approved two-line author bio.</p>
 ```
 
 ## content/learn/5-ft-vs-7-ft-long-hose.mdx
@@ -588,10 +588,9 @@ L36: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal 
 
 ```text
 L3: - TODO(jeremiah): Confirm credentials, agencies and years teaching for the About page.
-L4: - TODO(jeremiah): Supply an approved author headshot and two-line author bio.
+L4: - TODO(jeremiah): Supply an approved two-line author bio.
 L5: - TODO(jeremiah): Supply a business street address only if it should be public; none is emitted in structured data.
 L6: - TODO(jeremiah): Supply YouTube IDs, titles and upload dates for article embeds.
-L7: - TODO(jeremiah): Provide the original file for the logo shown in chat; the attachment has no downloadable file reference in this workspace. Apply that exact asset to the header/footer and structured-data logo when available.
 ```
 
 ## lib/minimum-gas.ts
@@ -616,4 +615,4 @@ L48: a: `TODO(jeremiah): Write approved FAQ answers for ${slug}.`,
 L56: const body = `<!-- Editorial angle: ${angle.replace(/-->/g, "")} -->\n\n## Overview\n<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->\n\n## Details\n<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->\n\n## Put it into practice\n<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->\n`;
 ```
 
-Total: 349 markers across 53 files.
+Total: 348 markers across 53 files.

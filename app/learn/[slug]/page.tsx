@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -179,11 +180,15 @@ export default async function ArticlePage({
             </section>
           )}
           <aside className="learn-author">
+            <Image
+              src="/photos/jay-gardner-shore.webp"
+              alt="Jay Gardner in his drysuit beside the water"
+              width={112}
+              height={112}
+              className="learn-author-photo"
+            />
             <h2>Jeremiah Gardner</h2>
-            <p>
-              TODO(jeremiah): Supply an approved author headshot and two-line
-              bio.
-            </p>
+            <p>TODO(jeremiah): Supply an approved two-line author bio.</p>
             <p>
               <Link href="/about">About Jeremiah</Link> ·{" "}
               <a href="https://jeremiahgardner.com">jeremiahgardner.com</a>

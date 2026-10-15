@@ -38,8 +38,8 @@ export default function AboutPage() {
           </div>
           <div className="about-portrait">
             <Image
-              src="/portrait.jpg"
-              alt="Jay Gardner, founder and instructor at Gardner Underwater"
+              src="/photos/jay-gardner-shore.webp"
+              alt="Jay Gardner in his drysuit beside the water"
               fill
               sizes="(max-width: 760px) 100vw, 45vw"
               priority
@@ -101,8 +101,8 @@ export default function AboutPage() {
         <div className="container note-grid">
           <div className="note-photo">
             <Image
-              src="/landscape.jpg"
-              alt="Jay demonstrating how to handle a dive reel"
+              src="/photos/cavern-diving.webp"
+              alt="A diver in horizontal trim beneath a sunlit cavern entrance"
               fill
               sizes="(max-width: 760px) 100vw, 40vw"
             />

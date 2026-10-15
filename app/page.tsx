@@ -142,8 +142,8 @@ export default function HomePage() {
         <div className="container landing-instructor-grid">
           <div className="landing-instructor-image">
             <Image
-              src="/portrait.jpg"
-              alt="Jay Gardner, UTD and DAN instructor, preparing scuba equipment"
+              src="/photos/jay-gardner-underwater.webp"
+              alt="Jay Gardner diving with twin cylinders and a primary light"
               fill
               sizes="(max-width: 760px) 100vw, 45vw"
             />

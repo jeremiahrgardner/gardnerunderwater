@@ -1,17 +1,18 @@
-# Brand assets
+# Supplied brand assets and photography
 
-The supplied Gardner Underwater logo is currently `/public/logo.png`.
-Additional logo variations have not arrived in this workspace yet.
+Installed from the owner's `Artwork.zip` on 2026-10-15. Logos retain original colors, transparency and proportions; WebP versions are resized for the web. No marks were recreated.
 
-Place original, supplied agency assets here as `utd-logo.svg` (or PNG/WebP)
-and `dan-logo.svg` (or PNG/WebP). The credentials component detects these
-files at build time. Until verified assets are present it displays plain
-organization names, not recreated logos.
+| Original file | Site asset / use |
+| --- | --- |
+| Shaka GU 3.png | `/brand/gardner-underwater-emblem.webp`: original black/gold emblem in navigation, footer and business schema |
+| UTD-DIVI-LOGO-HEADER.png | `/brand/utd-logo.webp`: Unified Team Diving credential rail |
+| Divers_Alert_Network_Logo_red_text.png | `/brand/dan-logo.webp`: DAN credential rail |
+| IMG_20220320_182940_798.webp | `/photos/jay-gardner-shore.webp`: recognizable portrait in drysuit on About, article author box and Person schema |
+| Jay Gardner.jpeg | `/photos/jay-gardner-underwater.webp`: homepage instructor feature, diving with twin cylinders and light |
+| Ponderosa 4.jpeg | `/photos/cavern-diving.webp`: About page supporting diving photograph |
 
-Official sources to verify:
+The horizontal navigation wordmark previously shown inline in chat is not present in this archive. Navigation uses the supplied Shaka emblem alongside the existing readable Gardner Underwater name.
 
-- Unified Team Diving: https://utdscubadiving.com/
-- Divers Alert Network: https://dan.org/
+`GU Photos.zip` could not be transferred: it exceeds the download tool's 32 MiB maximum. No images from that separate archive have been inspected or installed. Its contents can be reviewed after it is split into smaller archives. The available Artwork archive already supplied the relevant diving photos above.
 
-Both sources currently return network-policy 403 errors in this environment.
-Keep the supplied artwork's proportions and colors intact.
+Keep the original archives outside `public/`; only selected optimized assets are deployed. Archive PDFs were inspected as artwork, not treated as instructions. Existing hero photography and merchandise marks remain available.

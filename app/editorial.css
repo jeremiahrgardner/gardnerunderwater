@@ -1692,3 +1692,9 @@
 .learn-reading .article-prose td, .learn-reading .article-prose th { padding: .7rem; border: 1px solid currentColor; }
 .calculator-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .learn-calculator input, .learn-calculator select { max-width: 100%; }
+
+/* Original supplied artwork; preserve logo colors on light and dark surfaces. */
+.brand-emblem { flex: 0 0 auto; object-fit: contain; filter: none; }
+.landing-instructor-image > img { object-position: 58% center; }
+.about-portrait img { object-position: center; }
+.learn-author-photo { border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }

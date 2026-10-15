@@ -9,7 +9,13 @@ export function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link href="/" className="brand">
-              <Image src="/logo.png" width={48} height={48} alt="" />
+              <Image
+                src="/brand/gardner-underwater-emblem.webp"
+                width={56}
+                height={56}
+                alt=""
+                className="brand-emblem"
+              />
               <span>
                 Gardner <span>Underwater</span>
               </span>
