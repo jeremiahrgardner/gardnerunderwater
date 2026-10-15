@@ -22,7 +22,7 @@ export const businessSchema = {
   "@id": `${site.url}/#organization`,
   name: site.name,
   url: site.url,
-  logo: absoluteUrl("/brand/gardner-underwater-emblem.webp"),
+  logo: absoluteUrl("/brand/gu-logo-landscape.png"),
   telephone: "+1-619-880-0684",
   areaServed: "San Diego",
   sameAs: [
