@@ -1714,3 +1714,7 @@
 .instructor-surface-photo > img { object-fit: contain; object-position: center; }
 .training-expedition-photo { height: clamp(300px, 42vw, 600px); }
 .training-expedition-photo > img { object-position: center 60%; }
+
+.about-portrait img { object-position: center 32%; }
+.portrait-credit { position: absolute; right: 12px; bottom: 12px; padding: 6px 10px; background: rgba(8, 30, 38, .9); color: #fff; font-size: .7rem; line-height: 1.4; }
+.note-photo img { object-position: center; }

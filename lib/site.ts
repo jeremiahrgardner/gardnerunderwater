@@ -37,7 +37,7 @@ export const personSchema = {
   "@type": "Person",
   "@id": `${site.url}/about#jeremiah-gardner`,
   name: "Jeremiah Gardner",
-  image: absoluteUrl("/photos/jay-gardner-shore.webp"),
+  image: absoluteUrl("/photos/jay-gardner-leia-vita.webp"),
   jobTitle: "UTD scuba instructor",
   worksFor: { "@id": `${site.url}/#organization` },
   sameAs: ["https://jeremiahgardner.com", "https://x.com/JeremiahGardner"],

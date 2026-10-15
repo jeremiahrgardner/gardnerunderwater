@@ -38,12 +38,13 @@ export default function AboutPage() {
           </div>
           <div className="about-portrait">
             <Image
-              src="/photos/jay-gardner-shore.webp"
-              alt="Jay Gardner in his drysuit beside the water"
+              src="/photos/jay-gardner-leia-vita.webp"
+              alt="Jay Gardner smiling in his drysuit beside the water"
               fill
               sizes="(max-width: 760px) 100vw, 45vw"
               priority
             />
+            <span className="portrait-credit">Photo: Leia Vita</span>
           </div>
         </div>
       </section>
@@ -101,8 +102,8 @@ export default function AboutPage() {
         <div className="container note-grid">
           <div className="note-photo">
             <Image
-              src="/photos/cavern-diving.webp"
-              alt="A diver in horizontal trim beneath a sunlit cavern entrance"
+              src="/photos/cave-diving-artwork-2.webp"
+              alt="A cave diver beneath a limestone ceiling, illuminating the passage with a primary light"
               fill
               sizes="(max-width: 760px) 100vw, 40vw"
             />
