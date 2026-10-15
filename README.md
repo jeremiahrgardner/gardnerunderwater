@@ -13,7 +13,7 @@ An independent Next.js site with a refreshed, responsive interface built around 
 - **Next.js 16** (App Router)
 - **TypeScript**
 - **CSS** shared design tokens and responsive layouts in `app/globals.css`
-- Self-hosted Syne, DM Sans, and EB Garamond fonts, with licenses in `public/fonts/`
+- Self-hosted Roboto headings, DM Sans body text, and EB Garamond fonts, with licenses in `public/fonts/`
 
 ## Getting Started
 

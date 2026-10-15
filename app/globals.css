@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Syne";
-  src: url("/fonts/syne-latin-wght-normal.woff2") format("woff2");
-  font-weight: 400 800;
+  font-family: "Roboto";
+  src: url("/fonts/roboto-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -31,7 +31,7 @@
   --gold: #e8c64b;
   --gold-dark: #756018;
   --white: #fffef9;
-  --display: "Syne", Arial, sans-serif;
+  --display: "Roboto", Arial, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
   --serif: "EB Garamond", Georgia, serif;
   --mono: "Courier New", monospace;

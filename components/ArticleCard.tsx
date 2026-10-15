@@ -4,9 +4,11 @@ import { clusters } from "@/lib/articles";
 import { Arrow } from "./SiteUI";
 export function ArticleCard({
   article,
+  compact = false,
 }: {
   article: Article;
   featured?: boolean;
+  compact?: boolean;
 }) {
   return (
     <article className="article-card">
@@ -18,9 +20,11 @@ export function ArticleCard({
           <Link href={`/learn/${article.slug}`}>{article.title}</Link>
         </h3>
         <p>{article.description}</p>
-        <Link className="text-link" href={`/learn/${article.slug}`}>
-          Read article <Arrow />
-        </Link>
+        {!compact && (
+          <Link className="text-link" href={`/learn/${article.slug}`}>
+            Read article <Arrow />
+          </Link>
+        )}
       </div>
     </article>
   );
