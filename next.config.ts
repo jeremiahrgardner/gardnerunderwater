@@ -1,7 +1,3 @@
 import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
+const nextConfig: NextConfig = { async redirects() { return [{"source": "/courses/doubles-backmount-or-sidemount", "destination": "/courses/doubles", "permanent": true}, {"source": "/courses/open-water-diver-recreational-1", "destination": "/courses/open-water-rec-1", "permanent": true}, {"source": "/courses/recreational-2-advanced-open-water", "destination": "/courses/rec-2-advanced-open-water", "permanent": true}, {"source": "/courses/smb-surface-marker-buoy-extension", "destination": "/courses/smb-extension", "permanent": true}, {"source": "/courses/propulsion-and-or-back-kick-extension", "destination": "/courses/propulsion-back-kick-extension", "permanent": true}]; } };
 export default nextConfig;

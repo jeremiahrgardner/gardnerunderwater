@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { courses, courseSlug } from "@/lib/courses";
@@ -20,17 +21,7 @@ export async function generateMetadata({
   const item = courses.find((course) => courseSlug(course.title) === slug);
   if (!item) notFound();
   const description = item.desc.slice(0, 157).replace(/\s+\S*$/, "") + "…";
-  return {
-    title: `${item.title} — Scuba Training`,
-    description,
-    alternates: { canonical: `/courses/${slug}` },
-    openGraph: {
-      title: item.title,
-      description,
-      url: `/courses/${slug}`,
-      images: ["/social.jpg"],
-    },
-  };
+  return pageMetadata(`${item.title} in San Diego`, description, `/courses/${slug}`);
 }
 export default async function CoursePage({
   params,
@@ -109,10 +100,10 @@ export default async function CoursePage({
           {course.tagline && <p className="large-copy">{course.tagline}</p>}
           <div className="course-detail-quicklinks">
             <Link
-              href={`/contact?course=${encodeURIComponent(course.title)}#consultation`}
+              href={`/contact?course=${course.slug}#consultation`}
               className="btn btn-dark"
             >
-              Talk about this training <Arrow />
+              Book this course <Arrow />
             </Link>
             <span>Start with a free 15-minute consultation.</span>
           </div>
@@ -164,7 +155,7 @@ export default async function CoursePage({
             {course.duration && (
               <div className="course-duration">
                 <strong>Typical duration</strong>
-                <span>{course.duration.replace(/\*/g, "")}</span>
+                <span>{course.duration}</span>
                 <p>
                   Duration is a guide. Additional days may be recommended based
                   on your needs.
@@ -172,10 +163,10 @@ export default async function CoursePage({
               </div>
             )}
             <Link
-              href={`/contact?course=${encodeURIComponent(course.title)}#consultation`}
+              href={`/contact?course=${course.slug}#consultation`}
               className="btn btn-dark"
             >
-              Request a consultation <Arrow />
+              Book this course <Arrow />
             </Link>
             <span className="course-booking-note">
               Free 15-minute call · Arrange a time by email
