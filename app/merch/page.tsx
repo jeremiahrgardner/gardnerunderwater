@@ -5,6 +5,7 @@ import { PageIntro, Arrow } from "@/components/SiteUI";
 import { tees, hats } from "@/lib/merch";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/merch" },
   title: "Merchandise",
   description:
     "Fly the Black with Gardner Underwater apparel. Shop tees and headwear through our Square store.",

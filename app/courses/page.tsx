@@ -3,6 +3,7 @@ import { CourseCatalog } from "@/components/CourseCatalog";
 import { PageIntro, ConsultationCTA } from "@/components/SiteUI";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/courses" },
   title: "Courses",
   description:
     "Explore foundational and technical dive training, scuba coaching, DAN first aid, and specialty courses with Gardner Underwater.",

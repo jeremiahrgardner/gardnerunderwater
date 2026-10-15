@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Arrow, ConsultationCTA, PageIntro } from "@/components/SiteUI";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pricing" },
   title: "Pricing",
   description:
     "Upfront pricing: $300 per day for dive training, $129 per month for coaching, and $300 per DAN course.",

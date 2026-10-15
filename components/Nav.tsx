@@ -7,13 +7,16 @@ import { usePathname } from "next/navigation";
 import { Arrow } from "./SiteUI";
 
 const links = [
+  { href: "/courses", label: "Training" },
   { href: "/training", label: "Our approach" },
-  { href: "/courses", label: "Courses" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/articles", label: "Articles" },
   { href: "/about", label: "Meet Jay" },
 ];
 
-function Navigation() {
+function Navigation({ showArticles }: { showArticles: boolean }) {
+  const navLinks = showArticles
+    ? links
+    : links.filter((link) => link.href !== "/articles");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDialogElement>(null);
@@ -42,15 +45,9 @@ function Navigation() {
 
   return (
     <>
-      <div className="utility-bar">
-        <div className="container">
-          <span>Eyes open. Brain on. Unified team.</span>
-          <a href="tel:+16198800684">
-            San Diego, CA <Arrow diagonal />
-          </a>
-        </div>
-      </div>
-      <header className="site-header">
+      <header
+        className={`site-header ${pathname === "/" ? "site-header-home" : ""}`}
+      >
         <div className="container header-inner">
           <Link href="/" className="brand" aria-label="Gardner Underwater home">
             <Image
@@ -66,18 +63,20 @@ function Navigation() {
             </span>
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
+                aria-current={
+                  pathname.startsWith(link.href) ? "page" : undefined
+                }
               >
                 {link.label}
               </Link>
             ))}
           </nav>
           <Link href="/contact" className="btn btn-dark header-cta">
-            Book a consultation <Arrow diagonal />
+            Let’s talk training <Arrow diagonal />
           </Link>
           <button
             ref={toggleRef}
@@ -134,17 +133,18 @@ function Navigation() {
           </div>
           <nav aria-label="Mobile navigation">
             {[
-              ...links,
+              ...navLinks,
               { href: "/shop", label: "Gear & rentals" },
               { href: "/merch", label: "Merchandise" },
-            ].map((link, i) => (
+            ].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
+                aria-current={
+                  pathname.startsWith(link.href) ? "page" : undefined
+                }
                 onClick={() => setOpen(false)}
               >
-                <span className="menu-number">0{i + 1}</span>
                 {link.label}
                 <Arrow diagonal />
               </Link>
@@ -155,7 +155,7 @@ function Navigation() {
             className="btn btn-primary"
             onClick={() => setOpen(false)}
           >
-            Book a consultation <Arrow />
+            Request a consultation <Arrow />
           </Link>
           <a className="mobile-phone" href="tel:+16198800684">
             +1 (619) 880-0684
@@ -167,7 +167,7 @@ function Navigation() {
 }
 
 // Route changes reset the menu without synchronously updating state in an effect.
-export function Nav() {
+export function Nav({ showArticles = true }: { showArticles?: boolean }) {
   const pathname = usePathname();
-  return <Navigation key={pathname} />;
+  return <Navigation key={pathname} showArticles={showArticles} />;
 }

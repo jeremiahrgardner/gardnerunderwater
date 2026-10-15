@@ -3,6 +3,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { PageIntro, Arrow } from "@/components/SiteUI";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Book a consultation",
   description:
     "Request a free 15-minute consultation with Jay Gardner. Discuss your diving experience, goals, and the right training path for you.",
@@ -21,9 +22,9 @@ export default async function ContactPage({
         eyebrow="Let’s start a conversation"
         title={
           <>
-            Your goals.
+            Better diving.
             <br />
-            <span className="serif-accent">Our next dive.</span>
+            <span className="serif-accent">Starts here.</span>
           </>
         }
       >

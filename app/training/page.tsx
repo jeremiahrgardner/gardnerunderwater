@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageIntro, ConsultationCTA, Arrow } from "@/components/SiteUI";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/training" },
   title: "Our approach",
   description:
     "Individual attention, team diving, and real-world skills. Discover the Gardner Underwater training philosophy.",

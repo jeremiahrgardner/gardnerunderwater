@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Arrow, ConsultationCTA } from "@/components/SiteUI";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "Meet Jay",
   description:
     "Meet Jay Gardner, UTD Instructor #225, DAN instructor, founder of Gardner Underwater, and co-host of The Dive Table podcast.",

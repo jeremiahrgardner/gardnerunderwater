@@ -210,3 +210,10 @@ export const courseCategories = [
     id: "extensions-specialties",
   },
 ];
+
+export function courseSlug(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}

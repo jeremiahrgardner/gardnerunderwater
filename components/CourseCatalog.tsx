@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { courses, courseCategories } from "@/lib/courses";
+import { courses, courseCategories, courseSlug } from "@/lib/courses";
 import { Arrow } from "./SiteUI";
 
 export function CourseCatalog() {
@@ -96,7 +96,11 @@ export function CourseCatalog() {
                       <span>{item.label}</span>
                       {course.duration && <span>{course.duration}</span>}
                     </div>
-                    <h3>{course.title}</h3>
+                    <h3>
+                      <Link href={`/courses/${courseSlug(course.title)}`}>
+                        {course.title}
+                      </Link>
+                    </h3>
                     {course.tagline && (
                       <p className="course-tagline">{course.tagline}</p>
                     )}
@@ -123,10 +127,10 @@ export function CourseCatalog() {
                       </details>
                     )}
                     <Link
-                      href={`/contact?course=${encodeURIComponent(course.title)}#consultation`}
+                      href={`/courses/${courseSlug(course.title)}`}
                       className="text-link course-link"
                     >
-                      Talk about this course <Arrow />
+                      Explore this training <Arrow />
                     </Link>
                   </article>
                 ))}

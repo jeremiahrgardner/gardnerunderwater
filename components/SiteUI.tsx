@@ -53,11 +53,11 @@ export function ConsultationCTA() {
     <section className="consultation-cta">
       <div className="container cta-grid">
         <div>
-          <div className="eyebrow">Your next chapter starts here</div>
+          <div className="eyebrow">Your next step</div>
           <h2>
-            Let’s talk
+            Better diving starts
             <br />
-            about your diving.
+            with a conversation.
           </h2>
         </div>
         <div>
@@ -67,10 +67,10 @@ export function ConsultationCTA() {
             from there.
           </p>
           <Link href="/contact" className="btn btn-primary">
-            Let’s plan your training <Arrow />
+            Request a free consultation <Arrow />
           </Link>
           <span className="cta-note">
-            A conversation first. Training that fits you.
+            No course commitment. Just a good place to start.
           </span>
         </div>
       </div>

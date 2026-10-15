@@ -1,3 +1,4 @@
+import { getArticles } from "@/lib/articles";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "./SiteUI";
@@ -41,6 +42,9 @@ export function Footer() {
           <div>
             <h2 className="footer-label">Beyond the water</h2>
             <nav aria-label="Resources">
+              {getArticles().length > 0 && (
+                <Link href="/articles">Articles & field notes</Link>
+              )}
               <Link href="/shop">Gear & rentals</Link>
               <Link href="/merch">Merchandise</Link>
               <a

@@ -17,6 +17,8 @@ An independent Next.js site with a refreshed, responsive interface built around 
 
 ## Getting Started
 
+Use Node.js 24 (pinned in `package.json` for Vercel and local development).
+
 ```bash
 # Install dependencies
 npm ci
@@ -39,16 +41,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Pages
 
-| Route       | Description                                                                |
-| ----------- | -------------------------------------------------------------------------- |
-| `/`         | Home — training pathways, approach, instructor, student feedback           |
-| `/training` | Training philosophy, UTD/DAN agency alignment, 5 principles                |
-| `/courses`  | Searchable and filterable catalog with expandable course details           |
-| `/pricing`  | Transparent pricing — $300/day training, $129/mo coaching, $300/course DAN |
-| `/shop`     | Equipment rentals and "Save A Course" retail                               |
-| `/merch`    | Apparel (tees, hats) with links to Square store                            |
-| `/about`    | Jay Gardner bio, UTD #225, Why I Teach, The Dive Table podcast             |
-| `/contact`  | Consultation email request, direct contact, next steps, testimonials       |
+| Route                | Description                                                                   |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `/`                  | Certified-diver training paths, instructor, student feedback, and field notes |
+| `/training`          | Training approach and philosophy                                              |
+| `/courses`           | Searchable and filterable training catalog                                    |
+| `/courses/[slug]`    | Individual training pages with pricing and consultation links                 |
+| `/pricing`           | Training, coaching, and DAN pricing                                           |
+| `/articles`          | Field notes and practical training articles                                   |
+| `/articles/[slug]`   | Server-rendered Markdown reading pages and related training                   |
+| `/articles/feed.xml` | RSS feed of published articles                                                |
+| `/sitemap.xml`       | Public pages, training, and published articles                                |
+| `/shop`              | Equipment rentals and student essentials                                      |
+| `/merch`             | Apparel with links to Square                                                  |
+| `/about`             | Jay's story and The Dive Table                                                |
+| `/contact`           | Consultation email requests, direct contact, and student feedback             |
 
 ## Content and consultation requests
 
@@ -56,7 +63,7 @@ Course descriptions are in `lib/courses.ts`, rental prices in `lib/rentals.ts`, 
 
 No scheduling provider is connected yet. The consultation form prepares a URL-encoded email draft to Jay. Visitors review and send it in their own email app, then arrange a time with Jay. The form does not send email itself, store submissions, or confirm appointments. Course links carry the selected course into the request. Direct phone and email links provide alternatives.
 
-Markdown publishing through GitHub remains planned; there is no blog engine or journal route in this UI refresh.
+Markdown publishing is implemented in `content/articles/`, with an article index, individual reading pages, related training, RSS, and a sitemap. See [the publishing guide](content/README.md) for draft handling and deployment steps. Run `npm run test:articles` for the article and content validation checks (Node.js 24 in the prepared environment).
 
 ## Repository Notes
 
@@ -73,3 +80,7 @@ Markdown publishing through GitHub remains planned; there is no blog engine or j
 Use the existing Vercel project and its configured GitHub branch. For another compatible Node.js host, run `npm run build` then `npm start`. The contact route reads query parameters on the server, so the current application requires a Next.js runtime rather than a plain static export.
 
 Jeremiah must approve before any DNS or hosting changes.
+
+## Agency branding
+
+The credentials rail supports original UTD and DAN artwork at `public/brand/utd-logo.svg` and `public/brand/dan-logo.svg` (PNG/WebP also supported). Until supplied or fetched from verified official sources, it uses organization names and accurate instructor credentials. Additional Gardner Underwater logo variations have not been supplied to this workspace yet. See `docs/brand-assets.md`.
