@@ -61,21 +61,21 @@ export default function HomePage() {
         <div className="landing-hero-shade" />
         <div className="container landing-hero-content">
           <div className="eyebrow">
-            Scuba instruction & coaching · San Diego & beyond
+            DIR scuba training & coaching · San Diego & beyond
           </div>
           <h1 id="home-title">
-            Become the diver
+            Certified isn’t
             <br />
-            you want to be.
+            the same as capable.
           </h1>
           <p>
-            Better control. Clearer thinking. More confidence.
-            <br className="desktop-break" /> Personal training for certified
-            divers ready to grow.
+            You’ve done the courses. You know there’s another level.
+            <br className="desktop-break" /> Train with a mentor and a small
+            team that hold one consistent standard.
           </p>
           <div className="hero-actions">
             <Link href="#training-paths" className="btn btn-primary">
-              Find your path <Arrow />
+              Find your next level <Arrow />
             </Link>
             <Link href="/about" className="hero-instructor-link">
               <span>Meet your instructor</span>
