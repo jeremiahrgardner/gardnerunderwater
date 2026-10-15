@@ -78,10 +78,10 @@ export default function TrainingPage() {
           The outcome is a more capable, thinking diver.
         </span>
       </PageIntro>
-      <section className="wide-photo">
+      <section className="wide-photo training-expedition-photo">
         <Image
-          src="/hero-cave.jpg"
-          alt="Divers maintaining trim while exploring together inside an underwater cave"
+          src="/photos/frio-river-expedition.webp"
+          alt="Divers moving together underwater during the Frio River expedition"
           fill
           sizes="100vw"
         />

@@ -8,17 +8,15 @@ export function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <Link href="/" className="brand">
+            <Link href="/" className="brand" aria-label="Gardner Underwater home">
               <Image
-                src="/brand/gardner-underwater-emblem.webp"
-                width={56}
-                height={56}
+                src="/brand/gu-logo-landscape.png"
+                width={3023}
+                height={751}
+                sizes="(max-width: 600px) 210px, 240px"
                 alt=""
-                className="brand-emblem"
+                className="brand-wordmark"
               />
-              <span>
-                Gardner <span>Underwater</span>
-              </span>
             </Link>
             <p>
               Training designed to advance your skills,

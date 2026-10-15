@@ -51,16 +51,14 @@ function Navigation({ showArticles }: { showArticles: boolean }) {
         <div className="container header-inner">
           <Link href="/" className="brand" aria-label="Gardner Underwater home">
             <Image
-              src="/brand/gardner-underwater-emblem.webp"
-              width={42}
-              height={42}
+              src="/brand/gu-logo-landscape.png"
+              width={3023}
+              height={751}
+              sizes="(max-width: 600px) 180px, 210px"
               alt=""
-              className="brand-emblem"
-              priority
+              className="brand-wordmark"
+              preload
             />
-            <span>
-              Gardner <span>Underwater</span>
-            </span>
           </Link>
           <nav className="desktop-nav" aria-label="Main navigation">
             {navLinks.map((link) => (

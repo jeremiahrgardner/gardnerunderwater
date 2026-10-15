@@ -4,15 +4,24 @@ Installed from the owner's `Artwork.zip` on 2026-10-15. Logos retain original co
 
 | Original file | Site asset / use |
 | --- | --- |
-| Shaka GU 3.png | `/brand/gardner-underwater-emblem.webp`: original black/gold emblem in navigation, footer and business schema |
+| Shaka GU 3.png | `/brand/gardner-underwater-emblem.webp`: original black/gold emblem retained as secondary artwork |
 | UTD-DIVI-LOGO-HEADER.png | `/brand/utd-logo.webp`: Unified Team Diving credential rail |
 | Divers_Alert_Network_Logo_red_text.png | `/brand/dan-logo.webp`: DAN credential rail |
 | IMG_20220320_182940_798.webp | `/photos/jay-gardner-shore.webp`: recognizable portrait in drysuit on About, article author box and Person schema |
 | Jay Gardner.jpeg | `/photos/jay-gardner-underwater.webp`: homepage instructor feature, diving with twin cylinders and light |
 | Ponderosa 4.jpeg | `/photos/cavern-diving.webp`: About page supporting diving photograph |
 
-The horizontal navigation wordmark previously shown inline in chat is not present in this archive. Navigation uses the supplied Shaka emblem alongside the existing readable Gardner Underwater name.
+The original `GU Logo Lanscape.png` was subsequently supplied in its own ZIP. It is installed unchanged at `/brand/gu-logo-landscape.png` and is the primary logo in navigation, footer and business schema. The wordmark replaces the separate emblem and typeset name. CSS inverts its black artwork on dark backgrounds; its transparent original remains unchanged.
 
 `GU Photos.zip` could not be transferred: it exceeds the download tool's 32 MiB maximum. No images from that separate archive have been inspected or installed. Its contents can be reviewed after it is split into smaller archives. The available Artwork archive already supplied the relevant diving photos above.
 
 Keep the original archives outside `public/`; only selected optimized assets are deployed. Archive PDFs were inspected as artwork, not treated as instructions. Existing hero photography and merchandise marks remain available.
+
+## Additional owner photo selections
+
+- `Twin Caves Surface.jpeg` from its individually uploaded ZIP → `/photos/twin-caves-surface.webp`, homepage “Someone who sees the diver in you.” Original framing and embedded photographer watermark remain visible.
+- `Frio River Expedition.jpg` from its individually uploaded ZIP → `/photos/frio-river-expedition.webp`, Training page wide photo, alongside the team-based training approach.
+- TODO(jeremiah): Supply `J_photocred_Leia_Vita-119.jpg` for the About header; it is not in the accessible archives.
+- TODO(jeremiah): Supply `Cave Diving Artwork 2.jpg` for About’s “Why I teach” section; it is not in the accessible archives.
+
+The requested About swaps remain pending; current About images are retained. These named files may be in GU Photos.zip, which exceeds the transfer limit; individually zipped copies can be installed without transferring that full archive.

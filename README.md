@@ -84,4 +84,4 @@ Jeremiah must approve before any DNS or hosting changes.
 
 ## Agency branding
 
-Original UTD and DAN artwork and the black/gold Gardner Underwater Shaka emblem are installed from the owner’s Artwork.zip. Diving photographs now appear in the homepage instructor feature, About page and article author box. See `docs/brand-assets.md` for source filenames, placements and the separate GU Photos.zip transfer limitation.
+The original landscape GU wordmark is the primary navigation/footer logo. Original UTD and DAN artwork and the secondary black/gold Shaka emblem are installed from the owner’s Artwork.zip. Diving photographs now appear in the homepage instructor feature, About page and article author box. See `docs/brand-assets.md` for source filenames, placements and the separate GU Photos.zip transfer limitation.
