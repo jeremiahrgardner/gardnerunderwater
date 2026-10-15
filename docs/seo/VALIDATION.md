@@ -29,7 +29,7 @@ Validated locally on 2026-10-15, Node.js 24 / Next.js 16.2.6. The branch is for 
 
 `https://api.github.com` also returned **Forbidden** through `gh api`, including after network permission was granted for the turn. Native Git access is separate. The requested PR must be created through that API when its network route becomes available; a prepared description includes the complete owner inventory. Domain additions for the API and validators have been saved in the cloud environment configuration draft, preserving existing domains. Saving the draft does not change the running proxy policy.
 
-There is no approved, public article yet. An article Lighthouse SEO score of 100 and external validation of its final dates, video and copy remain pending publication approval. No indexing protection was removed to improve a draft's score. Video IDs/upload dates, author headshot/bio and calculator-default confirmation are owner inputs, not fabricated test claims.
+There is no approved, public article yet. An article Lighthouse SEO score of 100 and external validation of its final dates, video and copy remain pending publication approval. No indexing protection was removed to improve a draft's score. Video IDs/upload dates, author bio and calculator-default confirmation are owner inputs, not fabricated test claims.
 
 Vercel Web Analytics must be enabled in the project to receive deployed events. Local browser checks capture calls to the actual SDK event hook; they do not prove delivery to the Vercel dashboard. The form prepares email for the visitor to send and does not confirm appointments or delivered mail.
 
@@ -48,3 +48,9 @@ VERCEL_ENV=preview npm start -- --hostname 127.0.0.1 --port 3101
 ```
 
 Browser audits used Chromium, Playwright, axe-core and Lighthouse 13. These optional audit tools were installed outside the checkout. Detailed local reports and screenshots are in `/workspace/scratch/seo-program/`; they are ephemeral and not deployment assets. See [the owner inventory](TODO_INVENTORY.md) for every actionable placeholder.
+
+## Artwork follow-up
+
+Original GU, UTD and DAN marks and three diving photographs were installed from the owner-supplied Artwork.zip. Build/lint passed after the asset changes. The separate GU Photos.zip exceeds the tool's 32 MiB transfer limit and has not been inspected. The original horizontal wordmark was not found in Artwork.zip; navigation pairs its supplied Shaka emblem with the existing readable site name. Source filenames are documented in docs/brand-assets.md.
+
+Post-artwork Chromium checks passed at 1440 px and 390 px on home and About: both agency logos and all photos load, no page overflow, zero axe violations, and mobile menu open/Escape behavior works. Screenshots are in `/workspace/scratch/brand-review/`.

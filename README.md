@@ -84,4 +84,4 @@ Jeremiah must approve before any DNS or hosting changes.
 
 ## Agency branding
 
-The credentials rail supports original UTD and DAN artwork at `public/brand/utd-logo.svg` and `public/brand/dan-logo.svg` (PNG/WebP also supported). Until supplied or fetched from verified official sources, it uses organization names and accurate instructor credentials. Additional Gardner Underwater logo variations have not been supplied to this workspace yet. See `docs/brand-assets.md`.
+Original UTD and DAN artwork and the black/gold Gardner Underwater Shaka emblem are installed from the owner’s Artwork.zip. Diving photographs now appear in the homepage instructor feature, About page and article author box. See `docs/brand-assets.md` for source filenames, placements and the separate GU Photos.zip transfer limitation.

@@ -22,7 +22,7 @@ export const businessSchema = {
   "@id": `${site.url}/#organization`,
   name: site.name,
   url: site.url,
-  logo: absoluteUrl("/logo.png"),
+  logo: absoluteUrl("/brand/gardner-underwater-emblem.webp"),
   telephone: "+1-619-880-0684",
   areaServed: "San Diego",
   sameAs: [
@@ -37,6 +37,7 @@ export const personSchema = {
   "@type": "Person",
   "@id": `${site.url}/about#jeremiah-gardner`,
   name: "Jeremiah Gardner",
+  image: absoluteUrl("/photos/jay-gardner-shore.webp"),
   jobTitle: "UTD scuba instructor",
   worksFor: { "@id": `${site.url}/#organization` },
   sameAs: ["https://jeremiahgardner.com", "https://x.com/JeremiahGardner"],

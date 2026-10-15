@@ -51,11 +51,11 @@ function Navigation({ showArticles }: { showArticles: boolean }) {
         <div className="container header-inner">
           <Link href="/" className="brand" aria-label="Gardner Underwater home">
             <Image
-              src="/logo.png"
+              src="/brand/gardner-underwater-emblem.webp"
               width={42}
               height={42}
               alt=""
-              className="brand-symbol"
+              className="brand-emblem"
               priority
             />
             <span>

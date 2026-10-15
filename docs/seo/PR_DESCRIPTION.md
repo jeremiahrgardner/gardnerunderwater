@@ -12,7 +12,7 @@ Validation: production and preview builds, TypeScript, lint and 22 tests pass. B
 
 External Google Rich Results and Schema.org validators returned proxy CONNECT 403; no external validation success is claimed. Article SEO 100 remains pending approved public content. Vercel analytics event delivery requires Web Analytics enabled in the project. GitHub API also returns Forbidden in this environment; this description is ready for the requested single PR.
 
-No named legacy typos were found, so no spelling corrections are claimed. Supplied chat logo has no downloadable asset reference in this workspace; its exact integration is recorded as an owner TODO rather than recreating it.
+No named legacy typos were found, so no spelling corrections are claimed. Owner-supplied Artwork.zip now provides original GU Shaka, UTD and DAN marks and diving photography. Navigation/footer use the supplied emblem plus readable brand name. About, homepage instructor and author images now use diving photographs. The horizontal wordmark is absent from this archive; GU Photos.zip exceeds the transfer tool’s 32 MiB limit, so the chosen photos come from Artwork.zip.
 
 The following is the complete actionable TODO(jeremiah) inventory, including every article stub and generator placeholder. Brief examples and test fixture strings are excluded.
 
@@ -23,7 +23,7 @@ Every actionable owner marker in application code, article stubs and their gener
 ## app/learn/[slug]/page.tsx
 
 ```text
-L184: TODO(jeremiah): Supply an approved author headshot and two-line
+L191: <p>TODO(jeremiah): Supply an approved two-line author bio.</p>
 ```
 
 ## content/learn/5-ft-vs-7-ft-long-hose.mdx
@@ -606,10 +606,9 @@ L36: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal 
 
 ```text
 L3: - TODO(jeremiah): Confirm credentials, agencies and years teaching for the About page.
-L4: - TODO(jeremiah): Supply an approved author headshot and two-line author bio.
+L4: - TODO(jeremiah): Supply an approved two-line author bio.
 L5: - TODO(jeremiah): Supply a business street address only if it should be public; none is emitted in structured data.
 L6: - TODO(jeremiah): Supply YouTube IDs, titles and upload dates for article embeds.
-L7: - TODO(jeremiah): Provide the original file for the logo shown in chat; the attachment has no downloadable file reference in this workspace. Apply that exact asset to the header/footer and structured-data logo when available.
 ```
 
 ## lib/minimum-gas.ts
@@ -634,4 +633,4 @@ L48: a: `TODO(jeremiah): Write approved FAQ answers for ${slug}.`,
 L56: const body = `<!-- Editorial angle: ${angle.replace(/-->/g, "")} -->\n\n## Overview\n<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->\n\n## Details\n<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->\n\n## Put it into practice\n<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->\n`;
 ```
 
-Total: 349 markers across 53 files.
+Total: 348 markers across 53 files.
