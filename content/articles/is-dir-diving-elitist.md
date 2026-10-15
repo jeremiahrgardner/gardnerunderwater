@@ -1,0 +1,103 @@
+---
+title: "Is DIR Diving Elitist? An Honest Answer From a DIR Instructor"
+slug: "is-dir-diving-elitist"
+description: "DIR has a reputation for arrogance, and some of it was earned. Where it came from, what the system actually asks of you, and how good DIR training should feel."
+date: "2026-10-15"
+author: "Gardner Underwater"
+category: "DIR Foundations"
+image: "/landscape.jpg"
+imageAlt: "Jay Gardner demonstrating how to handle a dive reel and line"
+course: "/courses/essentials-of-recreational-diving"
+draft: true
+---
+
+<!-- DRAFT for Jay's review. This one should sound most like you. Before publishing: rewrite anything that doesn't match your view, add your own experience where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+
+**DIR diving isn't elitist by design, but it earned that reputation honestly.** The name implies everyone else is "doing it wrong," and some early advocates were combative online. The system itself is a set of practical solutions for diving safely as a team. Good DIR training explains the reasons behind every practice and treats other divers with respect.
+
+If you've ever asked a question on a dive forum and been told your gear was wrong before anyone answered it, you've met the problem. It's worth taking seriously, because it keeps good divers away from training that would help them.
+
+## Where did DIR's reputation come from?
+
+Three things built it.
+
+**The name.** "Doing It Right" carries an obvious implication about everyone else. Even people who like the system admit the name got it off on the wrong foot.
+
+**The early culture.** DIR came out of 1990s cave exploration, a small world of strong personalities. Some early advocates argued in a polemic, inflexible style, and the label "stroke" for non-DIR divers became part of the online culture ([Wikipedia](https://en.wikipedia.org/wiki/Doing_It_Right_(scuba_diving))). That tone spread through forums for years.
+
+**All-or-nothing rules.** In its strictest form, DIR treats the configuration as a complete package: you're either in it or you're not. To an outsider, that can sound like a purity test rather than a safety system.
+
+None of that is imaginary. If DIR divers want to be heard, the first step is admitting it.
+
+## What does DIR actually ask of you?
+
+Strip away the culture, and DIR asks four reasonable things:
+
+1. **Get good at the basics.** Buoyancy, trim, propulsion and awareness come before any advanced skill.
+2. **Dive as a team.** Stay close, stay aware and be ready to help.
+3. **Standardize with your team.** Same configuration, same procedures, same gases, so anyone can solve anyone's problem.
+4. **Plan your gas.** Know your reserve and turn the dive with it intact.
+
+Every one of those has a clear reason. Standardization isn't about everyone looking the same. It's about a teammate finding your backup regulator in zero visibility, with their eyes closed, because it's exactly where theirs is.
+
+That's also why DIR divers sometimes decline to dive with people in very different configurations. It isn't a judgment of the person. It's that the team's emergency plan depends on everyone being set up the same way.
+
+## Is elitism a problem with the system or the people?
+
+The people. A system can be strict without anyone being rude about it.
+
+You can apply the same standards to yourself that DIR asks for and still be generous with other divers. In fact, the core of the system points the other way: a diver who's focused on their team, their skills and their gas plan has little attention left for judging strangers on the boat.
+
+Unified Team Diving, the agency we teach through, describes itself as "an inclusive underwater philosophy" built around a thinking dive team ([UTD](https://utdscubadiving.com/about-utd/)). That's the version of DIR worth teaching.
+
+## How good DIR training should feel
+
+Our training philosophy, set out on our [Training page](/training), includes two principles that speak directly to this:
+
+- **Stay humble. Stay hungry.** There is always more to learn, for the student and the instructor.
+- **Feedback is a mirror.** Feedback is different from judgment. It shows you what you can't otherwise see.
+
+In practice, that means:
+
+- **Every practice comes with a reason.** If an instructor can't explain why something is done a certain way, that's a gap in the training, not a test of your loyalty.
+- **You start where you are.** You don't need to throw away your gear or your past training to begin.
+- **Mistakes are part of the process.** Training is where you're supposed to get things wrong.
+- **Other divers aren't the enemy.** The goal is to make you a better diver, not to make anyone else feel worse.
+
+<!-- TODO(jeremiah): Add a few sentences from your own experience: a time you saw DIR taught badly, or a student who arrived expecting judgment and found something different. -->
+
+## Signs you've found the wrong DIR instructor
+
+- They criticize your gear before they've seen you dive.
+- They can't explain the reasoning behind a practice beyond "that's the standard."
+- They talk more about other divers' mistakes than about your progress.
+- You leave feeling smaller instead of more capable.
+
+## Signs you've found the right one
+
+- They watch you dive, then explain what they saw and why it matters.
+- They answer "why" questions with real reasons and welcome them.
+- They show you video of yourself and help you fix one thing at a time.
+- You leave a better diver, and you can tell.
+
+## Frequently asked questions
+
+### Do I have to be "fully DIR" to train with a DIR instructor?
+
+No. Many divers take an entry course to improve their skills and adopt the parts that make sense for their diving. Your instructor should explain the full system and the reasons for it, then let you decide.
+
+### Why won't some DIR divers dive with non-DIR divers?
+
+Because their emergency procedures assume everyone on the team is configured the same way. Mixing systems can slow down a response when it matters most. It's a planning decision, not a personal one.
+
+### Is DIR only for technical and cave divers?
+
+No. The fundamentals transfer to every kind of diving. See [What Is DIR Diving?](/articles/what-is-dir-diving)
+
+### Are GUE and UTD different in attitude?
+
+Both agencies grew from the same roots and teach many of the same principles. We compare them fairly in [GUE vs UTD vs Hogarthian](/articles/gue-vs-utd-vs-hogarthian).
+
+## Try it for yourself
+
+The best way to judge DIR is to experience good teaching. [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving) is a skills class for certified divers that introduces the UTD system. Bring your questions, including the skeptical ones.
