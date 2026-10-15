@@ -1,6 +1,6 @@
 ---
-title: Rock Bottom (Minimum Gas) Calculator
-description: 'TODO(jeremiah): Write the meta description for rock-bottom-calculator.'
+title: 'Rock Bottom Calculator: Minimum Gas by Depth, With the Formula'
+description: How to calculate rock bottom (minimum gas) the UTD way, with values from 40 to 100 feet for an aluminum 80 and an HP100 and a worked example.
 slug: rock-bottom-calculator
 cluster: gas-planning
 isPillar: false
@@ -8,35 +8,106 @@ pillar: scuba-gas-management
 wave: 1
 primaryKeyword: rock bottom calculation
 secondaryKeywords:
-  - minimum gas calculator
+- minimum gas calculator
 ctaCourse: essentials-of-recreational-diving
 ctaPage: null
 extraLinks:
-  - /courses/essentials-of-tech
-answer: >-
-  TODO(jeremiah): Write the approved 40–60 word answer for
-  rock-bottom-calculator.
+- /courses/essentials-of-tech
+answer: 'Rock bottom is the gas you keep in reserve so two divers sharing one supply can reach the surface, or the next gas source, from the worst point of the dive. UTD multiplies ascent time, stressed breathing rate, two divers and average depth in atmospheres: 800 psi at 60 feet and 1,600 psi at 100 feet in an aluminum 80.'
 faqs:
-  - q: 'TODO(jeremiah): Supply reader questions for rock-bottom-calculator.'
-    a: 'TODO(jeremiah): Write approved FAQ answers for rock-bottom-calculator.'
+- q: Is rock bottom the same as minimum gas?
+  a: Yes. Different agencies and instructors also call it minimum gas or minimum gas reserve.
+- q: Why is rock bottom lower in an HP100 than an aluminum 80?
+  a: The gas needed is the same. An HP100 holds more gas for each psi, so the same volume shows up as a lower number on the gauge.
+- q: Why does UTD plan with 1.0 cubic foot per minute?
+  a: Because that's a realistic breathing rate under stress. UTD's planning rates are 0.5 cubic feet per minute at rest, 0.75 while swimming and 1.0 in an emergency, and rock bottom plans for the emergency.
+- q: Does rock bottom include my ascent stops?
+  a: Yes. The ascent time includes the one-minute stops every 10 feet from half your maximum depth.
 video:
   youtubeId: ''
   title: ''
   uploadDate: ''
-publishedAt: null
-lastReviewed: null
-draft: true
-calculatorDefaultsConfirmed: false
+publishedAt: '2026-10-13'
+lastReviewed: '2026-10-15'
+draft: false
+calculatorDefaultsConfirmed: true
 ---
-<!-- Editorial angle: Interactive calculator (see brief Phase 5); a link magnet other dive sites will cite. -->
 
-## Overview
-<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
+Rock bottom is the foundation of a gas plan. Every UTD class uses it. For how to turn it into a turn pressure, see [Gas Management for Recreational Divers](/learn/scuba-gas-management).
 
 <MinimumGasCalculator />
 
-## Details
-<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
+## Rock bottom by depth
 
-## Put it into practice
-<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
+| Max depth | Ascent time | Average depth | Gas needed (cu ft) | Aluminum 80 (77.4 cu ft at 3,000 psi) | HP100 (100 cu ft at 3,442 psi) |
+| --- | --- | --- | --- | --- | --- |
+| 40 ft | 4 min | 25 ft (1.76 ATA) | 14.1 | 600 psi | 500 psi |
+| 60 ft | 5 min | 33 ft (2.00 ATA) | 20.0 | 800 psi | 700 psi |
+| 80 ft | 7 min | 43 ft (2.30 ATA) | 32.2 | 1,300 psi | 1,200 psi |
+| 100 ft | 8 min | 50 ft (2.52 ATA) | 40.2 | 1,600 psi | 1,400 psi |
+
+Values are rounded up to the next 100 psi. Salt water.
+
+The table stops at 100 feet on purpose. UTD keeps the equivalent narcotic depth at 100 feet or less and doesn't use air or nitrox deeper than that; beyond 100 feet, UTD divers breathe helium mixes, and gas planning is part of that training.
+
+## The assumptions
+
+Every rock bottom number rests on assumptions. These follow UTD's planning method:
+
+- **Two divers** breathing from one gas supply.
+- **A stressed breathing rate of 1.0 cubic foot per minute per diver.** UTD plans with 0.5 cubic feet per minute at rest, 0.75 while swimming and 1.0 under stress. Nobody breathes calmly while sharing gas.
+- **One minute at depth** to recognize the problem and start sharing gas.
+- **An ascent to half your maximum depth**, then **one-minute stops every 10 feet** to the surface.
+- **Average depth** of that ascent, in atmospheres absolute (ATA).
+
+If your team breathes more heavily, dives in colder water or plans longer stops, your rock bottom goes up.
+
+## The formula
+
+UTD's rock bottom formula is:
+
+**Rock bottom = ascent time × stressed breathing rate × 2 divers × average depth (ATA)**
+
+1. **Ascent time.** Add one minute for solving the problem at depth to the time it takes to ascend, including the stops.
+2. **Average depth.** Work out the average depth of that ascent and convert it to ATA: depth in feet ÷ 33 + 1.
+3. **Gas needed.** Multiply ascent time × 1.0 cubic foot per minute × 2 divers × ATA.
+4. **Convert to psi.** Divide the gas needed by your cylinder's rated volume, then multiply by its rated pressure.
+5. **Round up** to the next 100 psi.
+
+## A worked example: 100 feet on an aluminum 80
+
+This is the example UTD uses in its own dive planning material.
+
+| Ascent segment | Minutes |
+| --- | --- |
+| Solve the problem at 100 ft | 1 |
+| Ascend from 100 ft to 50 ft | 2 |
+| One-minute stops at 50, 40, 30, 20 and 10 ft | 5 |
+| **Total ascent time** | **8** |
+
+- Average depth of the ascent: 50 feet, about 2.5 ATA
+- Gas needed: 8 minutes × 1.0 cu ft/min × 2 divers × 2.5 ATA = **40 cubic feet**
+- Aluminum 80: 40 ÷ 77.4 × 3,000 = 1,550 psi, rounded up to **1,600 psi**
+
+Start that dive with 3,000 psi and only 1,400 psi is usable. That's why a single aluminum 80 runs out of usable gas quickly at 100 feet.
+
+## How to adjust for your team
+
+- **Different cylinder:** divide the gas needed by that cylinder's rated volume, then multiply by its rated pressure.
+- **Different depth:** rebuild the ascent profile, add up the minutes and find the new average depth.
+- **Mismatched tanks:** plan around the diver whose cylinder reaches rock bottom first.
+- **Technical dives:** rock bottom gets you to the next available gas source, such as a decompression bottle, rather than to the surface. That planning is part of technical training.
+
+Know your own breathing rate. Measure it on a few relaxed dives, and you'll see how much margin the stressed rate builds in.
+
+## Common rock bottom mistakes
+
+- **Calculating for one diver.** The whole point is to cover a teammate who has no gas.
+- **Using relaxed breathing rates.** Nobody breathes calmly during a gas share.
+- **Using one reserve at all depths.** The table shows how fast it grows.
+- **Rounding down.** Always round up.
+- **Not sharing numbers before the dive.** Everyone on the team should know everyone's rock bottom, and the team ascends on or before it.
+
+## Learn to plan it in the water
+
+Gas planning, rock bottom and gas sharing with a long hose are part of [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving). For more advanced gas planning and ascent strategies, see [Essentials of Tech](/courses/essentials-of-tech).

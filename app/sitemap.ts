@@ -4,6 +4,7 @@ import { courses, courseSlug } from "@/lib/courses";
 import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const articles = getArticles();
   return [
     ...[
       "/",
@@ -12,7 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/pricing",
       "/about",
       "/learn",
-      ...clusters.map((c) => `/learn/topic/${c.slug}`),
+      // Topic hubs are listed once they have at least one published article.
+      ...clusters
+        .filter((c) => articles.some((a) => a.cluster === c.slug))
+        .map((c) => `/learn/topic/${c.slug}`),
       "/contact",
       "/shop",
       "/merch",
@@ -20,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...courses.map((course) => ({
       url: absoluteUrl(`/courses/${courseSlug(course.title)}`),
     })),
-    ...getArticles().map((article) => ({
+    ...articles.map((article) => ({
       url: absoluteUrl(`/learn/${article.slug}`),
       lastModified: new Date(article.lastReviewed!),
     })),

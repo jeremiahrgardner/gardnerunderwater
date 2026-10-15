@@ -2,12 +2,6 @@
 
 Every actionable owner marker in application code, article stubs and their generator is listed below. Brief examples, test fixture strings and this generated report are excluded. Multiple locations may request the same owner input.
 
-## app/learn/[slug]/page.tsx
-
-```text
-L191: <p>TODO(jeremiah): Supply an approved two-line author bio.</p>
-```
-
 ## content/learn/5-ft-vs-7-ft-long-hose.mdx
 
 ```text
@@ -30,18 +24,6 @@ L25: TODO(jeremiah): Write approved FAQ answers for
 L38: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
 L41: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
 L44: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/backplate-and-wing-vs-jacket-bcd.mdx
-
-```text
-L4: TODO(jeremiah): Write the meta description for
-L20: TODO(jeremiah): Write the approved 40–60 word answer for
-L24: TODO(jeremiah): Supply reader questions for
-L27: TODO(jeremiah): Write approved FAQ answers for
-L40: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L43: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L46: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
 ## content/learn/balanced-rig.mdx
@@ -104,18 +86,6 @@ L38: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L41: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/dir-gear-configuration.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for dir-gear-configuration.'
-L18: TODO(jeremiah): Write the approved 40–60 word answer for
-L21: - q: 'TODO(jeremiah): Supply reader questions for dir-gear-configuration.'
-L22: a: 'TODO(jeremiah): Write approved FAQ answers for dir-gear-configuration.'
-L34: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L37: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L40: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/dir-glossary.mdx
 
 ```text
@@ -176,18 +146,6 @@ L35: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L38: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/gue-vs-utd-vs-hogarthian.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for gue-vs-utd-vs-hogarthian.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for gue-vs-utd-vs-hogarthian.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for gue-vs-utd-vs-hogarthian.'
-L33: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L36: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L39: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/helicopter-turn-and-modified-flutter.mdx
 
 ```text
@@ -212,18 +170,6 @@ L37: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L40: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/horizontal-trim-feet-sinking.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for horizontal-trim-feet-sinking.'
-L18: TODO(jeremiah): Write the approved 40–60 word answer for
-L21: - q: 'TODO(jeremiah): Supply reader questions for horizontal-trim-feet-sinking.'
-L23: TODO(jeremiah): Write approved FAQ answers for
-L36: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L39: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L42: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/hover-without-hands.mdx
 
 ```text
@@ -246,30 +192,6 @@ L26: TODO(jeremiah): Write approved FAQ answers for
 L39: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
 L42: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
 L45: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/how-to-back-kick.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for how-to-back-kick.'
-L16: answer: 'TODO(jeremiah): Write the approved 40–60 word answer for how-to-back-kick.'
-L18: - q: 'TODO(jeremiah): Supply reader questions for how-to-back-kick.'
-L19: a: 'TODO(jeremiah): Write approved FAQ answers for how-to-back-kick.'
-L31: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L34: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L37: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/how-to-become-a-technical-diver.mdx
-
-```text
-L4: TODO(jeremiah): Write the meta description for
-L21: TODO(jeremiah): Write the approved 40–60 word answer for
-L25: TODO(jeremiah): Supply reader questions for
-L28: TODO(jeremiah): Write approved FAQ answers for
-L41: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L44: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L47: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
 ## content/learn/how-to-deploy-an-smb.mdx
@@ -308,18 +230,6 @@ L37: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L40: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/is-dir-diving-elitist.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for is-dir-diving-elitist.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for is-dir-diving-elitist.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for is-dir-diving-elitist.'
-L33: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L36: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L39: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/la-jolla-shores-skills-practice.mdx
 
 ```text
@@ -330,18 +240,6 @@ L27: TODO(jeremiah): Write approved FAQ answers for
 L40: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
 L43: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
 L46: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/long-hose-configuration.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for long-hose-configuration.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for long-hose-configuration.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for long-hose-configuration.'
-L33: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L36: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L39: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
 ## content/learn/out-of-air-drill-long-hose.mdx
@@ -380,18 +278,6 @@ L41: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L44: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/rock-bottom-calculator.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for rock-bottom-calculator.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for rock-bottom-calculator.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for rock-bottom-calculator.'
-L34: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L39: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L42: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/rule-of-thirds-diving.mdx
 
 ```text
@@ -428,42 +314,6 @@ L41: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L44: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/scuba-buoyancy-control.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for scuba-buoyancy-control.'
-L18: TODO(jeremiah): Write the approved 40–60 word answer for
-L21: - q: 'TODO(jeremiah): Supply reader questions for scuba-buoyancy-control.'
-L22: a: 'TODO(jeremiah): Write approved FAQ answers for scuba-buoyancy-control.'
-L34: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L37: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L40: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/scuba-finning-techniques.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for scuba-finning-techniques.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for scuba-finning-techniques.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for scuba-finning-techniques.'
-L33: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L36: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L39: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/scuba-gas-management.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for scuba-gas-management.'
-L16: answer: 'TODO(jeremiah): Write the approved 40–60 word answer for scuba-gas-management.'
-L18: - q: 'TODO(jeremiah): Supply reader questions for scuba-gas-management.'
-L19: a: 'TODO(jeremiah): Write approved FAQ answers for scuba-gas-management.'
-L31: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L34: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L37: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/sidemount-vs-backmount.mdx
 
 ```text
@@ -498,18 +348,6 @@ L23: TODO(jeremiah): Write approved FAQ answers for
 L36: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
 L39: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
 L42: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
-## content/learn/technical-diving-san-diego.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for technical-diving-san-diego.'
-L17: TODO(jeremiah): Write the approved 40–60 word answer for
-L20: - q: 'TODO(jeremiah): Supply reader questions for technical-diving-san-diego.'
-L21: a: 'TODO(jeremiah): Write approved FAQ answers for technical-diving-san-diego.'
-L33: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L36: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L39: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
 ## content/learn/utd-essentials-of-recreational-diving.mdx
@@ -560,18 +398,6 @@ L35: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L38: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## content/learn/what-is-dir-diving.mdx
-
-```text
-L3: description: 'TODO(jeremiah): Write the meta description for what-is-dir-diving.'
-L16: answer: 'TODO(jeremiah): Write the approved 40–60 word answer for what-is-dir-diving.'
-L18: - q: 'TODO(jeremiah): Supply reader questions for what-is-dir-diving.'
-L19: a: 'TODO(jeremiah): Write approved FAQ answers for what-is-dir-diving.'
-L31: <!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
-L34: <!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
-L37: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
-```
-
 ## content/learn/why-divers-plateau.mdx
 
 ```text
@@ -588,15 +414,8 @@ L36: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal 
 
 ```text
 L3: - TODO(jeremiah): Confirm credentials, agencies and years teaching for the About page.
-L4: - TODO(jeremiah): Supply an approved two-line author bio.
-L5: - TODO(jeremiah): Supply a business street address only if it should be public; none is emitted in structured data.
-L6: - TODO(jeremiah): Supply YouTube IDs, titles and upload dates for article embeds.
-```
-
-## lib/minimum-gas.ts
-
-```text
-L1: // TODO(jeremiah): Confirm all minimum-gas defaults against your teaching before publishing the calculator.
+L4: - TODO(jeremiah): Supply a business street address only if it should be public; none is emitted in structured data.
+L5: - TODO(jeremiah): Supply YouTube IDs, titles and upload dates for article embeds.
 ```
 
 ## lib/site.ts
@@ -615,4 +434,4 @@ L48: a: `TODO(jeremiah): Write approved FAQ answers for ${slug}.`,
 L56: const body = `<!-- Editorial angle: ${angle.replace(/-->/g, "")} -->\n\n## Overview\n<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->\n\n## Details\n<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->\n\n## Put it into practice\n<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->\n`;
 ```
 
-Total: 348 markers across 53 files.
+Total: 247 markers across 37 files.
