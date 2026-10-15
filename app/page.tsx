@@ -95,6 +95,38 @@ export default function HomePage() {
         </div>
       </section>
       <AgencyCredentials />
+      <section className="section section-paper" aria-labelledby="why-title">
+        <div className="container split-content">
+          <div>
+            <div className="eyebrow">Sound familiar?</div>
+            <h2 id="why-title">
+              Good training
+              <br />
+              shouldn’t be this hard to find.
+            </h2>
+          </div>
+          <div className="prose">
+            <p>
+              Every instructor taught it a little differently. You collected the
+              cards, but not the confidence. You can’t tell which training to
+              trust. And the people you dive with at home don’t dive the way you
+              want to.
+            </p>
+            <p>
+              <strong>Gardner Underwater is built differently.</strong>
+            </p>
+            <p>
+              One system, taught the same way every time. Small teams, never
+              more than three students to one instructor. Training you pay for.
+              Certification you earn.
+            </p>
+            <p>
+              If you’re tired of the next card not making you a better diver,
+              you’ve found your team.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="section landing-paths" id="training-paths">
         <div className="container">
           <div className="landing-section-heading">
