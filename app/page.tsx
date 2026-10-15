@@ -271,9 +271,9 @@ export default function HomePage() {
               <div>
                 <span className="eyebrow">Field notes</span>
                 <h2>
-                  A little perspective.
+                  The thinking
                   <br />
-                  For your next dive.
+                  behind the skills.
                 </h2>
               </div>
               <Link href="/learn" className="text-link">
