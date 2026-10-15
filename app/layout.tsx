@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./editorial.css";
 import { getArticles, isContentPreview } from "@/lib/articles";
-import { site, jsonLd } from "@/lib/site";
+import { site } from "@/lib/site";
+import { ConversionTracking } from "@/components/ConversionTracking";
+import { Analytics } from "@vercel/analytics/next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
@@ -49,49 +51,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: jsonLd({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "EducationalOrganization",
-                  "@id": `${site.url}/#organization`,
-                  name: site.name,
-                  url: site.url,
-                  logo: `${site.url}/logo.png`,
-                  description: site.description,
-                  telephone: site.phone,
-                  email: site.email,
-                  areaServed: { "@type": "City", name: "San Diego" },
-                  founder: { "@id": `${site.url}/#jay-gardner` },
-                  sameAs: [
-                    "https://www.instagram.com/gardnerunderwater/",
-                    "https://www.facebook.com/gardnerunderwater/",
-                  ],
-                },
-                {
-                  "@type": "Person",
-                  "@id": `${site.url}/#jay-gardner`,
-                  name: "Jay Gardner",
-                  jobTitle: "Scuba instructor and coach",
-                  url: `${site.url}/about`,
-                  image: `${site.url}/portrait.jpg`,
-                  worksFor: { "@id": `${site.url}/#organization` },
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": `${site.url}/#website`,
-                  name: site.name,
-                  url: site.url,
-                  publisher: { "@id": `${site.url}/#organization` },
-                  inLanguage: "en-US",
-                },
-              ],
-            }),
-          }}
-        />
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
@@ -100,6 +59,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ConversionTracking />
+        <Analytics />
       </body>
     </html>
   );
