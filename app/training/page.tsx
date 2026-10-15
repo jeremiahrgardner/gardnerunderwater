@@ -97,7 +97,7 @@ export default function TrainingPage() {
             <div>
               <div className="eyebrow">The how</div>
               <h2>
-                Good training.
+                Intentional training.
                 <br />
                 Built around you.
               </h2>
