@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./editorial.css";
-import { getArticles, isContentPreview } from "@/lib/articles";
 import { site } from "@/lib/site";
 import { ConversionTracking } from "@/components/ConversionTracking";
 import { Analytics } from "@vercel/analytics/next";
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Gardner Underwater",
   },
   description: site.description,
-  alternates: { types: { "application/rss+xml": "/articles/feed.xml" } },
+  alternates: { types: { "application/rss+xml": "/learn/feed.xml" } },
   openGraph: {
     type: "website",
     siteName: site.name,
@@ -54,7 +53,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
-        <Nav showArticles={getArticles().length > 0 || isContentPreview} />
+        <Nav showArticles={true} />
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>

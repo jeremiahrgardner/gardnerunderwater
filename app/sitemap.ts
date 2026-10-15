@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getArticles } from "@/lib/articles";
+import { getArticles, clusters } from "@/lib/articles";
 import { courses, courseSlug } from "@/lib/courses";
 import { absoluteUrl } from "@/lib/site";
 
@@ -11,7 +11,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/training",
       "/pricing",
       "/about",
-      ...(getArticles().length > 0 ? ["/articles"] : []),
+      "/learn",
+      ...clusters.map(c => `/learn/topic/${c.slug}`),
       "/contact",
       "/shop",
       "/merch",
@@ -20,8 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: absoluteUrl(`/courses/${courseSlug(course.title)}`),
     })),
     ...getArticles().map((article) => ({
-      url: absoluteUrl(`/articles/${article.slug}`),
-      lastModified: new Date(article.updated || article.date),
+      url: absoluteUrl(`/learn/${article.slug}`),
+      lastModified: new Date(article.lastReviewed!),
     })),
   ];
 }

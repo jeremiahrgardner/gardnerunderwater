@@ -1,190 +1,69 @@
-import { cache } from "react";
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { marked, Renderer } from "marked";
-import sanitizeHtml from "sanitize-html";
+import { courses } from "./courses.ts";
 
-const directory = path.join(process.cwd(), "content/articles");
+const plan = JSON.parse(fs.readFileSync(path.join(process.cwd(), "docs/seo/articles.json"), "utf8"));
+export const clusters: { slug: string; name: string; pillar: string }[] = plan.clusters;
 export type Article = {
-  slug: string;
-  title: string;
-  description: string;
-  date: string;
-  updated?: string;
-  author: string;
-  category: string;
-  image: string;
-  imageAlt: string;
-  course: string;
-  draft: boolean;
-  body: string;
-  readingMinutes: number;
+  title: string; description: string; slug: string; cluster: string; isPillar: boolean;
+  pillar: string | null; wave: number; primaryKeyword: string; secondaryKeywords: string[];
+  ctaCourse: string | null; ctaPage: string | null; extraLinks: string[]; answer: string;
+  faqs: { q: string; a: string }[]; video?: { youtubeId: string; title: string; uploadDate: string };
+  publishedAt: string | null; lastReviewed: string | null; draft: boolean; body: string;
 };
-
-function requiredString(
-  data: Record<string, unknown>,
-  field: string,
-  file: string,
-): string {
-  const value = data[field];
-  if (typeof value !== "string" || !value.trim())
-    throw new Error(`${file}: ${field} must be a nonempty string.`);
-  return value.trim();
+export const isContentPreview = process.env.NODE_ENV === "development" || process.env.VERCEL_ENV === "preview";
+const publicPages = new Set(["/", "/training", "/about", "/contact", "/pricing", "/shop", "/merch", "/courses", "/learn"]);
+const validDate = (value: unknown): value is string => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
+export function validateArticles(articles: Article[]) {
+  const errors: string[] = [], warnings: string[] = [];
+  for (const article of articles) {
+    const problems: string[] = [];
+    const words = (article.answer || "").trim().split(/\s+/).filter(Boolean).length;
+    if (words < 40 || words > 60) problems.push("answer must contain 40–60 words");
+    if (!article.description || article.description.length > 160) problems.push("description is required and must be at most 160 characters");
+    if (!validDate(article.lastReviewed)) problems.push("lastReviewed must be a valid YYYY-MM-DD date");
+    if (!validDate(article.publishedAt)) problems.push("publishedAt must be a valid YYYY-MM-DD date");
+    if (!clusters.some(c => c.slug === article.cluster)) problems.push("unknown cluster");
+    if (!article.title || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug)) problems.push("title and valid slug required");
+    if (articles.filter(a => a.slug === article.slug).length !== 1) problems.push("duplicate slug");
+    if (article.ctaCourse && !courses.some(c => c.slug === article.ctaCourse)) problems.push("unknown ctaCourse");
+    if (!article.ctaCourse && (!article.ctaPage || !publicPages.has(article.ctaPage))) problems.push("valid ctaPage required when ctaCourse is null");
+    if (article.isPillar ? article.pillar !== null : !articles.some(a => a.slug === article.pillar && a.isPillar && a.cluster === article.cluster)) problems.push("missing or invalid pillar target");
+    if (/TODO\(jeremiah\)/.test(JSON.stringify(article))) problems.push("unresolved owner placeholders");
+    if (!article.body.trim()) problems.push("body required");
+    const links = [...(article.extraLinks || []), ...Array.from(article.body.matchAll(/(?:\]\(|href=["'])(\/(?:learn|courses)(?:\/[^\s)"'#?]*)?)/g), match => match[1])];
+    for (const link of links) {
+      if (typeof link !== "string") { problems.push("extraLinks must contain paths"); continue; }
+      const route = link.split(/[?#]/)[0];
+      if (route.startsWith("/courses/") && !courses.some(c => `/courses/${c.slug}` === route)) problems.push(`unresolved link: ${route}`);
+      if (route.startsWith("/learn/topic/") && !clusters.some(c => `/learn/topic/${c.slug}` === route)) problems.push(`unresolved link: ${route}`);
+      else if (route.startsWith("/learn/") && !route.startsWith("/learn/topic/") && !articles.some(a => `/learn/${a.slug}` === route && (article.draft || !a.draft))) problems.push(`unresolved link: ${route}`);
+    }
+    if (article.video?.youtubeId && (!/^[A-Za-z0-9_-]{11}$/.test(article.video.youtubeId) || !validDate(article.video.uploadDate) || !article.video.title)) problems.push("video requires a valid YouTube ID, title and uploadDate");
+    for (const problem of problems) (article.draft ? warnings : errors).push(`${article.slug}: ${problem}`);
+  }
+  return { errors, warnings };
 }
-
-function validDate(value: string, file: string): string {
-  if (
-    !/^\d{4}-\d{2}-\d{2}$/.test(value) ||
-    !Number.isFinite(Date.parse(value)) ||
-    new Date(value).toISOString().slice(0, 10) !== value
-  )
-    throw new Error(`${file}: use a valid YYYY-MM-DD date.`);
-  return value;
-}
-
-const readArticles = cache((): Article[] => {
-  const slugs = new Set<string>();
-  const articles = fs
-    .readdirSync(directory)
-    .filter((file) => file.endsWith(".md"))
-    .map((file) => {
-      const { data, content } = matter(
-        fs.readFileSync(path.join(directory, file), "utf8"),
-      );
-      const read = (field: string) => requiredString(data, field, file);
-      const slug = read("slug");
-      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slugs.has(slug))
-        throw new Error(
-          `${file}: article slugs must be unique, lowercase, and hyphenated.`,
-        );
-      slugs.add(slug);
-      if (typeof data.draft !== "boolean")
-        throw new Error(`${file}: draft must be true or false.`);
-      const image = read("image");
-      const publicRoot = path.join(process.cwd(), "public");
-      const imagePath = path.resolve(publicRoot, `.${image}`);
-      if (
-        !image.startsWith("/") ||
-        image.startsWith("//") ||
-        !imagePath.startsWith(publicRoot + path.sep) ||
-        !fs.existsSync(imagePath)
-      )
-        throw new Error(
-          `${file}: image must reference a local file in public/.`,
-        );
-      const course = read("course");
-      if (!/^\/courses(?:\/[a-z0-9-]+|#[a-z0-9-]+)?$/.test(course))
-        throw new Error(`${file}: course must be a local training URL.`);
-      const date = validDate(read("date"), file);
-      const updated =
-        data.updated === undefined
-          ? undefined
-          : validDate(read("updated"), file);
-      if (updated && updated < date)
-        throw new Error(`${file}: updated cannot precede date.`);
-      if (!content.trim())
-        throw new Error(`${file}: article body cannot be empty.`);
-      if (
-        marked
-          .lexer(content)
-          .some((token) => token.type === "heading" && token.depth === 1)
-      )
-        throw new Error(
-          `${file}: start body headings at ##; the page already has a title.`,
-        );
-      return {
-        slug,
-        title: read("title"),
-        description: read("description"),
-        date,
-        updated,
-        author: read("author"),
-        category: read("category"),
-        image,
-        imageAlt: read("imageAlt"),
-        course,
-        draft: data.draft,
-        body: content,
-        readingMinutes: Math.max(
-          1,
-          Math.ceil(content.split(/\s+/).length / 200),
-        ),
-      };
-    });
-  return articles.sort(
-    (a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title),
-  );
-});
-
-export const isContentPreview =
-  process.env.NODE_ENV === "development" ||
-  process.env.VERCEL_ENV === "preview";
-
-export const getArticles = cache(() =>
-  readArticles().filter(
-    (article) =>
-      !article.draft && article.date <= new Date().toISOString().slice(0, 10),
-  ),
-);
-
-export function getRenderableArticles() {
-  return isContentPreview ? readArticles() : getArticles();
-}
-
-export function getArticle(slug: string) {
-  return getRenderableArticles().find((article) => article.slug === slug);
-}
-
-export function renderArticle(body: string) {
-  const headings: { id: string; text: string; depth: number }[] = [];
-  const seen = new Map<string, number>();
-  const renderer = new Renderer();
-  renderer.heading = function ({ tokens, depth, text }) {
-    const label = sanitizeHtml(text, {
-      allowedTags: [],
-      allowedAttributes: {},
-    });
-    const base =
-      label
-        .toLowerCase()
-        .normalize("NFKD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-|-$/g, "") || "section";
-    const count = seen.get(base) || 0;
-    seen.set(base, count + 1);
-    const id = count ? `${base}-${count + 1}` : base;
-    if (depth <= 3) headings.push({ id, text: label, depth });
-    return `<h${depth} id="${id}">${this.parser.parseInline(tokens)}</h${depth}>`;
-  };
-  const raw = marked.parse(body, { renderer, async: false, gfm: true });
-  const html = sanitizeHtml(raw, {
-    allowedTags: [
-      ...sanitizeHtml.defaults.allowedTags.filter((tag) => tag !== "h1"),
-      "img",
-    ],
-    allowedAttributes: {
-      a: ["href", "title"],
-      h2: ["id"],
-      h3: ["id"],
-      h4: ["id"],
-      img: ["src", "alt", "width", "height", "loading"],
-      code: ["class"],
-    },
-    allowedSchemes: ["http", "https", "mailto"],
-    transformTags: {
-      img: sanitizeHtml.simpleTransform("img", { loading: "lazy" }),
-    },
+export function readArticles(): Article[] {
+  const directory = path.join(process.cwd(), "content/learn");
+  if (!fs.existsSync(directory)) return [];
+  const articles = fs.readdirSync(directory).filter(file => file.endsWith(".mdx")).map(file => {
+    const { data, content } = matter(fs.readFileSync(path.join(directory, file), "utf8"));
+    if (data.slug !== file.slice(0, -4)) throw new Error(`${file}: slug must match filename`);
+    if (typeof data.draft !== "boolean") throw new Error(`${file}: draft must be explicitly true or false`);
+    return { ...data, body: content } as Article;
   });
-  return { html, headings };
+  const { errors } = validateArticles(articles);
+  if (errors.length) throw new Error(errors.join("\n"));
+  return articles.sort((a,b) => (b.publishedAt || "").localeCompare(a.publishedAt || "") || a.title.localeCompare(b.title));
 }
-
-export function formatArticleDate(date: string) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${date}T12:00:00Z`));
+export function getArticles() { return readArticles().filter(a => !a.draft && !!a.publishedAt && a.publishedAt <= new Date().toISOString().slice(0,10)); }
+export function getRenderableArticles() { return isContentPreview ? readArticles() : getArticles(); }
+export function getArticle(slug: string) { return getRenderableArticles().find(a => a.slug === slug); }
+export function getRelatedArticles(article: Article) {
+  const siblings = getArticles().filter(a => a.cluster === article.cluster && a.slug !== article.slug);
+  if (article.isPillar) return siblings;
+  return [...siblings.filter(a => a.slug === article.pillar), ...siblings.filter(a => a.slug !== article.pillar).slice(0,2)];
 }
+export function formatArticleDate(date: string) { return new Intl.DateTimeFormat("en-US", {dateStyle:"long",timeZone:"UTC"}).format(new Date(`${date}T12:00:00Z`)); }

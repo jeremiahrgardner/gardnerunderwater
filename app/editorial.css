@@ -1680,3 +1680,13 @@
   margin-bottom: 20px;
   font-size: 0.92rem;
 }
+
+/* Learn pages reuse the site's paper, ink and typographic palette. */
+.learn-reading { max-width: 850px; }
+.learn-reading h1 { font-size: clamp(2.3rem, 6vw, 4.5rem); line-height: 1.08; margin: 1.5rem 0; }
+.learn-answer, .learn-course, .learn-author, .learn-draft { padding: clamp(1.25rem, 4vw, 2rem); background: var(--paper, #f4f1e9); border: 1px solid currentColor; margin: 2rem 0; }
+.learn-answer { font-size: 1.2rem; line-height: 1.7; border-left: 4px solid var(--gold, #b89960); }
+.learn-draft { border-style: dashed; }
+.learn-video { width: 100%; aspect-ratio: 16 / 9; border: 0; margin: 2rem 0; }
+.learn-reading .article-prose table { display: block; overflow-x: auto; }
+.learn-reading .article-prose td, .learn-reading .article-prose th { padding: .7rem; border: 1px solid currentColor; }

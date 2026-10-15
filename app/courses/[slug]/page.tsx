@@ -48,7 +48,7 @@ export default async function CoursePage({
           note: "Total days discussed before booking",
         };
   const related = getArticles()
-    .filter((article) => article.course === `/courses/${slug}`)
+    .filter((article) => article.ctaCourse === slug)
     .slice(0, 2);
   const schema = {
     "@context": "https://schema.org",
@@ -181,7 +181,7 @@ export default async function CoursePage({
         <section className="section related-articles">
           <div className="container">
             <div className="landing-section-heading">
-              <h2>A little more perspective.</h2>
+              <h2>Related reading</h2>
             </div>
             <div className="article-grid">
               {related.map((article) => (

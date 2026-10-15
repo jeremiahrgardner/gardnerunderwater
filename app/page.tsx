@@ -194,7 +194,7 @@ export default function HomePage() {
                   For your next dive.
                 </h2>
               </div>
-              <Link href="/articles" className="text-link">
+              <Link href="/learn" className="text-link">
                 Read all articles <Arrow />
               </Link>
             </div>
@@ -211,7 +211,7 @@ export default function HomePage() {
         rel="alternate"
         type="application/rss+xml"
         title={`${site.name} articles`}
-        href={absoluteUrl("/articles/feed.xml")}
+        href={absoluteUrl("/learn/feed.xml")}
       />
     </>
   );
