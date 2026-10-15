@@ -1,16 +1,21 @@
+import { personSchema, jsonLd } from "@/lib/site";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { Arrow, ConsultationCTA } from "@/components/SiteUI";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/about" },
-  title: "Meet Jay",
-  description:
-    "Meet Jay Gardner, UTD Instructor #225, DAN instructor, founder of Gardner Underwater, and co-host of The Dive Table podcast.",
-};
+export const metadata: Metadata = pageMetadata(
+  "Jeremiah Gardner, UTD Scuba Instructor",
+  "Jeremiah Gardner is a UTD scuba instructor, cave diver and coach in San Diego. His background, teaching philosophy and how to train with him.",
+  "/about",
+);
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(personSchema) }}
+      />
       <section className="about-hero">
         <div className="container about-grid">
           <div>

@@ -9,14 +9,14 @@ import { Arrow } from "./SiteUI";
 const links = [
   { href: "/courses", label: "Training" },
   { href: "/training", label: "Our approach" },
-  { href: "/articles", label: "Articles" },
+  { href: "/learn", label: "Learn" },
   { href: "/about", label: "Meet Jay" },
 ];
 
 function Navigation({ showArticles }: { showArticles: boolean }) {
   const navLinks = showArticles
     ? links
-    : links.filter((link) => link.href !== "/articles");
+    : links.filter((link) => link.href !== "/learn");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDialogElement>(null);

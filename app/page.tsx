@@ -1,4 +1,6 @@
+import { businessSchema, jsonLd } from "@/lib/site";
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow, ConsultationCTA } from "@/components/SiteUI";
@@ -7,24 +9,11 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { getArticles } from "@/lib/articles";
 import { absoluteUrl, site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Scuba Instruction & Coaching in San Diego",
-  description: site.description,
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "Become the diver you want to be",
-    description: site.description,
-    url: "/",
-    images: [
-      {
-        url: "/social.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Divers exploring together with Gardner Underwater",
-      },
-    ],
-  },
-};
+export const metadata: Metadata = pageMetadata(
+  "DIR Scuba Training in San Diego",
+  "DIR-based scuba training and coaching in San Diego. Build real buoyancy, trim and team skills with UTD instructor Jeremiah Gardner in classes of 3 or fewer.",
+  "/",
+);
 
 const paths = [
   {
@@ -57,6 +46,10 @@ export default function HomePage() {
   const articles = getArticles().slice(0, 2);
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(businessSchema) }}
+      />
       <section className="landing-hero" aria-labelledby="home-title">
         <Image
           src="/hero-cave.jpg"
@@ -209,7 +202,7 @@ export default function HomePage() {
                   For your next dive.
                 </h2>
               </div>
-              <Link href="/articles" className="text-link">
+              <Link href="/learn" className="text-link">
                 Read all articles <Arrow />
               </Link>
             </div>
@@ -226,7 +219,7 @@ export default function HomePage() {
         rel="alternate"
         type="application/rss+xml"
         title={`${site.name} articles`}
-        href={absoluteUrl("/articles/feed.xml")}
+        href={absoluteUrl("/learn/feed.xml")}
       />
     </>
   );

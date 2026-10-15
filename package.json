@@ -7,22 +7,29 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:articles": "node --experimental-strip-types --test tests/articles.test.mjs"
+    "test:articles": "node --experimental-strip-types --test tests/articles.test.mjs",
+    "validate:content": "node --experimental-strip-types scripts/validate-content.mjs",
+    "prebuild": "npm run validate:content",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "generate:articles": "node scripts/generate-article-stubs.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "gray-matter": "^4.0.3",
-    "marked": "^18.1.1",
     "next": "16.2.6",
+    "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "sanitize-html": "^2.18.1"
+    "remark-gfm": "^4.0.1",
+    "remark-mdx": "^3.1.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/sanitize-html": "^2.16.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",

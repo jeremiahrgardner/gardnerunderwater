@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { PageIntro, ConsultationCTA, Arrow } from "@/components/SiteUI";
 import { rentalKits, rentalTanks, services, shopStock } from "@/lib/rentals";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/shop" },
-  title: "Gear & rentals",
-  description:
-    "Equipment and tank rentals, service, and Save A Course essentials for Gardner Underwater students.",
-};
+export const metadata: Metadata = pageMetadata(
+  "Dive Gear, Rentals & Services",
+  "Explore equipment and tank rentals, gear servicing and Save A Course essentials for Gardner Underwater students. View rental options and service rates.",
+  "/shop",
+);
 function RateTable({
   title,
   note,

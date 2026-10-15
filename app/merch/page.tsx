@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import Link from "next/link";
 import { PageIntro, Arrow } from "@/components/SiteUI";
 import { tees, hats } from "@/lib/merch";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/merch" },
-  title: "Merchandise",
-  description:
-    "Fly the Black with Gardner Underwater apparel. Shop tees and headwear through our Square store.",
-};
+export const metadata: Metadata = pageMetadata(
+  "Dive Apparel & Merchandise",
+  "Fly the Black with Gardner Underwater tees and headwear. Browse dive team apparel and choose your design, then shop through our linked Square store.",
+  "/merch",
+);
 export default function MerchPage() {
   return (
     <>

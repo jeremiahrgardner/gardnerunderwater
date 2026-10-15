@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
+import { courses, courseSlug } from "@/lib/courses";
 import { ContactForm } from "@/components/ContactForm";
 import { PageIntro, Arrow } from "@/components/SiteUI";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/contact" },
-  title: "Book a consultation",
-  description:
-    "Request a free 15-minute consultation with Jay Gardner. Discuss your diving experience, goals, and the right training path for you.",
-};
+export const metadata: Metadata = pageMetadata(
+  "Book a Course | Gardner Underwater, San Diego",
+  "Book a scuba course or coaching with Gardner Underwater in San Diego. Call +1 (619) 880-0684 or send a message.",
+  "/contact",
+);
 export default async function ContactPage({
   searchParams,
 }: {
   searchParams: Promise<{ course?: string | string[] }>;
 }) {
   const params = await searchParams;
-  const selectedCourse =
+  const requestedCourse =
     typeof params.course === "string" ? params.course.slice(0, 200) : "";
+  const matchedCourse = courses.find(
+    (c) =>
+      courseSlug(c.title) === requestedCourse || c.title === requestedCourse,
+  );
+  const selectedCourse = matchedCourse?.title || requestedCourse;
   return (
     <>
       <PageIntro
@@ -39,7 +45,11 @@ export default async function ContactPage({
       </PageIntro>
       <section className="section" id="consultation">
         <div className="container contact-grid">
-          <ContactForm key={selectedCourse} selectedCourse={selectedCourse} />
+          <ContactForm
+            key={selectedCourse}
+            selectedCourse={selectedCourse}
+            courseSlug={matchedCourse ? courseSlug(matchedCourse.title) : ""}
+          />
           <aside className="contact-sidebar">
             <div className="contact-direct">
               <div className="eyebrow">Prefer a direct conversation?</div>

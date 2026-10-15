@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { PageIntro, ConsultationCTA, Arrow } from "@/components/SiteUI";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/training" },
-  title: "Our approach",
-  description:
-    "Individual attention, team diving, and real-world skills. Discover the Gardner Underwater training philosophy.",
-};
+export const metadata: Metadata = pageMetadata(
+  "How We Train Thinking Divers",
+  "Training first, certification second. Small 3:1 classes, skills taught in real-dive context, team-based procedures and video feedback in San Diego.",
+  "/training",
+);
 const approach = [
   [
     "Individual attention",

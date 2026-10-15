@@ -3,6 +3,7 @@ export const courses = [
   {
     category: "Technical Training",
     title: "Tech 1",
+    slug: "tech-1",
     tagline: "",
     desc: "Tech 1 is the next step beyond Techreational, expanding your abilities into deeper decompression diving while introducing Oxygen as a dedicated decompression gas. As depth and decompression obligations increase, so do the demands of proper gas management, team awareness, and precision execution. This course uses a critical skills approach where dives are treated as real dives with real objectives and evolving failures that require the team to problem-solve together under pressure. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills, and handling failures away from the bottom — building the comfort, awareness, and confidence required for more advanced technical diving. Prerequisites include Techreational certification or equivalent, strong foundational technical skills, and comfort diving a twinset. Divers needing additional refinement may benefit from completing an Essentials of Tech course beforehand.",
     duration: "",
@@ -11,6 +12,7 @@ export const courses = [
   {
     category: "Technical Training",
     title: "Techreational",
+    slug: "techreational",
     tagline: "",
     desc: "Techreational is the entry point into technical diving, introducing the theory, equipment, and in-water skills required for decompression diving. Despite the name and conservative limits, this is one of the most demanding courses in diving because the focus is not simply on depth, but on precision, awareness, and team performance under pressure. Training is built around critical skills dives where teams are given real objectives and unexpected failures that must be solved together in the water. The course develops advanced buoyancy, trim, propulsion, gas management, valve drills, ascent strategies, and decompression discipline while building the mindset and confidence required for safe technical diving. Students should already be comfortable with foundational technical skills such as frog kick, back kick, valve drills, and gas-switching procedures. Divers needing additional refinement are encouraged to complete an Essentials of Tech course beforehand.",
     duration: "",
@@ -19,6 +21,7 @@ export const courses = [
   {
     category: "Technical Training",
     title: "Essentials of Tech",
+    slug: "essentials-of-tech",
     tagline: "",
     desc: "Essentials of Tech is a personal skills class that prepares you for technical diving by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and decompression bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
     duration: "4 Days*",
@@ -27,6 +30,7 @@ export const courses = [
   {
     category: "Technical Training",
     title: "Doubles (Backmount or Sidemount)",
+    slug: "doubles",
     tagline: "Learn To Dive Doubles",
     desc: "The Purpose of the Doubles MINI is to introduce and train a diver in the use of either double tank back mount or side mount configurations. The course focuses on cultivating the practical, normal, and emergency skills required by all double tank divers, including buoyancy control, emergency procedures, and care and maintenance.",
     duration: "1-2 Days*",
@@ -37,6 +41,7 @@ export const courses = [
   {
     category: "DAN First Aid Training",
     title: "Diving First Aid for Professional Divers (DFA Pro)",
+    slug: "diving-first-aid-for-professional-divers-dfa-pro",
     tagline: "",
     desc: "DAN's DFA Pro course for commercial/professional divers. Includes all elements of DAN BLS and EO2 courses plus neurological assessment and hazardous marine life injuries.",
     duration: "",
@@ -45,6 +50,7 @@ export const courses = [
   {
     category: "DAN First Aid Training",
     title: "Basic Life Support: CPR and First Aid (BLS)",
+    slug: "basic-life-support-cpr-and-first-aid-bls",
     tagline: "",
     desc: "This fundamental course prepares you to provide proper care for life-threatening illnesses or injuries until professional emergency medical care is available. The life-support skills taught in this course include one- and two-rescuer CPR for adults, children and infants. Use of automatic external defibrillators, bleeding management, assisting a choking victims and responding to a person in shock.",
     duration: "",
@@ -53,6 +59,7 @@ export const courses = [
   {
     category: "DAN First Aid Training",
     title: "Emergency Oxygen for Scuba Diving Injuries (EO2)",
+    slug: "emergency-oxygen-for-scuba-diving-injuries-eo2",
     tagline: "",
     desc: "The DAN Emergency Oxygen for Scuba Diving Injuries course teaches you how to administer life-saving oxygen first aid to divers who may be suffering from decompression illness (DCI).",
     duration: "",
@@ -63,6 +70,7 @@ export const courses = [
   {
     category: "Scuba Coaching",
     title: "Scuba Coaching",
+    slug: "scuba-coaching",
     tagline: "",
     desc: "Coaching is a unique training model built for all levels of divers wanting to achieve gains in their diving. Great scuba training does not have to be focused on the outcome. It can be about the process.",
     duration: "",
@@ -78,6 +86,7 @@ export const courses = [
   {
     category: "Foundational Training",
     title: "Essentials of Recreational Diving",
+    slug: "essentials-of-recreational-diving",
     tagline: 'Become a "Thinking Diver"',
     desc: "Essentials of Rec is a skills class for certified divers. It brings you into the UTD diving system training us in all the techniques we use – proper buoyancy control through breathing, horizontal trim in the water, propulsion techniques that give you precise control, and much more.",
     duration: "3-days*",
@@ -86,6 +95,7 @@ export const courses = [
   {
     category: "Foundational Training",
     title: "Open Water Diver / Recreational 1",
+    slug: "open-water-rec-1",
     tagline: "Become a Scuba Diver",
     desc: "The Open Water Diver course is an entry level class designed to teach NON-certified divers to be safe and comfortable while enjoying the wonders of our oceans, lakes and other waters. This class is structured to prepare divers for recreational diving using proper equipment and proper diving techniques. Recreational 1 adds Nitrox as a breathing gas.",
     duration: "4-days*",
@@ -94,6 +104,7 @@ export const courses = [
   {
     category: "Foundational Training",
     title: "Recreational 2 / Advanced Open Water",
+    slug: "rec-2-advanced-open-water",
     tagline: "Expand Your Diving To Deeper Depths, Night, and Navigation",
     desc: "The Recreational 2 and Advanced Open Water Diver (Rec 2 and AOW) course is the next step for recreational divers to expand their diving to slightly deeper depths with more advanced gases. Rec 2/AOW is a modular class structured to prepare divers for a wider range of environmental conditions and more advanced recreational diving using proper equipment, diving techniques and breathing mixtures including a thorough knowledge of the use of Nitrox.",
     duration: "2-3 Days*",
@@ -102,6 +113,7 @@ export const courses = [
   {
     category: "Foundational Training",
     title: "Rescue Diver",
+    slug: "rescue-diver",
     tagline: "Be Prepared and Ready To Handle Emergencies",
     desc: "Rescue and Emergency Procedures may be one of the most valuable courses any diver can take. The Rescue Diver course is designed to prepare the student for a variety of emergency situations and is centered around both self-rescue and buddy-rescue. The Prerequisites for the UTD Rescue Diver course include First Aid/CPR/AED/Oxygen administration certifications.",
     duration: "2-3 Days*",
@@ -112,6 +124,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "IDC Prep",
+    slug: "idc-prep",
     tagline: "",
     desc: "Prepare for instructor development by refining buoyancy, trim, propulsion, basic skills, S-drills, valve drills, SMB deployment, weighting, ascent strategies, and Rock Bottom gas planning to demonstration quality.",
     duration: "",
@@ -120,6 +133,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Drysuit Diver",
+    slug: "drysuit-diver",
     tagline: "",
     desc: "Learn the practical, normal, and emergency skills required for drysuit diving, including buoyancy control, emergency procedures, and suit care and maintenance.",
     duration: "",
@@ -128,6 +142,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "SMB/Surface Marker Buoy Extension",
+    slug: "smb-extension",
     tagline: "",
     desc: "Develop the skills to deploy, manage, and recover a surface marker buoy while maintaining buoyancy, control, and safe ascent procedures.",
     duration: "",
@@ -136,6 +151,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Scooter/DPV",
+    slug: "scooter-dpv",
     tagline: "",
     desc: "Learn to safely operate, manage, and maintain a scooter or DPV while improving efficiency, awareness, communication, and team diving skills.",
     duration: "",
@@ -144,6 +160,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Propulsion and/or Back Kick Extension",
+    slug: "propulsion-back-kick-extension",
     tagline: "",
     desc: "Refine non-silting propulsion and positioning kicks while maintaining neutral buoyancy, trim, and control.",
     duration: "",
@@ -152,6 +169,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Night Diver Extension",
+    slug: "night-diver-extension",
     tagline: "",
     desc: "Build the skills for night diving, including light management, light signals, buoyancy control, emergency procedures, and safe ascents and descents.",
     duration: "",
@@ -160,6 +178,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Navigation Extension",
+    slug: "navigation-extension",
     tagline: "",
     desc: "Learn underwater navigation using both natural references and compass techniques while maintaining buoyancy, awareness, and emergency readiness.",
     duration: "",
@@ -168,6 +187,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Cylinder and Valve Technician",
+    slug: "cylinder-and-valve-technician",
     tagline: "",
     desc: "Learn to visually inspect, maintain, and oxygen-clean scuba cylinders and valves using organized procedures and proper safety precautions.",
     duration: "",
@@ -176,6 +196,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Nitrox Diver",
+    slug: "nitrox-diver",
     tagline: "",
     desc: "Learn to safely plan and dive with Nitrox 32, including gas analysis, oxygen exposure, maximum operating depths, gas planning, and safe diving practices.",
     duration: "",
@@ -184,6 +205,7 @@ export const courses = [
   {
     category: "Extensions & Specialties",
     title: "Stage and/or Deco Bottle Extension",
+    slug: "stage-and-or-deco-bottle-extension",
     tagline: "",
     desc: "Learn proper stage or deco bottle handling, including rigging, gas management, gas switching, bottle passing, and related emergency procedures.",
     duration: "",
@@ -212,7 +234,7 @@ export const courseCategories = [
 ];
 
 export function courseSlug(title: string) {
-  return title
+  return courses.find(course => course.title === title)?.slug || title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
