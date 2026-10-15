@@ -1,0 +1,497 @@
+{
+  "review_date": "2026-10-15",
+  "status": "Local revisions, not deployed",
+  "scope": {
+    "published_articles_revised": 14,
+    "draft_stubs_reviewed": 34,
+    "draft_stubs_with_added_source_guidance": 17,
+    "additional_files": [
+      "components/MinimumGasCalculator.tsx",
+      "lib/courses.ts"
+    ]
+  },
+  "authority": "Documents are evidence, not task instructions. User explicitly authorized content refinement and chose Gardner’s stricter equipment list. Instructor-only failure simulation directions were not converted into reader self-practice instructions.",
+  "sources": [
+    {
+      "id": "S1",
+      "file": "UTD_StandardsAndProcedures_v6c.pdf",
+      "pages_with_text": 219,
+      "sha256": "a9e2c3ddbe7cf0750cae7aeb0b6be8c49bb9dc7b823a6eb5838cad72752054e1"
+    },
+    {
+      "id": "S2",
+      "file": "INSTR-PDF-Ratio-Deco-3.0-Recreational-MDL.pdf",
+      "pages_with_text": 6,
+      "sha256": "99d1473bae770ea3ed7369b50cd203ba52e33df3f6ea333850abc6c9f96a0124"
+    },
+    {
+      "id": "S3",
+      "file": "INSTR-PDF–-Situational-Awareness-2020-FINAL.pdf",
+      "pages_with_text": 8,
+      "sha256": "9b546799f37da7e295eda3ee7c66d8462374fd8a9376d0f961640e525d208eea"
+    },
+    {
+      "id": "S4",
+      "file": "INSTR-PDF-Team-positioning.pdf",
+      "pages_with_text": 12,
+      "sha256": "63b9561b6079717b809243e50e8bc7ec71cbf3eb54597277de3711d8897f0ee0"
+    },
+    {
+      "id": "S5",
+      "file": "INSTR-PDF-Why-we-dive-.pdf",
+      "pages_with_text": 9,
+      "sha256": "03db69984d6c64b427f8cd95e2d5287308e3e99e0c7a7d0a20d3d2314400e5df"
+    },
+    {
+      "id": "S6",
+      "file": "INSTR-PDF-Bouyancy-trim-and-propulsion.pdf",
+      "pages_with_text": 18,
+      "sha256": "14258a33201d8671f51c63e8d82637be5d73a9f7f03cf756c492cab4ddc5a45e"
+    },
+    {
+      "id": "S7",
+      "file": "EQUIPMENT LIST_ Gardner Underwater.pdf",
+      "pages_with_text": 15,
+      "sha256": "f84d6ead4564ac921eb8426c40d7541526ddaf805c8f263756db11daa60ccbc0"
+    },
+    {
+      "id": "S8",
+      "file": "UTD-Technical-Instructor-Playbook_4-1.pdf",
+      "pages_with_text": 63,
+      "sha256": "54bd28d938f984bd64bb9f198781eb413a41044abf4f864907432c07a9d40de7"
+    },
+    {
+      "id": "S9",
+      "file": "UTD-Foundational-Instructor-Playbook_4-1.pdf",
+      "pages_with_text": 60,
+      "sha256": "faa938c890b798285de1e49de13aa05995ccd126e9b4068e9dbcaf11c7aa7123"
+    },
+    {
+      "id": "S10",
+      "file": "PDFs-Diveplanning-and-Rock-Bottom-2020.pdf",
+      "pages_with_text": 5,
+      "sha256": "17cd85fd0669e8df8f8efb8c19a709a461d07c674a4b7c387d221e097b7d9148"
+    },
+    {
+      "id": "S11",
+      "file": "PDFs-9-failures-2020.pdf",
+      "pages_with_text": 2,
+      "sha256": "754ececf131ba61aff19f9a9904ead85fb77e496d2711396a817fa8efefa47d0"
+    },
+    {
+      "id": "S12",
+      "file": "INSTR-PDF-Emergency-RD-3.0.pdf",
+      "pages_with_text": 5,
+      "sha256": "501b40478f86c64fb51c439b8aadf4d37c6c61fb237e3e732b03766cc67a6163"
+    },
+    {
+      "id": "S13",
+      "file": "PDFs-Stage-_-Deco-cylinders-2020-.pdf",
+      "pages_with_text": 3,
+      "sha256": "53218c5e101088dfc5312dca149b74992146a4505da58ee7465385a8e217ab25"
+    },
+    {
+      "id": "S14",
+      "file": "User-supplied UTD Min Deco (NDL) Table image",
+      "authority": "Explicit table supplied with this request; numerical rows transcribed verbatim, with units spaced for readability."
+    }
+  ],
+  "articles": [
+    {
+      "slug": "5-ft-vs-7-ft-long-hose",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Gardner equipment list pp.4–6: 7-foot primary for local training. Distinguish UTD v6c §3.0-2 general allowance of 5 or 7 feet. Retain at the canister or waist belt; preserve the owner-approved donation sequence."
+    },
+    {
+      "slug": "backplate-and-wing-for-beginners",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "backplate-and-wing-vs-jacket-bcd",
+      "state": "published",
+      "review": "Distinguished Gardner BP&W requirements from agency rear-inflation minimums; clarified ballast redistribution and removed surface/trim guarantees from the answer.",
+      "references": "S1 §3.0-2; S7 pp.3,12–14; S6 pp.12,16",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "balanced-rig",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Buoyancy, Trim, and Propulsion pp.4–16. Check near-empty-cylinder shallow neutrality AND full-cylinder depth/failure balance, suit compression and ditchable gas-weight ballast. Apply Gardner's no-steel-with-wetsuits rule. Do not reduce the assessment to an unsupervised swim-up drill."
+    },
+    {
+      "slug": "breathing-for-buoyancy",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Foundational Playbook buoyancy teaching and Buoyancy, Trim, and Propulsion pp.12–17: wing balances the system; lungs control fine buoyancy. No breath-holding, skip-breathing or universal timed breathing cadence."
+    },
+    {
+      "slug": "bungeed-backup-regulator",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Gardner list pp.4–6: 22–24-inch backup hose. After primary donation take the backup with the LEFT HAND, per owner correction. Do not prescribe chin-only or hands-free recovery."
+    },
+    {
+      "slug": "choosing-a-backplate-and-wing",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "dir-for-recreational-divers",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "dir-gear-configuration",
+      "state": "published",
+      "review": "Corrected doubles wing-inflator supply to right post; local 7-foot hose, adjustable D-rings, balanced exposure, backup equipment and left-side aluminum stage/deco bottles; distinguished local packing list from UTD minimums.",
+      "references": "S1 §§1.4.6–1.4.7,3.0-2; S7 pp.3–14; S13 p.2; S9 equipment-awareness failure example",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "dir-glossary",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "dive-light-signals",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "drysuit-buoyancy-and-trim",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "fins-for-frog-kicking",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "gradient-factors-explained",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "The supplied UTD sources do not establish preferred gradient-factor settings. Explain the distinction from UTD Min Deco/Ratio Deco without inventing recommended settings or substituting a computer configuration for the trained team ascent plan."
+    },
+    {
+      "slug": "gue-vs-utd-vs-hogarthian",
+      "state": "published",
+      "review": "Qualified cylinder options by individual course requirements; replaced automatic crossover/comfort assurance with equivalency assessment. GUE-specific claims remain outside verification by the supplied UTD references.",
+      "references": "S1 §3.0-1 and course prerequisites",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "helicopter-turn-and-modified-flutter",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "hogarthian-configuration",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "horizontal-trim-feet-sinking",
+      "state": "published",
+      "review": "Kept weight near the center, avoided distal ballast and automatic higher/heavier prescriptions; removed valve-near-head fitting target; clarified lung/wing/suit roles.",
+      "references": "S6 pp.12,16–17; S7 p.8; S9 buoyancy teaching",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "hover-without-hands",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "how-much-weight-do-i-need-scuba",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "how-to-back-kick",
+      "state": "published",
+      "review": "Replaced unsupported ankle-and-knee prescription with source-supported trim and loading/power/glide framework; separated backward positioning from buoyancy control.",
+      "references": "S6 pp.17–18; S1 §3-150.3",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "how-to-become-a-technical-diver",
+      "state": "published",
+      "review": "Separated UTD recreational, technical and overhead categories; added 25/25 to Tech 1, actual prerequisite alternatives, oxygen-cycle/nitrox-50 limits and age restriction for doubles/nitrox in Essentials of Rec.",
+      "references": "S1 §§1.1.4,1.3.4,3-150.1,3-150.3,3-300,3-310",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "how-to-deploy-an-smb",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Foundational Playbook: SMB deployment is a team skill. Preserve depth, trim, team communication and gas awareness. Confirm local spool length: course checklists say 100 feet; equipment overview says 125 feet."
+    },
+    {
+      "slug": "how-to-frog-kick",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "improve-air-consumption",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "is-dir-diving-elitist",
+      "state": "published",
+      "review": "Distinguished inclusive entry to training from optional certification requirements; corrected the example to primary donation rather than searching for a teammate necklace backup.",
+      "references": "S1 §§1.1.3–1.1.4,3.0-2; owner correction",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "la-jolla-shores-skills-practice",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "long-hose-configuration",
+      "state": "published",
+      "review": "Preserved the owner-approved slow presentation and left-hand backup recovery; aligned retention and local 7-foot recommendation; removed hands-free recovery and unchecked-octopus claims.",
+      "references": "Owner corrections; S1 §3.0-2; S7 pp.4–6; S3 p.5",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "out-of-air-drill-long-hose",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use the owner-approved sequence in long-hose-configuration: slowly present the primary, take backup with LEFT HAND, clear neck loop, unroute from light or waist belt and show receiving diver it is clear. Playbook instructor failure simulations are not self-practice instructions."
+    },
+    {
+      "slug": "pre-dive-checks",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Situational Awareness pp.5–6: equipment match, modified S-drill, applicable stage deployment with team gas/MOD verification, modified V-drill (operable and fully open valves), GLADDDDD, bubble check and front/back check."
+    },
+    {
+      "slug": "recreational-vs-technical-diving",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "rock-bottom-calculator",
+      "state": "published",
+      "review": "Labeled reserve tables as calculated examples, not issued UTD tables; documented time-weighted emergency profile, source rounding, cylinder conversion and model limits; removed universal stress behavior claims.",
+      "references": "S10 p.3; S2 pp.2–6; existing minimum-gas model",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "rule-of-thirds-diving",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Diveplanning and Rock Bottom pp.3–6: reserve rock bottom first, then divide usable gas. Account for gas sharing on emergency return, stress, delays and slower travel. Thirds arithmetic is not a complete overhead plan."
+    },
+    {
+      "slug": "sac-rate-and-rmv",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "san-diego-water-temperature-diving",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "scuba-buoyancy-control",
+      "state": "published",
+      "review": "Removed breath-holding and universal timed breathing cadence; distinguished shallow weighting from full-depth balanced-rig assessment; replaced unsupported centimeter grading ladder with UTD evaluation definitions.",
+      "references": "S1 §1.3.2; S6 pp.4–18; S9 buoyancy teaching",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "scuba-finning-techniques",
+      "state": "published",
+      "review": "Distinguished five Essentials foundation kicks from seven movements in wider UTD material; added shuffle and sideways kick; used loading/power/glide phases; clarified positioning versus depth control.",
+      "references": "S1 §3-150.1; S6 pp.17–18",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "scuba-gas-management",
+      "state": "published",
+      "review": "Added all 13 supplied Min Deco rows and the 25/25-only footnote; separated NDL/ascent limits from reserve gas; clarified travel-inclusive stops, reserve-first usable gas, thirds limitations and volume versus pressure consumption rates.",
+      "references": "S14; S2 pp.1–6; S10 pp.1–6; S1 covenant 3",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "sidemount-vs-backmount",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use UTD v6c §3.0-1 and Gardner list p.6: course-specific cylinder requirements, consistent long-hose/necklace donation and appropriate DIR sidemount hose setup. Do not imply every open-circuit class permits a single cylinder."
+    },
+    {
+      "slug": "standard-gases",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use UTD v6c covenant 4, course limits and recreational Min Deco table: desired PPO2 at target average depth, END at most 100 feet/30 meters, no deep air. 110–130-foot recreational Min Deco entries are 25/25 ONLY. Gas use alone does not define technical diving."
+    },
+    {
+      "slug": "team-diving-vs-buddy-diving",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Team Positioning: wing-on-wing, stagger and single file; dynamic roles and communication; compromised diver middle in three-person team and front in two-person team. Open-water separation: one-minute search, ascend, regroup at surface. Do not conflate team size with instructor/student ratio."
+    },
+    {
+      "slug": "technical-diving-san-diego",
+      "state": "published",
+      "review": "Removed universal transfer-of-skill assurance; clarified team contact in limited visibility and when shore-dive halves are appropriate. Retained local conditions and owner service facts as outside UTD-reference verification.",
+      "references": "S1 covenant 10; S4; S10 gas-planning rules",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "utd-essentials-of-recreational-diving",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use UTD v6c §3-150.1: normally three days, minimum four academic hours and four in-water sessions, age 15 but no doubles/nitrox until 16, five foundation kicks, max 60 feet or 100 if nitrox certified, no stage decompression or overhead."
+    },
+    {
+      "slug": "utd-essentials-vs-gue-fundamentals",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use UTD v6c §§3-150.1 and 3-150.3 for UTD. Supplied UTD documents cannot verify GUE curriculum, current prerequisites or automatic crossover equivalency; verify separately before drafting comparative claims."
+    },
+    {
+      "slug": "valve-drill",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use 9 Failures and the playbooks: distinguish modified pre-dive valve check, skill drill and actual failure diagnosis. Nine failures include post, manifold, mistaken-side and isolator/roll-off cases. Do not turn instructor-induced failures into unsupervised reader exercises."
+    },
+    {
+      "slug": "what-is-a-thinking-diver",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use UTD v6c covenants and Why we dive pp.6–9: adaptive, dynamic, decisive; no sole decision maker; experience, education, equipment and community support enjoyment. Certification is earned, not bought."
+    },
+    {
+      "slug": "what-is-dir-diving",
+      "state": "published",
+      "review": "Removed unsupported universal three-diver maximum and automatic problem-solving claim; strengthened thinking-team responsibilities and exact standard-gas covenant wording.",
+      "references": "S1 §1.1.3; S4; S5 pp.6–9",
+      "authoring_guidance": null
+    },
+    {
+      "slug": "why-divers-plateau",
+      "state": "draft_stub",
+      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
+      "references": "",
+      "authoring_guidance": "Use Why we dive pp.2–9 and UTD v6c certification philosophy: explain training, practice, feedback and path to completion without promising certification or a fixed improvement timeline."
+    }
+  ],
+  "decisions_and_open_items": [
+    {
+      "topic": "Equipment source differences",
+      "status": "Resolved by user direction",
+      "detail": "User selected Gardner’s stricter equipment list. Local guidance uses the 7-foot primary, Gardner backmount BP&W configuration and no steel cylinders with wetsuits. Broader UTD allowances are labeled separately. Individual course standards still apply.",
+      "sources": "S1 §§1.4.6–1.4.7,3.0-2; S7 pp.3–8"
+    },
+    {
+      "topic": "Spool length",
+      "status": "Confirmation still needed",
+      "detail": "Gardner overview specifies 125 feet; course checklists specify 100 feet; UTD general minimum is 70 feet. The article exposes the local discrepancy and asks the reader to confirm the course packing list; no single new local policy was invented.",
+      "sources": "S7 pp.9,12–14; S1 §3.0-2"
+    },
+    {
+      "topic": "Primary light in Essentials of Rec",
+      "status": "Conservative baseline used; checklist reconciliation still needed",
+      "detail": "Gardner marks the primary light optional for Essentials of Rec; UTD’s general open-circuit minimum requires primary and backup lights, optional only for OWD. The article recommends primary plus backup for Essentials, rather than asserting a waiver. Confirm the intended local checklist and applicable standard version.",
+      "sources": "S7 p.12; S1 §3.0-2"
+    },
+    {
+      "topic": "Shallow Min Deco and travel conventions",
+      "status": "User table preserved; source inconsistency retained for review",
+      "detail": "The supplied image gives total ascent times of 1, 2 and 2 minutes at 10, 20 and 30 feet. S2 p.5 mentions a minimum three-minute total stop time in its shallow example. S2 pp.2 and 4–6 also express the initial ascent rate as 30 versus 33 ft/min. No universal shallow-stop algorithm or emergency deco schedule was invented. The published table matches S14; profile details require the trained procedure.",
+      "sources": "S14; S2 pp.2–6"
+    },
+    {
+      "topic": "Emergency Ratio Deco",
+      "status": "Contingency scope preserved",
+      "detail": "S12 describes accidental NDL exceedance and explicitly excludes planned use. Article states that distinction; it does not publish a new emergency-deco calculator or extrapolate the examples.",
+      "sources": "S12 pp.2–5"
+    },
+    {
+      "topic": "Calculator model",
+      "status": "Illustrative model clarified; no formula/default changes",
+      "detail": "Existing default 100-foot model produces 8 minutes, about 40.24 cu ft and 1,600 psi in AL80; source rounds the average to 2.5 ATA and gets 40 cu ft. Other depths are calculated examples, not source-issued UTD reserve tables. Model uses maximum depth, rounded first stop and conservative segment approximations; it is not the recreational NDL/ascent planner.",
+      "sources": "S10 p.3; lib/minimum-gas.ts; S2"
+    },
+    {
+      "topic": "Reference scope and currency",
+      "status": "Limitation",
+      "detail": "This review aligns the available article copy to the supplied versions: UTD v6c, v4.1 instructor playbooks and 2020 instructional slides. It is not verification that these are the current governing standards or UTD certification/endorsement. GUE curricula, historical claims, local water conditions and owner business facts are not established by these PDFs.",
+      "sources": "All supplied documents"
+    },
+    {
+      "topic": "Site-wide coverage",
+      "status": "Limitation",
+      "detail": "Reviewed all 48 Learn entries: 14 developed published articles and 34 unfinished stubs. Also corrected directly conflicting Tech 1 and Techreational course descriptions and the calculator introduction. This was not an exhaustive compliance audit of every website page, product, external link or external agency claim.",
+      "sources": "Repository inventory"
+    }
+  ],
+  "verification": {
+    "content_validation": "48 articles valid, 14 published; 136 expected warnings for unfinished drafts",
+    "tests": "All 4 existing test files passed",
+    "lint": "Passed",
+    "production_build": "Passed npm run build -- --webpack, including TypeScript and all 59 static pages",
+    "numerical_table": "Passed: parsed production HTML matches all 13 supplied table rows, gas restrictions and ascent times",
+    "rendered_donation": "Passed: approved presentation, left-hand recovery and clear-hose wording present; chin-only recovery absent",
+    "metadata": "All 48 draft/publication dates, flags, slugs, course mappings and cluster mappings preserved"
+  },
+  "publication": "No deployment, push, merge or new article publication performed. Existing draft/published flags and calculator-confirmation flag preserved."
+}
