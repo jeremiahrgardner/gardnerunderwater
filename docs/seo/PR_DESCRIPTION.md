@@ -602,13 +602,6 @@ L33: <!-- TODO(jeremiah): Write the article body following the editorial angle; 
 L36: <!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
 ```
 
-## docs/brand-assets.md
-
-```text
-L24: - TODO(jeremiah): Supply `J_photocred_Leia_Vita-119.jpg` for the About header; it is not in the accessible archives.
-L25: - TODO(jeremiah): Supply `Cave Diving Artwork 2.jpg` for About’s “Why I teach” section; it is not in the accessible archives.
-```
-
 ## docs/seo/OWNER_INPUTS.md
 
 ```text
@@ -640,4 +633,4 @@ L48: a: `TODO(jeremiah): Write approved FAQ answers for ${slug}.`,
 L56: const body = `<!-- Editorial angle: ${angle.replace(/-->/g, "")} -->\n\n## Overview\n<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->\n\n## Details\n<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->\n\n## Put it into practice\n<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->\n`;
 ```
 
-Total: 350 markers across 54 files.
+Total: 348 markers across 53 files.
