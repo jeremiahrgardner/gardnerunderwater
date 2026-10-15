@@ -1,210 +1,173 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import { Arrow } from "./SiteUI";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/training", label: "Training" },
+const links = [
+  { href: "/training", label: "Our approach" },
   { href: "/courses", label: "Courses" },
   { href: "/pricing", label: "Pricing" },
-  { href: "/shop", label: "Shop" },
-  { href: "/merch", label: "Merch" },
-  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "Meet Jay" },
 ];
 
-export function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+function Navigation() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDialogElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => { setMenuOpen(false); }, [pathname]);
+    if (!open) return;
+    const dialog = menuRef.current;
+    const toggle = toggleRef.current;
+    if (!dialog) return;
+    dialog.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const media = window.matchMedia("(min-width: 960px)");
+    const closeOnDesktop = () => {
+      if (media.matches) setOpen(false);
+    };
+    media.addEventListener("change", closeOnDesktop);
+    return () => {
+      dialog.close();
+      document.body.style.overflow = previousOverflow;
+      media.removeEventListener("change", closeOnDesktop);
+      toggle?.focus();
+    };
+  }, [open]);
 
   return (
     <>
-      <header
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          transition: "background 0.3s, border-color 0.3s",
-          background: scrolled ? "rgba(245, 240, 230, 0.97)" : "transparent",
-          borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
-          backdropFilter: scrolled ? "blur(8px)" : "none",
-        }}
-      >
-        <div style={{
-          maxWidth: "1240px",
-          margin: "0 auto",
-          padding: "0 clamp(1.25rem, 4vw, 3rem)",
-          height: "68px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}>
-          {/* Logo */}
-          <Link href="/" aria-label="Gardner Underwater — home" style={{ display: "flex", alignItems: "center", gap: "0.65rem", textDecoration: "none" }}>
-            <div style={{ position: "relative", width: "36px", height: "36px", flexShrink: 0 }}>
-              <Image src="/logo.png" alt="Gardner Underwater" fill style={{ objectFit: "contain" }} priority />
-            </div>
-            <span style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "0.72rem",
-              fontWeight: 800,
-              letterSpacing: "0.06em",
-              color: "var(--ink-dark)",
-              textTransform: "uppercase",
-              lineHeight: 1.2,
-            }}>
-              Gardner<br />Underwater
+      <div className="utility-bar">
+        <div className="container">
+          <span>Eyes open. Brain on. Unified team.</span>
+          <a href="tel:+16198800684">
+            San Diego, CA <Arrow diagonal />
+          </a>
+        </div>
+      </div>
+      <header className="site-header">
+        <div className="container header-inner">
+          <Link href="/" className="brand" aria-label="Gardner Underwater home">
+            <Image
+              src="/logo.png"
+              width={42}
+              height={42}
+              alt=""
+              className="brand-symbol"
+              priority
+            />
+            <span>
+              Gardner <span>Underwater</span>
             </span>
           </Link>
-
-          {/* Desktop nav */}
-          <nav aria-label="Main navigation" className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "0.1rem" }}>
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.58rem",
-                    fontWeight: isActive ? 700 : 400,
-                    letterSpacing: "0.12em",
-                    textTransform: "uppercase",
-                    color: isActive ? "var(--ink-dark)" : "var(--ash)",
-                    padding: "0.5rem 0.65rem",
-                    transition: "color 0.15s",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                    position: "relative",
-                  }}
-                  className="nav-link"
-                >
-                  {link.label}
-                  {isActive && (
-                    <span style={{
-                      position: "absolute",
-                      bottom: "2px",
-                      left: "0.65rem",
-                      right: "0.65rem",
-                      height: "1.5px",
-                      background: "var(--gold)",
-                    }} />
-                  )}
-                </Link>
-              );
-            })}
+          <nav className="desktop-nav" aria-label="Main navigation">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={pathname === link.href ? "page" : undefined}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
-
-          {/* CTA */}
-          <Link href="/contact" className="btn btn-primary hide-mobile" style={{ fontSize: "0.55rem", padding: "0.65rem 1.4rem" }}>
-            Book Now
+          <Link href="/contact" className="btn btn-dark header-cta">
+            Book a consultation <Arrow diagonal />
           </Link>
-
-          {/* Hamburger */}
           <button
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="hamburger"
-            style={{ background: "none", border: "none", cursor: "pointer", padding: "0.5rem", display: "flex", flexDirection: "column", gap: "5px" }}
+            ref={toggleRef}
+            className="menu-toggle"
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            onClick={() => setOpen(true)}
           >
-            <span style={{ display: "block", width: "22px", height: "2px", background: "var(--ink-dark)", transition: "transform 0.3s", transform: menuOpen ? "translateY(7px) rotate(45deg)" : "none" }} />
-            <span style={{ display: "block", width: "22px", height: "2px", background: "var(--ink-dark)", transition: "opacity 0.3s", opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ display: "block", width: "22px", height: "2px", background: "var(--ink-dark)", transition: "transform 0.3s", transform: menuOpen ? "translateY(-7px) rotate(-45deg)" : "none" }} />
+            <span>Menu</span>
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M3 7h18M3 16h18"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+            </svg>
           </button>
         </div>
       </header>
-
-      {/* Mobile backdrop */}
-      <div
-        aria-hidden="true"
-        onClick={() => setMenuOpen(false)}
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 99,
-          background: "rgba(245, 240, 230, 0.85)",
-          opacity: menuOpen ? 1 : 0,
-          pointerEvents: menuOpen ? "all" : "none",
-          transition: "opacity 0.3s",
-        }}
-      />
-
-      {/* Mobile drawer */}
-      <div
-        role="dialog"
-        aria-label="Navigation menu"
-        style={{
-          position: "fixed",
-          top: 0, right: 0, bottom: 0,
-          width: "min(300px, 85vw)",
-          zIndex: 100,
-          background: "var(--canvas)",
-          borderLeft: "1px solid var(--border)",
-          padding: "5rem 2rem 2rem",
-          display: "flex",
-          flexDirection: "column",
-          gap: "0",
-          transform: menuOpen ? "translateX(0)" : "translateX(100%)",
-          transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-          overflowY: "auto",
+      <dialog
+        id="mobile-menu"
+        aria-label="Site navigation"
+        ref={menuRef}
+        className="mobile-menu"
+        onCancel={() => setOpen(false)}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) setOpen(false);
         }}
       >
-        {navLinks.map((link, i) => {
-          const isActive = pathname === link.href;
-          return (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              aria-current={isActive ? "page" : undefined}
-              style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "1.4rem",
-                fontWeight: 800,
-                letterSpacing: "0.03em",
-                color: isActive ? "var(--gold-dark)" : "var(--ink-dark)",
-                padding: "0.75rem 0",
-                borderBottom: "1px solid var(--border)",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                lineHeight: 1.2,
-              }}
-            >
-              {link.label}
-            </Link>
-          );
-        })}
-        <Link href="/contact" onClick={() => setMenuOpen(false)} className="btn btn-primary" style={{ marginTop: "2rem", justifyContent: "center" }}>
-          Book Your Course
-        </Link>
-      </div>
-
-      <style>{`
-        .nav-link:hover { color: var(--ink-dark) !important; }
-        @media (max-width: 900px) {
-          .desktop-nav { display: none !important; }
-          .hamburger  { display: flex !important; }
-          .hide-mobile { display: none !important; }
-        }
-      `}</style>
+        <div className="mobile-menu-inner">
+          <div className="mobile-menu-heading">
+            <span className="eyebrow">Explore Gardner Underwater</span>
+            <button aria-label="Close menu" onClick={() => setOpen(false)}>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="m6 6 12 12M6 18 18 6"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <nav aria-label="Mobile navigation">
+            {[
+              ...links,
+              { href: "/shop", label: "Gear & rentals" },
+              { href: "/merch", label: "Merchandise" },
+            ].map((link, i) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={pathname === link.href ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                <span className="menu-number">0{i + 1}</span>
+                {link.label}
+                <Arrow diagonal />
+              </Link>
+            ))}
+          </nav>
+          <Link
+            href="/contact"
+            className="btn btn-primary"
+            onClick={() => setOpen(false)}
+          >
+            Book a consultation <Arrow />
+          </Link>
+          <a className="mobile-phone" href="tel:+16198800684">
+            +1 (619) 880-0684
+          </a>
+        </div>
+      </dialog>
     </>
   );
+}
+
+// Route changes reset the menu without synchronously updating state in an effect.
+export function Nav() {
+  const pathname = usePathname();
+  return <Navigation key={pathname} />;
 }

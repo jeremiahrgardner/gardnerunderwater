@@ -6,19 +6,20 @@ Training designed to advance your skills, your control, and your brain.
 
 **Current live site:** https://gardnerunderwater.com
 
-This is a faithful rebuild of the existing site. Strategic updates coming later.
+An independent Next.js site with a refreshed, responsive interface built around small-team training and consultation requests.
 
 ## Stack
 
 - **Next.js 16** (App Router)
 - **TypeScript**
-- **Tailwind CSS** (installed via `create-next-app` but not actively used — all styles are inline/CSS variables for simplicity)
+- **CSS** shared design tokens and responsive layouts in `app/globals.css`
+- Self-hosted Syne, DM Sans, and EB Garamond fonts, with licenses in `public/fonts/`
 
 ## Getting Started
 
 ```bash
 # Install dependencies
-npm install
+npm ci
 
 # Run locally (development)
 npm run dev
@@ -27,43 +28,48 @@ npm run dev
 npm run build
 npm start
 
-# Lint / type-check
+# Lint
 npm run lint
+
+# Type-check (after building to generate route types)
+npx tsc --noEmit
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Pages
 
-| Route | Description |
-|-------|-------------|
-| `/` | Home — Hero, The Why, The Who, course teasers |
-| `/training` | Training philosophy, UTD/DAN agency alignment, 5 principles |
-| `/courses` | Full course catalog — Technical, Foundational, DAN, Coaching |
-| `/pricing` | Transparent pricing — $300/day training, $129/mo coaching, $300/course DAN |
-| `/shop` | Equipment rentals and "Save A Course" retail |
-| `/merch` | Apparel (tees, hats) with links to Square store |
-| `/about` | Jay Gardner bio, UTD #225, Why I Teach, The Dive Table podcast |
-| `/contact` | Booking form, call/social links, testimonials |
+| Route       | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
+| `/`         | Home — training pathways, approach, instructor, student feedback           |
+| `/training` | Training philosophy, UTD/DAN agency alignment, 5 principles                |
+| `/courses`  | Searchable and filterable catalog with expandable course details           |
+| `/pricing`  | Transparent pricing — $300/day training, $129/mo coaching, $300/course DAN |
+| `/shop`     | Equipment rentals and "Save A Course" retail                               |
+| `/merch`    | Apparel (tees, hats) with links to Square store                            |
+| `/about`    | Jay Gardner bio, UTD #225, Why I Teach, The Dive Table podcast             |
+| `/contact`  | Consultation email request, direct contact, next steps, testimonials       |
+
+## Content and consultation requests
+
+Course descriptions are in `lib/courses.ts`, rental prices in `lib/rentals.ts`, and merchandise listings in `lib/merch.ts`. Shared page introductions, arrows, and consultation calls to action are in `components/SiteUI.tsx`.
+
+No scheduling provider is connected yet. The consultation form prepares a URL-encoded email draft to Jay. Visitors review and send it in their own email app, then arrange a time with Jay. The form does not send email itself, store submissions, or confirm appointments. Course links carry the selected course into the request. Direct phone and email links provide alternatives.
+
+Markdown publishing through GitHub remains planned; there is no blog engine or journal route in this UI refresh.
 
 ## Repository Notes
 
 - This repo is **isolated** from other Gardner/Jeremiah projects (UTD, GEC, DeadReckon, Noema, etc.)
-- No deployment has been configured yet
-- Logo and branding assets are pending — current build uses text-only logo
+- A Vercel project exists; verify its production deployment and domain assignment in Vercel before publishing changes.
+- Logo and instructor/diving photography are included. `hero-dive.jpg` is a graffiti image despite its filename and is not used in the refreshed layouts.
 
 ## Assets Needed
 
-- [ ] Logo SVG/PNG (top-left of every page)
-- [ ] Merch product images (currently linked to Square.store)
-- [ ] Any underwater/diver photography used on current live site
+- [ ] Optional merchandise photography; the current listings link to product details and photos on Square.
 
 ## Deploy
 
-Not configured yet. To deploy:
-
-1. **Vercel** (recommended): `vercel` CLI or connect GitHub repo
-2. **GitHub Pages**: Static export (`next export`) required
-3. **Other**: Run `npm run build` then serve the `.next/` output
+Use the existing Vercel project and its configured GitHub branch. For another compatible Node.js host, run `npm run build` then `npm start`. The contact route reads query parameters on the server, so the current application requires a Next.js runtime rather than a plain static export.
 
 Jeremiah must approve before any DNS or hosting changes.

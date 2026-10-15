@@ -1,370 +1,258 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { ScrollReveal } from "@/components/ScrollReveal";
+import { Arrow, ConsultationCTA } from "@/components/SiteUI";
+
+const pathways = [
+  {
+    number: "01",
+    title: "Build your foundation.",
+    label: "Foundational training",
+    text: "Buoyancy. Trim. Control. Develop the skills and awareness that make every dive better.",
+    href: "/courses#foundational-training",
+    tag: "Start here",
+  },
+  {
+    number: "02",
+    title: "Explore what’s next.",
+    label: "Technical training",
+    text: "Move beyond recreational limits with a deliberate, team-based approach to technical diving.",
+    href: "/courses#technical-training",
+    tag: "Go further",
+  },
+  {
+    number: "03",
+    title: "Keep getting better.",
+    label: "Scuba coaching",
+    text: "Build momentum through consistent practice, honest feedback, and a plan that grows with you.",
+    href: "/courses#scuba-coaching",
+    tag: "Stay curious",
+  },
+];
 
 export default function HomePage() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section
-        className="hero"
-        style={{
-          backgroundImage: "url('/hero-cave.jpg')",
-          paddingBottom: "clamp(4rem, 8vw, 7rem)",
-        }}
-      >
-        <div className="container">
-          {/* Top-left ornamental corner */}
-          <div style={{
-            position: "absolute",
-            top: "clamp(4rem, 8vw, 6rem)",
-            left: "clamp(1.25rem, 4vw, 3rem)",
-            width: "24px",
-            height: "24px",
-            borderTop: "2px solid var(--gold)",
-            borderLeft: "2px solid var(--gold)",
-            opacity: 0.6,
-            zIndex: 10,
-          }} />
-
-          <div className="hero-kicker">Gardner Underwater</div>
-
-          <h1 className="hero-title">
-            Ready to<br />
-            <span style={{ color: "var(--gold)" }}>Unlock</span><br />
-            Your Diving<br />
-            <span style={{ color: "var(--gold)" }}>Potential</span>?
-          </h1>
-
-          <p className="hero-sub">
-            Training designed to advance your skills, your control, and your brain.
-            For dedicated divers who are done coasting.
-          </p>
-
-          <div className="hero-actions">
-            <Link href="/contact" className="btn btn-primary">
-              Book Your Course
-            </Link>
-            <Link href="/courses" className="btn btn-outline">
-              View Courses
-            </Link>
+      <section className="home-hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <div className="eyebrow">
+              <span className="status-dot" />
+              Independent scuba training · San Diego & beyond
+            </div>
+            <h1>
+              More control.
+              <br />
+              More confidence.
+              <br />
+              <span>Better diving.</span>
+            </h1>
+            <p>
+              Training designed to advance your skills, your control, and your
+              brain. For dedicated divers who are ready to grow.
+            </p>
+            <div className="hero-actions">
+              <Link href="/courses" className="btn btn-dark">
+                Find your next course <Arrow />
+              </Link>
+              <Link href="/training" className="text-link">
+                The way we train <Arrow diagonal />
+              </Link>
+            </div>
+            <div className="hero-bottom">
+              <span className="hero-coordinate">32°43′ N &nbsp; 117°09′ W</span>
+              <span>Eyes open. Brain on.</span>
+            </div>
           </div>
-
-          <div className="scroll-indicator">
-            <div className="scroll-line" />
-            <span>Scroll</span>
-          </div>
-        </div>
-      </section>
-
-      {/* ── The Why — paper background ── */}
-      <section className="section section--paper">
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(3rem, 6vw, 7rem)", alignItems: "start" }}>
-            {/* Left: heading + label */}
-            <ScrollReveal>
-              <div className="section-label">The Foundation</div>
-              <h2 style={{
-                fontFamily: "'Syne', sans-serif",
-                fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                fontWeight: 900,
-                lineHeight: 0.95,
-                letterSpacing: "-0.03em",
-                marginBottom: "2rem",
-              }}>
-                The<br />
-                <span style={{ color: "var(--gold-dark)" }}>Why</span>
-              </h2>
-
-              {/* Ornamental rule */}
-              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "2rem" }}>
-                <div style={{ width: "2rem", height: "1.5px", background: "var(--gold)", opacity: 0.5 }} />
-                <div style={{ width: "5px", height: "5px", background: "var(--gold)", transform: "rotate(45deg)", opacity: 0.6 }} />
-                <div style={{ flex: 1, height: "1px", background: "var(--border)" }} />
-              </div>
-
-              <p style={{ fontSize: "0.95rem", color: "var(--ash)", lineHeight: 1.9, maxWidth: "42ch" }}>
-                We serve divers who want to be the best they can possibly be — and are willing to do the work to get there.
-              </p>
-            </ScrollReveal>
-
-            {/* Right: content block */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "2rem", paddingTop: "clamp(1rem, 3vw, 2.5rem)" }}>
-              <ScrollReveal delay={100}>
-                <div style={{ borderLeft: "3px solid var(--gold)", paddingLeft: "1.5rem" }}>
-                  <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
-                    We&apos;ve all experienced{" "}
-                    <strong>underwhelming</strong> training — the kind that leaves us with a plastic certification card but without the confidence to actually apply what we&apos;ve &quot;mastered.&quot;
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={150}>
-                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
-                  Too often traditional scuba classes are designed to sell you the next class, the next trip, or more gear. Not here.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <p style={{ fontSize: "1rem", color: "var(--ink-dark)", lineHeight: 1.85, fontWeight: 500 }}>
-                  <strong>Gardner Underwater is built differently.</strong> We focus on the{" "}
-                  <span style={{ color: "var(--gold-dark)" }}>training</span>, not the certification.
-                  On reaching the{" "}
-                  <span style={{ color: "var(--gold-dark)" }}>next plateau</span>, not selling you gear you don&apos;t need.
-                  On turning you into a{" "}
-                  <span style={{ color: "var(--gold-dark)" }}>Thinking Diver</span>.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={250}>
-                <Link href="/contact" className="btn btn-primary">
-                  Book Your Course
-                </Link>
-              </ScrollReveal>
+          <div className="hero-visual">
+            <Image
+              src="/hero-cave.jpg"
+              alt="Two divers exploring a sunlit underwater cave as a team"
+              fill
+              sizes="(max-width: 760px) 100vw, 52vw"
+              priority
+            />
+            <div className="photo-marker">
+              <span className="marker-cross" aria-hidden="true">
+                +
+              </span>
+              There’s more to discover.
+            </div>
+            <div className="photo-caption">
+              <span>
+                Built for the dive.
+                <br />
+                Not just the certification.
+              </span>
+              <span className="photo-arrow">
+                <Arrow />
+              </span>
             </div>
           </div>
         </div>
       </section>
-
-      {/* ── The Who — cream bg, centered quote ── */}
+      <div className="trust-strip">
+        <div className="container trust-grid">
+          <div>
+            <span className="trust-number">3:1</span>
+            <span>Maximum student-to-instructor ratio</span>
+          </div>
+          <div>
+            <span className="trust-name">UTD + DAN</span>
+            <span>Thoughtful training. Real-world skills.</span>
+          </div>
+          <div>
+            <span className="trust-name">Your goals. Your pace.</span>
+            <span>Train in San Diego, or wherever you dive.</span>
+          </div>
+        </div>
+      </div>
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(3rem, 6vw, 7rem)", alignItems: "start" }}>
-            {/* Left: label + heading */}
+          <div className="section-heading">
             <div>
-              <ScrollReveal>
-                <div className="section-label">Who We Serve</div>
-              </ScrollReveal>
-              <ScrollReveal delay={100}>
-                <h2 style={{
-                  fontFamily: "'Syne', sans-serif",
-                  fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                  fontWeight: 900,
-                  lineHeight: 0.95,
-                  letterSpacing: "-0.03em",
-                  marginBottom: "2rem",
-                }}>
-                  The<br />
-                  <span style={{ color: "var(--gold-dark)" }}>Who</span>
-                </h2>
-              </ScrollReveal>
-
-              {/* Ornament box quote */}
-              <ScrollReveal delay={150}>
-                <div className="ornament-box">
-                  <blockquote style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(1rem, 2vw, 1.4rem)",
-                    fontWeight: 700,
-                    color: "var(--ink-dark)",
-                    lineHeight: 1.35,
-                    fontStyle: "normal",
-                  }}>
-                    Dedicated divers.<br />
-                    Committed to growth.<br />
-                    Ready to advance.
-                  </blockquote>
-                </div>
-              </ScrollReveal>
+              <div className="eyebrow">A path forward</div>
+              <h2>
+                Where do you
+                <br />
+                want to go?
+              </h2>
             </div>
-
-            {/* Right: content */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", paddingTop: "clamp(1rem, 3vw, 2.5rem)" }}>
-              <ScrollReveal delay={150}>
-                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
-                  Divers often come to us knowing they want to improve, but not having a clear path forward. They&apos;ve been endlessly fumbling with gear configuration, trying to learn a back kick from YouTube, or spending countless hours to dial in the &quot;right&quot; gradient factor.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={200}>
-                <p style={{ fontSize: "0.95rem", color: "var(--ink)", lineHeight: 1.9 }}>
-                  If you&apos;re tired of getting the next certification card without truly advancing in your diving confidence, skill, and awareness — you&apos;ve found a home at Gardner Underwater.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={250}>
-                <p style={{ fontSize: "1rem", color: "var(--ink-dark)", lineHeight: 1.8, fontWeight: 500 }}>
-                  <strong>Eyes Open. Brain On. Unified Team.</strong> These are the foundations upon which you will build a scalable platform for reaching the highest levels in your diving.
-                </p>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                  <Link href="/contact" className="btn btn-primary">
-                    Book Your Course
-                  </Link>
-                  <Link href="/courses" className="btn btn-outline">
-                    View Courses
-                  </Link>
+            <p>
+              You don’t need another certification card.
+              <br />
+              You need a clear path to becoming the diver you want to be.
+            </p>
+          </div>
+          <div className="pathways">
+            {pathways.map((path) => (
+              <Link key={path.number} href={path.href} className="pathway-card">
+                <div className="card-topline">
+                  <span>
+                    {path.number} / {path.label}
+                  </span>
+                  <Arrow diagonal />
                 </div>
-              </ScrollReveal>
-            </div>
+                <span className="pathway-tag">{path.tag}</span>
+                <h3>{path.title}</h3>
+                <p>{path.text}</p>
+                <span className="text-link">
+                  Explore the training <Arrow />
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="section-footnote">
+            <span>Looking for first aid training or a specific skill?</span>
+            <Link href="/courses" className="text-link">
+              See the full curriculum <Arrow />
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* ── Explore grid — ink bg, paper cards ── */}
-      <section className="section section--ink">
-        <div className="container">
-          <ScrollReveal>
-            <div className="section-label">Explore</div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={100}>
-            <h2 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(1.8rem, 4vw, 3rem)",
-              fontWeight: 900,
-              letterSpacing: "-0.02em",
-              marginBottom: "3rem",
-              color: "var(--canvas)",
-            }}>
-              Discover What Awaits
+      <section className="philosophy-feature">
+        <div className="container philosophy-grid">
+          <div>
+            <div className="eyebrow">The Gardner Underwater difference</div>
+            <h2>
+              Train for the diver
+              <br />
+              you’re becoming.
             </h2>
-          </ScrollReveal>
-
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "1px",
-            background: "rgba(248, 248, 244, 0.08)",
-            border: "1px solid rgba(248, 248, 244, 0.08)",
-          }}>
+            <p className="large-copy">
+              We focus on the training, not the certification. On reaching your
+              next plateau, not selling you gear you don’t need.
+            </p>
+            <p>
+              We’ve all experienced underwhelming training: a plastic
+              certification card without the confidence to apply what we’ve
+              learned. Here, you’ll find focused instruction, honest feedback,
+              and a team that challenges you to think.
+            </p>
+            <Link href="/training" className="text-link">
+              Get to know our approach <Arrow />
+            </Link>
+          </div>
+          <div className="principle-stack">
             {[
-              { label: "THE COURSES", href: "/courses", sub: "Find the right course for your goals" },
-              { label: "THE TRAINING", href: "/training", sub: "How we train, and why it works" },
-              { label: "THE PRICING", href: "/pricing", sub: "Upfront about money. No surprises." },
-              { label: "THE SHOP", href: "/shop", sub: "Gear, resources, and more" },
-            ].map((item) => (
-              <ScrollReveal key={item.label} delay={150}>
-                <Link
-                  href={item.href}
-                  style={{
-                    display: "block",
-                    padding: "clamp(2rem, 4vw, 2.75rem)",
-                    background: "var(--paper)",
-                    textDecoration: "none",
-                    height: "100%",
-                    transition: "background 0.25s",
-                  }}
-                  className="explore-card"
-                >
-                  <div style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.55rem",
-                    letterSpacing: "0.22em",
-                    color: "var(--gold-dark)",
-                    marginBottom: "1rem",
-                    opacity: 0.7,
-                  }}>
-                    {item.label}
-                  </div>
-                  <h3 style={{
-                    fontFamily: "'Syne', sans-serif",
-                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
-                    fontWeight: 900,
-                    color: "var(--ink-dark)",
-                    marginBottom: "0.65rem",
-                    lineHeight: 1.1,
-                    letterSpacing: "-0.02em",
-                  }}>
-                    {item.label.replace("THE ", "")}
-                  </h3>
-                  <p style={{
-                    fontSize: "0.82rem",
-                    color: "var(--ash)",
-                    lineHeight: 1.65,
-                  }}>
-                    {item.sub}
-                  </p>
-
-                  {/* Bottom arrow */}
-                  <div style={{ marginTop: "1.5rem", color: "var(--gold-dark)", fontSize: "1.2rem" }}>→</div>
-                </Link>
-              </ScrollReveal>
+              [
+                "01",
+                "Eyes open.",
+                "See the whole dive. Build awareness of yourself, your team, and your environment.",
+              ],
+              [
+                "02",
+                "Brain on.",
+                "Understand the why. Make deliberate decisions, rather than just following a checklist.",
+              ],
+              [
+                "03",
+                "Unified team.",
+                "Train together. Your team is your backup: gas, equipment, and brain.",
+              ],
+            ].map(([num, title, text]) => (
+              <div key={num}>
+                <span className="eyebrow">{num}</span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* ── Contact bar — paper bg ── */}
-      <section
-        className="section section--paper"
-        style={{ textAlign: "center", borderTop: "1px solid var(--border)" }}
-      >
-        <div className="container--narrow">
-          <ScrollReveal>
-            <div className="section-label" style={{ justifyContent: "center" }}>Ready to Start?</div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={100}>
-            <h2 style={{
-              fontFamily: "'Syne', sans-serif",
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
-              fontWeight: 900,
-              letterSpacing: "-0.03em",
-              marginBottom: "1.25rem",
-            }}>
-              Let&apos;s dive in.
-            </h2>
-          </ScrollReveal>
-
-          <ScrollReveal delay={150}>
-            <p style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: "clamp(1.1rem, 3vw, 1.8rem)",
-              fontWeight: 700,
-              color: "var(--gold-dark)",
-              marginBottom: "1.5rem",
-              letterSpacing: "0.04em",
-            }}>
-              +1 (619) 880-0684
+      <section className="section">
+        <div className="container instructor-grid">
+          <div className="instructor-photo">
+            <Image
+              src="/portrait.jpg"
+              alt="Jay Gardner smiling while preparing scuba equipment"
+              fill
+              sizes="(max-width: 760px) 100vw, 45vw"
+            />
+            <span className="photo-label">
+              Jay Gardner · UTD Instructor #225
+            </span>
+          </div>
+          <div className="instructor-copy">
+            <div className="eyebrow">Your instructor. Your teammate.</div>
+            <h2>Hey, I’m Jay.</h2>
+            <p className="large-copy">
+              I teach because I love it.
+              <br />I dive because I’m obsessed with it.
             </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={200}>
-            <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "2rem" }}>
-              {[
-                { href: "https://www.facebook.com/gardnerunderwater/", label: "Facebook" },
-                { href: "https://www.instagram.com/gardnerunderwater/", label: "Instagram" },
-                { href: "https://www.youtube.com/@thedivetable", label: "YouTube" },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  className="hover-gold"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: "0.65rem",
-                    letterSpacing: "0.15em",
-                    color: "var(--ash)",
-                    transition: "color 0.15s",
-                  }}
-                >
-                  {s.label}
-                </a>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={250}>
-            <Link href="/contact" className="btn btn-primary btn-lg">
-              Book Your Course
+            <p>
+              I know what it feels like to want more from your diving and not
+              know how to get there. Coaching changed that for me. Now I help
+              other divers find their own next plateau, with practical training
+              and feedback that makes a difference.
+            </p>
+            <p>
+              Founder of Gardner Underwater, UTD instructor, DAN instructor, and
+              co-host of The Dive Table.
+            </p>
+            <Link href="/about" className="text-link">
+              A little more about me <Arrow />
             </Link>
-          </ScrollReveal>
+          </div>
         </div>
       </section>
-
-      <style>{`
-        .explore-card:hover { background: var(--ink-dark) !important; }
-        .explore-card:hover h3 { color: var(--canvas); }
-        .explore-card:hover p { color: var(--dim); }
-        .explore-card:hover .arrow-gold { color: var(--gold); }
-      `}</style>
+      <section className="testimonial-section">
+        <div className="container testimonial-grid">
+          <div className="eyebrow">From the dive team</div>
+          <figure>
+            <blockquote>
+              “He took the time to help me dial in the skills I really wanted to
+              focus on. I gained a lot from this training.”
+            </blockquote>
+            <figcaption>
+              <span className="quote-rule" />
+              Thomas K <span>· Gardner Underwater student</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <ConsultationCTA />
     </>
   );
 }
