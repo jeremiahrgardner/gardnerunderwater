@@ -28,9 +28,9 @@ export default async function ContactPage({
         eyebrow="Let’s start a conversation"
         title={
           <>
-            Better diving.
+            Let’s find your
             <br />
-            <span className="serif-accent">Starts here.</span>
+            <span className="serif-accent">next level.</span>
           </>
         }
       >
@@ -101,11 +101,11 @@ export default async function ContactPage({
         <div className="container">
           <div className="section-heading">
             <div>
-              <div className="eyebrow">From the dive team</div>
+              <div className="eyebrow">In their words</div>
               <h2>
-                Training that
+                Better divers.
                 <br />
-                makes a difference.
+                Better teammates.
               </h2>
             </div>
           </div>

@@ -30,7 +30,7 @@ export default function AboutPage() {
             <p className="large-copy">
               Hey, I’m Jay Gardner.
               <br />
-              Let’s find your next plateau.
+              Let’s find your next level.
             </p>
             <span className="intro-note">
               UTD Instructor #225 · San Diego, California
@@ -60,21 +60,23 @@ export default function AboutPage() {
           </div>
           <div className="prose">
             <p>
-              Jay Gardner is the founder and operator of Gardner Underwater, and
-              co-owner and Director of Development at{" "}
+              Jay Gardner is the founder and operator of Gardner Underwater and
+              a{" "}
               <a
                 href="https://utdscubadiving.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Unified Team Diving
-              </a>
-              , a training agency committed to building thinking divers.
+              </a>{" "}
+              instructor (#225). He is a former co-owner and Director of
+              Development at UTD, a training agency committed to building
+              thinking divers.
             </p>
             <p>
-              His qualifications range from technical diving to cave diving. As
-              a UTD instructor and coach, Jay helps divers build foundational,
-              transformative, and sustaining skills, approaches, and mindset.
+              He holds recreational, technical, cave, and instructor ratings,
+              and he dives the same system he teaches. As a coach, Jay helps
+              divers build the skills, approach, and mindset that last.
             </p>
             <p>
               Jay is also an instructor for Divers Alert Network (DAN), teaching
@@ -101,9 +103,10 @@ export default function AboutPage() {
       <section className="section section-paper">
         <div className="container note-grid">
           <div className="note-photo">
+            {/* TODO(jeremiah): Swap in a tighter in-cave shot of Jay if you have one. */}
             <Image
-              src="/photos/cave-diving-artwork-2.webp"
-              alt="A cave diver beneath a limestone ceiling, illuminating the passage with a primary light"
+              src="/photos/jay-gardner-underwater.webp"
+              alt="Jay Gardner diving sidemount among submerged limestone"
               fill
               sizes="(max-width: 760px) 100vw, 40vw"
             />
