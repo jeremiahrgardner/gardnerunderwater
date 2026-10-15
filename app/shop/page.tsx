@@ -4,7 +4,11 @@ import Link from "next/link";
 import { PageIntro, ConsultationCTA, Arrow } from "@/components/SiteUI";
 import { rentalKits, rentalTanks, services, shopStock } from "@/lib/rentals";
 
-export const metadata: Metadata = pageMetadata("Dive Gear, Rentals & Services", "Explore equipment and tank rentals, gear servicing and Save A Course essentials for Gardner Underwater students. View rental options and service rates.", "/shop");
+export const metadata: Metadata = pageMetadata(
+  "Dive Gear, Rentals & Services",
+  "Explore equipment and tank rentals, gear servicing and Save A Course essentials for Gardner Underwater students. View rental options and service rates.",
+  "/shop",
+);
 function RateTable({
   title,
   note,

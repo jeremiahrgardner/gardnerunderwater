@@ -20,8 +20,14 @@ export function ContactForm({
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         let sourcePath = "/contact";
-        try { sourcePath = sessionStorage.getItem("booking_source") || sourcePath; } catch {}
-        track("contact_form_submit", { source_path: sourcePath, course: courseSlug, delivery_mode: "mailto_draft" });
+        try {
+          sourcePath = sessionStorage.getItem("booking_source") || sourcePath;
+        } catch {}
+        track("contact_form_submit", {
+          source_path: sourcePath,
+          course: courseSlug,
+          delivery_mode: "mailto_draft",
+        });
         const subject = `Consultation request: ${data.get("interest") || "Dive training"}`;
         const body = `Hi Jay,\n\nI'd like to arrange a free consultation.\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nExperience: ${data.get("experience") || "Not specified"}\nFound us via: ${data.get("discovery")}\nReferring path: ${sourcePath}\nTraining interest: ${data.get("interest") || "Not sure yet"}\n\nGoals and availability:\n${data.get("message")}\n`;
         setDraftHref(
@@ -101,7 +107,22 @@ export function ContactForm({
           required
         />
       </div>
-      <div className="form-field"><label htmlFor="discovery">How did you find us? (required)</label><select id="discovery" name="discovery" required defaultValue=""><option value="">Please choose</option>{["Google search", "AI assistant (ChatGPT, Perplexity, etc.)", "YouTube / The Dive Table", "Instagram or Facebook", "Friend or referral", "Other"].map(option => <option key={option}>{option}</option>)}</select></div>
+      <div className="form-field">
+        <label htmlFor="discovery">How did you find us? (required)</label>
+        <select id="discovery" name="discovery" required defaultValue="">
+          <option value="">Please choose</option>
+          {[
+            "Google search",
+            "AI assistant (ChatGPT, Perplexity, etc.)",
+            "YouTube / The Dive Table",
+            "Instagram or Facebook",
+            "Friend or referral",
+            "Other",
+          ].map((option) => (
+            <option key={option}>{option}</option>
+          ))}
+        </select>
+      </div>
       <div className="form-submit">
         <button className="btn btn-dark" type="submit">
           Prepare consultation email <Arrow />

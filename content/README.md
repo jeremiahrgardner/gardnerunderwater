@@ -1,29 +1,23 @@
-# Publishing field notes
+# Write and publish Learn articles
 
-Articles live in `content/articles/*.md`. No CMS or account is required to write them.
-Article bodies must be written and approved by Jeremiah, as specified in `docs/seo/CODEX_BRIEF.md`. The two example files are unpublished templates with headings only. The 48-article content program in that brief is a separate implementation phase; it is not claimed complete by this design pass.
+One system: `content/learn/*.mdx` feeds `/learn`, eight topic hubs, course related reading, the homepage, RSS and sitemap. The 48 stubs come from `docs/seo/articles.json`. Only Jeremiah writes and approves article copy. The old, unpublished Markdown examples have been retired; `/articles` routes redirect to `/learn`.
 
-## Write and preview
+## Authoring
 
-1. Copy `article-template.md` to a new filename.
-2. Choose a unique, lowercase, hyphenated `slug` and update every frontmatter field.
-3. Write the article in ordinary Markdown. Start body headings at `##`; the title is already the page's H1.
-4. Put images in `public/` and reference them with `/filename.jpg`. Give each image useful alt text. Keep `course` pointed to a real `/courses` page or category anchor.
-5. Keep `draft: true` while writing. Run `npm run dev` to review the draft at `/articles/your-slug`, or use a Vercel preview deployment. Drafts show an unpublished banner and noindex metadata. Production deployments exclude them. Protect preview access through your Vercel project settings if drafts must remain private.
-6. Only publish article copy Jeremiah has written and approved. Run `npm run test:articles`, `npm run lint`, and `npm run build` before publishing.
+1. Edit an existing stub. `npm run generate:articles` fills missing files only and never overwrites edits.
+2. Replace every owner placeholder: description (aim for 140–160 characters; maximum 160), standalone answer (40–60 words), FAQ questions/answers and body. Keep body headings at `##` or lower. Follow the editorial angle comment without treating research estimates as verified facts.
+3. Preserve the slug, cluster, pillar and course mapping. Course slugs come from `lib/courses.ts`. Use `ctaPage` only when `ctaCourse` is null. Internal links must resolve; published articles cannot link to drafts. Publish a cluster's pillar before linking to it from public articles.
+4. Markdown tables work. Use `<YouTube id="actual-video-id" title="Descriptive title" />` for a lazy video. Set `video.youtubeId`, `video.title` and `video.uploadDate` (quoted `YYYY-MM-DD`) for matching VideoObject metadata. Do not invent video data. MDX executes trusted repository content: accept edits only from trusted authors.
+5. Keep `draft: true`. Preview locally with `npm run dev`, or use the branch's Vercel preview. Draft pages have a visible banner and `noindex`; `/learn` has a preview-only draft review list. Production and ordinary local production builds exclude drafts from routes, lists, RSS, related links and sitemap. Unknown deployment environments default to hiding drafts. Preview access controls are managed in Vercel; repository files remain public.
+6. Before publishing, obtain Jeremiah's approval, set actual quoted `publishedAt` and `lastReviewed` dates, and set `draft: false`. Run `npm test`, `npm run lint` and `npm run build`. Published metadata failures, unresolved owner placeholders, invalid MDX and broken internal links fail validation. Draft editorial incompleteness produces warnings; `npm run validate:content -- --verbose` prints them.
+7. Open a PR and review its preview before merging. Merging to the Vercel production branch publishes the site. A future publication date hides the article but does not schedule a rebuild. Update `lastReviewed` when actually reviewed; this date supplies the sitemap's article modification date.
 
-Required fields are `title`, `slug`, `description`, `date`, `author`, `category`, `image`, `imageAlt`, `course`, and the boolean `draft`. Dates must be quoted `YYYY-MM-DD` strings. Set optional `updated` only after a substantive revision. It must not precede `date`. Credit the actual writer or the organization; do not imply Jay authored or reviewed a piece unless he did.
+## Minimum-gas calculator
 
-## Publish
+`rock-bottom-calculator.mdx` embeds `<MinimumGasCalculator />`. All training defaults live in `minimumGasDefaults` in `lib/minimum-gas.ts`. Leave this article as a draft until Jeremiah confirms them. After confirmation, update defaults if needed and set `calculatorDefaultsConfirmed: true` in its frontmatter. The publication validator enforces this separate check.
 
-Set `draft: false`, use the real publication date, commit the article and images, and push or merge to the branch configured for production in Vercel. A configured Git integration rebuilds the site. Verify the resulting deployment and article URL.
+## Analytics and consultation
 
-The same published collection powers the homepage, `/articles`, article pages, related reading, `/articles/feed.xml`, and `/sitemap.xml`. Drafts and future-dated posts are excluded from all of these. A future date alone does not schedule a deployment: rebuild on the publication date. A draft flag hides the page from the site, but does not make the Markdown private in a public GitHub repository.
+Enable Web Analytics for the Vercel project so the installed SDK can deliver events. The browser sends `booking_click`, `article_cta_click` and `contact_form_submit`, with `source_path` and a course slug when known. Form events identify `delivery_mode: mailto_draft`; they do not indicate delivered email or a confirmed appointment. Personal form content is excluded from analytics. The email draft includes the required discovery-source answer and referring path.
 
-To unpublish, set `draft: true` and deploy again. If a published URL must move or disappear permanently, plan a suitable redirect rather than silently changing its slug.
-
-## Writing for useful discovery
-
-Answer a real diver's question directly. Explain who the advice applies to, distinguish training prerequisites from suggestions, and use the instructor's actual experience and verified sources. Link relevant courses and primary agency sources. Avoid unsupported safety, certification, or outcome claims.
-
-Article pages render their content on the server and include canonical URLs, author/date information, descriptive metadata, social images, BlogPosting and breadcrumb structured data, and related training. These support discovery; they do not guarantee rankings or AI citations.
+See `docs/seo/OWNER_INPUTS.md` for owner facts and `docs/seo/VALIDATION.md` for acceptance results and external-service limitations.

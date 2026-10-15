@@ -14,3 +14,30 @@ export function absoluteUrl(path: string) {
 export function jsonLd(value: unknown) {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
+
+// TODO(jeremiah): Supply a public business street address if desired; do not infer one.
+export const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${site.url}/#organization`,
+  name: site.name,
+  url: site.url,
+  logo: absoluteUrl("/logo.png"),
+  telephone: "+1-619-880-0684",
+  areaServed: "San Diego",
+  sameAs: [
+    "https://www.facebook.com/gardnerunderwater/",
+    "https://www.instagram.com/gardnerunderwater/",
+    "https://www.youtube.com/@thedivetable",
+    "https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1",
+  ],
+};
+export const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${site.url}/about#jeremiah-gardner`,
+  name: "Jeremiah Gardner",
+  jobTitle: "UTD scuba instructor",
+  worksFor: { "@id": `${site.url}/#organization` },
+  sameAs: ["https://jeremiahgardner.com", "https://x.com/JeremiahGardner"],
+};

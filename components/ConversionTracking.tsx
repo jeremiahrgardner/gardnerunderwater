@@ -14,9 +14,19 @@ export function ConversionTracking() {
       const isArticleCta = anchor.hasAttribute("data-course-cta");
       if (!isBooking && !isArticleCta) return;
       const source_path = location.pathname;
-      const course = anchor.getAttribute("data-course") || target.searchParams.get("course") || "";
-      if (isBooking) { try { sessionStorage.setItem("booking_source", source_path); } catch {} }
-      track(isBooking ? "booking_click" : "article_cta_click", { source_path, course });
+      const course =
+        anchor.getAttribute("data-course") ||
+        target.searchParams.get("course") ||
+        "";
+      if (isBooking) {
+        try {
+          sessionStorage.setItem("booking_source", source_path);
+        } catch {}
+      }
+      track(isBooking ? "booking_click" : "article_cta_click", {
+        source_path,
+        course,
+      });
     };
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);

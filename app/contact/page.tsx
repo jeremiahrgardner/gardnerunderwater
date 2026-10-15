@@ -4,7 +4,11 @@ import { courses, courseSlug } from "@/lib/courses";
 import { ContactForm } from "@/components/ContactForm";
 import { PageIntro, Arrow } from "@/components/SiteUI";
 
-export const metadata: Metadata = pageMetadata("Book a Course | Gardner Underwater, San Diego", "Book a scuba course or coaching with Gardner Underwater in San Diego. Call +1 (619) 880-0684 or send a message.", "/contact");
+export const metadata: Metadata = pageMetadata(
+  "Book a Course | Gardner Underwater, San Diego",
+  "Book a scuba course or coaching with Gardner Underwater in San Diego. Call +1 (619) 880-0684 or send a message.",
+  "/contact",
+);
 export default async function ContactPage({
   searchParams,
 }: {
@@ -13,7 +17,10 @@ export default async function ContactPage({
   const params = await searchParams;
   const requestedCourse =
     typeof params.course === "string" ? params.course.slice(0, 200) : "";
-  const matchedCourse = courses.find(c => courseSlug(c.title) === requestedCourse || c.title === requestedCourse);
+  const matchedCourse = courses.find(
+    (c) =>
+      courseSlug(c.title) === requestedCourse || c.title === requestedCourse,
+  );
   const selectedCourse = matchedCourse?.title || requestedCourse;
   return (
     <>
@@ -38,7 +45,11 @@ export default async function ContactPage({
       </PageIntro>
       <section className="section" id="consultation">
         <div className="container contact-grid">
-          <ContactForm key={selectedCourse} selectedCourse={selectedCourse} courseSlug={matchedCourse ? courseSlug(matchedCourse.title) : ""} />
+          <ContactForm
+            key={selectedCourse}
+            selectedCourse={selectedCourse}
+            courseSlug={matchedCourse ? courseSlug(matchedCourse.title) : ""}
+          />
           <aside className="contact-sidebar">
             <div className="contact-direct">
               <div className="eyebrow">Prefer a direct conversation?</div>

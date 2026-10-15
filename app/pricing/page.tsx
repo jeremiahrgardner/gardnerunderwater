@@ -3,7 +3,11 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Arrow, ConsultationCTA, PageIntro } from "@/components/SiteUI";
 
-export const metadata: Metadata = pageMetadata("Scuba Training & Coaching Pricing", "Explore Gardner Underwater pricing: $300 per training day, $129 monthly scuba coaching and $300 DAN first aid courses. Start with a consultation.", "/pricing");
+export const metadata: Metadata = pageMetadata(
+  "Scuba Training & Coaching Pricing",
+  "Explore Gardner Underwater pricing: $300 per training day, $129 monthly scuba coaching and $300 DAN first aid courses. Start with a consultation.",
+  "/pricing",
+);
 const options = [
   {
     title: "In-water training",

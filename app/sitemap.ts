@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/pricing",
       "/about",
       "/learn",
-      ...clusters.map(c => `/learn/topic/${c.slug}`),
+      ...clusters.map((c) => `/learn/topic/${c.slug}`),
       "/contact",
       "/shop",
       "/merch",

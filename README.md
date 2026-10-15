@@ -48,9 +48,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `/courses`           | Searchable and filterable training catalog                                    |
 | `/courses/[slug]`    | Individual training pages with pricing and consultation links                 |
 | `/pricing`           | Training, coaching, and DAN pricing                                           |
-| `/articles`          | Field notes and practical training articles                                   |
-| `/articles/[slug]`   | Server-rendered Markdown reading pages and related training                   |
-| `/articles/feed.xml` | RSS feed of published articles                                                |
+| `/learn`          | Field notes and practical training articles                                   |
+| `/learn/[slug]`   | Server-rendered MDX articles, answers, FAQs and course links                   |
+| `/learn/feed.xml` | RSS feed of published articles                                                |
+| `/learn/topic/[cluster]` | Eight topic hubs with published pillar and supporting articles |
 | `/sitemap.xml`       | Public pages, training, and published articles                                |
 | `/shop`              | Equipment rentals and student essentials                                      |
 | `/merch`             | Apparel with links to Square                                                  |
@@ -63,7 +64,7 @@ Course descriptions are in `lib/courses.ts`, rental prices in `lib/rentals.ts`, 
 
 No scheduling provider is connected yet. The consultation form prepares a URL-encoded email draft to Jay. Visitors review and send it in their own email app, then arrange a time with Jay. The form does not send email itself, store submissions, or confirm appointments. Course links carry the selected course into the request. Direct phone and email links provide alternatives.
 
-Markdown publishing is implemented in `content/articles/`, with an article index, individual reading pages, related training, RSS, and a sitemap. See [the publishing guide](content/README.md) for draft handling and deployment steps. Run `npm run test:articles` for the article and content validation checks (Node.js 24 in the prepared environment).
+MDX publishing is implemented in `content/learn/`, with an article index, individual reading pages, related training, RSS, and a sitemap. See [the publishing guide](content/README.md) for draft handling and deployment steps. Run `npm test` for the article and content validation checks (Node.js 24 in the prepared environment).
 
 ## Repository Notes
 

@@ -21,7 +21,11 @@ export async function generateMetadata({
   const item = courses.find((course) => courseSlug(course.title) === slug);
   if (!item) notFound();
   const description = item.desc.slice(0, 157).replace(/\s+\S*$/, "") + "…";
-  return pageMetadata(`${item.title} in San Diego`, description, `/courses/${slug}`);
+  return pageMetadata(
+    `${item.title} in San Diego`,
+    description,
+    `/courses/${slug}`,
+  );
 }
 export default async function CoursePage({
   params,

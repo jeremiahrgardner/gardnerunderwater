@@ -1,3 +1,4 @@
+import { businessSchema, jsonLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
@@ -8,7 +9,11 @@ import { ArticleCard } from "@/components/ArticleCard";
 import { getArticles } from "@/lib/articles";
 import { absoluteUrl, site } from "@/lib/site";
 
-export const metadata: Metadata = pageMetadata("DIR Scuba Training in San Diego", "DIR-based scuba training and coaching in San Diego. Build real buoyancy, trim and team skills with UTD instructor Jeremiah Gardner in classes of 3 or fewer.", "/");
+export const metadata: Metadata = pageMetadata(
+  "DIR Scuba Training in San Diego",
+  "DIR-based scuba training and coaching in San Diego. Build real buoyancy, trim and team skills with UTD instructor Jeremiah Gardner in classes of 3 or fewer.",
+  "/",
+);
 
 const paths = [
   {
@@ -41,7 +46,10 @@ export default function HomePage() {
   const articles = getArticles().slice(0, 2);
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"LocalBusiness\", \"@id\": \"https://gardnerunderwater.com/#organization\", \"name\": \"Gardner Underwater\", \"url\": \"https://gardnerunderwater.com\", \"logo\": \"https://gardnerunderwater.com/logo.png\", \"telephone\": \"+1-619-880-0684\", \"areaServed\": \"San Diego\", \"sameAs\": [\"https://www.facebook.com/gardnerunderwater/\", \"https://www.instagram.com/gardnerunderwater/\", \"https://www.youtube.com/@thedivetable\", \"https://podcasts.apple.com/us/podcast/the-dive-table/id1611099442?mt=2&ls=1\"]}" }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(businessSchema) }}
+      />
       <section className="landing-hero" aria-labelledby="home-title">
         <Image
           src="/hero-cave.jpg"

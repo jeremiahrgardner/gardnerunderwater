@@ -3,7 +3,11 @@ import { pageMetadata } from "@/lib/metadata";
 import { CourseCatalog } from "@/components/CourseCatalog";
 import { PageIntro, ConsultationCTA } from "@/components/SiteUI";
 
-export const metadata: Metadata = pageMetadata("UTD Scuba Courses in San Diego", "UTD recreational, technical and specialty courses in San Diego: Essentials of Rec and Tec, Techreational, Tech 1, Doubles, Rescue, Drysuit and more.", "/courses");
+export const metadata: Metadata = pageMetadata(
+  "UTD Scuba Courses in San Diego",
+  "UTD recreational, technical and specialty courses in San Diego: Essentials of Rec and Tec, Techreational, Tech 1, Doubles, Rescue, Drysuit and more.",
+  "/courses",
+);
 
 export default function CoursesPage() {
   return (

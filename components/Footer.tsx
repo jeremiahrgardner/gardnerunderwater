@@ -41,9 +41,7 @@ export function Footer() {
           <div>
             <h2 className="footer-label">Beyond the water</h2>
             <nav aria-label="Resources">
-              {true && (
-                <Link href="/learn">Learn about diving</Link>
-              )}
+              <Link href="/learn">Learn about diving</Link>
               <Link href="/shop">Gear & rentals</Link>
               <Link href="/merch">Merchandise</Link>
               <a

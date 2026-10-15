@@ -1,13 +1,21 @@
+import { personSchema, jsonLd } from "@/lib/site";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import Image from "next/image";
 import { Arrow, ConsultationCTA } from "@/components/SiteUI";
 
-export const metadata: Metadata = pageMetadata("Jeremiah Gardner, UTD Scuba Instructor", "Jeremiah Gardner is a UTD scuba instructor, cave diver and coach in San Diego. His background, teaching philosophy and how to train with him.", "/about");
+export const metadata: Metadata = pageMetadata(
+  "Jeremiah Gardner, UTD Scuba Instructor",
+  "Jeremiah Gardner is a UTD scuba instructor, cave diver and coach in San Diego. His background, teaching philosophy and how to train with him.",
+  "/about",
+);
 export default function AboutPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: "{\"@context\": \"https://schema.org\", \"@type\": \"Person\", \"@id\": \"https://gardnerunderwater.com/about#jeremiah-gardner\", \"name\": \"Jeremiah Gardner\", \"jobTitle\": \"UTD scuba instructor\", \"worksFor\": {\"@id\": \"https://gardnerunderwater.com/#organization\"}, \"sameAs\": [\"https://jeremiahgardner.com\", \"https://x.com/JeremiahGardner\"]}" }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(personSchema) }}
+      />
       <section className="about-hero">
         <div className="container about-grid">
           <div>
