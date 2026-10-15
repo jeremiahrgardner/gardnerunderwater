@@ -1,7 +1,7 @@
 ---
 title: "How to Become a Technical Diver: The Training Path"
 slug: "how-to-become-a-technical-diver"
-description: "Technical diving starts with skills, not gear. The training path from recreational diver to Tech 1, and how to know when you're ready for each step."
+description: "Technical diving starts with skills, not gear. The UTD training path from recreational diver to Tech 1, the prerequisites, and how to know you're ready."
 date: "2026-10-15"
 author: "Gardner Underwater"
 category: "Training Path"
@@ -11,19 +11,19 @@ course: "/courses/essentials-of-tech"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check the course sequence and prerequisites against your current offerings, add your own path into technical diving where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Course limits, gases and prerequisites below come from UTD Standards and Procedures v6.0c (October 2020); confirm they're still current. TWO CONFLICTS TO RESOLVE: (1) your Tech 1 course page says Tech 1 "introduces Oxygen as a dedicated decompression gas", but the 2020 standards have Techreational already using one oxygen bottle, with Tech 1 adding 21/35 and 18/45 to 160 ft and oxygen or nitrox 50. This article follows the standards; update one or the other. (2) The 2020 standards accept Essentials of Tech, Rec 2 + Doubles MINI, Techreational or an assessed equivalent for Tech 1, while your course page asks for Techreational or equivalent. This article follows your course page. Also add your own path where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
-**To become a technical diver, first master the fundamentals of buoyancy, trim, propulsion and gas sharing, then learn to dive doubles, then take an entry-level technical course that introduces decompression.** At Gardner Underwater, that path runs from Essentials of Recreational Diving to Essentials of Tech, Doubles, Techreational and Tech 1. Skills come first. Gear and depth come after.
+**To become a technical diver, first master the fundamentals of buoyancy, trim, propulsion and gas sharing, get comfortable in doubles, then take an entry-level technical course that introduces decompression.** At Gardner Underwater, that path runs from Essentials of Recreational Diving to Essentials of Tech, Techreational and Tech 1, with a Doubles course wherever you need it. Skills come first. Gear and depth come after.
 
 The most common mistake we see is the reverse: a diver buys doubles, signs up for a deco course and discovers in the water that their foundations can't carry the load. Technical diving doesn't forgive weak basics. It magnifies them.
 
 ## What is technical diving?
 
-Technical diving is diving beyond recreational limits. In practice, that usually means at least one of these:
+Technical diving is diving beyond recreational limits. UTD defines its technical training as dives deeper than 100 feet with planned decompression. In practice, technical diving usually means at least one of these:
 
 - **Decompression:** dives that require mandatory stops on the way up, so you can't ascend directly to the surface.
 - **Overhead environments:** caves and wreck interiors, where you can't ascend at all until you've swum out.
-- **Mixed gases:** nitrox and oxygen for decompression, and trimix (helium blends) for deeper dives.
+- **Mixed gases:** helium mixes (trimix) to limit narcosis at depth, and nitrox 50 or oxygen for decompression.
 - **More equipment:** doubles or sidemount, stage and decompression bottles, and redundant systems.
 
 The common thread is that the surface is no longer your emergency exit. You solve problems where you are, with your team.
@@ -32,9 +32,9 @@ The common thread is that the surface is no longer your emergency exit. You solv
 
 Before any technical course, you should be able to do these reliably, not just occasionally:
 
-- Hold your depth within a few feet while doing a task, like reading a gauge or deploying an SMB.
+- Hold your depth within about 3 feet (1 meter) while doing a task, like reading a gauge or deploying an SMB. That's the passing standard in UTD courses, and technical divers aim for much tighter.
 - Stay horizontal and still, without using your hands.
-- Frog kick, back kick and turn in place without stirring up the bottom.
+- Frog kick, back kick and helicopter turn without stirring up the bottom.
 - Donate your long hose and share gas calmly while holding position.
 - Plan your gas, including rock bottom and turn pressure, before the dive.
 
@@ -42,33 +42,49 @@ If any of those feels shaky, that's not a reason to stop. It's a clear list of w
 
 ## The training path, step by step
 
-| Step | Course | What it builds |
-| --- | --- | --- |
-| 1 | Essentials of Recreational Diving | Buoyancy through breathing, horizontal trim, precise propulsion, the UTD system |
-| 2 | Essentials of Tech | Advanced buoyancy, trim and propulsion; air sharing; deco bottle handling; more advanced gas planning and ascents |
-| 3 | Doubles (Backmount or Sidemount) | Normal and emergency skills for double-tank diving |
-| 4 | Techreational | Entry to decompression diving: theory, equipment, critical skills dives under pressure |
-| 5 | Tech 1 | Deeper decompression with oxygen as a dedicated deco gas; mid-water control and failures away from the bottom |
+| Step | Course | What it builds | Depth and gas limits |
+| --- | --- | --- | --- |
+| 1 | Essentials of Recreational Diving | Buoyancy through breathing, horizontal trim, five kicks, gas sharing, valve drills, SMB, rock bottom planning | 60 ft (100 ft if nitrox certified); no decompression |
+| 2 | Essentials of Tech | Advanced buoyancy, trim and propulsion; valve shutdown; handling one deco bottle; advanced gas planning and ascents | 60 ft; air or nitrox 32; no decompression |
+| As needed | Doubles (Backmount or Sidemount) | Normal and emergency skills for double-tank diving, including valve drills | Course-specific |
+| 3 | Techreational | Entry to decompression diving with trimix 25/25 and one oxygen bottle | 130 ft |
+| 4 | Tech 1 | Deeper decompression with 21/35 or 18/45, oxygen or nitrox 50, optional stage bottle | 160 ft |
 
 ### 1. Essentials of Recreational Diving
 
-This is where the foundation gets built: buoyancy control through breathing, horizontal trim and propulsion techniques that give precise control. Every later course assumes these skills. [Course details](/courses/essentials-of-recreational-diving).
+This is where the foundation gets built, and it's UTD's entry point for divers already certified by another agency. You learn buoyancy control through breathing, horizontal trim, five non-silting kicks, gas sharing with a long hose, valve drills, SMB deployment and rock bottom gas planning, normally over three days with video debriefs. Every later course assumes these skills. [Course details](/courses/essentials-of-recreational-diving).
 
 ### 2. Essentials of Tech
 
-A personal skills class that prepares you for technical diving. It advances your buoyancy, trim and propulsion, and introduces more advanced air sharing, decompression bottle handling, gas planning and ascent strategies. [Course details](/courses/essentials-of-tech).
+A personal skills class that prepares you for technical depths. It takes place in shallow open water, stays within no-decompression limits, and advances your buoyancy, trim and propulsion, including the back kick and helicopter turn. It introduces valve shutdowns, more advanced air sharing, handling one decompression bottle, and more advanced gas planning and ascent strategies. It's also useful for recreational divers who simply want to be more skilled. [Course details](/courses/essentials-of-tech).
 
-### 3. Doubles
+### Doubles, when you need it
 
-Doubles change your buoyancy, your trim and your emergency procedures. This course trains the practical, normal and emergency skills every double-tank diver needs, in either backmount or sidemount. [Course details](/courses/doubles-backmount-or-sidemount).
+Doubles change your buoyancy, your trim and your emergency procedures. This course trains the normal and emergency skills every double-tank diver needs, in either backmount or sidemount, including shutting down and reopening a valve quickly. Take it when you're ready to move into doubles, before you need them for a technical course. [Course details](/courses/doubles-backmount-or-sidemount).
 
-### 4. Techreational
+### 3. Techreational
 
-The entry point into technical diving. It introduces the theory, equipment and in-water skills for decompression diving. Despite its conservative limits, it's demanding: the focus is precision, awareness and team performance under pressure, through dives with real objectives and unexpected failures. Come in already comfortable with the frog kick, back kick, valve drills and gas switching. [Course details](/courses/techreational).
+UTD's first step into technical diving. You learn to dive normoxic trimix 25/25 to 130 feet with one decompression bottle of oxygen, in doubles. Despite its conservative limits, it's demanding: the focus is precision, awareness and team performance under pressure, through dives with real objectives and unexpected failures, on the bottom and in mid-water. Come in already comfortable with the frog kick, back kick, valve drills and gas switching. [Course details](/courses/techreational).
 
-### 5. Tech 1
+### 4. Tech 1
 
-The next step beyond Techreational. It expands into deeper decompression diving and introduces oxygen as a dedicated decompression gas. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills and handling failures away from the bottom. [Course details](/courses/tech-1).
+The next step beyond Techreational. It extends your range to 160 feet with trimix 21/35 or 18/45, one decompression bottle of oxygen or nitrox 50, and an optional stage bottle. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills and handling failures away from the bottom. [Course details](/courses/tech-1).
+
+<!-- TODO(jeremiah): Resolve the Tech 1 oxygen wording against your course page (see the note at the top). -->
+
+## What are the prerequisites?
+
+Under UTD's standards, each step has an age minimum, a training prerequisite and a minimum number of logged dives beyond open water certification:
+
+| Course | Minimum age | Prior training | Dives beyond open water |
+| --- | --- | --- | --- |
+| Essentials of Recreational Diving | 15 | Open water certification from a recognized agency | None set |
+| Essentials of Tech | 18 | Advanced (UTD Rec 2) or equivalent | 50, including 25 non-training dives |
+| Doubles | 16 | Advanced (UTD Rec 2) or equivalent | None set |
+| Techreational | 21 | Essentials of Tech and nitrox, or equivalent | 75 (25 after Essentials of Tech recommended) |
+| Tech 1 | 21 | Techreational or equivalent | 75 |
+
+Essentials of Tech, Techreational and Tech 1 also require swim tests, a 10-minute tow of a diver in full gear, and a rescue of a diver simulating oxygen toxicity.
 
 ## Do you need to buy doubles first?
 
@@ -78,7 +94,7 @@ See [DIR Gear Configuration, Piece by Piece](/articles/dir-gear-configuration) f
 
 ## How long does it take?
 
-It depends far more on practice than on calendar time. Each course gives you skills; the dives between courses make them automatic. Expect to dive regularly between steps, and expect an honest instructor to tell you when you need more time.
+It depends far more on practice than on calendar time. The dive minimums above give a rough idea, but each course gives you skills; the dives between courses make them automatic. Expect to dive regularly between steps, and expect an honest instructor to tell you when you need more time.
 
 <!-- TODO(jeremiah): Add your own path here: how coaching as a student changed your diving, and how that led into technical, cave and exploration diving. Your About page tells this story briefly; a few more specifics would make this section stronger. -->
 
@@ -91,13 +107,17 @@ It depends far more on practice than on calendar time. Each course gives you ski
 
 ## Frequently asked questions
 
+### How many dives do I need before technical training?
+
+Under UTD's standards, 50 logged dives beyond open water for Essentials of Tech, and 75 for Techreational and Tech 1. The dive count is a minimum. Your skills decide when you're ready.
+
 ### Do I need to be a recreational instructor or divemaster first?
 
 No. Technical diving is about skills and judgment, not professional ratings.
 
 ### Is sidemount or backmount better for technical diving?
 
-Both work. The right choice depends on your goals, your body and where you dive. Our Doubles course covers either.
+Both work, and UTD courses can be taken in either. The right choice depends on your goals, your body and where you dive. Our Doubles course covers both.
 
 ### Is technical diving dangerous?
 
@@ -105,7 +125,7 @@ It carries more risk than recreational diving because the surface isn't an immed
 
 ### What is the difference between Essentials of Tech and Techreational?
 
-Essentials of Tech is a personal skills class that prepares you for technical training. Techreational is the first course that introduces decompression diving itself.
+Essentials of Tech is a no-decompression skills class that prepares you for technical training and introduces handling a deco bottle. Techreational is the first course that introduces decompression diving itself, with trimix 25/25 and oxygen to 130 feet.
 
 ## Start with your foundation
 

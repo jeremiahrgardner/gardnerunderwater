@@ -50,13 +50,13 @@ A boat dive through one of the region's largest kelp forests. It's a good place 
 
 A collection of artificial reefs and wrecks off Mission Beach, including the Yukon, a former Canadian navy destroyer escort. Wrecks bring depth, current and structure: good ground for gas planning, ascent discipline and team position, and a natural next step toward wreck training.
 
-<!-- TODO(jeremiah): Add your own notes: which sites you use for which courses, the best months for each, and any spots you'd steer newer divers away from. -->
+<!-- TODO(jeremiah): UTD's 2020 standards list its headquarters in San Diego. If that's still true, it's a strong local point to add here. Add your own notes: which sites you use for which courses, the best months for each, and any spots you'd steer newer divers away from. -->
 
 ## What should you know before diving here?
 
 - **Swell and surf matter.** Check the surf forecast before shore dives. A beautiful day can still have a rough entry.
 - **Plan for cold.** Your weighting, your gas consumption and your dexterity all change in cold water. Do a proper weight check with your actual suit; see [How to Master Scuba Buoyancy](/articles/scuba-buoyancy-control).
-- **Plan your gas for the swim back.** Shore dives that start with a surface swim often call for halves or thirds. See [Gas Management for Recreational Divers](/articles/scuba-gas-management).
+- **Plan your gas for the swim back.** UTD plans most shore dives on halves: set rock bottom aside, then spend half of what's left on the way out. See [Gas Management for Recreational Divers](/articles/scuba-gas-management).
 - **Dive with a team that's trained the same way.** It matters more in low visibility.
 
 ## Where do technical divers get gas in San Diego?

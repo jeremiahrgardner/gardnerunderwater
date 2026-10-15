@@ -11,7 +11,7 @@ course: "/courses/essentials-of-recreational-diving"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check the comparison against your experience, add a photo of a configured backplate and wing where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Course equipment FAQ checked against UTD's minimum equipment standards. Before publishing: check the comparison against your experience, add a photo of a configured backplate and wing where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **A backplate and wing puts all its lift behind you and holds your tank rigidly in place, which makes horizontal trim, stability and streamlining easier underwater.** A jacket BCD wraps lift around your torso, which floats you upright at the surface but tends to tip you vertical underwater. For most divers who want better control, a backplate and wing is the better tool. Jackets still suit some divers and situations.
 
@@ -92,7 +92,7 @@ Yes. Aluminum plates are light, and some divers use a soft plate for travel. The
 
 ### Do I need a backplate and wing to take a DIR course?
 
-Not necessarily. Talk to your instructor; many divers borrow or rent one for training before deciding what to buy.
+Not necessarily a backplate, but you do need lift behind you. UTD's standards call for a rear-inflation buoyancy compensator: a backplate and wing, a back-inflate BCD or a sidemount rig all qualify, and a traditional jacket doesn't. Talk to your instructor; many divers borrow or rent a backplate and wing for training before deciding what to buy.
 
 ## Try one before you buy one
 

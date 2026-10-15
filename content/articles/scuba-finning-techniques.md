@@ -11,9 +11,9 @@ course: "/courses/propulsion-and-or-back-kick-extension"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check every technique description against how you teach it, add a short clip of each kick where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD Standards v6.0c: Essentials of Rec teaches five non-silting kicks that move you forward and backward, and UTD propulsion training requires non-split fins. Before publishing: check every technique description against how you teach it, add a short clip of each kick where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
-**Five kicks give you full control underwater: the frog kick, the modified frog, the modified flutter, the helicopter turn and the back kick.** Together they let you move forward, creep through tight spaces, turn in place and back up, all without changing depth or stirring up the bottom. The standard flutter kick most divers learn first does only one of those jobs well.
+**Five kicks give you full control underwater: the frog kick, the modified frog, the modified flutter, the helicopter turn and the back kick.** Together they let you move forward, creep through tight spaces, turn in place and back up, all without changing depth or stirring up the bottom. They're the five kicks UTD teaches in Essentials of Recreational Diving. The standard flutter kick most divers learn first does only one of those jobs well.
 
 If you only know the flutter kick, you can swim. These five let you control exactly where you are.
 
@@ -72,7 +72,7 @@ It gets its own step-by-step guide: [How to Back Kick](/articles/how-to-back-kic
 
 ## Which fins work best?
 
-Stiff blade fins with spring straps work best for these kicks. They hold their shape on the sweep of the frog kick and give you something to push against on the back kick. Split fins and very soft fins are designed for flutter kicking and struggle with all five.
+Stiff blade fins with spring straps work best for these kicks. They hold their shape on the sweep of the frog kick and give you something to push against on the back kick. Split fins and very soft fins are designed for flutter kicking and struggle with all five. UTD's propulsion and back kick training requires non-split fins.
 
 Fin weight also affects trim. Heavy fins pull your feet down in a wetsuit; in a drysuit they can help offset air that collects in your legs.
 
@@ -98,7 +98,7 @@ For most diving, yes. It's more efficient, quieter on the bottom and easier to c
 
 ### Can I frog kick in split fins?
 
-You can try, but split fins aren't built for it. Most divers find the frog kick and back kick far easier in stiff blade fins.
+You can try, but split fins aren't built for it, and UTD propulsion courses require non-split fins. Most divers find the frog kick and back kick far easier in stiff blade fins.
 
 ### How long does it take to learn the back kick?
 

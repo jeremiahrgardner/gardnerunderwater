@@ -11,7 +11,7 @@ course: "/courses/essentials-of-recreational-diving"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. This one should sound most like you. Before publishing: rewrite anything that doesn't match your view, add your own experience where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. UTD's inclusive ethos and "thinking diver" ideal checked against UTD's standards. This one should sound most like you. Before publishing: rewrite anything that doesn't match your view, add your own experience where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **DIR diving isn't elitist by design, but it earned that reputation honestly.** The name implies everyone else is "doing it wrong," and some early advocates were combative online. The system itself is a set of practical solutions for diving safely as a team. Good DIR training explains the reasons behind every practice and treats other divers with respect.
 
@@ -48,7 +48,7 @@ The people. A system can be strict without anyone being rude about it.
 
 You can apply the same standards to yourself that DIR asks for and still be generous with other divers. In fact, the core of the system points the other way: a diver who's focused on their team, their skills and their gas plan has little attention left for judging strangers on the boat.
 
-Unified Team Diving, the agency we teach through, describes itself as "an inclusive underwater philosophy" built around a thinking dive team ([UTD](https://utdscubadiving.com/about-utd/)). That's the version of DIR worth teaching.
+Unified Team Diving, the agency we teach through, describes itself as "an inclusive underwater philosophy" built around a thinking dive team ([UTD](https://utdscubadiving.com/about-utd/)). Its aim is a "thinking diver" rather than a "protocol diver": someone who understands why each practice exists, not just how to perform it. That's the version of DIR worth teaching.
 
 ## How good DIR training should feel
 

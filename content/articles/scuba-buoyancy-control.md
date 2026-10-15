@@ -11,7 +11,7 @@ course: "/courses/scuba-coaching"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check every claim against how you teach it, add a short video clip where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD's standards and class evaluation parameters: weight check at 10 ft with about 500 psi, the wing's role, and the hover benchmark from UTD's buoyancy scoring. Before publishing: check every claim against how you teach it, add a short video clip where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **Good scuba buoyancy is the result of four things, in order: correct weighting, a balanced rig, horizontal trim and calm breathing.** Most divers try to fix buoyancy with the inflator button and their hands. That treats the symptom. Fix the four foundations and holding still becomes the easy part.
 
@@ -29,13 +29,13 @@ Most divers are overweighted. Extra lead means extra air in your wing to compens
 
 **The end-of-dive weight check:**
 
-1. Finish a normal dive and stop at 15 feet with about 500 psi left in an aluminum 80.
+1. Finish a normal dive and stop at 10 feet with about 500 psi left in an aluminum 80.
 2. Empty your wing completely. In a drysuit, keep only enough suit air to avoid squeeze.
 3. Breathe normally, hands still.
-4. You should hold 15 feet, sinking slightly on a full exhale and rising slightly on a full inhale.
+4. You should hold 10 feet, sinking slightly on a full exhale and rising slightly on a full inhale.
 5. If you sink, remove weight next time. If you can't hold the stop, add a little.
 
-Why at the end of the dive? Because your tank is lightest then. An aluminum 80 gets about 6 pounds lighter as you breathe it down. If you're correctly weighted with a near-empty tank, you're correctly weighted for the whole dive.
+Why at the end of the dive? Because your tank is lightest then. An aluminum 80 gets about 6 pounds lighter as you breathe it down. If you're correctly weighted with a near-empty tank, you're correctly weighted for the whole dive. At the start, your wing simply carries the weight of the gas you haven't breathed yet.
 
 Write the result in your log, along with your suit, tank and water type. That's your baseline.
 
@@ -59,7 +59,9 @@ If your feet sink or your head drops, the cause is almost always weight placemen
 
 ## Step 4: Fine-tune with your breath
 
-Once weighting and trim are right, your lungs become your fine buoyancy control. A full breath raises you slightly; a full exhale lowers you. Use the wing for big depth changes and your breath for everything in between.
+Once weighting and trim are right, your lungs become your buoyancy control. Inhale and you rise slightly, exhale and you sink, hold a mid-sized breath and you stay neutral.
+
+The wing has a different job. In UTD training, it carries the weight of the gas you'll breathe, makes up for suit compression as you go deeper, and floats you and your gear at the surface. It balances the system; your lungs do the buoyancy. If you're constantly adding and dumping small puffs of air, you're using the wing for the lungs' job.
 
 The pattern that works for most divers is slow and full: a steady inhale, a short pause, a long relaxed exhale. Short, shallow breathing makes you bob and builds up carbon dioxide, which makes you breathe harder.
 
@@ -82,6 +84,10 @@ On your next dive, find a sandy bottom at 20 to 30 feet:
 5. Have your buddy film you. Watch for your feet, your hands and your depth.
 
 When 30 seconds is easy, go for 60. Then do it while deploying an SMB or reading your gauge.
+
+### How steady is steady enough?
+
+UTD's course evaluations give a useful yardstick. Holding your depth within about 1 meter (roughly 3 feet) is the passing standard. Within about 30 centimeters (1 foot) is above average, and within 10 centimeters is demonstration level. Using your hands to manage buoyancy doesn't pass, however close you stay.
 
 ## Common buoyancy mistakes
 

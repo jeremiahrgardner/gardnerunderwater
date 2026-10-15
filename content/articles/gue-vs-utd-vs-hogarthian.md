@@ -11,7 +11,7 @@ course: "/courses"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: confirm every agency fact against current GUE and UTD sources, keep the disclosure, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. UTD details checked against UTD Standards and Procedures v6.0c (ethos, thinking vs protocol diver, backmount or sidemount in every open-circuit course, Essentials as the entry for certified divers, Techreational/Tech 1 limits). Before publishing: confirm every agency fact against current GUE and UTD sources, keep the disclosure, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 *Disclosure: Gardner Underwater teaches through UTD, and Jay Gardner was an owner of UTD until 2026. We've tried to describe both agencies fairly and link to their own descriptions so you can check.*
 
@@ -56,11 +56,11 @@ Unified Team Diving is a training agency that grew from the same Hogarthian and 
 
 <!-- TODO(jeremiah): Confirm the founding details you want to state here (founder, year) and add them if helpful. -->
 
-UTD's ideal is a "thinking diver" on a unified team: someone who understands why each practice exists, not just how to perform it. At Gardner Underwater, the UTD path for certified divers looks like this:
+UTD describes itself as an inclusive philosophy, and its ideal is a "thinking diver" rather than a "protocol diver": someone who understands why each practice exists, not just how to perform it. Every UTD open-circuit course can be taken in backmount or sidemount, with single or double cylinders. At Gardner Underwater, the UTD path for certified divers looks like this:
 
-1. [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving): the entry point into the UTD system, normally over three days with video debriefs.
-2. [Essentials of Tech](/courses/essentials-of-tech): a personal skills class that prepares you for technical diving.
-3. [Techreational](/courses/techreational) and [Tech 1](/courses/tech-1): the entry into decompression diving and the next step beyond it.
+1. [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving): the entry point into the UTD system for certified divers, normally over three days with video debriefs.
+2. [Essentials of Tech](/courses/essentials-of-tech): a no-decompression personal skills class that prepares you for technical diving.
+3. [Techreational](/courses/techreational) and [Tech 1](/courses/tech-1): decompression diving with trimix, to 130 feet and then 160 feet.
 
 ## How do GUE and UTD differ?
 

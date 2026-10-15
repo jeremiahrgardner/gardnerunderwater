@@ -11,7 +11,7 @@ course: "/courses/essentials-of-recreational-diving"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check the routing and donation steps against how you teach them, add a short video of the routing and an air share where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD Standards v6.0c (5 or 7 ft hose, S-drills, 200 ft gas-sharing swim) and the 2020 Stage/Deco deck (hose routing). Before publishing: check the routing and donation steps against how you teach them, add a short video of the routing and an air share where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **In a long hose configuration, the regulator you breathe from is on a hose 5 to 7 feet long. If a teammate runs out of gas, you give them the regulator in your mouth and switch to a backup regulator held under your chin.** The out-of-gas diver gets a regulator that's known to be working, with enough hose to swim comfortably side by side or single file. You never have to search for a backup.
 
@@ -49,11 +49,11 @@ Your backup regulator sits on a shorter hose, held by a loop of bungee or surgic
 5. **Let the hose unroute** from under your light or pocket as you sort out position. Hold onto each other as needed.
 6. **Stabilize, communicate and make a plan.** Then swim or ascend together, at a controlled pace.
 
-The whole sequence should feel calm and automatic. That only happens with practice, ideally on many dives, not just in a course.
+The whole sequence should feel calm and automatic. That only happens with practice, ideally on many dives, not just in a course. UTD calls this practiced gas-sharing drill the S-drill, and it's part of every UTD course from open water up. In advanced and technical courses, teams also swim at least 200 feet while sharing gas.
 
 ## Is 5 feet or 7 feet better?
 
-Seven feet is the standard for technical and overhead diving, where you may need to swim single file. In open water, many divers use 5 or 6 feet, depending on their body size and whether they wear a canister light. A larger diver may find a 5-foot hose too short to turn their head comfortably.
+Seven feet is the standard for technical and overhead diving, where you may need to swim single file. UTD's minimum equipment allows either a 5-foot or a 7-foot hose. In open water, a 5-foot hose suits many divers, depending on their body size and whether they wear a canister light. A larger diver may find a 5-foot hose too short to turn their head comfortably.
 
 If you're unsure, start with what your instructor dives and adjust from there.
 

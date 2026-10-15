@@ -11,7 +11,7 @@ course: "/courses/doubles-backmount-or-sidemount"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check every claim against how you teach it, add photos of your own single and doubles rigs where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD Standards and Procedures v6.0c (minimum equipment, steel cylinder rule, Doubles MINI) and the 2020 Stage/Deco deck (bottles on the left). Before publishing: check every claim against how you teach it, add photos of your own single and doubles rigs where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **A DIR gear configuration is a standard way of setting up scuba equipment so that every item sits in the same place, on every diver, on every dive.** It uses a backplate and wing, a one-piece harness, a long-hose primary regulator, a bungeed backup and as little else as possible. The goal isn't looks. It's that you, or a teammate, can find and use anything without thinking.
 
@@ -35,8 +35,9 @@ It also scales. The same layout works from a single aluminum tank in warm water 
 | Pressure gauge | Short hose, clipped at the left hip | Easy to read, never dangling |
 | Inflator hose | Left side | Matches the wing's inflator |
 | Primary light | Canister on the right hip (when used) | Also holds the long hose in place |
-| Backup lights | Clipped to the chest D-rings (overhead dives) | Two, always in the same place |
+| Backup light | Clipped to a chest D-ring | One for open water, two for overhead dives |
 | Cutting tool | On the waist belt | Reachable with either hand |
+| Stage and deco bottles | Clipped on the left side | Keeps the long hose side clear |
 
 ## The backplate
 
@@ -74,15 +75,32 @@ In backmounted doubles, the long hose comes off the right cylinder valve. The ba
 ## Lights, tools and storage
 
 - **Primary light:** a canister light on the right hip, with the head on a Goodman handle. On open-water dives without a canister, a pocket or knife on the right hip does the job of holding the long hose.
-- **Backup lights:** two small lights clipped to the chest D-rings for overhead and night diving.
+- **Backup lights:** one small backup light clipped to a chest D-ring in open water, two for overhead diving.
 - **Cutting tool:** on the waist belt, reachable with either hand.
 - **Storage:** a thigh pocket on a drysuit or a small pocket on the harness for an SMB, spool and wet notes. Nothing clipped where it dangles.
+- **Stage and deco bottles:** always on the left side. The right side stays clear so the long hose can deploy cleanly, and there's no right hip D-ring to clip one to anyway.
 
 ## Fins, mask and computer
 
-- **Fins:** stiff blade fins with spring straps suit the frog kick and back kick. Split fins struggle with both. See [Scuba Finning Techniques](/articles/scuba-finning-techniques).
+- **Fins:** stiff blade fins with spring straps suit the frog kick and back kick. Split fins struggle with both, and UTD's propulsion training requires non-split fins. See [Scuba Finning Techniques](/articles/scuba-finning-techniques).
 - **Mask:** low-volume, black skirt optional, with a spare on longer dives.
 - **Computer:** wrist-mounted, where you can read it while holding position.
+
+## What does every UTD course require?
+
+UTD's standards set the same minimum kit for every open-circuit course, whether you dive backmount or sidemount, single tank or doubles:
+
+- A primary regulator on a 5- or 7-foot hose wrapped around your neck, and a backup regulator on a bungee necklace.
+- A rear-inflation buoyancy compensator: a wing on a backplate and harness, a back-inflate BCD, or a sidemount trim device. A traditional jacket BCD doesn't qualify.
+- A depth gauge, a timer and a compass.
+- A mask, and fins suited to UTD propulsion techniques.
+- At least one cutting tool.
+- A spool with at least 70 feet of line and a surface marker buoy.
+- A primary light and a backup light, with two backups for overhead diving.
+- Wet notes or a slate.
+- An exposure suit suited to the dive.
+
+On an entry-level open water course, the spool, SMB, lights and wet notes are optional.
 
 ## Common configuration mistakes
 
@@ -105,6 +123,10 @@ For trim, stability and standardization, most divers find it is. A jacket has ad
 ### Do I need a canister light for recreational diving?
 
 No. On daytime open-water dives, a hip pocket or knife sheath can hold the long hose. A canister light becomes standard for overhead and night diving.
+
+### Can I dive steel doubles in a wetsuit?
+
+Not in UTD training. UTD's standards only allow steel doubles when you're also wearing a drysuit, which gives you a second source of buoyancy if your wing fails. Steel cylinders that are neutral or positive at 500 psi are the exception.
 
 ### Is sidemount compatible with DIR?
 

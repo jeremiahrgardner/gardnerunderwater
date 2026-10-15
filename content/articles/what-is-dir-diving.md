@@ -11,7 +11,7 @@ course: "/courses/essentials-of-recreational-diving"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check every claim, add your own story where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD Standards and Procedures v6.0c (covenants, standard gas, Essentials of Rec content) and the 2020 dive planning deck (3-diver teams). Before publishing: check every claim, add your own story where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **DIR, short for "Doing It Right," is a holistic approach to scuba diving.** It combines strong fundamental skills, a standardized and minimal equipment configuration, team-based procedures and careful gas planning. It grew out of deep cave exploration in Florida in the 1990s. Today it shapes how agencies such as UTD and GUE train both recreational and technical divers.
 
@@ -37,12 +37,27 @@ Gardner Underwater teaches through UTD. For a fair comparison of the agencies, s
 DIR rests on five ideas. Each one exists to solve a real problem divers have underwater.
 
 1. **The diver comes first.** Buoyancy, trim, propulsion and awareness matter more than any piece of equipment. A diver who can hold position without effort has spare attention for everything else.
-2. **The team is your backup.** Your teammates carry the gas, equipment and judgment you'd need in a failure. That only works if you stay close, stay aware and dive with people trained the same way.
-3. **Standardize everything that can be standardized.** Same regulator setup, same gas choices, same signals, same procedures. In an emergency, nobody wastes time working out where something is.
+2. **The team is your backup.** Your teammates carry the gas, equipment and judgment you'd need in a failure. That only works if you stay close, stay aware and dive with people trained the same way. UTD teams are three divers at most.
+3. **Standardize everything that can be standardized.** Same regulator setup, same signals, same procedures, and the same standard gases. In an emergency, nobody wastes time working out where something is. Standard gases also mean no deep air: below 100 feet, helium mixes keep narcosis in check.
 4. **Keep the configuration minimal.** Every extra hose, clip and gadget is something to snag, fail or fumble. If it doesn't earn its place, it doesn't go.
 5. **Plan the gas before the dive.** You know how much gas the team needs to get two divers to the surface from the worst point of the dive, and you turn the dive with that reserve intact.
 
 Underneath all five sits an attitude: any diver can call any dive, at any time, for any reason, without argument.
+
+## How does UTD put DIR into practice?
+
+UTD sums up its approach in [ten covenants](https://utdscubadiving.com/utds-10-covenants/). In short:
+
+1. **Unified team:** the team is your backup for gas, equipment and brain.
+2. **Thinking team:** nobody relies on one person or one piece of gear to make every decision. No "trust me" dives.
+3. **Rock bottom gas management:** every diver carries enough gas to get two divers to the next gas source.
+4. **Standard gas:** the right oxygen level for the depth, an equivalent narcotic depth of 100 feet or less, and no deep air.
+5. **Consistent, modular configuration:** the same system across the team and across every kind of diving.
+6. **Minimalism:** take only what the dive needs.
+7. **Holistic:** every piece of equipment has a reason for what it is and where it goes.
+8. **Streamlined and accessible:** everything stowed, everything reachable.
+9. **Situational awareness:** equal attention to the environment, the equipment and the team.
+10. **Proper training and experience** for the dive you're doing.
 
 ## What does a DIR gear setup look like?
 
@@ -99,7 +114,7 @@ Yes. The configuration scales from a single aluminum tank in a 3 mm suit to doub
 
 ### What does a DIR course actually teach?
 
-An entry course focuses on buoyancy, trim, propulsion (including the back kick), gas sharing with a long hose, basic gas planning and team awareness, with video debriefs so you can see your own diving.
+UTD's entry course for certified divers, Essentials of Recreational Diving, covers buoyancy and trim, five non-silting kicks (including the back kick), gas sharing with a long hose, valve drills, SMB deployment, rock bottom gas planning and team protocols, with video debriefs so you can see your own diving.
 
 ## Start doing it right
 

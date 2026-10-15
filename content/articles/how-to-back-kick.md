@@ -11,7 +11,7 @@ course: "/courses/propulsion-and-or-back-kick-extension"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: check the technique and drills against how you teach the back kick, add a short clip where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Checked against UTD Standards v6.0c (Propulsion/Back Kick MINI, Essentials of Tech, Tech 1). Before publishing: check the technique and drills against how you teach the back kick, add a short clip where marked, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
 
 **To back kick, start horizontal with your knees bent and fins up, slide your legs straight back, turn your fins outward, then pull them back toward you with the blades flat to push water forward.** Pause, glide back, and repeat slowly. The back kick lets you reverse, hold position and back away from the reef without stirring up the bottom. It depends far more on trim and timing than on strength.
 
@@ -21,12 +21,12 @@ Most divers who struggle with the back kick are trying too hard. It's a techniqu
 
 The back kick is how you:
 
-- **Hold position** in mild current or during a safety stop.
+- **Hold position** in mild current or at a stop during your ascent.
 - **Back away** from a reef, a wreck or a photo subject without turning around.
 - **Keep your place in the team** when the diver ahead slows down.
 - **Correct overshoot** without using your hands.
 
-It's also a prerequisite skill for technical training. Our Techreational course expects you to arrive comfortable with it.
+It's also a core skill for technical training. UTD's Essentials of Tech requires a back kick and a helicopter turn, Tech 1 requires you to hold position with a back kick, and our Techreational course expects you to arrive comfortable with it.
 
 ## How to do the back kick, step by step
 
@@ -75,7 +75,7 @@ It varies widely. Some divers get a functional back kick in one session with goo
 
 ## Which fins work best?
 
-Stiff blade fins with spring straps make the back kick much easier. Split fins and very soft fins don't give you a firm surface to pull against. See [Scuba Finning Techniques](/articles/scuba-finning-techniques) for more on fins and the other kicks.
+Stiff blade fins with spring straps make the back kick much easier. Split fins and very soft fins don't give you a firm surface to pull against, which is why UTD's back kick training requires non-split fins. See [Scuba Finning Techniques](/articles/scuba-finning-techniques) for more on fins and the other kicks.
 
 ## Common back kick mistakes
 
@@ -100,8 +100,8 @@ It asks you to coordinate several things at once, including trim, ankle rotation
 
 ### Do I need the back kick for recreational diving?
 
-It isn't required, but it makes you far more comfortable around reefs, wrecks and other divers, and it's expected before technical training.
+It isn't required to dive, but it makes you far more comfortable around reefs, wrecks and other divers. It's one of the five kicks taught in UTD's Essentials of Recreational Diving, and it's required in Essentials of Tech.
 
 ## Learn it with feedback
 
-Our [Propulsion and Back Kick Extension](/courses/propulsion-and-or-back-kick-extension) focuses on non-silting propulsion and positioning kicks while maintaining buoyancy, trim and control. It's also part of [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving).
+Our [Propulsion and Back Kick Extension](/courses/propulsion-and-or-back-kick-extension) focuses on non-silting propulsion and positioning kicks while maintaining buoyancy, trim and control. By the end, you hold your position with a back kick while neutral, including during a normal ascent. It's also part of [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving).

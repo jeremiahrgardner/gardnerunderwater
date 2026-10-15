@@ -11,85 +11,88 @@ course: "/courses/essentials-of-recreational-diving"
 draft: true
 ---
 
-<!-- DRAFT for Jay's review. Before publishing: confirm the rock bottom assumptions (2 divers, 1.0 cu ft/min stressed SAC each, 1 minute to solve the problem, 30 ft/min ascent, 3-minute stop at 15 ft) match how you teach minimum gas, adjust the numbers if not, change author to "Jay Gardner" if you approve it as yours, set the real date, then set draft: false. -->
+<!-- DRAFT for Jay's review. Revised against UTD's 2020 Dive Planning and Rock Bottom deck: rock bottom formula, consumption rates, the all usable / halves / thirds rules and GLADDDDD all follow that deck. The 60 ft example applies UTD's ascent profile (1 min to solve the problem, ascend to half max depth, 1-minute stops every 10 ft); confirm that's how you'd plan it. Then change author to "Jay Gardner" if you approve it as yours, set the real date, and set draft: false. -->
 
-**Gas management means planning, before the dive, how much gas you can use and how much you must keep in reserve.** The reserve, called rock bottom or minimum gas, is enough for you and an out-of-gas teammate to get from the deepest point of the dive to the surface, including a safety stop. Everything above rock bottom is usable gas, and your plan decides how much of it you spend before turning the dive.
+**Gas management means planning, before the dive, how much gas you can use and how much you must keep in reserve.** The reserve, called rock bottom, is enough gas for two divers sharing one supply to reach the surface, or the next available gas source, from the worst point of the dive. Everything above rock bottom is usable gas, and the type of dive decides how much of it you spend before turning around.
 
 Most recreational divers learn one rule: be back on the boat with 500 psi. That rule says nothing about depth, about your buddy, or about what happens if something goes wrong at the far end of the dive. A real gas plan does.
 
 ## What is rock bottom?
 
-Rock bottom is the minimum gas you need to handle the worst realistic emergency: your teammate runs out of gas at the deepest, furthest point of the dive, and you share your gas while the two of you ascend safely.
+Rock bottom is the minimum gas you need to handle the worst realistic emergency: your teammate runs out of gas at the deepest point of the dive, and you share your gas while the two of you make a controlled ascent.
 
 That's why rock bottom is calculated for two divers, not one. It's also why it changes with depth. At 100 feet, every breath uses about four times as much gas as at the surface.
 
-### The assumptions behind our numbers
-
-A rock bottom calculation needs a few assumptions. The examples in this article use these:
-
-- **Two divers** breathing from one cylinder.
-- **Stressed breathing:** 1.0 cubic foot per minute each, roughly double a relaxed rate, because nobody breathes calmly while sharing gas.
-- **One minute at depth** to recognize the problem and start sharing.
-- **Ascent at 30 feet per minute** to a stop at 15 feet.
-- **A 3-minute stop**, then a slow ascent to the surface.
-
-Your instructor may teach slightly different values. The method matters more than the exact numbers.
+In UTD's system, rock bottom gas management applies to every dive and every class. It's one of UTD's ten covenants.
 
 ## How to calculate rock bottom
 
-Break the emergency ascent into segments, work out how much gas each one uses, and add them up.
+UTD uses one formula:
 
-Here's the 60-foot example, for two divers on an aluminum 80:
+**Rock bottom = ascent time × stressed breathing rate × 2 divers × average depth (ATA)**
 
-1. **Solve the problem at 60 ft:** 1 minute at 2.82 atmospheres = 2.82 surface minutes.
-2. **Ascend from 60 to 15 ft:** 1.5 minutes at an average 2.14 atmospheres = 3.20 surface minutes.
-3. **Stop at 15 ft:** 3 minutes at 1.45 atmospheres = 4.36 surface minutes.
-4. **Ascend from 15 ft to the surface:** 0.5 minutes at 1.23 atmospheres = 0.61 surface minutes.
+- **Ascent time** includes one minute to solve the problem at depth, the ascent to half your maximum depth, and one-minute stops every 10 feet from there to the surface.
+- **Stressed breathing rate** is 1.0 cubic foot per minute per diver. UTD plans with 0.5 at rest, 0.75 while swimming and 1.0 under stress.
+- **Average depth** is the average depth of that ascent, in atmospheres absolute: depth in feet ÷ 33 + 1.
 
-That's 11.0 surface minutes. Two divers breathing 1.0 cubic foot per minute each use 22.0 cubic feet.
+### Worked example: 60 feet on an aluminum 80
 
-An aluminum 80 holds 77.4 cubic feet at 3,000 psi, so each psi is about 0.0258 cubic feet. 22.0 cubic feet is about 853 psi. **Round up: rock bottom is 900 psi at 60 feet.**
+1. **Ascent time:** 1 minute to solve the problem, 1 minute to ascend from 60 to 30 feet, then one-minute stops at 30, 20 and 10 feet = **5 minutes.**
+2. **Average depth:** 33 feet, or **2.0 ATA.**
+3. **Gas needed:** 5 × 1.0 × 2 divers × 2.0 = **20 cubic feet.**
+4. **Convert to psi:** an aluminum 80 holds 77.4 cubic feet at 3,000 psi. 20 ÷ 77.4 × 3,000 = 775 psi. **Round up: rock bottom is 800 psi at 60 feet.**
 
-For a full table by depth and tank, see the [Rock Bottom Calculator](/articles/rock-bottom-calculator).
+For a table by depth and tank, see the [Rock Bottom Calculator](/articles/rock-bottom-calculator).
 
 | Max depth | Rock bottom, aluminum 80 |
 | --- | --- |
-| 30 ft | 600 psi |
-| 60 ft | 900 psi |
-| 80 ft | 1,100 psi |
-| 100 ft | 1,400 psi |
+| 40 ft | 600 psi |
+| 60 ft | 800 psi |
+| 80 ft | 1,300 psi |
+| 100 ft | 1,600 psi |
 
-At 100 feet, the "500 psi" rule leaves two divers roughly 900 psi short.
+At 100 feet, the "500 psi" habit leaves two divers about 1,100 psi short.
 
 ## What is usable gas?
 
-Usable gas is everything above rock bottom. Start with a full aluminum 80 at 3,000 psi on a 60-foot dive, and your usable gas is 3,000 − 900 = **2,100 psi.**
+Usable gas is everything above rock bottom. Start with a full aluminum 80 at 3,000 psi on a 60-foot dive, and your usable gas is 3,000 − 800 = **2,200 psi.**
 
 How much of that you spend before turning around depends on the dive.
 
 ## How to set your turn pressure
 
+UTD uses three rules, chosen by whether you need to get back to where you started.
+
 | Dive type | Rule | Usable gas spent before turning | Turn pressure (60 ft, AL80) |
 | --- | --- | --- | --- |
-| Boat dive, ascend anywhere | All usable | All of it; ascend at rock bottom | Ascend at 900 psi |
-| Shore dive, must swim back | Halves | Half | Turn at 1,950 psi |
-| Current, overhead or long swim back | Thirds | One third | Turn at 2,300 psi |
+| Drift dive or live-boat pickup | All usable | All of it; start the ascent at rock bottom | Ascend at 800 psi |
+| Shore dive or anchored boat dive | Halves | Half | Turn at 1,900 psi |
+| Must return to the start, such as a cave | Thirds | One third | Turn at 2,300 psi |
 
-- **All usable:** on a boat dive where you can surface anywhere, you can use all your usable gas. You start the ascent when you reach rock bottom.
-- **Halves:** if you must return to your starting point, spend half your usable gas going out. Turn at 3,000 − 1,050 = 1,950 psi. You'll arrive back with rock bottom intact.
-- **Thirds:** when the swim back might be harder than the swim out, or the environment is overhead, spend only a third going out. Turn at 3,000 − 700 = 2,300 psi.
+- **All usable:** when navigation doesn't matter, like a drift dive with a live boat, all the gas above rock bottom is usable. Start the ascent when you reach rock bottom.
+- **Halves:** when it's good to return to the start but not required, like a shore dive or an anchored boat dive, spend half your usable gas going out. Turn at 3,000 − 1,100 = 1,900 psi.
+- **Thirds:** when you must return to the start, as in a cave or wreck penetration, spend only a third of your usable gas going out. Turn at 3,000 − 733 = 2,267 psi; round up to 2,300.
 
-Thirds come from cave diving, where the exit is the only way out. In open water, they're a sensible choice for strong currents and long shore swims.
+Thirds come from cave diving, where the exit is the only way out. In UTD planning, thirds are always taken from usable gas, after rock bottom is set aside. Thirds without rock bottom don't hold up in the ocean.
 
 ## Planning as a team
 
-Gas planning is a team activity. Everyone shares their numbers before the dive, and the team turns when the first diver hits their turn pressure.
+Gas planning is a team activity. Before every dive, UTD teams run through a short plan review, GLADDDDD:
 
-If teammates have different tanks or breathe at very different rates, the plan follows the most limiting diver. A diver on a smaller tank hits rock bottom sooner, and the team plans around that.
+- **Goal:** what the dive is for.
+- **Leader:** who leads the dive, leads the ascent and deploys the SMB.
+- **Air/gas:** the gas, the turn pressure and rock bottom.
+- **Depth:** maximum and average depth.
+- **Duration:** maximum and expected dive time.
+- **Deco:** the ascent plan.
+- **Direction:** headings and route.
+- **Distance:** limits on how far the team goes.
+
+Everyone states their numbers, and the team turns when the first diver reaches their turn pressure. The ascent starts on or before rock bottom. If teammates have different tanks or breathe at very different rates, the plan follows the most limiting diver.
 
 ## SAC rate: the number behind the plan
 
-Your surface air consumption (SAC) rate is how much gas you breathe per minute at the surface. Measure it on a few relaxed dives: note your pressure used, the time, and your average depth, then convert to surface terms.
+Your surface air consumption (SAC) rate is how much gas you breathe per minute at the surface. Measure it on a few relaxed dives: note the gas you used, the time and your average depth, then convert to surface terms.
 
 Knowing your SAC turns gas planning from guesswork into arithmetic. It also shows you when something is off: a dive where you breathe far more than usual is a signal to slow down and ask why.
 
@@ -99,7 +102,7 @@ Knowing your SAC turns gas planning from guesswork into arithmetic. It also show
 
 - **Planning for one diver.** Rock bottom must cover two.
 - **Using the same reserve at every depth.** Deeper dives need more.
-- **Forgetting the safety stop.** It uses real gas, especially when two divers share.
+- **Using thirds without rock bottom.** Set rock bottom aside first, then divide what's left.
 - **Not stating numbers before the dive.** If the team doesn't know each other's turn pressures, nobody does.
 - **Checking your gauge too rarely.** Check it often enough that it never surprises you.
 
@@ -107,15 +110,15 @@ Knowing your SAC turns gas planning from guesswork into arithmetic. It also show
 
 ### Is 500 psi enough to end a recreational dive?
 
-As a surface arrival target, it can be. As a reserve at depth, it usually isn't. At 60 feet, our calculation needs 900 psi for two divers to ascend safely from an aluminum 80.
+As a surface arrival target, it can be. As a reserve at depth, it usually isn't. At 60 feet, UTD's method needs 800 psi in an aluminum 80 for two divers to ascend safely.
 
 ### What is the difference between rock bottom and minimum gas?
 
 They mean the same thing. Different agencies and instructors use different names, including minimum gas and minimum gas reserve.
 
-### Do I need to calculate rock bottom on every dive?
+### When should I use halves instead of thirds?
 
-You need a number for every depth you dive. Most divers learn their rock bottom for common depths and tanks and recheck it when anything changes.
+Use halves when returning to your starting point is preferred but not required, like most shore and anchored boat dives. Use thirds when you must get back to the start, as in an overhead environment.
 
 ### Does rock bottom change with a steel tank?
 
@@ -123,4 +126,4 @@ Yes. The gas needed is the same, but each psi holds a different amount of gas in
 
 ## Learn to plan it, then live it
 
-Gas planning, gas sharing with a long hose and team awareness are all built into [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving). Planning to go deeper? [Essentials of Tech](/courses/essentials-of-tech) introduces more advanced gas planning and ascent strategies.
+Rock bottom gas planning, gas sharing with a long hose and team awareness are all part of [Essentials of Recreational Diving](/courses/essentials-of-recreational-diving). Planning to go deeper? [Essentials of Tech](/courses/essentials-of-tech) introduces more advanced gas planning and ascent strategies.
