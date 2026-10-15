@@ -21,7 +21,7 @@ export default function AboutPage() {
           <div>
             <div className="eyebrow">The person behind the training</div>
             <h1>
-              Diver.
+              Cave Diver.
               <br />
               Teacher.
               <br />
