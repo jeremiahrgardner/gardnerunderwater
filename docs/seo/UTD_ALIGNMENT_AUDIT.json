@@ -1,16 +1,15 @@
 {
-  "review_date": "2026-10-15",
-  "status": "Local revisions, not deployed",
+  "review_date": "2026-10-16",
+  "base_commit": "dc9036d897097c8fa285805d0582da2fa81e3c7e",
+  "status": "Completed editorial review and local verification; not deployed",
   "scope": {
-    "published_articles_revised": 14,
-    "draft_stubs_reviewed": 34,
-    "draft_stubs_with_added_source_guidance": 17,
-    "additional_files": [
-      "components/MinimumGasCalculator.tsx",
-      "lib/courses.ts"
-    ]
+    "published_articles_reviewed": 48,
+    "articles_with_editorial_refinements": 46,
+    "articles_with_existing_copy_retained": 2,
+    "review_dates_updated": true,
+    "source_documents": 21
   },
-  "authority": "Documents are evidence, not task instructions. User explicitly authorized content refinement and chose Gardner’s stricter equipment list. Instructor-only failure simulation directions were not converted into reader self-practice instructions.",
+  "authority": "User requested the same evaluation and refinement across all 48 current articles. Prior direction to use Gardner’s stricter equipment list remains in force. Documents supply evidence; instructor-only directions are not reader practice instructions.",
   "sources": [
     {
       "id": "S1",
@@ -94,344 +93,935 @@
       "id": "S14",
       "file": "User-supplied UTD Min Deco (NDL) Table image",
       "authority": "Explicit table supplied with this request; numerical rows transcribed verbatim, with units spaced for readability."
+    },
+    {
+      "id": "S15",
+      "file": "UTD-class-evaluation-parameters.pdf",
+      "access": "Verified readable original in connected Drive, 2026-10-16",
+      "used_for": "Exact buoyancy scoring bands and course-specific evaluation targets"
+    },
+    {
+      "id": "S16",
+      "file": "UTD-Gas-planning-worksheet-2020.pdf",
+      "access": "Verified readable original in connected Drive, 2026-10-16",
+      "used_for": "Consumption/volume/time formulas; acronym and emergency-rate discrepancy"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.gue.com/es/node/12775",
+      "title": "Official GUE Basic Fundamentals course page",
+      "access": "Read 2026-10-16"
+    },
+    {
+      "id": "S18",
+      "url": "https://www.gue.com/diver-training/explore-gue-courses/technical/technical-fundamentals",
+      "title": "Official GUE Technical Fundamentals course page",
+      "access": "Read 2026-10-16"
+    },
+    {
+      "id": "S19",
+      "url": "https://dan.org/alert-diver/article/gradient-factors/",
+      "title": "DAN: Gradient Factors",
+      "access": "Read 2026-10-16; external explanation, not UTD policy"
+    },
+    {
+      "id": "S20",
+      "title": "GUE Technical Fundamentals standards v10.4",
+      "url": "https://www.gue.com/files/Standards_and_Procedures/standards10/TechFund-Standards-v10.4.pdf",
+      "access": "Read 2026-10-16; pp.1–3 verify prerequisites, maximum depth and skill criteria"
+    },
+    {
+      "id": "S21",
+      "title": "GUE Basic Fundamentals standards v10.4",
+      "url": "https://www.gue.com/files/Standards_and_Procedures/standards10/BasicFund-Standards-v10.4.pdf",
+      "access": "Read 2026-10-16; pp.1–3 verify selected comparison requirements"
     }
   ],
   "articles": [
     {
       "slug": "5-ft-vs-7-ft-long-hose",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Gardner equipment list pp.4–6: 7-foot primary for local training. Distinguish UTD v6c §3.0-2 general allowance of 5 or 7 feet. Retain at the canister or waist belt; preserve the owner-approved donation sequence."
+      "url": "https://gardnerunderwater.com/learn/5-ft-vs-7-ft-long-hose",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains Gardner 7-foot specification and UTD 5/7-foot minimum; qualifies body fit, usable reach and cross-configuration transfer.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S1 UTD Standards v6c §3.0-2; S7 Gardner equipment list pp.4–6",
+        "S7 Gardner equipment list pp.4–6; equipment fit",
+        "S7 Gardner equipment list pp.4–6; S4 Team Positioning",
+        "S7 Gardner equipment list pp.4–6; S1 UTD Standards v6c §3.0-1",
+        "Source-supported 40–60 word answer; see article source map"
+      ],
+      "sha256_before": "47100604a6cdee3c99e56b4dcd037149473b4ccc94824001c226715a1bccf5ac",
+      "sha256_after": "78212e192a705e56031167796773d6f5830d2aa93a9c96d1d404091727cf0169",
+      "tracked_refinements": 6
     },
     {
       "slug": "backplate-and-wing-for-beginners",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/backplate-and-wing-for-beginners",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Removes surface-posture guarantees and automatic skill-transfer claims; retains correct fit, local configuration and try-before-buy guidance.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S6 Buoyancy, Trim and Propulsion balanced rig; S7 Gardner equipment list equipment fit",
+        "S6 Buoyancy, Trim and Propulsion balanced system; S7 Gardner equipment list",
+        "S1 UTD Standards v6c §§1.2.1,3-150.1"
+      ],
+      "sha256_before": "d0c960ff4e7de05e9060ebfed1032fee2b3a6f958b34c9b22a49f40f5e8b315e",
+      "sha256_after": "04e0a582b3cd56fae6f50d7b34aace6e12ca8537a0f0ea05a4e52e9733d39b22",
+      "tracked_refinements": 3
     },
     {
       "slug": "backplate-and-wing-vs-jacket-bcd",
+      "url": "https://gardnerunderwater.com/learn/backplate-and-wing-vs-jacket-bcd",
       "state": "published",
-      "review": "Distinguished Gardner BP&W requirements from agency rear-inflation minimums; clarified ballast redistribution and removed surface/trim guarantees from the answer.",
-      "references": "S1 §3.0-2; S7 pp.3,12–14; S6 pp.12,16",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Qualifies surface-flotation comparison; retains local BP&W versus general UTD rear-inflation distinction.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S6 Buoyancy, Trim and Propulsion balanced system; remove design guarantees"
+      ],
+      "sha256_before": "9d2b417065aa2fcbc31f176e6b57b7647a4f2570a3cad204938959215087adea",
+      "sha256_after": "45ed2f9317d1592e0a676db83a0582a2c01be3bc5da9da76a8ed242fcfc34ee6",
+      "tracked_refinements": 1
     },
     {
       "slug": "balanced-rig",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Buoyancy, Trim, and Propulsion pp.4–16. Check near-empty-cylinder shallow neutrality AND full-cylinder depth/failure balance, suit compression and ditchable gas-weight ballast. Apply Gardner's no-steel-with-wetsuits rule. Do not reduce the assessment to an unsupervised swim-up drill."
+      "url": "https://gardnerunderwater.com/learn/balanced-rig",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks shallow neutrality and full-rig failure balance; corrects blanket cylinder-buoyancy statements and distinguishes UTD steel-doubles exception from local policy.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S1 UTD Standards v6c §1.4.6; S6 Buoyancy, Trim and Propulsion balanced rig",
+        "S1 UTD Standards v6c §1.4.6; S7 Gardner equipment list p.8; user-approved local policy",
+        "S1 UTD Standards v6c §1.4.6; S7 Gardner equipment list p.8"
+      ],
+      "sha256_before": "89d0ea02d4b08c67e25020f2802cbf458c7c39dee988465fad6840dff6b8de2d",
+      "sha256_after": "8fcca6849b0bb01f3ae17bd1c6cd20080a7012d52b6a2becbd7e3ef64b6589d2",
+      "tracked_refinements": 4
     },
     {
       "slug": "breathing-for-buoyancy",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Foundational Playbook buoyancy teaching and Buoyancy, Trim, and Propulsion pp.12–17: wing balances the system; lungs control fine buoyancy. No breath-holding, skip-breathing or universal timed breathing cadence."
+      "url": "https://gardnerunderwater.com/learn/breathing-for-buoyancy",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains continuous relaxed breathing and lung-volume control; prevents the drill being read as a ban on necessary venting or inflation.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S6 Buoyancy, Trim and Propulsion pp.12–17",
+        "S6 Buoyancy, Trim and Propulsion lung control and expanding gas; S9 buoyancy teaching"
+      ],
+      "sha256_before": "47b62257093c869fff89c875c38f5c89757a62618f56deea028b31fa0a05647c",
+      "sha256_after": "92470df53ca79151d4ab8abf9ecbfea04ab59c0611e2be3499f2662b4507a28a",
+      "tracked_refinements": 2
     },
     {
       "slug": "bungeed-backup-regulator",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Gardner list pp.4–6: 22–24-inch backup hose. After primary donation take the backup with the LEFT HAND, per owner correction. Do not prescribe chin-only or hands-free recovery."
+      "url": "https://gardnerunderwater.com/learn/bungeed-backup-regulator",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains left-hand recovery, 22–24-inch local hose and inspection; qualifies snag-free claims and unverified attachment prescriptions.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S7 Gardner equipment list pp.4–6; S3 Situational Awareness equipment awareness",
+        "S7 Gardner equipment list pp.4–6; equipment fit and function"
+      ],
+      "sha256_before": "80de3bfa7aa449eb2bfff96313219e407fe4fa0028c7da59845c1ea03706ead8",
+      "sha256_after": "7429efb4925a10c67b4a905ecee98cd0d92a5ec9f17837691da4c3a92af87305",
+      "tracked_refinements": 2
     },
     {
       "slug": "choosing-a-backplate-and-wing",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/choosing-a-backplate-and-wing",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Bases plate and lift selection on the actual diver, cylinders and negative load; retains local harness/D-ring configuration and exposure policy.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S6 Buoyancy, Trim and Propulsion pp.12,16; S7 Gardner equipment list p.8",
+        "S7 Gardner equipment list pp.5,8; S1 UTD Standards v6c §1.4.6",
+        "S6 Buoyancy, Trim and Propulsion pp.4–12"
+      ],
+      "sha256_before": "c217253451b59965e1338a5ae747bea9434ac5c3cebd05bbb89567af0ae4ade0",
+      "sha256_after": "34af9d181a174880617d40e2dfb64d27ccdc0e6dbe01c281f73894ab12e6f5b1",
+      "tracked_refinements": 3
     },
     {
       "slug": "dir-for-recreational-divers",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/dir-for-recreational-divers",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Labels illustrative comparisons fairly; states reserve assumptions, halves criteria, 3,000 psi starting pressure and correct Min Deco first-stop/travel convention.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S1 UTD Standards v6c covenants; S5 Why we dive",
+        "S10 Diveplanning and Rock Bottom rock bottom formula; site calculator model",
+        "S1 UTD Standards v6c inclusive, thinking-team philosophy",
+        "S1 UTD Standards v6c covenants, inclusive teaching",
+        "S10 Diveplanning and Rock Bottom formula/halves criteria",
+        "S2 Recreational Ratio Deco p.2",
+        "Source-supported 40–60 word answer; see article source map",
+        "S2 Recreational Ratio Deco pp.2–4",
+        "S10 Diveplanning and Rock Bottom reserve formula"
+      ],
+      "sha256_before": "d1c8b8256aa69dd3bb1bda7c72a075173de3110f69263361f45958d67a2e5e4b",
+      "sha256_after": "54c009049cc215bafd35a4c4bd0d875311346ce62581f464aab1a9a22cc63649",
+      "tracked_refinements": 9
     },
     {
       "slug": "dir-gear-configuration",
+      "url": "https://gardnerunderwater.com/learn/dir-gear-configuration",
       "state": "published",
-      "review": "Corrected doubles wing-inflator supply to right post; local 7-foot hose, adjustable D-rings, balanced exposure, backup equipment and left-side aluminum stage/deco bottles; distinguished local packing list from UTD minimums.",
-      "references": "S1 §§1.4.6–1.4.7,3.0-2; S7 pp.3–14; S13 p.2; S9 equipment-awareness failure example",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks right-post wing inflation, local 7-foot primary, left-hand backup, left-side aluminum bottles and local/general equipment distinctions; improves ballast language.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S6 Buoyancy, Trim and Propulsion balanced-rig arithmetic; avoid treating all steel tanks alike"
+      ],
+      "sha256_before": "3759984155bcd4a74d433e115b9da19da47ea21cba829bf844b531ca6b52ab00",
+      "sha256_after": "361171acfcc44465677d60c67e9c1f834a22d8f6b7937a699085368040161aeb",
+      "tracked_refinements": 1
     },
     {
       "slug": "dir-glossary",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/dir-glossary",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks all definitions against linked articles; qualifies isolation and MOD, corrects volume/time units and retains supported team-size and gas limits.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S11 nine failures; avoid guarantee",
+        "S16 UTD Gas Planning Worksheet volume/time dimensional units",
+        "S1 UTD Standards v6c §§1.4.1–1.4.2; S13 markings"
+      ],
+      "sha256_before": "b599c91e4c518835470e88be3da15f62b6ab7dc6e0e56cda1bf83c1ffc0f6319",
+      "sha256_after": "ccf1309a8a57ea9e4de0a05fd0ca6f5064e0a9edd1083c13395099dffd80e8ee",
+      "tracked_refinements": 3
     },
     {
       "slug": "dive-light-signals",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/dive-light-signals",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains pre-agreed general light conventions; clarifies backup-light deployment and exit decisions when required illumination fails.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S1 UTD Standards v6c §3-222; S9 Equipment Awareness: night light failure critical"
+      ],
+      "sha256_before": "1d4f0bfcb36c6dba7940c6256e83ff44410bd4f80d279ce62948b576f675767e",
+      "sha256_after": "81b4099b2cca8dfdd2f9441584493c8bd853b57fca0f171443cf7914dfeb238a",
+      "tracked_refinements": 1
     },
     {
       "slug": "drysuit-buoyancy-and-trim",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/drysuit-buoyancy-and-trim",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Aligns suit/wing/lung roles, normal horizontal posture and failure response; avoids using fin weight to hide excess suit gas; preserves local steel/wetsuit restriction.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S6 Buoyancy, Trim and Propulsion pp.12–17; S9 buoyancy teaching",
+        "S1 UTD Standards v6c §3-280; S6 Buoyancy, Trim and Propulsion",
+        "S6 Buoyancy, Trim and Propulsion pp.12–17; S9 failed-bladder response",
+        "S6 Buoyancy, Trim and Propulsion p.17: knees up, feet flat",
+        "S6 Buoyancy, Trim and Propulsion pp.16–17",
+        "Source-supported 40–60 word answer; see article source map",
+        "S1 UTD Standards v6c §1.4.6; S7 Gardner equipment list p.8"
+      ],
+      "sha256_before": "c9702bfac551b85a59cb87ac2bcee830d366e9e5c578dfb10a17c4e9ce4c8c63",
+      "sha256_after": "3427535d0717aefafd1e1f346c42fab39d788523aae55a7bbbaa2a650802794c",
+      "tracked_refinements": 7
     },
     {
       "slug": "fins-for-frog-kicking",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/fins-for-frog-kicking",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains appropriate non-split fins and fit; qualifies drysuit/heavy-fin and maintenance advice.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S6 Buoyancy, Trim and Propulsion pp.16–18; S7 Gardner equipment list p.7",
+        "S6 Buoyancy, Trim and Propulsion pp.16–17; S1 UTD Standards v6c §3-280",
+        "S7 Gardner equipment list p.7; equipment maintenance"
+      ],
+      "sha256_before": "904b65f32309f78b4c0fbd719c620deff55f9d1e4f4bd55062a84f32860f1a4e",
+      "sha256_after": "583f251daddcd6b3948df505dc7c09a7c96d84008e57062e467a0f0ad5adadf4",
+      "tracked_refinements": 3
     },
     {
       "slug": "gradient-factors-explained",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "The supplied UTD sources do not establish preferred gradient-factor settings. Explain the distinction from UTD Min Deco/Ratio Deco without inventing recommended settings or substituting a computer configuration for the trained team ascent plan."
+      "url": "https://gardnerunderwater.com/learn/gradient-factors-explained",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Removes lower-is-always-safer claim; explains first-stop distribution and continued ongassing without inventing UTD GF settings.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16",
+        "S19 DAN Gradient Factors, first-stop ongassing discussion",
+        "S19 DAN Gradient Factors",
+        "Source-supported 40–60 word answer; see article source map"
+      ],
+      "sha256_before": "49c6d098eeac5fe204db77b3d579853f3d0e5ec3c8393ee28f30b59afdb79d0d",
+      "sha256_after": "ca000748a48146bee667f0153284efffeb12f1554d573db682123c6bc5891f60",
+      "tracked_refinements": 4
     },
     {
       "slug": "gue-vs-utd-vs-hogarthian",
+      "url": "https://gardnerunderwater.com/learn/gue-vs-utd-vs-hogarthian",
       "state": "published",
-      "review": "Qualified cylinder options by individual course requirements; replaced automatic crossover/comfort assurance with equivalency assessment. GUE-specific claims remain outside verification by the supplied UTD references.",
-      "references": "S1 §3.0-1 and course prerequisites",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Verifies current GUE split entry structure at official pages; preserves UTD course/configuration scope and assessed crossover; replaces inaccessible reference link.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S18 official GUE course page; replace inaccessible PDF with verified source",
+        "S20 §§3.2.1.2–3.2.1.9",
+        "S21 §§3.1.7.2–3.1.7.9"
+      ],
+      "sha256_before": "094a032b1ed6235c3b229cea10efeaefc221bad441f2436455688b057ac5d0a7",
+      "sha256_after": "6ce07af2d4f8bce87a91bdffc943aeedf82c74c2dc018735e5fba984d0c33b68",
+      "tracked_refinements": 1
     },
     {
       "slug": "helicopter-turn-and-modified-flutter",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/helicopter-turn-and-modified-flutter",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains five foundation/seven broader movements and phase teaching; removes a universal preference for modified flutter near fine silt.",
+      "references": [
+        "S6 pp.17–18",
+        "S1 §§3-150.1,3-150.3,3-221",
+        "S6 Buoyancy, Trim and Propulsion p.18; S4 Team Positioning environment"
+      ],
+      "sha256_before": "2a0625dee7d7e38f0b522f4a37504b6c36ef01610430b2a38b03db40a10be38f",
+      "sha256_after": "cc5d6c1e47bcdf403cb54577da613c55a6b70e05dbb02561cd848be6cd66ae78",
+      "tracked_refinements": 1
     },
     {
       "slug": "hogarthian-configuration",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/hogarthian-configuration",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves modular minimal configuration; emphasizes thinking/awareness and verifies actual drysuit inflation supply rather than mandating one gas path.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S1 UTD Standards v6c covenants 2,8,9",
+        "S1 UTD Standards v6c §3-280 inflation setup; S9 right-post/wing failure example"
+      ],
+      "sha256_before": "9318fbd3935038cc1337f30a193e8986e732fbc8e6eb8a04ed32fee61ff846af",
+      "sha256_after": "eeff8b39b45056253e48774da361a2644acbaef09b3c64c6a6b4a003ba987392",
+      "tracked_refinements": 2
     },
     {
       "slug": "horizontal-trim-feet-sinking",
+      "url": "https://gardnerunderwater.com/learn/horizontal-trim-feet-sinking",
       "state": "published",
-      "review": "Kept weight near the center, avoided distal ballast and automatic higher/heavier prescriptions; removed valve-near-head fitting target; clarified lung/wing/suit roles.",
-      "references": "S6 pp.12,16–17; S7 p.8; S9 buoyancy teaching",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Retains central ballast, posture and cylinder fitting; prevents heavy fins being used to conceal poor drysuit control.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S6 Buoyancy, Trim and Propulsion pp.16–17; S1 UTD Standards v6c §3-280"
+      ],
+      "sha256_before": "b440b0f99fd95542d66224cc83272d0b965dbd0873faba38021cb9d8bfd8a445",
+      "sha256_after": "03480568df30088748c639779c58be444ac09b5eb00f21fafce7ccbe4dd7626e",
+      "tracked_refinements": 1
     },
     {
       "slug": "hover-without-hands",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/hover-without-hands",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Confirms buoyancy bands against the recovered class-evaluation sheet, preserves ± and strict less-than notation, and separates general minimum score from course-specific targets.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S15 UTD Class Evaluation Parameters buoyancy scoring",
+        "S15 UTD Class Evaluation Parameters preserve strict less-than and ± band",
+        "S1 UTD Standards v6c §1.3.2; S15 UTD Class Evaluation Parameters course matrix",
+        "S15 UTD Class Evaluation Parameters hands-for-buoyancy distinction"
+      ],
+      "sha256_before": "f8cb4f7a1eab89232b3cd29a1d1e604a1552b7b34d237d48368572571ff254cd",
+      "sha256_after": "e5ce85ea87e0a5973b8c2c6964514e6daf7e334964b9e5152b44011ec47f8e0a",
+      "tracked_refinements": 8
     },
     {
       "slug": "how-much-weight-do-i-need-scuba",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/how-much-weight-do-i-need-scuba",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Prevents deliberately consuming emergency gas to reach a check pressure; corrects cylinder-model/steel exceptions and supervises ballast adjustments.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S6 Buoyancy, Trim and Propulsion p.16; S1 UTD Standards v6c rock-bottom covenant",
+        "S1 UTD Standards v6c §1.4.6",
+        "S1 UTD Standards v6c §1.4.6; S6 Buoyancy, Trim and Propulsion",
+        "S6 Buoyancy, Trim and Propulsion p.16; S1 UTD Standards v6c training skill control",
+        "S1 UTD Standards v6c §1.4.6; S7 Gardner equipment list p.8"
+      ],
+      "sha256_before": "cf7472d899724fafb911a26b5b329a44c02aa9fd48ab6db7f9db6c0fba504541",
+      "sha256_after": "5ea5c76bd1deac03d9c50d79ff6be3aa842734763a4f1a3b62edd2f1b0ea1068",
+      "tracked_refinements": 5
     },
     {
       "slug": "how-to-back-kick",
+      "url": "https://gardnerunderwater.com/learn/how-to-back-kick",
       "state": "published",
-      "review": "Replaced unsupported ankle-and-knee prescription with source-supported trim and loading/power/glide framework; separated backward positioning from buoyancy control.",
-      "references": "S6 pp.17–18; S1 §3-150.3",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks neutral trim, load/power/rest and instructor demonstration; preserves corrected non-prescriptive sequence and avoids an unsupported fastest-feedback promise.",
+      "references": [
+        "S6 pp.17–18",
+        "S1 §§3-150.1,3-150.3,3-221",
+        "S6 Buoyancy, Trim and Propulsion pp.16–18; avoid unsupported outcome superlative"
+      ],
+      "sha256_before": "a81ade700d17f35146ca42326069aafce8d7cbbf26289f6ec17fab9ce26d407a",
+      "sha256_after": "6bc8470e3d4bcc3472df2c8f077a00632aadb26f63f36a6cc272461595e3ee6f",
+      "tracked_refinements": 1
     },
     {
       "slug": "how-to-become-a-technical-diver",
+      "url": "https://gardnerunderwater.com/learn/how-to-become-a-technical-diver",
       "state": "published",
-      "review": "Separated UTD recreational, technical and overhead categories; added 25/25 to Tech 1, actual prerequisite alternatives, oxygen-cycle/nitrox-50 limits and age restriction for doubles/nitrox in Essentials of Rec.",
-      "references": "S1 §§1.1.4,1.3.4,3-150.1,3-150.3,3-300,3-310",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks ages, dive counts, prerequisite alternatives, gas/depth/deco limits and category distinctions; reinforces Tech 1 alternatives rather than requiring Techreational in every case.",
+      "references": [
+        "S1 §§1.1.4,1.3.2–1.3.4 and individual courses",
+        "S8",
+        "S9",
+        "S15",
+        "S1 UTD Standards v6c §§3-300,3-310"
+      ],
+      "sha256_before": "fe2e7219e77f043f0317adad66420ea9b9c00d44c4b76d6679736c601c721c0c",
+      "sha256_after": "e19a465e5fcf400e2efe116b02aaf44bf31edcd9d64f481af1e80502d6745bef",
+      "tracked_refinements": 1
     },
     {
       "slug": "how-to-deploy-an-smb",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Foundational Playbook: SMB deployment is a team skill. Preserve depth, trim, team communication and gas awareness. Confirm local spool length: course checklists say 100 feet; equipment overview says 125 feet."
+      "url": "https://gardnerunderwater.com/learn/how-to-deploy-an-smb",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Aligns with oral-inflation MINI equipment and neutral deployment; coordinates depth/breathing/line awareness, jam release, entanglement and lost-marker response without a recovery guarantee.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S1 UTD Standards v6c §3-220; S10 Diveplanning and Rock Bottom leader/SMB plan",
+        "S1 UTD Standards v6c §3-220 equipment",
+        "S1 UTD Standards v6c §3-220 proper breathing, neutral deployment; S9 team skill",
+        "S1 UTD Standards v6c §3-220 failures/emergency procedures; S7 Gardner equipment list cutting tools",
+        "S1 UTD Standards v6c §3-220 failures; no recovery guarantee",
+        "S1 UTD Standards v6c §3-220 neutral deployment; S9 personal skills"
+      ],
+      "sha256_before": "078e03aa42f2a98ba46ecc274eceacf2b1edd454c1fe74853bc5aace56fcb249",
+      "sha256_after": "0a94f044ce11b22e5787bdf6e0f0c8c501bf1760a135c042a020b30fd0dd7bf3",
+      "tracked_refinements": 6
     },
     {
       "slug": "how-to-frog-kick",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/how-to-frog-kick",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains phase teaching and non-silting intent; removes unsupported twice-the-effort claim and absolute only-works-horizontal assertion.",
+      "references": [
+        "S6 pp.17–18",
+        "S1 §§3-150.1,3-150.3,3-221",
+        "S6 Buoyancy, Trim and Propulsion p.18; remove unsupported quantified efficiency claim",
+        "S6 Buoyancy, Trim and Propulsion pp.17–18"
+      ],
+      "sha256_before": "204b23366f2dbc262916926d06c4449ad6b9eeff4093dc47fd02ba8809cdd827",
+      "sha256_after": "d6796a970b24efe1089d3071dc7286236db488b2be18020024ecbd9f8ac7f9f9",
+      "tracked_refinements": 2
     },
     {
       "slug": "improve-air-consumption",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/improve-air-consumption",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains workload/trim-based efficiency and emergency planning rate; qualifies individual demand, ongoing breathing difficulty and rates above the examples.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S10 Diveplanning and Rock Bottom planning rates; S3 Situational Awareness gas awareness",
+        "S3 Situational Awareness incident chain, calling dive; S1 UTD Standards v6c proper training",
+        "S10 Diveplanning and Rock Bottom emergency planning rates"
+      ],
+      "sha256_before": "a05b1f3efa6c2051ed474052bb802eccc1bfed540d5a685cbffbeb646996849e",
+      "sha256_after": "409af9b0398b2eaea1e472ea819e0b81ac51cd7e49e6cb9afc805e7bcc8d6d2c",
+      "tracked_refinements": 3
     },
     {
       "slug": "is-dir-diving-elitist",
+      "url": "https://gardnerunderwater.com/learn/is-dir-diving-elitist",
       "state": "published",
-      "review": "Distinguished inclusive entry to training from optional certification requirements; corrected the example to primary donation rather than searching for a teammate necklace backup.",
-      "references": "S1 §§1.1.3–1.1.4,3.0-2; owner correction",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves inclusive thinking-diver philosophy while making actual course equipment requirements explicit.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S1 UTD Standards v6c §3.0-2; S7 Gardner equipment list local requirements"
+      ],
+      "sha256_before": "83440dd4cf0136d64b3530efabb6a1843f5f04e3413ce7a75f2eacf177cf2d86",
+      "sha256_after": "80eee3da72d8376ae96b517cb6b98132cb1385b9a4c0c8b017bda35662837b98",
+      "tracked_refinements": 1
     },
     {
       "slug": "la-jolla-shores-skills-practice",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/la-jolla-shores-skills-practice",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Uses a visible bottom as a reference rather than a safety guarantee; applies actual return/exit requirements and labels gas reserves as examples.",
+      "references": [
+        "S1 covenants and drysuit course",
+        "S4",
+        "S7 p.8",
+        "S10",
+        "S10 Diveplanning and Rock Bottom usable gas criteria; site calculator model",
+        "S1 UTD Standards v6c §3-220 neutral deployment; no depth safety guarantee"
+      ],
+      "sha256_before": "09a0ea0d31c524389e447ba21ef0a1b8a6a98c5c2ca679e4ea3bf8a7cd80e7bc",
+      "sha256_after": "b095334add9fbed7188a3666441d9386e6c619518fd30c4ceb48f3a4bc8bc43f",
+      "tracked_refinements": 2
     },
     {
       "slug": "long-hose-configuration",
+      "url": "https://gardnerunderwater.com/learn/long-hose-configuration",
       "state": "published",
-      "review": "Preserved the owner-approved slow presentation and left-hand backup recovery; aligned retention and local 7-foot recommendation; removed hands-free recovery and unchecked-octopus claims.",
-      "references": "Owner corrections; S1 §3.0-2; S7 pp.4–6; S3 p.5",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves all owner-approved donation mechanics and local hose policy; scopes S-drill claims to relevant open-circuit training rather than every UTD class.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S1 UTD Standards v6c open-circuit course skills; exclude academic/blender/technician classes"
+      ],
+      "sha256_before": "b5bb76621aba686d9f7e82d8ad68bfce1487f3db75aef45032e4c5058a1b3ee1",
+      "sha256_after": "57da405be4e5bcc027599eb5385c206db8e903075aad99a52cefc59fd5940c1d",
+      "tracked_refinements": 1
     },
     {
       "slug": "out-of-air-drill-long-hose",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use the owner-approved sequence in long-hose-configuration: slowly present the primary, take backup with LEFT HAND, clear neck loop, unroute from light or waist belt and show receiving diver it is clear. Playbook instructor failure simulations are not self-practice instructions."
+      "url": "https://gardnerunderwater.com/learn/out-of-air-drill-long-hose",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves slow removal/presentation and left-hand backup; accounts for lost wing/suit inflation, supported contact, neutral practice and continued thinking during the exit.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S1 UTD Standards v6c rock bottom, valve/gas failures; S9 failed wing and compounded failures",
+        "S4 Team Positioning issue management; S8/S9 team positioning",
+        "S1 UTD Standards v6c thinking-team covenant",
+        "S6 Buoyancy, Trim and Propulsion lung control; S4 Team Positioning",
+        "S1 UTD Standards v6c open-circuit versus academic/technician courses"
+      ],
+      "sha256_before": "58d1a01f5992e7c50aa32bb67f2c1a24e3d3c33dcc11397bc1d4c49fcac6e776",
+      "sha256_after": "b2ebe8d469c32afa72d4a48d39752b56f08a7fe64aa85d5122e9f37a949963f6",
+      "tracked_refinements": 5
     },
     {
       "slug": "pre-dive-checks",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Situational Awareness pp.5–6: equipment match, modified S-drill, applicable stage deployment with team gas/MOD verification, modified V-drill (operable and fully open valves), GLADDDDD, bubble check and front/back check."
+      "url": "https://gardnerunderwater.com/learn/pre-dive-checks",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Adds applicable stage deployment with function/gas/MOD verification; treats gauge movement as a possible supply restriction, not proof of one specific fault.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S3 Situational Awareness equipment awareness; modified valve check",
+        "S3 Situational Awareness p.5 exact pre-dive sequence",
+        "S3 Situational Awareness p.5"
+      ],
+      "sha256_before": "815b8129de986f0ddcc27e201876d627cba5c907c4ae1978d9c030262b91dbe2",
+      "sha256_after": "c6ce658b21d8af0ffa7714095baeb7e59b32c8fef95c1eaebdcc40826a99c2d6",
+      "tracked_refinements": 3
     },
     {
       "slug": "recreational-vs-technical-diving",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/recreational-vs-technical-diving",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Uses UTD training categories; avoids a universal safe/direct-ascent guarantee and distinguishes recreational Min Deco stops from planned staged decompression.",
+      "references": [
+        "S1 §§1.1.4,1.3.2–1.3.4 and individual courses",
+        "S8",
+        "S9",
+        "S15",
+        "S1 UTD Standards v6c §1.3.4 recreational category; avoid universal ascent guarantee",
+        "S1 UTD Standards v6c §1.3.4; S2 Min Deco",
+        "S1 UTD Standards v6c §§3-300,3-310"
+      ],
+      "sha256_before": "7af8de9d5bdc500b9397cbaa95ffc81a0c1575759d381bbcdc46ea2017416bee",
+      "sha256_after": "05309d4adb9d6d73d43d141017e29225ce3280eade3f82fef6ee78abc18ba2ac",
+      "tracked_refinements": 4
     },
     {
       "slug": "rock-bottom-calculator",
+      "url": "https://gardnerunderwater.com/learn/rock-bottom-calculator",
       "state": "published",
-      "review": "Labeled reserve tables as calculated examples, not issued UTD tables; documented time-weighted emergency profile, source rounding, cylinder conversion and model limits; removed universal stress behavior claims.",
-      "references": "S10 p.3; S2 pp.2–6; existing minimum-gas model",
-      "authoring_guidance": null
+      "review_status": "reviewed_existing_copy_retained",
+      "review": "Rechecks 40/60/80/100-foot table against existing segment model, 100-foot eight-minute source example, cylinder ratings and rounding; keeps the model illustrative and separate from NDL/deco scheduling.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16"
+      ],
+      "sha256_before": "79fc8ea570f181f42383addf460acc7c6bf300788ab2cd1b3e6227c5c73342d8",
+      "sha256_after": "49c37b7816c30daef3d8936d41e112ce0255ab3258d65dedd620672db8f927e4",
+      "tracked_refinements": 0
     },
     {
       "slug": "rule-of-thirds-diving",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Diveplanning and Rock Bottom pp.3–6: reserve rock bottom first, then divide usable gas. Account for gas sharing on emergency return, stress, delays and slower travel. Thirds arithmetic is not a complete overhead plan."
+      "url": "https://gardnerunderwater.com/learn/rule-of-thirds-diving",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks usable-gas-first arithmetic and emergency return caveats; removes an unsupported HP cylinder designation from the source example and universal stress behavior claims.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16",
+        "S10 Diveplanning and Rock Bottom imperial thirds example; no specific HP model stated",
+        "S10 Diveplanning and Rock Bottom thirds broad assumptions"
+      ],
+      "sha256_before": "ade866afb0d042b6878a5168f4c85efb8f60d228be9083c483abf3b15d40b125",
+      "sha256_after": "0d42143b95da7f3a1141a058772a98bdc510b7e230cdcb2f6b8e11902025cba1",
+      "tracked_refinements": 2
     },
     {
       "slug": "sac-rate-and-rmv",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/sac-rate-and-rmv",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks pressure/volume dimensional units and both worked examples; notes worksheet acronym variation, reserve assumptions, gas/time restrictions and practical limits of calculated bottom time.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16",
+        "S16 UTD Gas Planning Worksheet worksheet unit labels; S10 Diveplanning and Rock Bottom",
+        "S10 Diveplanning and Rock Bottom reserve formula; calculator assumptions",
+        "S10 Diveplanning and Rock Bottom usable gas; S14 supplied table",
+        "S16 UTD Gas Planning Worksheet bottom-time arithmetic; S10 Diveplanning and Rock Bottom halves criteria",
+        "S10 Diveplanning and Rock Bottom emergency planning rates; record worksheet disagreement in audit"
+      ],
+      "sha256_before": "5b82c0c5110b50e30ca8b7f11c3f9ce8a33e67b701f953f3150a515485f7c3dd",
+      "sha256_after": "1ab384eee7193f37d6cf76fc61ffdb1e38e7f2a5d49bdb6c21588ebd4f8b56da",
+      "tracked_refinements": 5
     },
     {
       "slug": "san-diego-water-temperature-diving",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": null
+      "url": "https://gardnerunderwater.com/learn/san-diego-water-temperature-diving",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Retains attributed historical surface-temperature table as environmental context, not a thermal-safety prescription; aligns steel-cylinder exception and heating-failure planning.",
+      "references": [
+        "S1 covenants and drysuit course",
+        "S4",
+        "S7 p.8",
+        "S10",
+        "S1 UTD Standards v6c §1.4.6; S7 Gardner equipment list p.8",
+        "S1 UTD Standards v6c §3-280 recommended heating and failure training; S7 Gardner equipment list p.8"
+      ],
+      "sha256_before": "b3df24e85b66a84fd5d219a8345863310fb103366cb2cc31658a1dbaa3059997",
+      "sha256_after": "a558b16ce48249919342e8c7f25f3875ef94103e7b096b64e59ba4b63fd36df8",
+      "tracked_refinements": 2
     },
     {
       "slug": "scuba-buoyancy-control",
+      "url": "https://gardnerunderwater.com/learn/scuba-buoyancy-control",
       "state": "published",
-      "review": "Removed breath-holding and universal timed breathing cadence; distinguished shallow weighting from full-depth balanced-rig assessment; replaced unsupported centimeter grading ladder with UTD evaluation definitions.",
-      "references": "S1 §1.3.2; S6 pp.4–18; S9 buoyancy teaching",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Confirms recovered evaluation bands and course-specific expectations; prevents emergency-gas consumption for weight checks; preserves wing/lung roles and no breath-holding.",
+      "references": [
+        "S6 pp.4–18",
+        "S9 buoyancy teaching",
+        "S15",
+        "S15 UTD Class Evaluation Parameters exact ± bands and course matrix",
+        "S6 Buoyancy, Trim and Propulsion p.16; S1 UTD Standards v6c rock-bottom covenant",
+        "S6 Buoyancy, Trim and Propulsion p.16"
+      ],
+      "sha256_before": "c431e5f07a57c1e9886e46e3d3ea06e874dc85b1a266a2fa3f0d9166f0dd05b8",
+      "sha256_after": "6bd212fcf4c5f2b4983125235ed0b59edfbf7657999f98ceb298d138bca821fa",
+      "tracked_refinements": 3
     },
     {
       "slug": "scuba-finning-techniques",
+      "url": "https://gardnerunderwater.com/learn/scuba-finning-techniques",
       "state": "published",
-      "review": "Distinguished five Essentials foundation kicks from seven movements in wider UTD material; added shuffle and sideways kick; used loading/power/glide phases; clarified positioning versus depth control.",
-      "references": "S1 §3-150.1; S6 pp.17–18",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks five foundation/seven broader movements and phase terminology; aligns fin-weight advice with drysuit control rather than compensation.",
+      "references": [
+        "S6 pp.17–18",
+        "S1 §§3-150.1,3-150.3,3-221",
+        "S6 Buoyancy, Trim and Propulsion pp.16–18; S1 UTD Standards v6c §3-280"
+      ],
+      "sha256_before": "66d262a010cd3a67144ab5fcc9f2254f8bafd2c8d99904f449c4fc38825e3465",
+      "sha256_after": "01b2a5296533fc3a097d909275c1fae489dcea7a475c3d1a345ae82d0e66e8ef",
+      "tracked_refinements": 1
     },
     {
       "slug": "scuba-gas-management",
+      "url": "https://gardnerunderwater.com/learn/scuba-gas-management",
       "state": "published",
-      "review": "Added all 13 supplied Min Deco rows and the 25/25-only footnote; separated NDL/ascent limits from reserve gas; clarified travel-inclusive stops, reserve-first usable gas, thirds limitations and volume versus pressure consumption rates.",
-      "references": "S14; S2 pp.1–6; S10 pp.1–6; S1 covenant 3",
-      "authoring_guidance": null
+      "review_status": "reviewed_existing_copy_retained",
+      "review": "Rechecks GLADDDDD, two-diver reserve, reserve-first all-usable/halves/thirds examples, average-depth first-stop strategy and all 13 supplied Min Deco rows, including 25/25-only deep entries.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16"
+      ],
+      "sha256_before": "166566acfdc7ff43db6645745fb6960be16a012b9b96a930638d801387b91bee",
+      "sha256_after": "5213b57e2a45b730559979449489238debee62117c972942451c50127d06ca0e",
+      "tracked_refinements": 0
     },
     {
       "slug": "sidemount-vs-backmount",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use UTD v6c §3.0-1 and Gardner list p.6: course-specific cylinder requirements, consistent long-hose/necklace donation and appropriate DIR sidemount hose setup. Do not imply every open-circuit class permits a single cylinder."
+      "url": "https://gardnerunderwater.com/learn/sidemount-vs-backmount",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Keeps course-specific cylinder requirements and consistent donation; removes unsupported equivalence between Z-System distribution-block plumbing and backmount isolation.",
+      "references": [
+        "S1 §3.0-2",
+        "S7 pp.2–14",
+        "S13",
+        "S1 UTD Standards v6c §3-282; S7 Gardner equipment list p.6",
+        "S1 UTD Standards v6c §3-282 pp.79–80"
+      ],
+      "sha256_before": "0ac72f0191cbe4da3535eae1a6a70636d791eb319cfd66df2db248e95057ae28",
+      "sha256_after": "0a88db749d1c4eb00a33097db6138e195d90524a8ada6e3d1de629d228ee1afa",
+      "tracked_refinements": 2
     },
     {
       "slug": "standard-gases",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use UTD v6c covenant 4, course limits and recreational Min Deco table: desired PPO2 at target average depth, END at most 100 feet/30 meters, no deep air. 110–130-foot recreational Min Deco entries are 25/25 ONLY. Gas use alone does not define technical diving."
+      "url": "https://gardnerunderwater.com/learn/standard-gases",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks every gas/depth row against v6c appendix; distinguishes oxygen MOD from working/course/END/density limits; adds hypoxic-gas context and course decompression limits; removes same-gas/same-ascent guarantee and blending recipe.",
+      "references": [
+        "S1 covenants and gas limits",
+        "S2",
+        "S10",
+        "S14",
+        "S16",
+        "S1 UTD Standards v6c thinking-team covenant; S3 Situational Awareness depth/time awareness",
+        "S1 UTD Standards v6c §3-244; S3 Situational Awareness gas checks",
+        "S1 UTD Standards v6c §1.4.1–1.4.2 and Standard Gas Mixes appendix",
+        "S1 UTD Standards v6c §3-300",
+        "S1 UTD Standards v6c §3-310"
+      ],
+      "sha256_before": "b3903a99058514a49ca65eb0f6d41243a902c98c2ccedc8b2b65b3248b12bef3",
+      "sha256_after": "d04a1fb4d27b2d6e913852b45e20d57be5dc96cedad28670702da7c3cd017f08",
+      "tracked_refinements": 5
     },
     {
       "slug": "team-diving-vs-buddy-diving",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Team Positioning: wing-on-wing, stagger and single file; dynamic roles and communication; compromised diver middle in three-person team and front in two-person team. Open-water separation: one-minute search, ascend, regroup at surface. Do not conflate team size with instructor/student ratio."
+      "url": "https://gardnerunderwater.com/learn/team-diving-vs-buddy-diving",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Confirms maximum-three source, dynamic roles, positions, compromised-diver order and open-water separation; separates team size from course ratios and avoids disparaging all buddy pairs.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S1 UTD Standards v6c covenants 1–2; avoid unsupported agency caricature",
+        "S10 Diveplanning and Rock Bottom leader roles; S4 Team Positioning team roles",
+        "S4 Team Positioning environment; S3 Situational Awareness"
+      ],
+      "sha256_before": "216ce47a2c2ed66d14ff984a94e43213414947a41d1ef5b15e43865ef750ba25",
+      "sha256_after": "a60c15175128ae7c555cac5b6106b4e3e5e099308301d7c4c97b98dd2c952be1",
+      "tracked_refinements": 3
     },
     {
       "slug": "technical-diving-san-diego",
+      "url": "https://gardnerunderwater.com/learn/technical-diving-san-diego",
       "state": "published",
-      "review": "Removed universal transfer-of-skill assurance; clarified team contact in limited visibility and when shore-dive halves are appropriate. Retained local conditions and owner service facts as outside UTD-reference verification.",
-      "references": "S1 covenant 10; S4; S10 gas-planning rules",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks conditional shore-dive halves and local exposure/team advice; labels three-student format as Gardner service policy rather than agency-wide ratio.",
+      "references": [
+        "S1 covenants and drysuit course",
+        "S4",
+        "S7 p.8",
+        "S10",
+        "S1 UTD Standards v6c course ratios; preserve owner local service claim"
+      ],
+      "sha256_before": "3f19eaf85a759b643354db0db0a067ec50f40d0b90a9617a5c2f8c85438dc568",
+      "sha256_after": "3db2f0257eceecd07a5cd524370ab61a3f233481516e940a1a1fcf370037dad0",
+      "tracked_refinements": 1
     },
     {
       "slug": "utd-essentials-of-recreational-diving",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use UTD v6c §3-150.1: normally three days, minimum four academic hours and four in-water sessions, age 15 but no doubles/nitrox until 16, five foundation kicks, max 60 feet or 100 if nitrox certified, no stage decompression or overhead."
+      "url": "https://gardnerunderwater.com/learn/utd-essentials-of-recreational-diving",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks ages, nitrox/doubles restrictions, depth, hours/sessions, Basic Six, evaluation and path-to-completion; adds Open Water/Rec 1 prerequisite exception and general/supervised-assessment context.",
+      "references": [
+        "S1 §§1.1.4,1.3.2–1.3.4 and individual courses",
+        "S8",
+        "S9",
+        "S15",
+        "S1 UTD Standards v6c §3-150.1",
+        "S1 UTD Standards v6c §§1.6,3-150.1",
+        "S1 UTD Standards v6c §1.3.3"
+      ],
+      "sha256_before": "7845561411bcbbc68b42ab10cc48869fae84fd2aab3fde888e86ab4fcc110ac1",
+      "sha256_after": "27243429aec4912c693767e23bd433fe23883f7d7044757f816fb093e5b336b3",
+      "tracked_refinements": 3
     },
     {
       "slug": "utd-essentials-vs-gue-fundamentals",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use UTD v6c §§3-150.1 and 3-150.3 for UTD. Supplied UTD documents cannot verify GUE curriculum, current prerequisites or automatic crossover equivalency; verify separately before drafting comparative claims."
+      "url": "https://gardnerunderwater.com/learn/utd-essentials-vs-gue-fundamentals",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks UTD requirements against v6c and GUE current public pages; corrects non-training-dive wording, links sources and distinguishes selected prerequisites from the complete enrollment checklist.",
+      "references": [
+        "S1 §§1.1.4,1.3.2–1.3.4 and individual courses",
+        "S8",
+        "S9",
+        "S15",
+        "S1 UTD Standards v6c §3-150.1",
+        "S17/S18 official GUE course pages",
+        "S18 official GUE Technical Fundamentals prerequisites",
+        "S1 UTD Standards v6c §1.3.2; S15 UTD Class Evaluation Parameters course matrix; avoid unsupported cross-agency numerical equivalence",
+        "S20 §§3.2.1.2–3.2.1.9",
+        "S21 §§3.1.7.2–3.1.7.9"
+      ],
+      "sha256_before": "276ac5c1ab975ce4c98e177145722edb335212c4442d8c6abb12263a3a88ec1e",
+      "sha256_after": "2c864a7bd1a3e8b57ab052101e650e1f8b6dfa9ed3f9985aa67cb1756e3223ca",
+      "tracked_refinements": 4
     },
     {
       "slug": "valve-drill",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use 9 Failures and the playbooks: distinguish modified pre-dive valve check, skill drill and actual failure diagnosis. Nine failures include post, manifold, mistaken-side and isolator/roll-off cases. Do not turn instructor-induced failures into unsupervised reader exercises."
+      "url": "https://gardnerunderwater.com/learn/valve-drill",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Checks course timing and nine-failure list; separates practice valve reopening from actual failures, confirms working supply before manipulation and removes automatic isolate-first simplification.",
+      "references": [
+        "S1 covenants and course skills",
+        "S3",
+        "S4",
+        "S8",
+        "S9",
+        "S11",
+        "S1 UTD Standards v6c §3-281; S11 nine failures",
+        "S11 nine failures flowchart; S8/S9 thinking/critical skills",
+        "S11 flowchart/caution; S8/S9 critical-skills training",
+        "S1 UTD Standards v6c §3-281 practice performance versus S11 actual failures",
+        "S1 UTD Standards v6c §3-150.1; single first-stage configuration in S7 Gardner equipment list p.4"
+      ],
+      "sha256_before": "ac58bece852c60445501bf5ba8a4e2fa6e17e6c414943910d20e739ec1965a6d",
+      "sha256_after": "26e7714ba2771b4bff221948254a9fa5afb8049270e30070eaa83d336c4f0231",
+      "tracked_refinements": 5
     },
     {
       "slug": "what-is-a-thinking-diver",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use UTD v6c covenants and Why we dive pp.6–9: adaptive, dynamic, decisive; no sole decision maker; experience, education, equipment and community support enjoyment. Certification is earned, not bought."
+      "url": "https://gardnerunderwater.com/learn/what-is-a-thinking-diver",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves covenants and adaptive/team judgment; avoids claiming a diver using memorized procedures has no response capacity.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S1 UTD Standards v6c thinking team and proper training; S5"
+      ],
+      "sha256_before": "543cf0f21a7029ed22423d40485ccf0fe3820035ec1563a7357b68f4580e81dd",
+      "sha256_after": "f504d036df745d22f904d4bbd4f7ac63943b73eecd2cb09e2c18eba1b0d977ea",
+      "tracked_refinements": 1
     },
     {
       "slug": "what-is-dir-diving",
+      "url": "https://gardnerunderwater.com/learn/what-is-dir-diving",
       "state": "published",
-      "review": "Removed unsupported universal three-diver maximum and automatic problem-solving claim; strengthened thinking-team responsibilities and exact standard-gas covenant wording.",
-      "references": "S1 §1.1.3; S4; S5 pp.6–9",
-      "authoring_guidance": null
+      "review_status": "reviewed_and_refined",
+      "review": "Checks ten covenants, gas/depth and agency distinction; restores explicitly supported maximum-three rule missed in the earlier review.",
+      "references": [
+        "S1 covenants",
+        "S5",
+        "S10",
+        "S10 Diveplanning and Rock Bottom p.2, Leader: Maximum 3 divers on a team"
+      ],
+      "sha256_before": "934d5f44f08d5fef2d2155b46a0a42f9b78a82a726a20b2b9ab8f2176b614e3e",
+      "sha256_after": "fe8a82df05f6f83660a4f2e1c568827a79c5af8dcc0e1fdbdd6e837b952ba31e",
+      "tracked_refinements": 1
     },
     {
       "slug": "why-divers-plateau",
-      "state": "draft_stub",
-      "review": "Unfinished placeholder only; no developed instructional copy to reconcile.",
-      "references": "",
-      "authoring_guidance": "Use Why we dive pp.2–9 and UTD v6c certification philosophy: explain training, practice, feedback and path to completion without promising certification or a fixed improvement timeline."
+      "url": "https://gardnerunderwater.com/learn/why-divers-plateau",
+      "state": "published",
+      "review_status": "reviewed_and_refined",
+      "review": "Preserves feedback/training/experience model; avoids no-inflator drills becoming a reason to delay necessary buoyancy action.",
+      "references": [
+        "S1 §§1.1.4,1.3.2–1.3.4 and individual courses",
+        "S8",
+        "S9",
+        "S15",
+        "S6 Buoyancy, Trim and Propulsion lung control; S3 Situational Awareness task loading"
+      ],
+      "sha256_before": "07c6d3982d5ff0617edc5cb02bd14d64a7cb77b1d886ea33c481ee5dbbee0182",
+      "sha256_after": "30f471584b1f7f5ecdd6e4f922d56e1cd2e7c87e8166f292907b78c26612962e",
+      "tracked_refinements": 1
     }
   ],
   "decisions_and_open_items": [
@@ -472,26 +1062,44 @@
       "sources": "S10 p.3; lib/minimum-gas.ts; S2"
     },
     {
-      "topic": "Reference scope and currency",
-      "status": "Limitation",
-      "detail": "This review aligns the available article copy to the supplied versions: UTD v6c, v4.1 instructor playbooks and 2020 instructional slides. It is not verification that these are the current governing standards or UTD certification/endorsement. GUE curricula, historical claims, local water conditions and owner business facts are not established by these PDFs.",
-      "sources": "All supplied documents"
+      "topic": "Team size: correction to the earlier audit",
+      "status": "Resolved",
+      "detail": "S10 PDF p.2, Leader slide, explicitly states Maximum 3 divers on a team. That supports the newer team article. The earlier audit incorrectly described this rule as unsupported. Restored it to the DIR pillar and retained the distinction from course ratios.",
+      "sources": "S10 p.2; S4"
     },
     {
-      "topic": "Site-wide coverage",
-      "status": "Limitation",
-      "detail": "Reviewed all 48 Learn entries: 14 developed published articles and 34 unfinished stubs. Also corrected directly conflicting Tech 1 and Techreational course descriptions and the calculator introduction. This was not an exhaustive compliance audit of every website page, product, external link or external agency claim.",
-      "sources": "Repository inventory"
+      "topic": "Buoyancy scoring: expanded evidence corrects earlier audit",
+      "status": "Resolved",
+      "detail": "Recovered S15 confirms score 2 for >±1 m variation or hands for buoyancy; 3 for <±1 m, 4 for <±0.3 m, 5 for <±0.1 m. Retained the bands and clarified course-specific expectations, which can exceed the v6c general minimum of 3. The earlier unsupported classification reflected an incomplete source set.",
+      "sources": "S15; S1 §1.3.2"
+    },
+    {
+      "topic": "Worksheet emergency breathing rate and unit labels",
+      "status": "Source discrepancy documented; conservative existing examples retained",
+      "detail": "S16 metric rock-bottom line uses 30 L/min; its imperial example prints .75 cu ft/min and some dimension labels do not match the formulas. S10 explicitly lists emergency stress at 1.0 cu ft/min and 30 L/min as planning values. Kept the site’s existing 1.0 cu ft/min model and did not treat either value as a ceiling if actual team demand is higher. Used dimensional formulas rather than copying inconsistent labels.",
+      "sources": "S10 p.3; S16"
+    },
+    {
+      "topic": "Source currency and non-UTD facts",
+      "status": "Scope limitation",
+      "detail": "UTD alignment is against the supplied v6c, v4.1 and 2020 references, expanded by S15/S16. This is not evidence of later governing UTD revisions. Current GUE entry structure was checked against its official course pages; temperature, historical narrative and owner business facts remain separately attributed context, not UTD standards. No safety outcome or certification is guaranteed.",
+      "sources": "S1–S19"
+    },
+    {
+      "topic": "Publication state",
+      "status": "All 48 already published on current main",
+      "detail": "The previous audit described 14 developed published articles plus 34 stubs. Current base dc9036d includes publication and tags for all 48. This review assesses all developed articles; no new publication, slug, course mapping or original publication date was introduced.",
+      "sources": "Git base dc9036d; repository inventory"
     }
   ],
   "verification": {
-    "content_validation": "48 articles valid, 14 published; 136 expected warnings for unfinished drafts",
-    "tests": "All 4 existing test files passed",
+    "content_validation": "Passed: 48 valid, 48 published, no draft warnings",
+    "tests": "Passed all 4 existing test files",
     "lint": "Passed",
-    "production_build": "Passed npm run build -- --webpack, including TypeScript and all 59 static pages",
-    "numerical_table": "Passed: parsed production HTML matches all 13 supplied table rows, gas restrictions and ascent times",
-    "rendered_donation": "Passed: approved presentation, left-hand recovery and clear-hose wording present; chin-only recovery absent",
-    "metadata": "All 48 draft/publication dates, flags, slugs, course mappings and cluster mappings preserved"
+    "production_build": "Passed npm run build -- --webpack; TypeScript and all 93 static pages generated",
+    "rendered_articles": "Passed all 48: canonical URL, one H1, title, Article and FAQ JSON-LD, no owner placeholders",
+    "numerical_tables": "Passed all 13 supplied Min Deco rows and all 7 v6c bottom-gas rows",
+    "metadata": "Publication dates, draft flags, slugs, course mappings, cluster/pillar mappings and calculator approval flag preserved for all 48"
   },
-  "publication": "No deployment, push, merge or new article publication performed. Existing draft/published flags and calculator-confirmation flag preserved."
+  "release": "Working branch codex/utd-all-48-review; changes not yet merged or deployed."
 }
