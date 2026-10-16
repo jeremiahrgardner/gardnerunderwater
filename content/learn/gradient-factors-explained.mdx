@@ -1,6 +1,6 @@
 ---
 title: Gradient Factors Explained Without the Math Headache
-description: 'TODO(jeremiah): Write the meta description for gradient-factors-explained.'
+description: 'Gradient factors in plain English: what GF low and GF high control, what lower numbers do, why there''s no single best setting, and how UTD''s approach differs.'
 slug: gradient-factors-explained
 cluster: gas-planning
 isPillar: false
@@ -8,33 +8,83 @@ pillar: scuba-gas-management
 wave: 2
 primaryKeyword: gradient factors explained
 secondaryKeywords:
-  - best gradient factors
+- best gradient factors
 ctaCourse: techreational
 ctaPage: null
 extraLinks: []
-answer: >-
-  TODO(jeremiah): Write the approved 40–60 word answer for
-  gradient-factors-explained.
+answer: Gradient factors adjust how close a Bühlmann-based dive computer lets you get to the model's theoretical limit. GF low sets how deep your first stop is; GF high sets how much margin you keep when you surface. Lower numbers mean more conservatism. No setting is universally best, and none replaces a trained team ascent plan.
 faqs:
-  - q: 'TODO(jeremiah): Supply reader questions for gradient-factors-explained.'
-    a: 'TODO(jeremiah): Write approved FAQ answers for gradient-factors-explained.'
+- q: What does 100/100 mean?
+  a: It means the computer allows you to approach the Bühlmann model's full limits, with no added margin. The limit is a model, and model limits are not a guarantee of safety.
+- q: What are the best gradient factors?
+  a: There isn't a single best setting. Choose one with your instructor that fits your training and diving, use it consistently, and make sure your team's plan accounts for it.
+- q: Do gradient factors make a dive safe?
+  a: No. They change how conservative the model is. Decompression sickness can still happen within any model's limits, and things the computer can't measure, such as cold and exertion, matter too.
+- q: Does UTD use gradient factors?
+  a: UTD's recreational and technical training uses its own ascent strategies, Min Deco for no-stop dives and Ratio Deco for decompression dives, planned and run by the team. Computers are tools within that plan.
 video:
   youtubeId: ''
   title: ''
   uploadDate: ''
-publishedAt: null
-lastReviewed: null
-draft: true
+publishedAt: '2026-09-16'
+lastReviewed: '2026-10-16'
+draft: false
 ---
-<!-- Editorial angle: The homepage already names gradient-factor tinkering as a pain point; answer it. -->
 
-<!-- UTD alignment guidance: The supplied UTD sources do not establish preferred gradient-factor settings. Explain the distinction from UTD Min Deco/Ratio Deco without inventing recommended settings or substituting a computer configuration for the trained team ascent plan. -->
+If you've opened your dive computer's settings and found "GF 30/70" or "GF 50/80," you've met gradient factors. They're one of the most discussed settings in diving, and one of the most misunderstood. Here's what they actually do, without the equations.
 
-## Overview
-<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
+## What problem do gradient factors solve?
 
-## Details
-<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
+Most technical dive computers are based on the Bühlmann decompression model. For each of several theoretical tissue compartments, the model sets a limit, called an M-value, on how much dissolved gas pressure it treats as tolerable during an ascent.
 
-## Put it into practice
-<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
+Run the model at its raw limits and it lets you ascend right up to those M-values. Gradient factors, developed by Erik Baker, let you choose how close to those limits you go, as a percentage.
+
+## What do GF low and GF high do?
+
+A gradient factor setting has two numbers, like 30/70.
+
+- **GF low** (the first number) controls **where your first stop is**. A lower GF low keeps you further from the limit at depth, so the computer starts your stops deeper.
+- **GF high** (the second number) controls **the margin when you surface**. A lower GF high keeps you further from the limit at the end of the dive, so you spend longer on the shallow stops.
+
+Between the first stop and the surface, the computer draws a straight line from GF low to GF high and keeps your ascent under it.
+
+## What do the numbers mean in practice?
+
+| Setting | What it does |
+| --- | --- |
+| 100/100 | Uses the model's full limits, with no added margin |
+| Lower GF low | First stop is deeper; more time spent deep |
+| Lower GF high | More margin on surfacing; more time on shallow stops |
+| Both lower | More conservative overall; longer decompression |
+
+There's no free lunch. More conservatism means longer stops, more gas used during decompression and more time in the water.
+
+## So what are the "best" gradient factors?
+
+There isn't a single answer, and anyone who gives you one number for every diver and every dive is oversimplifying.
+
+DAN's [Alert Diver article on gradient factors](https://dan.org/alert-diver/article/gradient-factors/) makes a few points worth keeping in mind:
+
+- **The model is a model.** Decompression models almost certainly don't capture the full truth. Decompression sickness can occur within any model's limits.
+- **The computer can't see everything.** Cold, exertion and how you feel aren't meaningfully accounted for by today's computers.
+- **Settings aren't comparable across brands.** Some manufacturers describe their conservatism settings poorly, which makes them hard to evaluate.
+- **Fiddling has side effects.** Changing inputs to "fool" the algorithm can cause problems, such as missed oxygen warnings.
+
+The practical advice: choose a setting with your instructor that fits your training and the diving you do, keep it consistent, and make sure your team knows what everyone is using.
+
+## How does UTD approach decompression?
+
+UTD doesn't build its training around gradient-factor settings. It teaches ascent strategies that the team plans and runs together:
+
+- **Min Deco** for no-stop recreational diving: no-decompression limits by depth and gas, and a standard ascent with stops. See the Min Deco table in [Gas Management for Recreational Divers](/learn/scuba-gas-management).
+- **Ratio Deco** for decompression diving: a method for planning and adjusting a decompression ascent during the dive, using standard gases, applied by a trained team.
+
+Ratio Deco isn't a new decompression model; UTD describes it as an application of existing models. Its training covers the history of decompression theory, including Bühlmann and bubble models, so divers understand what their computers are doing.
+
+In that approach, a computer is a tool and a backup, not the plan. The team knows its ascent before it starts it.
+
+## Why it matters for your training
+
+Gradient-factor tinkering is a common pain point for divers moving into technical diving. Changing numbers can feel like doing something about risk. The things that actually move risk, like gas planning, standard gases, a practiced ascent and staying within your training, happen outside the settings menu.
+
+If you're heading toward decompression diving, [Techreational](/courses/techreational) is UTD's first step, with trimix 25/25 and oxygen decompression. For the gases themselves, see [Standard Gases](/learn/standard-gases).

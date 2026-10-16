@@ -1,6 +1,6 @@
 ---
 title: How to Calculate Your SAC Rate and RMV
-description: 'TODO(jeremiah): Write the meta description for sac-rate-and-rmv.'
+description: How to calculate your surface consumption rate from your logbook, convert between psi and cubic feet, and use it to plan gas at depth, with worked examples.
 slug: sac-rate-and-rmv
 cluster: gas-planning
 isPillar: false
@@ -8,30 +8,116 @@ pillar: scuba-gas-management
 wave: 2
 primaryKeyword: sac rate calculator
 secondaryKeywords:
-  - how to calculate sac rate
-  - rmv scuba
+- how to calculate sac rate
+- rmv scuba
 ctaCourse: scuba-coaching
 ctaPage: null
 extraLinks: []
-answer: 'TODO(jeremiah): Write the approved 40–60 word answer for sac-rate-and-rmv.'
+answer: To calculate your SAC rate, divide the gas you used by the dive time, then by your average depth in atmospheres. In psi, that's your SAC for that cylinder. Multiply by the cylinder's rated volume and divide by its rated pressure to get RMV in cubic feet per minute, which works with any cylinder.
 faqs:
-  - q: 'TODO(jeremiah): Supply reader questions for sac-rate-and-rmv.'
-    a: 'TODO(jeremiah): Write approved FAQ answers for sac-rate-and-rmv.'
+- q: What's the difference between SAC and RMV?
+  a: Both describe how much gas you'd use per minute at the surface. SAC is often given in psi per minute, which only applies to one cylinder. RMV is in cubic feet or liters per minute, so it works with any cylinder. UTD calls the volume rate surface consumption rate, or SCR.
+- q: What SAC rate should I plan with?
+  a: For planning, UTD uses 0.5 cubic feet per minute at rest, 0.75 while swimming and 1.0 under stress. Use your measured rate to understand your diving, and plan reserves with the stressed rate.
+- q: How accurate is a logbook SAC calculation?
+  a: Accurate enough to compare dives and spot trends, especially if you use the average depth from your computer. Pressure gauges and temperature add some error, so look at several dives rather than one.
+- q: Does my computer calculate SAC for me?
+  a: Many air-integrated computers do. Check whether it reports psi per minute or volume per minute, and whether it uses your cylinder's correct rated volume.
 video:
   youtubeId: ''
   title: ''
   uploadDate: ''
-publishedAt: null
-lastReviewed: null
-draft: true
+publishedAt: '2026-09-11'
+lastReviewed: '2026-10-16'
+draft: false
 ---
-<!-- Editorial angle: Calculator plus a logbook method. -->
 
-## Overview
-<!-- TODO(jeremiah): Write and approve this article's introduction and scope. -->
+Your surface consumption rate is the single most useful number in gas planning. It turns "I'll probably have enough" into arithmetic, and it shows you whether your diving is getting more efficient.
 
-## Details
-<!-- TODO(jeremiah): Write the article body following the editorial angle; add verified sources and tables as appropriate. -->
+You don't need a calculator app. You need your logbook and four numbers.
 
-## Put it into practice
-<!-- TODO(jeremiah): Add approved practical guidance and relevant internal links. -->
+## SAC, RMV, SCR: what's the difference?
+
+All three describe how much gas you breathe per minute, adjusted to surface pressure so dives at different depths can be compared.
+
+- **SAC** (surface air consumption) is often expressed in **psi per minute**. It's tied to one cylinder: 20 psi per minute means different amounts of gas in an aluminum 80 and an HP100.
+- **RMV** (respiratory minute volume) is expressed in **cubic feet or liters per minute**. It works with any cylinder.
+- **SCR** (surface consumption rate) is the term in UTD's planning material, used as a volume rate like RMV.
+
+For planning, a volume rate is more useful. For reading your gauge underwater, psi per minute is more practical. You'll use both.
+
+## How do you calculate it from your logbook?
+
+You need four numbers from one dive:
+
+1. **Gas used:** starting pressure minus ending pressure, in psi.
+2. **Dive time** in minutes.
+3. **Average depth**, from your computer.
+4. **Your cylinder's** rated volume and rated pressure.
+
+Then:
+
+- **Average depth in atmospheres (ATA)** = average depth in feet ÷ 33 + 1 (salt water).
+- **SAC in psi per minute** = gas used ÷ dive time ÷ ATA.
+- **RMV in cubic feet per minute** = SAC × rated volume ÷ rated pressure.
+
+This is the same method as UTD's gas planning worksheet.
+
+### Worked example
+
+An aluminum 80 (77.4 cubic feet at 3,000 psi). You start at 3,000 psi and finish at 1,500 psi after a 40-minute dive with an average depth of 40 feet.
+
+| Step | Calculation | Result |
+| --- | --- | --- |
+| Gas used | 3,000 − 1,500 | 1,500 psi |
+| Average depth in ATA | 40 ÷ 33 + 1 | 2.21 ATA |
+| SAC | 1,500 ÷ 40 ÷ 2.21 | 17 psi per minute |
+| RMV | 17 × 77.4 ÷ 3,000 | 0.44 cubic feet per minute |
+
+That's a relaxed rate. Your next dive into current might be very different, which is why one dive isn't enough.
+
+## How do you use it at depth?
+
+Multiply your surface rate by the pressure at depth. UTD calls this your depth consumption rate.
+
+**Example from UTD's planning material:** at 100 feet (4 ATA) with a swimming rate of 0.75 cubic feet per minute, you'd breathe 0.75 × 4 = 3 cubic feet per minute.
+
+To turn that into gauge pressure, use the cylinder's **tank factor**, the cubic feet it holds per 100 psi. For an aluminum 80, that's 77.4 ÷ 3,000 × 100, about 2.6; UTD's material rounds it to 2.5. Then:
+
+- **psi per minute at depth** = cubic feet per minute ÷ tank factor × 100
+- 3 ÷ 2.5 × 100 = **120 psi per minute** at 100 feet.
+
+At that rate, a full aluminum 80 lasts about 26 minutes at 100 feet: 77.4 ÷ 3. That's before you set aside any reserve.
+
+## How much bottom time does your gas give you?
+
+Using UTD's worksheet:
+
+**Bottom time = usable gas ÷ consumption rate ÷ depth in ATA**
+
+**Example:** an aluminum 80 at 3,000 psi on a 60-foot dive. Rock bottom is 800 psi, so usable gas is 2,200 psi, about 57 cubic feet. At 0.75 cubic feet per minute and 2.8 ATA, that's 57 ÷ 0.75 ÷ 2.8, or about 27 minutes before you reach rock bottom, if you spend all your usable gas. On a shore dive planned on halves, you'd turn around at about half that.
+
+For rock bottom and turn pressures, see [Gas Management for Recreational Divers](/learn/scuba-gas-management) and the [Rock Bottom Calculator](/learn/rock-bottom-calculator).
+
+## Measured rate or planning rate?
+
+Both, for different jobs.
+
+- **Your measured rate** tells you how you're diving. Track it over time; if it drops, your weighting, trim and kicking are getting better. If it jumps on a dive, ask why.
+- **Planning rates** keep your reserves honest. UTD plans with 0.5 cubic feet per minute at rest, 0.75 while swimming and 1.0 under stress. Rock bottom always uses the stressed rate, however good your measured rate is.
+
+## The logbook method
+
+After each dive, record:
+
+- Cylinder (and its rated volume and pressure)
+- Start and end pressure
+- Dive time and average depth
+- Conditions: cold, current, workload, stress
+- Your calculated SAC and RMV
+
+After ten dives, you'll know your normal range. After thirty, you'll see what changes it. If you want to lower it, see [How to Improve Air Consumption](/learn/improve-air-consumption).
+
+## Turn numbers into feedback
+
+Our [Scuba Coaching](/courses/scuba-coaching) program uses exactly this kind of data, alongside video, to build a training plan around your diving.
