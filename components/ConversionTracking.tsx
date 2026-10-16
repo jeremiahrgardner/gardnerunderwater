@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/track";
 
 /** Capture ordinary links, Next links, keyboard activation and article course CTAs. No form data is sent. */
 export function ConversionTracking() {

@@ -1,6 +1,6 @@
 "use client";
 
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/track";
 import { useState } from "react";
 import { Arrow } from "./SiteUI";
 
