@@ -21,16 +21,19 @@
 }
 
 :root {
-  --canvas: #f7f6f0;
-  --paper: #eeeee6;
-  --card: #fffef9;
-  --ink: #202924;
-  --ink-dark: #16251e;
-  --muted: #62675e;
-  --border: #d9dacf;
-  --gold: #e8c64b;
-  --gold-dark: #756018;
-  --white: #fffef9;
+  color-scheme: dark;
+  --gold-hover: #f2ce4a;
+  --border-strong: #79766d;
+  --canvas: #0e0e0e;
+  --paper: #181818;
+  --card: #202020;
+  --ink: #f5f3ec;
+  --ink-dark: #080808;
+  --muted: #b9b6ad;
+  --border: #3d3b35;
+  --gold: #E5B812;
+  --gold-dark: #E5B812;
+  --white: #f5f3ec;
   --display: "Roboto", Arial, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
   --serif: "EB Garamond", Georgia, serif;
@@ -162,7 +165,7 @@ main:focus {
 .status-dot {
   width: 7px;
   height: 7px;
-  background: #768357;
+  background: var(--gold);
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -187,6 +190,7 @@ main:focus {
   border: 0;
 }
 .skip-link {
+  color: var(--ink-dark);
   position: fixed;
   top: 8px;
   left: 8px;
@@ -219,18 +223,18 @@ main:focus {
     border-color 0.2s;
 }
 .btn-dark {
-  background: var(--ink-dark);
-  color: var(--white);
+  background: var(--gold);
+  color: var(--ink-dark);
 }
 .btn-dark:hover {
-  background: #314a3d;
+  background: var(--gold-hover);
 }
 .btn-primary {
   background: var(--gold);
   color: var(--ink-dark);
 }
 .btn-primary:hover {
-  background: #f3d66a;
+  background: var(--gold-hover);
 }
 .btn-outline {
   border-color: var(--border);
@@ -239,7 +243,7 @@ main:focus {
 .btn-outline:hover {
   background: var(--ink-dark);
   color: var(--white);
-  border-color: var(--ink-dark);
+  border-color: var(--gold);
 }
 .text-link {
   display: inline-flex;
@@ -261,7 +265,7 @@ main:focus {
 }
 .utility-bar {
   background: var(--ink-dark);
-  color: #e5e8df;
+  color: var(--ink);
   font-family: var(--mono);
   font-size: 0.59rem;
   letter-spacing: 0.08em;
@@ -283,7 +287,7 @@ main:focus {
   position: sticky;
   top: 0;
   z-index: 80;
-  background: rgba(247, 246, 240, 0.97);
+  background: rgba(14, 14, 14, 0.97);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -361,7 +365,7 @@ main:focus {
   margin: 0 0 0 auto;
 }
 .mobile-menu::backdrop {
-  background: rgba(13, 24, 18, 0.55);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
 }
 .mobile-menu-inner {
@@ -483,7 +487,7 @@ main:focus {
   position: relative;
   min-height: 620px;
   overflow: hidden;
-  background: #06333c;
+  background: var(--ink-dark);
 }
 .hero-visual > img {
   object-fit: cover;
@@ -493,7 +497,7 @@ main:focus {
   position: absolute;
   content: "";
   inset: 0;
-  background: linear-gradient(transparent 40%, rgba(3, 22, 23, 0.7));
+  background: linear-gradient(transparent 40%, rgba(0, 0, 0, 0.7));
   pointer-events: none;
 }
 .photo-marker {
@@ -536,7 +540,7 @@ main:focus {
 .photo-arrow {
   display: grid;
   place-items: center;
-  border: 1px solid #94a9a0;
+  border: 1px solid var(--border-strong);
   width: 46px;
   height: 46px;
   font-size: 1.5rem;
@@ -687,10 +691,10 @@ main:focus {
   align-items: center;
 }
 .philosophy-feature .eyebrow {
-  color: #c8cbbd;
+  color: var(--muted);
 }
 .philosophy-feature p {
-  color: #bbc5b9;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 .philosophy-feature .large-copy {
@@ -707,7 +711,7 @@ main:focus {
   display: flex;
   gap: 24px;
   padding-block: 28px;
-  border-bottom: 1px solid #3b4b40;
+  border-bottom: 1px solid var(--border);
 }
 .principle-stack > div:first-child {
   padding-top: 0;
@@ -733,7 +737,7 @@ main:focus {
 .instructor-photo {
   position: relative;
   height: 580px;
-  background: #173e47;
+  background: var(--paper);
 }
 .instructor-photo img {
   object-fit: cover;
@@ -828,8 +832,8 @@ figcaption > span {
 }
 
 .site-footer {
-  background: #14221b;
-  color: #f2f2e9;
+  background: var(--ink-dark);
+  color: var(--ink);
 }
 .footer-grid {
   display: grid;
@@ -838,13 +842,13 @@ figcaption > span {
   padding-block: 64px;
 }
 .footer-brand > p {
-  color: #b8c1b3;
+  color: var(--muted);
   font-size: 0.8rem;
   margin-top: 22px;
   margin-bottom: 20px;
 }
 .footer-brand .eyebrow {
-  color: #a7b09f;
+  color: var(--muted);
   font-size: 0.53rem;
   font-weight: 400;
 }
@@ -852,7 +856,7 @@ figcaption > span {
   font-family: var(--mono);
   font-size: 0.58rem;
   letter-spacing: 0.1em;
-  color: #a7b09f;
+  color: var(--muted);
   text-transform: uppercase;
   font-weight: 400;
   margin: 5px 0 23px;
@@ -881,11 +885,11 @@ figcaption > span {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  border-top: 1px solid #354337;
+  border-top: 1px solid var(--border);
   padding-block: 22px;
   font-family: var(--mono);
   font-size: 0.53rem;
-  color: #a7b09f;
+  color: var(--muted);
   letter-spacing: 0.03em;
 }
 
@@ -948,15 +952,15 @@ figcaption > span {
   border-color: var(--border);
 }
 .filter-tabs button[aria-pressed="true"] {
-  color: var(--white);
-  background: var(--ink-dark);
+  color: var(--ink-dark);
+  background: var(--gold);
 }
 .course-search {
   display: flex;
   align-items: center;
   gap: 10px;
   min-height: 44px;
-  border-bottom: 1px solid #a5aa9b;
+  border-bottom: 1px solid var(--border-strong);
   padding-inline: 4px;
 }
 .course-search input {
@@ -1098,7 +1102,7 @@ details ul {
 .wide-photo {
   height: 380px;
   position: relative;
-  background: #06333c;
+  background: var(--ink-dark);
 }
 .wide-photo > img {
   object-fit: cover;
@@ -1152,7 +1156,7 @@ details ul {
   display: flex;
   align-items: flex-start;
   gap: 25px;
-  border-top: 1px solid #d4d6c9;
+  border-top: 1px solid var(--border);
   padding-block: 24px;
 }
 .principle-list > article:first-child {
@@ -1213,7 +1217,7 @@ details ul {
 .about-portrait {
   position: relative;
   height: 650px;
-  background: #123540;
+  background: var(--paper);
 }
 .about-portrait img {
   object-fit: cover;
@@ -1313,12 +1317,12 @@ details ul {
 .pricing-featured {
   background: var(--ink-dark);
   color: var(--white);
-  border-color: var(--ink-dark);
+  border-color: var(--gold);
 }
 .pricing-featured > p,
 .pricing-featured .card-topline,
 .pricing-featured .price-note {
-  color: #c1cabd;
+  color: var(--muted);
 }
 .pricing-explainer {
   display: grid;
@@ -1381,7 +1385,7 @@ details ul {
   width: 100%;
   min-width: 0;
   background: var(--card);
-  border: 1px solid #c8cbbe;
+  border: 1px solid var(--border-strong);
   padding: 13px 14px;
   border-radius: 2px;
   font-size: 0.85rem;
@@ -1393,12 +1397,12 @@ details ul {
 }
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: #767a70;
+  color: var(--muted);
 }
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  border-color: var(--ink-dark);
+  border-color: var(--gold);
 }
 .form-submit {
   display: flex;
@@ -1578,14 +1582,14 @@ thead th:last-child {
   flex-shrink: 0;
 }
 .merch-banner .eyebrow {
-  color: #bdc6b7;
+  color: var(--muted);
   margin-bottom: 14px;
 }
 .merch-banner h2 {
   margin-bottom: 15px;
 }
 .merch-banner p {
-  color: #c0cab9;
+  color: var(--muted);
   font-size: 0.85rem;
   max-width: 60ch;
 }
