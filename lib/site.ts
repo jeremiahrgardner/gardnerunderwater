@@ -26,12 +26,6 @@ export const businessSchema = {
   telephone: "+1-619-880-0684",
   areaServed: "San Diego",
   founder: { "@id": `${site.url}/about#jeremiah-gardner` },
-  parentOrganization: {
-    "@type": "Organization",
-    "@id": "https://www.gardnerexpedition.co/#organization",
-    name: "Gardner Expedition Co.",
-    url: "https://www.gardnerexpedition.co",
-  },
   sameAs: [
     "https://www.facebook.com/gardnerunderwater/",
     "https://www.instagram.com/gardnerunderwater/",
