@@ -89,7 +89,17 @@ export function Footer() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Gardner Underwater</span>
           <span>Eyes open. Brain on. Unified team.</span>
-          <span>A Gardner Expedition Co. brand</span>
+          <span>
+            A{" "}
+            <a
+              href="https://www.gardnerexpedition.co"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gardner Expedition Co.
+            </a>{" "}
+            brand
+          </span>
         </div>
       </div>
     </footer>

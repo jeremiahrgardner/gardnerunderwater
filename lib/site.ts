@@ -25,6 +25,13 @@ export const businessSchema = {
   logo: absoluteUrl("/brand/gu-logo-landscape.png"),
   telephone: "+1-619-880-0684",
   areaServed: "San Diego",
+  founder: { "@id": `${site.url}/about#jeremiah-gardner` },
+  parentOrganization: {
+    "@type": "Organization",
+    "@id": "https://www.gardnerexpedition.co/#organization",
+    name: "Gardner Expedition Co.",
+    url: "https://www.gardnerexpedition.co",
+  },
   sameAs: [
     "https://www.facebook.com/gardnerunderwater/",
     "https://www.instagram.com/gardnerunderwater/",
@@ -37,8 +44,14 @@ export const personSchema = {
   "@type": "Person",
   "@id": `${site.url}/about#jeremiah-gardner`,
   name: "Jeremiah Gardner",
+  // The site calls him Jay; this ties "Jay Gardner" to the same person.
+  alternateName: "Jay Gardner",
   image: absoluteUrl("/photos/jay-gardner-leia-vita.webp"),
   jobTitle: "UTD scuba instructor",
   worksFor: { "@id": `${site.url}/#organization` },
-  sameAs: ["https://jeremiahgardner.com", "https://x.com/JeremiahGardner"],
+  sameAs: [
+    "https://jeremiahgardner.com",
+    "https://x.com/JeremiahGardner",
+    "https://www.linkedin.com/in/jeremiahgardner/",
+  ],
 };

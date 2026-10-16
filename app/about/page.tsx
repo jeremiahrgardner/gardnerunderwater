@@ -84,7 +84,15 @@ export default function AboutPage() {
             </p>
             <p>
               Out of the water, he’s a girl dad, entrepreneur, best-selling
-              author, internationally recognized speaker and coach, and co-host
+              author,{" "}
+              <a
+                href="https://jeremiahgardner.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                internationally recognized speaker
+              </a>{" "}
+              and coach, and co-host
               of{" "}
               <a
                 href="https://www.thedivetable.com/"
