@@ -4,7 +4,7 @@ export const site = {
   email: "jay@gardnerunderwater.com",
   phone: "+16198800684",
   description:
-    "Scuba instruction and coaching for certified divers who want better skills and confidence. Train with Jay Gardner in San Diego and beyond.",
+    "Small-team UTD training and coaching for committed divers who want more than another certification card. Train with Jay Gardner in San Diego and beyond.",
 };
 
 export function absoluteUrl(path: string) {

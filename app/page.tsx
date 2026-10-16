@@ -17,29 +17,44 @@ export const metadata: Metadata = pageMetadata(
 
 const paths = [
   {
-    label: "Refine your skills",
-    title: "Feel more at home in the water.",
-    text: "Build the buoyancy, trim, and propulsion that make every dive feel more controlled. For certified divers at any stage.",
+    label: "Sharpen the foundation",
+    title: "Make the fundamentals automatic.",
+    text: "Buoyancy, trim, and propulsion taught to one standard, so the basics stop taking up your attention. For certified divers at any stage.",
     href: "/courses/essentials-of-recreational-diving",
     link: "Explore foundational training",
     detail: "Essentials of Recreational Diving",
   },
   {
     label: "Keep progressing",
-    title: "A coach in your corner.",
-    text: "Turn practice into progress with a consistent plan, video review, and honest feedback. Work on the diver you want to become.",
+    title: "A mentor between your dives.",
+    text: "Monthly coaching with a plan, video review, and honest feedback, so your progress doesn’t stall between courses.",
     href: "/courses/scuba-coaching",
     link: "Discover scuba coaching",
     detail: "$129 / month · No minimum commitment",
   },
   {
     label: "Take the next step",
-    title: "Build a foundation for going further.",
-    text: "Prepare for the demands of technical diving through precise personal skills, clear thinking, and a team approach.",
+    title: "Earn your way into technical diving.",
+    text: "Precise personal skills, clear thinking, and a team approach. The foundation for deeper, longer, more demanding dives.",
     href: "/courses/essentials-of-tech",
     link: "Explore technical training",
     detail: "Essentials of Tech · Techreational · Tech 1",
   },
+];
+
+const team = [
+  [
+    "Same gear. Same procedures.",
+    "One consistent system means anyone trained this way can dive with you. No renegotiating the basics before every dive.",
+  ],
+  [
+    "Small teams, real bonds",
+    "Three students or fewer. You learn alongside divers who want what you want, and you solve problems together in the water.",
+  ],
+  [
+    "A team that keeps diving",
+    "Training days, local dives, and trips with a community of like-minded thinking divers. The course ends. The team doesn’t.",
+  ],
 ];
 
 export default function HomePage() {
@@ -61,21 +76,21 @@ export default function HomePage() {
         <div className="landing-hero-shade" />
         <div className="container landing-hero-content">
           <div className="eyebrow">
-            Scuba instruction & coaching · San Diego & beyond
+            DIR scuba training & coaching · San Diego & beyond
           </div>
           <h1 id="home-title">
-            Become the diver
+            Certified isn’t
             <br />
-            you want to be.
+            the same as capable.
           </h1>
           <p>
-            Better control. Clearer thinking. More confidence.
-            <br className="desktop-break" /> Personal training for certified
-            divers ready to grow.
+            You’ve done the courses. You know there’s another level.
+            <br className="desktop-break" /> Train with a mentor and a small
+            team that hold one consistent standard.
           </p>
           <div className="hero-actions">
             <Link href="#training-paths" className="btn btn-primary">
-              Find your path <Arrow />
+              Find your next level <Arrow />
             </Link>
             <Link href="/about" className="hero-instructor-link">
               <span>Meet your instructor</span>
@@ -95,20 +110,53 @@ export default function HomePage() {
         </div>
       </section>
       <AgencyCredentials />
+      <section className="section section-paper" aria-labelledby="why-title">
+        <div className="container split-content">
+          <div>
+            <div className="eyebrow">Sound familiar?</div>
+            <h2 id="why-title">
+              Good training
+              <br />
+              shouldn’t be this hard to find.
+            </h2>
+          </div>
+          <div className="prose">
+            <p>
+              Every instructor taught it a little differently. You collected the
+              cards, but not the confidence. You can’t tell which training to
+              trust. And the people you dive with at home don’t dive the way you
+              want to.
+            </p>
+            <p>
+              <strong>Gardner Underwater is built differently.</strong>
+            </p>
+            <p>
+              One system, taught the same way every time. Small teams, never
+              more than three students to one instructor. Training you pay for.
+              Certification you earn.
+            </p>
+            <p>
+              If you’re tired of the next card not making you a better diver,
+              you’ve found your team.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="section landing-paths" id="training-paths">
         <div className="container">
           <div className="landing-section-heading">
             <div>
-              <span className="eyebrow">Good divers never stop learning</span>
+              <span className="eyebrow">Pick your starting point</span>
               <h2>
-                Where would you
+                What’s your
                 <br />
-                like to feel better?
+                next level?
               </h2>
             </div>
             <p>
-              You’re already a diver. Your next step should match the diving you
-              want to do and the skills you want to improve.
+              You’re already a diver. Your next step should be earned, not sold.
+              Start where your skills are and build toward the diving you want
+              to do.
             </p>
           </div>
           <div className="training-paths-grid">
@@ -149,17 +197,15 @@ export default function HomePage() {
             />
             <div className="instructor-nameplate">
               <strong>Jay Gardner</strong>
-              <span>Your instructor. Your teammate.</span>
+              <span>Your mentor. Your teammate.</span>
             </div>
           </div>
           <div className="landing-instructor-copy">
-            <span className="eyebrow">
-              Personal training. A real relationship.
-            </span>
+            <span className="eyebrow">Your mentor</span>
             <h2>
-              Someone who sees
+              A mentor who’s been
               <br />
-              the diver in you.
+              where you’re going.
             </h2>
             <p className="large-copy">
               “I teach because I love it.
@@ -190,6 +236,34 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="section" aria-labelledby="team-title">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <div className="eyebrow">The team</div>
+              <h2 id="team-title">
+                Find your
+                <br />
+                crew.
+              </h2>
+            </div>
+            <p>
+              Diving the right way gets lonely when your local crew dives a
+              different way. Here, you join a community of thinking divers who
+              share one standard, in training and long after it.
+            </p>
+          </div>
+          <div className="approach-grid">
+            {team.map(([title, body], i) => (
+              <article key={title} className="approach-card">
+                <span className="eyebrow">0{i + 1}</span>
+                <h3>{title}</h3>
+                <p>{body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       {articles.length > 0 && (
         <section className="section landing-articles">
           <div className="container">
@@ -197,9 +271,9 @@ export default function HomePage() {
               <div>
                 <span className="eyebrow">Field notes</span>
                 <h2>
-                  A little perspective.
+                  The thinking
                   <br />
-                  For your next dive.
+                  behind the skills.
                 </h2>
               </div>
               <Link href="/learn" className="text-link">

@@ -2378,3 +2378,13 @@ thead th:last-child {
   display: grid;
   place-items: center;
 }
+
+/* Preserve messaging line breaks where older responsive rules joined words. */
+.site-footer .footer-brand > p br {
+  display: initial;
+}
+@media (max-width: 600px) {
+  .landing-hero #home-title br {
+    display: initial;
+  }
+}

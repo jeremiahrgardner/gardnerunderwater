@@ -16,9 +16,9 @@ export default function CoursesPage() {
         eyebrow="The curriculum"
         title={
           <>
-            Your next
+            Earn your
             <br />
-            <span className="serif-accent">plateau.</span>
+            <span className="serif-accent">next level.</span>
           </>
         }
       >

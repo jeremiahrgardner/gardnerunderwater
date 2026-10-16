@@ -101,7 +101,7 @@ export function ContactForm({
         <textarea
           id="message"
           name="message"
-          placeholder="What would you like to work on? When are you usually available for a quick call?"
+          placeholder="What are you working on, and what’s getting in the way? When are you usually free for a quick call?"
           rows={5}
           maxLength={4000}
           required

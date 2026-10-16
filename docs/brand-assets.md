@@ -8,7 +8,7 @@ Installed from the owner's `Artwork.zip` on 2026-10-15. Logos retain original co
 | UTD-DIVI-LOGO-HEADER.png | `/brand/utd-logo.webp`: Unified Team Diving credential rail |
 | Divers_Alert_Network_Logo_red_text.png | `/brand/dan-logo.webp`: DAN credential rail |
 | IMG_20220320_182940_798.webp | `/photos/jay-gardner-shore.webp`: earlier drysuit portrait retained for article author boxes |
-| Jay Gardner.jpeg | `/photos/jay-gardner-underwater.webp`: earlier homepage instructor photo, retained as an available asset |
+| Jay Gardner.jpeg | `/photos/jay-gardner-underwater.webp`: About “Why I teach”: Jay diving sidemount, per the owner’s messaging brief |
 | Ponderosa 4.jpeg | `/photos/cavern-diving.webp`: earlier About supporting photo, retained as an available asset |
 
 The original `GU Logo Lanscape.png` was subsequently supplied in its own ZIP. It is installed unchanged at `/brand/gu-logo-landscape.png` and is the primary logo in navigation, footer and business schema. The wordmark replaces the separate emblem and typeset name. CSS inverts its black artwork on dark backgrounds; its transparent original remains unchanged.
@@ -22,6 +22,6 @@ Keep the original archives outside `public/`; only selected optimized assets are
 - `Twin Caves Surface.jpeg` from its individually uploaded ZIP → `/photos/twin-caves-surface.webp`, homepage “Someone who sees the diver in you.” Original framing and embedded photographer watermark remain visible.
 - `Frio River Expedition.jpg` from its individually uploaded ZIP → `/photos/frio-river-expedition.webp`, Training page wide photo, alongside the team-based training approach.
 - `J_photocred_Leia_Vita-119.jpg` from its individually uploaded ZIP → `/photos/jay-gardner-leia-vita.webp`, About header and Person schema. Visible photo credit: Leia Vita, as credited in the source filename.
-- `Cave Diving Artwork 2.jpg` from its individually uploaded ZIP → `/photos/cave-diving-artwork-2.webp`, About’s “Why I teach” section.
+- `Cave Diving Artwork 2.jpg` from its individually uploaded ZIP → `/photos/cave-diving-artwork-2.webp`, retained as cave artwork; replaced in About’s “Why I teach” section because it does not show Jay.
 
-Both requested About images have now been supplied individually and installed in their specified sections. The full GU Photos.zip remains unnecessary for these placements.
+Both requested About images were supplied individually. The Leia Vita header portrait remains in use; the messaging brief subsequently selects `/photos/jay-gardner-underwater.webp` for “Why I teach” to show Jay in the water. The full GU Photos.zip remains unnecessary for these placements.

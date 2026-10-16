@@ -64,9 +64,9 @@ export default function TrainingPage() {
         eyebrow="The way we train"
         title={
           <>
-            Train with
+            One standard.
             <br />
-            <span className="serif-accent">intention.</span>
+            <span className="serif-accent">Every dive.</span>
           </>
         }
       >
@@ -97,7 +97,7 @@ export default function TrainingPage() {
             <div>
               <div className="eyebrow">The how</div>
               <h2>
-                Intentional training.
+                Consistent by design.
                 <br />
                 Built around you.
               </h2>
