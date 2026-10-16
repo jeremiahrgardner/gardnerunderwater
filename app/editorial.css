@@ -1690,6 +1690,8 @@
 .learn-video { width: 100%; aspect-ratio: 16 / 9; border: 0; margin: 2rem 0; }
 .learn-reading .article-prose table { display: block; overflow-x: auto; }
 .learn-reading .article-prose td, .learn-reading .article-prose th { padding: .7rem; border: 1px solid currentColor; }
+/* Article tables hold sentences, not prices: wrap and left-align, overriding the global rate-table defaults. */
+.learn-reading .article-prose td, .learn-reading .article-prose thead th:last-child { text-align: left; white-space: normal; }
 .calculator-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .learn-calculator input, .learn-calculator select { max-width: 100%; }
 
