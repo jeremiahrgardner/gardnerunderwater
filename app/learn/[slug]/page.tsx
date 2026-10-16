@@ -12,7 +12,13 @@ import {
 } from "@/lib/articles";
 import { courses } from "@/lib/courses";
 import { pageMetadata } from "@/lib/metadata";
-import { absoluteUrl, jsonLd, site } from "@/lib/site";
+import {
+  absoluteUrl,
+  businessSchema,
+  jsonLd,
+  personSchema,
+  site,
+} from "@/lib/site";
 import { MinimumGasCalculator } from "@/components/MinimumGasCalculator";
 import { YouTube } from "@/components/YouTube";
 import { ArticleCard } from "@/components/ArticleCard";
@@ -27,12 +33,14 @@ export async function generateMetadata({
 }) {
   const article = getArticle((await params).slug);
   if (!article) notFound();
+  const cluster = clusters.find((c) => c.slug === article.cluster);
   return {
     ...pageMetadata(
       article.title,
       article.description,
       `/learn/${article.slug}`,
     ),
+    keywords: articleKeywords(article),
     robots: article.draft ? { index: false, follow: false } : undefined,
     openGraph: {
       ...pageMetadata(
@@ -43,8 +51,24 @@ export async function generateMetadata({
       type: "article" as const,
       publishedTime: article.publishedAt || undefined,
       modifiedTime: article.lastReviewed || undefined,
+      authors: [absoluteUrl("/about")],
+      section: cluster?.name,
+      tags: articleKeywords(article),
     },
   };
+}
+// The article's target search terms, deduplicated, for meta and structured data.
+function articleKeywords(article: {
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+}) {
+  return [
+    ...new Set(
+      [article.primaryKeyword, ...(article.secondaryKeywords || [])]
+        .map((k) => k?.trim())
+        .filter(Boolean),
+    ),
+  ];
 }
 export default async function ArticlePage({
   params,
@@ -61,18 +85,34 @@ export default async function ArticlePage({
     { name: cluster.name, path: `/learn/topic/${cluster.slug}` },
     { name: article.title, path: `/learn/${article.slug}` },
   ];
+  const keywords = articleKeywords(article);
+  // Graph nodes share the page's @context, so drop each schema's own.
+  const node = (schema: Record<string, unknown>) =>
+    Object.fromEntries(
+      Object.entries(schema).filter(([k]) => k !== "@context"),
+    );
   const graph: object[] = [
     {
       "@type": "Article",
       headline: article.title,
       description: article.description,
+      abstract: article.answer,
       datePublished: article.publishedAt || undefined,
       dateModified: article.lastReviewed || undefined,
       author: { "@id": `${site.url}/about#jeremiah-gardner` },
       publisher: { "@id": `${site.url}/#organization` },
       image: absoluteUrl("/social.jpg"),
       mainEntityOfPage: absoluteUrl(`/learn/${article.slug}`),
+      articleSection: cluster.name,
+      keywords: keywords.join(", "),
+      inLanguage: "en-US",
+      wordCount: article.body
+        .replace(/<!--[\s\S]*?-->/g, "")
+        .split(/\s+/)
+        .filter((w) => /[A-Za-z0-9]/.test(w)).length,
     },
+    { ...node(personSchema), url: absoluteUrl("/about") },
+    node(businessSchema),
     {
       "@type": "BreadcrumbList",
       itemListElement: crumbs.map((c, i) => ({
@@ -83,6 +123,16 @@ export default async function ArticlePage({
       })),
     },
   ];
+  // The same questions and answers are rendered visibly in the FAQ section below.
+  if (article.faqs?.length)
+    graph.push({
+      "@type": "FAQPage",
+      mainEntity: article.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: { "@type": "Answer", text: faq.a },
+      })),
+    });
   if (article.video?.youtubeId && article.video.uploadDate)
     graph.push({
       "@type": "VideoObject",
