@@ -165,9 +165,10 @@ export default function TrainingPage() {
               </div>
               <h3>UTD</h3>
               <p>
-                Obsessed with training thinking divers. Rooted in Hogarthian/DIR
-                principles, with a consistent approach across foundational,
-                technical, cave, wreck, and CCR diving.
+                Obsessed with training thinking divers. The same DIR roots as
+                GUE, with backmount, sidemount, and rebreathers unified in one
+                system across foundational, technical, cave, wreck, and CCR
+                diving.
               </p>
             </a>
             <a

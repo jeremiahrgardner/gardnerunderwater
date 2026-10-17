@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       : undefined,
   metadataBase: new URL(site.url),
   title: {
-    default: "Technical Dive Training & Scuba Instruction | Gardner Underwater",
+    default: "UTD Technical Dive Training in San Diego | Gardner Underwater",
     template: "%s | Gardner Underwater",
   },
   description: site.description,

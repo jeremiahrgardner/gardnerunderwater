@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { courses, courseSlug } from "@/lib/courses";
+import { categoryHeadings, courseDetails } from "@/lib/course-details";
 import { getArticles } from "@/lib/articles";
 import { absoluteUrl, jsonLd, site } from "@/lib/site";
 import { Arrow } from "@/components/SiteUI";
@@ -20,7 +21,9 @@ export async function generateMetadata({
   const slug = (await params).slug;
   const item = courses.find((course) => courseSlug(course.title) === slug);
   if (!item) notFound();
-  const description = item.desc.slice(0, 157).replace(/\s+\S*$/, "") + "…";
+  const description =
+    courseDetails[slug]?.metaDescription ||
+    item.desc.slice(0, 157).replace(/\s+\S*$/, "") + "…";
   return pageMetadata(
     `${item.title} in San Diego`,
     description,
@@ -40,6 +43,8 @@ export default async function CoursePage({
     { length: Math.ceil(sentences.length / 3) },
     (_, index) => sentences.slice(index * 3, index * 3 + 3).join(" "),
   );
+  const detail = courseDetails[slug];
+  const heading = detail?.heading || categoryHeadings[course.category] || "Train with purpose.";
   const isCoaching = course.category === "Scuba Coaching";
   const isDan = course.category === "DAN First Aid Training";
   const pricing = isCoaching
@@ -117,14 +122,35 @@ export default async function CoursePage({
         <div className="container course-detail-grid">
           <div className="course-detail-copy">
             <span className="eyebrow">About this training</span>
-            <h2>
-              {isCoaching ? "Keep your progress going." : "Train with purpose."}
-            </h2>
+            <h2>{heading}</h2>
             <div className="prose">
-              {paragraphs.map((paragraph) => (
+              {(detail ? detail.lead : paragraphs).map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
-              {course.bullets && (
+              {detail?.sections.map((section) => (
+                <div key={section.title}>
+                  <h3>{section.title}</h3>
+                  <ul>
+                    {section.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              {detail?.next && (
+                <div>
+                  <h3>{detail.next.title}</h3>
+                  <ul>
+                    {detail.next.links.map((link) => (
+                      <li key={link.href}>
+                        <Link href={link.href}>{link.label}</Link>.{" "}
+                        {link.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {!detail && course.bullets && (
                 <ul>
                   {course.bullets.map((bullet) => (
                     <li key={bullet}>{bullet}</li>
@@ -135,14 +161,14 @@ export default async function CoursePage({
             <div className="course-detail-expectations">
               <h2>A personal approach.</h2>
               <p>
-                Train directly with Jay Gardner in a small team, with a maximum
-                student-to-instructor ratio of 3:1. Connect the skills to real
-                diving, with time for observation, practice, and feedback.
+                You train directly with me, in a team of three or fewer. Every
+                skill connects to a real dive, with time for observation,
+                practice, and feedback.
               </p>
               <p>
-                Start with a free 15-minute consultation to discuss your
-                experience, course prerequisites, equipment needs, and what you
-                want to achieve. Training dates are arranged together.
+                Start with a free 15-minute call. We’ll go over your experience,
+                the prerequisites, your equipment, and what you want to achieve,
+                then set dates together.
               </p>
               <Link href="/training" className="text-link">
                 How we train <Arrow />

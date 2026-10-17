@@ -4,7 +4,7 @@ export const site = {
   email: "jay@gardnerunderwater.com",
   phone: "+16198800684",
   description:
-    "Technical dive training, training days, and UTD courses for committed divers who want more than another card. Train with Jay Gardner in San Diego and beyond.",
+    "UTD technical dive training and training days in San Diego. Essentials of Tech, Techreational, Tech 1 and more, in teams of three or fewer with Jay Gardner.",
 };
 
 export function absoluteUrl(path: string) {

@@ -33,7 +33,7 @@ export default function AboutPage() {
               Let’s find your next level.
             </p>
             <span className="intro-note">
-              UTD Instructor #225 · San Diego, California
+              UTD Instructor #225 · Former UTD co-owner · San Diego
             </span>
           </div>
           <div className="about-portrait">
@@ -49,66 +49,6 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="section">
-        <div className="container split-content">
-          <div>
-            <div className="eyebrow">A little about me</div>
-            <h2>
-              Diving is the passion.
-              <br />
-              Teaching is the point.
-            </h2>
-          </div>
-          <div className="prose">
-            <p>
-              Jay Gardner is the founder and operator of Gardner Underwater and
-              a{" "}
-              <a
-                href="https://utdscubadiving.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Unified Team Diving
-              </a>{" "}
-              instructor (#225). He is a former co-owner and Director of
-              Development at UTD, a training agency committed to building
-              thinking divers.
-            </p>
-            <p>
-              He holds recreational, technical, cave, and instructor ratings,
-              and he dives the same system he teaches. Jay helps divers build
-              the skills, approach, and mindset that last.
-            </p>
-            <p>
-              Jay is also an instructor for Divers Alert Network (DAN), teaching
-              Basic Life Support: CPR and First Aid (BLS), Emergency Oxygen for
-              Scuba Diving Injuries (EO2), and Diving First Aid for Professional
-              Divers (DFA Pro).
-            </p>
-            <p>
-              Out of the water, he’s a girl dad, entrepreneur, best-selling
-              author,{" "}
-              <a
-                href="https://jeremiahgardner.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                internationally recognized speaker
-              </a>{" "}
-              and coach, and co-host
-              of{" "}
-              <a
-                href="https://www.thedivetable.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                The Dive Table
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="section section-paper">
         <div className="container note-grid">
           <div className="note-photo">
             <Image
@@ -143,6 +83,60 @@ export default function AboutPage() {
               love it. I dive because I’m obsessed with it.
             </p>
             <span className="signature">— Jay</span>
+          </div>
+        </div>
+      </section>
+      <section className="section section-paper">
+        <div className="container split-content">
+          <div>
+            <div className="eyebrow">A little about me</div>
+            <h2>
+              Diving is the passion.
+              <br />
+              Teaching is the point.
+            </h2>
+          </div>
+          <div className="prose">
+            <p>
+              I’m the founder of Gardner Underwater and a{" "}
+              <a
+                href="https://utdscubadiving.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Unified Team Diving
+              </a>{" "}
+              instructor (#225). I was also a co-owner and Director of
+              Development at UTD, so I know this system from the inside: how
+              it’s built, why each piece is there, and how it should be taught.
+            </p>
+            <p>
+              I hold recreational, technical, cave, and instructor ratings, and
+              I dive the same system I teach. I’m also a Divers Alert Network
+              (DAN) instructor for Basic Life Support (BLS), Emergency Oxygen for
+              Scuba Diving Injuries (EO2), and Diving First Aid for Professional
+              Divers (DFA Pro).
+            </p>
+            <p>
+              Out of the water, I’m a girl dad, entrepreneur, best-selling
+              author,{" "}
+              <a
+                href="https://jeremiahgardner.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                internationally recognized speaker
+              </a>{" "}
+              and coach, and co-host of{" "}
+              <a
+                href="https://www.thedivetable.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The Dive Table
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>

@@ -239,10 +239,9 @@ export default async function ArticlePage({
             />
             <h2>Jeremiah Gardner</h2>
             <p>
-              Jeremiah “Jay” Gardner is a UTD instructor, cave diver and coach
-              in San Diego, and an instructor for Divers Alert Network (DAN). He
-              helps divers build foundational, transformative and sustaining
-              skills, approaches and mindset.
+              Jeremiah “Jay” Gardner teaches UTD recreational and technical
+              diving in San Diego. He is a cave diver, a former UTD co-owner and
+              a Divers Alert Network (DAN) instructor.
             </p>
             <p>
               <Link href="/about">About Jeremiah</Link> ·{" "}

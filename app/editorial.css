@@ -1750,3 +1750,17 @@ h1 .serif-accent, h2 .serif-accent, h3 .serif-accent { font-family: var(--displa
   .learn-collection { margin-top: 28px; }
   .learn-index .article-card { padding: 24px 0; }
 }
+
+/* Long-form course pages: section labels inside the course copy. */
+.course-detail-copy .prose h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 34px 0 4px;
+}
+.course-detail-copy .prose li a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}

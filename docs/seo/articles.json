@@ -197,7 +197,7 @@
       ],
       "demandEstimate": "Low-Med",
       "competition": "Low (checked): forum threads",
-      "ctaCourse": null,
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": "/courses",
       "extraLinks": [],
       "angle": "Comparison table. Disclose up front that the author teaches UTD and was a UTD owner until 2026. Confirm current course names on both agency sites before publishing."
@@ -475,7 +475,7 @@
       ],
       "demandEstimate": "High",
       "competition": "High: scubadiving.com, PADI, DAN, magazines",
-      "ctaCourse": "scuba-coaching",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [
         "/courses/essentials-of-recreational-diving"
@@ -580,7 +580,7 @@
       ],
       "demandEstimate": "High",
       "competition": "High (checked): SDI/TDI, Dive Magazine, many shops",
-      "ctaCourse": "scuba-coaching",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [
         "/courses/essentials-of-recreational-diving"
@@ -602,7 +602,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Med",
-      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Why hands creep in; drills to stop it."
@@ -644,7 +644,7 @@
       ],
       "demandEstimate": "Med-High",
       "competition": "Med (checked): TDI, retailer blogs",
-      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "When to use each kick; one short clip per kick."
@@ -664,7 +664,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Med",
-      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "The five most common faults and their fixes."
@@ -685,7 +685,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Low-Med (checked): forum threads, one GUE.tv video",
-      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Solve the top complaint (rising while kicking back); no-fin and surface drills."
@@ -705,7 +705,7 @@
       ],
       "demandEstimate": "Low-Med",
       "competition": "Med (checked): TDI",
-      "ctaCourse": "propulsion-back-kick-extension",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Silt-safe use; video."
@@ -769,7 +769,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Med",
-      "ctaCourse": "scuba-coaching",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Calculator plus a logbook method."
@@ -893,7 +893,7 @@
       ],
       "demandEstimate": "Low",
       "competition": "Low",
-      "ctaCourse": "doubles",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [
         "/courses/essentials-of-tech"
@@ -1000,7 +1000,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Med",
-      "ctaCourse": "techreational",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Side-by-side table."
@@ -1041,7 +1041,7 @@
       ],
       "demandEstimate": "Low-Med",
       "competition": "Low (checked): forum threads",
-      "ctaCourse": "essentials-of-recreational-diving",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [
         "/courses/essentials-of-tech"
@@ -1063,7 +1063,7 @@
       ],
       "demandEstimate": "Med",
       "competition": "Med",
-      "ctaCourse": "scuba-coaching",
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": null,
       "extraLinks": [],
       "angle": "Author's voice: training versus certification; the case for coaching."
@@ -1084,7 +1084,7 @@
       ],
       "demandEstimate": "Low-Med",
       "competition": "Low (checked): an aggregator, forum threads",
-      "ctaCourse": null,
+      "ctaCourse": "essentials-of-tech",
       "ctaPage": "/courses",
       "extraLinks": [],
       "angle": "Sites, seasons, gas fills, training options."

@@ -4,7 +4,7 @@ export const courses = [
     category: "Technical Training",
     title: "Essentials of Tech",
     slug: "essentials-of-tech",
-    tagline: "",
+    tagline: "The personal skills class where technical diving starts.",
     desc: "Essentials of Tech is a personal skills class that prepares you for technical diving by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and decompression bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
     duration: "4 Days*",
     bullets: null,

@@ -10,8 +10,8 @@ import { getArticles } from "@/lib/articles";
 import { absoluteUrl, site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata(
-  "Technical & DIR Dive Training in San Diego",
-  "Technical dive training and in-water training days in San Diego. Build buoyancy, trim, gas and team skills with UTD instructor Jay Gardner in teams of 3 or fewer.",
+  "UTD Technical Dive Training in San Diego",
+  "UTD technical dive training in San Diego. Start with Essentials of Tech, build to Techreational and Tech 1, and train in teams of three or fewer with Jay Gardner.",
   "/",
 );
 
@@ -77,7 +77,7 @@ export default function HomePage() {
         <div className="landing-hero-shade" />
         <div className="container landing-hero-content">
           <div className="eyebrow">
-            Technical dive training · Training days · San Diego & beyond
+            UTD technical dive training · San Diego & beyond
           </div>
           <h1 id="home-title">
             Certified isn’t{" "}
@@ -191,6 +191,51 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section
+        className="section section-paper"
+        aria-labelledby="san-diego-title"
+      >
+        <div className="container split-content">
+          <div>
+            <div className="eyebrow">San Diego · Unified Team Diving</div>
+            <h2 id="san-diego-title">
+              Technical diving
+              <br />
+              starts here.
+            </h2>
+          </div>
+          <div className="prose">
+            <p>
+              Technical diving isn’t about going deeper. It’s about having the
+              skill, the gas, and the team to go where you want and come back.
+              You don’t have to travel to learn it.
+            </p>
+            <p>
+              San Diego’s water is cold, visibility changes, and conditions are
+              real. That’s exactly what makes it a great place to train. The sand
+              at La Jolla Shores is the best classroom in the county, with the
+              canyon edge a short swim away.
+            </p>
+            <p>
+              If you know DIR, you probably know GUE. UTD grew from the same
+              roots: the same configuration, the same team focus, the same
+              fundamentals. It unifies backmount, sidemount, and rebreathers in
+              one system, from your first skills course to decompression, cave,
+              and CCR.
+            </p>
+            <p>
+              <Link href="/learn/technical-diving-san-diego" className="text-link">
+                Technical diving in San Diego <Arrow />
+              </Link>
+            </p>
+            <p>
+              <Link href="/learn/gue-vs-utd-vs-hogarthian" className="text-link">
+                How UTD and GUE compare <Arrow />
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="landing-instructor">
         <div className="container landing-instructor-grid">
           <div className="landing-instructor-image instructor-surface-photo">
@@ -223,9 +268,10 @@ export default function HomePage() {
               cave diving, and exploration. Now I do that for other divers.
             </p>
             <p>
-              I’m Jay: UTD instructor, DAN instructor, cave diver, and co-host
-              of The Dive Table. You train directly with me, in a team of three
-              or fewer, with time to understand the why behind every skill.
+              I’m Jay: UTD instructor #225, former UTD co-owner, cave diver, DAN
+              instructor, and co-host of The Dive Table. You train directly with
+              me, in a team of three or fewer, with time to understand the why
+              behind every skill.
             </p>
             <Link href="/about" className="text-link">
               Get to know Jay <Arrow />
