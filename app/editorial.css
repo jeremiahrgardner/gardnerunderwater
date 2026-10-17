@@ -1690,6 +1690,31 @@
 /* On phones, keep diagram labels legible: scroll the figure sideways or tap to open it full size. */
 @media (max-width: 640px) { .learn-reading .article-prose .learn-figure img { width: 640px; max-width: none; } }
 .learn-figure figcaption { display: block; margin-top: .75rem; font-size: .9rem; line-height: 1.55; font-weight: 400; color: var(--muted, #5f5d55); }
+/* Email-gated downloads (components/ResourceDownload.tsx, app/resources). */
+.learn-resource { margin: 2.25rem 0; padding: clamp(1.25rem, 3vw, 1.75rem); background: var(--paper, #eeede6); border: 1px solid var(--border, #dad8ce); border-left: 4px solid var(--gold, #E5B812); }
+.learn-resource-kicker { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-dark, #7a6100); margin-bottom: .5rem; }
+.learn-resource h3 { margin: 0 0 .4rem; font-size: 1.25rem; line-height: 1.25; }
+.learn-reading .article-prose .learn-resource h3 { margin-top: 0; }
+.learn-resource > p { margin: 0 0 1rem; }
+.learn-resource-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+.learn-resource-form input[type="email"] { flex: 1 1 220px; min-width: 0; min-height: 52px; padding: 13px 14px; background: var(--card, #fffef9); border: 1px solid var(--border-strong, #a8a497); border-radius: 2px; font-size: .9rem; }
+.learn-resource-form input[type="email"]:focus { border-color: var(--gold, #E5B812); outline: 2px solid var(--gold, #E5B812); outline-offset: 1px; }
+.learn-resource-form .btn { flex: 0 0 auto; }
+.learn-resource-form .btn[disabled] { opacity: .7; cursor: progress; }
+.learn-resource-trap { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.learn-resource-done { font-weight: 600; }
+.learn-resource-error { color: #8a1c1c; font-weight: 600; margin-top: .75rem; }
+.learn-reading .article-prose .learn-resource-fine, .learn-resource-fine { font-size: .78rem; line-height: 1.5; color: var(--muted, #5f5d55); margin: .75rem 0 0; }
+.resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 0 28px; }
+.resource-cell .learn-resource { margin: 0 0 .6rem; height: auto; }
+.resource-cell { margin-bottom: 1.75rem; }
+.resource-related { font-size: .85rem; color: var(--muted, #5f5d55); }
+.resource-related a { color: var(--gold-dark, #7a6100); text-decoration: underline; text-decoration-color: var(--gold, #E5B812); text-underline-offset: 4px; }
+.resource-note { max-width: 60ch; margin-top: 2rem; }
+.resource-note h2 { font-size: 1.5rem; margin-bottom: .5rem; }
+.resource-note a { text-decoration: underline; text-decoration-color: var(--gold, #E5B812); text-underline-offset: 4px; }
+.learn-downloads-link { margin-top: .5rem; font-size: .95rem; }
+.learn-downloads-link a { font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold, #E5B812); text-underline-offset: 4px; }
 .calculator-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .learn-calculator input, .learn-calculator select { max-width: 100%; }
 
