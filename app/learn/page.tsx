@@ -19,7 +19,7 @@ export default function LearnPage() {
         <h1>Learn.</h1>
         <p>Practical guidance for more confident, thoughtful diving.</p>
         <p className="learn-downloads-link">
-          <Link href="/resources">Free downloads: tank factors, gas math, a dive log and more</Link>
+          <Link href="/tools">Free tools and downloads: gas planner, SAC rate, nitrox and more</Link>
         </p>
       </header>
       <LearnTopics />
