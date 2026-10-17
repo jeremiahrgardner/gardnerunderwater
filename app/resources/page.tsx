@@ -2,11 +2,11 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { resources } from "@/lib/resources";
 import { absoluteUrl, jsonLd, site } from "@/lib/site";
-import { ResourceDownload } from "@/components/ResourceDownload";
+import { ResourceLibrary } from "@/components/ResourceLibrary";
 
 const title = "Free Dive Planning Downloads: Gas Math, Tank Factors, Dive Log";
 const description =
-  "Free PDFs for technical and recreational divers: tank factor charts, gas consumption tables, gas math formulas, a dive log and an emergency action plan.";
+  "Free PDFs for divers: a gas planning worksheet, tank factor charts, gas consumption tables, gas math formulas, a dive log and an emergency action plan.";
 
 export const metadata = pageMetadata(title, description, "/resources");
 
@@ -14,7 +14,7 @@ const related: Record<string, { href: string; label: string }> = {
   "tank-factors": { href: "/learn/tank-factors", label: "Tank factors, explained" },
   "gas-consumption-table": { href: "/learn/sac-rate-and-rmv", label: "How to calculate your SAC rate" },
   "gas-math-formulas": { href: "/learn/instruments-confirm-what-you-know", label: "Doing the math underwater" },
-  "utd-gas-planning-worksheet": { href: "/learn/rock-bottom-calculator", label: "Rock bottom, step by step" },
+  "gas-planning-worksheet": { href: "/learn/rock-bottom-calculator", label: "Rock bottom, step by step" },
   "dive-log": { href: "/learn/why-divers-plateau", label: "Why divers plateau" },
   "emergency-action-plan": { href: "/learn/five-minute-dive-check", label: "The five-minute check" },
 };
@@ -58,25 +58,13 @@ export default function ResourcesPage() {
           it. Print them. Write on them. Bring them on the boat.
         </p>
       </header>
-      <div className="resource-grid">
-        {resources.map((r) => (
-          <div key={r.slug} className="resource-cell">
-            <ResourceDownload resource={r.slug} />
-            {related[r.slug] && (
-              <p className="resource-related">
-                Read next:{" "}
-                <Link href={related[r.slug].href}>{related[r.slug].label}</Link>
-              </p>
-            )}
-          </div>
-        ))}
-      </div>
+      <ResourceLibrary related={related} />
       <section className="resource-note">
-        <h2>Paper doesn&rsquo;t replace training</h2>
+        <h2>Paper doesn’t replace training</h2>
         <p>
           A worksheet tells you what the numbers are. Training teaches you to
           run them in your head, at depth, with your team, while something else
-          is going wrong. That&rsquo;s where{" "}
+          is going wrong. That’s where{" "}
           <Link href="/courses/essentials-of-tech">Essentials of Tech</Link>{" "}
           starts.
         </p>

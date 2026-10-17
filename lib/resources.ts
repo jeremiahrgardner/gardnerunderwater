@@ -1,7 +1,9 @@
-// Downloadable resources. Files live in resources/files (not public/), so the
-// only way to get one is through the email form, which serves it from
-// app/api/resources/route.ts. Rebuild the Gardner PDFs with
-// scripts/resources/build_pdfs.py and print_pdfs.mjs.
+// Downloadable resources. One email unlocks the whole library: the unlock
+// route (app/api/resources/route.ts) adds the reader to Kit and sets the
+// gu_library cookie, and the file route (app/api/resources/[slug]/route.ts)
+// serves files from resources/files (not public/) to browsers with that cookie.
+// Rebuild the PDFs with scripts/resources/build_pdfs.py and print_pdfs.mjs,
+// then the ZIP with scripts/resources/bundle.py.
 export type Resource = {
   slug: string;
   title: string;
@@ -9,10 +11,27 @@ export type Resource = {
   file: string;
   downloadName: string;
   pages: number;
-  credit?: string;
+};
+
+export const LIBRARY_COOKIE = "gu_library";
+
+export const library = {
+  slug: "all",
+  file: "dive-planning-library.zip",
+  downloadName: "Gardner-Underwater-Dive-Planning-Library.zip",
+  contentType: "application/zip",
 };
 
 export const resources: Resource[] = [
+  {
+    slug: "gas-planning-worksheet",
+    title: "Gas Planning Worksheet",
+    description:
+      "A fill-in sheet for rock bottom, usable gas, turn pressure, gas needed, bottom time and SAC rate, with a team table and a worked example.",
+    file: "gas-planning-worksheet.pdf",
+    downloadName: "Gardner-Underwater-Gas-Planning-Worksheet.pdf",
+    pages: 2,
+  },
   {
     slug: "tank-factors",
     title: "Tank Factors and Gas Consumption",
@@ -39,16 +58,6 @@ export const resources: Resource[] = [
     file: "gas-math-formulas.pdf",
     downloadName: "Gardner-Underwater-Gas-Math-Formulas.pdf",
     pages: 2,
-  },
-  {
-    slug: "utd-gas-planning-worksheet",
-    title: "UTD Gas Planning Worksheet",
-    description:
-      "UTD's fill-in worksheet for rock bottom, usable gas, gas needed, bottom time and SAC rate, in metric and imperial.",
-    file: "utd-gas-planning-worksheet.pdf",
-    downloadName: "UTD-Gas-Planning-Worksheet.pdf",
-    pages: 3,
-    credit: "© 2020 UTD Unified Team Diving. Shared with permission.",
   },
   {
     slug: "dive-log",

@@ -1,23 +1,21 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { getResource } from "@/lib/resources";
+import { cookies } from "next/headers";
+import { LIBRARY_COOKIE } from "@/lib/resources";
 import { KitError, SITE_TAG, subscribe } from "@/lib/kit";
 
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const ONE_YEAR = 60 * 60 * 24 * 365;
 
-// Email-gated download: adds the reader to Kit with the site tag, then returns the PDF.
+// Unlocks the downloads library: adds the reader to Kit, then remembers the
+// unlock in this browser with a cookie. No accounts or passwords; on a new
+// device the reader enters the same email again.
 export async function POST(request: Request) {
-  let body: { email?: unknown; resource?: unknown; website?: unknown };
+  let body: { email?: unknown; website?: unknown };
   try {
     body = await request.json();
   } catch {
     return Response.json({ error: "Invalid request." }, { status: 400 });
   }
   const email = typeof body.email === "string" ? body.email.trim() : "";
-  const resource =
-    typeof body.resource === "string" ? getResource(body.resource) : undefined;
-  if (!resource)
-    return Response.json({ error: "Unknown download." }, { status: 404 });
   if (!EMAIL.test(email) || email.length > 254)
     return Response.json(
       { error: "Please enter a valid email address." },
@@ -27,30 +25,25 @@ export async function POST(request: Request) {
   const isBot = typeof body.website === "string" && body.website !== "";
   if (!isBot) {
     try {
-      const saved = await subscribe(email, [
-        SITE_TAG,
-        `${SITE_TAG}: ${resource.title}`,
-      ]);
+      const saved = await subscribe(email, [SITE_TAG, `${SITE_TAG}: Downloads`]);
       if (!saved)
-        console.warn("resource_download: KIT_API_KEY is not set; signup not saved");
+        console.warn("library_unlock: KIT_API_KEY is not set; signup not saved");
     } catch (error) {
       if (error instanceof KitError && error.status === 422)
         return Response.json(
           { error: "Please check your email address and try again." },
           { status: 400 },
         );
-      // Never block the download on a Kit outage; log it so the gap is visible.
-      console.error("resource_download: Kit signup failed", error);
+      // Never block access on a Kit outage; log it so the gap is visible.
+      console.error("library_unlock: Kit signup failed", error);
     }
   }
-  const file = await readFile(
-    path.join(process.cwd(), "resources/files", resource.file),
-  );
-  return new Response(new Uint8Array(file), {
-    headers: {
-      "Content-Type": "application/pdf",
-      "Content-Disposition": `attachment; filename="${resource.downloadName}"`,
-      "Cache-Control": "no-store",
-    },
+  (await cookies()).set(LIBRARY_COOKIE, "1", {
+    maxAge: ONE_YEAR,
+    path: "/",
+    sameSite: "lax",
+    httpOnly: false, // read by the page to show the unlocked state
+    secure: process.env.NODE_ENV === "production",
   });
+  return Response.json({ ok: true });
 }
