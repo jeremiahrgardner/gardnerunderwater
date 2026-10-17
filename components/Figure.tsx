@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // A diagram or photo inside a Learn article, with a visible caption.
-// Diagrams are SVG files in public/learn/figures and are served as-is.
+// Images live in public/; SVGs are served as-is.
 // The image links to the full-size file so phone readers can zoom in.
 export function Figure({
   src,
