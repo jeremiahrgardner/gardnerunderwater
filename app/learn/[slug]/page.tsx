@@ -19,6 +19,7 @@ import {
   personSchema,
   site,
 } from "@/lib/site";
+import { Figure } from "@/components/Figure";
 import { MinimumGasCalculator } from "@/components/MinimumGasCalculator";
 import { YouTube } from "@/components/YouTube";
 import { ArticleCard } from "@/components/ArticleCard";
@@ -186,7 +187,7 @@ export default async function ArticlePage({
           <div className="article-prose">
             <MDXRemote
               source={article.body.replace(/<!--[\s\S]*?-->/g, "")}
-              components={{ YouTube, MinimumGasCalculator }}
+              components={{ Figure, YouTube, MinimumGasCalculator }}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
           </div>

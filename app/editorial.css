@@ -1683,6 +1683,13 @@
 .learn-reading .article-prose td, .learn-reading .article-prose th { padding: .7rem; border: 1px solid currentColor; }
 /* Article tables hold sentences, not prices: wrap and left-align, overriding the global rate-table defaults. */
 .learn-reading .article-prose td, .learn-reading .article-prose thead th:last-child { text-align: left; white-space: normal; }
+/* Article diagrams: full-width image and a readable caption, overriding the global quote-style figcaption. */
+.learn-figure { margin: 2.25rem 0; }
+.learn-figure-media { display: block; overflow-x: auto; border: 1px solid var(--border, #dad8ce); background: var(--card, #fffef9); }
+.learn-reading .article-prose .learn-figure img { display: block; width: 100%; height: auto; margin: 0; }
+/* On phones, keep diagram labels legible: scroll the figure sideways or tap to open it full size. */
+@media (max-width: 640px) { .learn-reading .article-prose .learn-figure img { width: 640px; max-width: none; } }
+.learn-figure figcaption { display: block; margin-top: .75rem; font-size: .9rem; line-height: 1.55; font-weight: 400; color: var(--muted, #5f5d55); }
 .calculator-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .learn-calculator input, .learn-calculator select { max-width: 100%; }
 
