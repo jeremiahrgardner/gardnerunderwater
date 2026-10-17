@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
+  // Gated PDFs live outside public/ and are read by the download route at runtime.
+  outputFileTracingIncludes: {
+    "/api/resources": ["./resources/files/**/*"],
+  },
   // PostHog's API paths end in a slash, so Next's automatic trailing-slash
   // redirect is switched off and re-added below for every path except /ingest.
   skipTrailingSlashRedirect: true,

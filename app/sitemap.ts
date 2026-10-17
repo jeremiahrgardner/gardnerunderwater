@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/pricing",
       "/about",
       "/learn",
+      "/resources",
       // Topic hubs are listed once they have at least one published article.
       ...clusters
         .filter((c) => articles.some((a) => a.cluster === c.slug))

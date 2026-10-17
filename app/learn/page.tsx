@@ -18,6 +18,9 @@ export default function LearnPage() {
       <header className="learn-index-header">
         <h1>Learn.</h1>
         <p>Practical guidance for more confident, thoughtful diving.</p>
+        <p className="learn-downloads-link">
+          <Link href="/resources">Free downloads: tank factors, gas math, a dive log and more</Link>
+        </p>
       </header>
       <LearnTopics />
       <section

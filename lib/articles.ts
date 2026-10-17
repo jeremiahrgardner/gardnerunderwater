@@ -3,6 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { extractInternalLinks } from "./content-links.ts";
 import { courses } from "./courses.ts";
+import { getResource } from "./resources.ts";
 
 const plan = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), "docs/seo/articles.json"), "utf8"),
@@ -45,6 +46,7 @@ const publicPages = new Set([
   "/merch",
   "/courses",
   "/learn",
+  "/resources",
 ]);
 const validDate = (value: unknown): value is string =>
   typeof value === "string" &&
@@ -102,6 +104,10 @@ export function validateArticles(articles: Article[]) {
     )
       problems.push("calculator defaults require Jeremiah confirmation");
     if (!article.body.trim()) problems.push("body required");
+    for (const [, slug] of article.body.matchAll(
+      /<ResourceDownload\s+resource="([^"]+)"/g,
+    ))
+      if (!getResource(slug)) problems.push(`unknown resource: ${slug}`);
     let bodyLinks: string[] = [];
     try {
       bodyLinks = extractInternalLinks(article.body);
