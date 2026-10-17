@@ -19,9 +19,9 @@ export function Footer() {
               />
             </Link>
             <p>
-              Training designed to advance your skills,
+              Technical training and training days
               <br />
-              your control, and your brain.
+              for divers who want more than a card.
             </p>
             <span className="eyebrow">
               San Diego, California · Train anywhere

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       : undefined,
   metadataBase: new URL(site.url),
   title: {
-    default: "Scuba Instruction & Coaching | Gardner Underwater",
+    default: "Technical Dive Training & Scuba Instruction | Gardner Underwater",
     template: "%s | Gardner Underwater",
   },
   description: site.description,

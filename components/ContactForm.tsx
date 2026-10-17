@@ -88,7 +88,7 @@ export function ContactForm({
           <input
             id="interest"
             name="interest"
-            placeholder="A course, coaching, or ‘not sure yet’"
+            placeholder="Technical training, a training day, or ‘not sure yet’"
             defaultValue={selectedCourse}
             maxLength={200}
           />
@@ -101,7 +101,7 @@ export function ContactForm({
         <textarea
           id="message"
           name="message"
-          placeholder="What would you like to work on? When are you usually available for a quick call?"
+          placeholder="What are you working on, and what’s getting in the way? When are you free for a quick call?"
           rows={5}
           maxLength={4000}
           required

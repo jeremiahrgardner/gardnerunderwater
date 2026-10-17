@@ -21,19 +21,19 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --gold-hover: #f2ce4a;
-  --border-strong: #79766d;
-  --canvas: #0e0e0e;
-  --paper: #181818;
-  --card: #202020;
-  --ink: #f5f3ec;
-  --ink-dark: #080808;
-  --muted: #b9b6ad;
-  --border: #3d3b35;
+  --border-strong: #a8a497;
+  --canvas: #f7f6f0;
+  --paper: #eeede6;
+  --card: #fffef9;
+  --ink: #141414;
+  --ink-dark: #0e0e0e;
+  --muted: #5f5d55;
+  --border: #dad8ce;
   --gold: #E5B812;
-  --gold-dark: #E5B812;
-  --white: #f5f3ec;
+  --gold-dark: #7a6100;
+  --white: #fffef9;
   --display: "Roboto", Arial, sans-serif;
   --body: "DM Sans", Arial, sans-serif;
   --serif: "EB Garamond", Georgia, serif;
@@ -329,7 +329,7 @@ main:focus {
   position: absolute;
   inset: auto 0 1px;
   height: 2px;
-  background: var(--ink-dark);
+  background: var(--gold);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s;
@@ -2381,4 +2381,44 @@ thead th:last-child {
 .mobile-menu-heading button {
   display: grid;
   place-items: center;
+}
+
+/* Black-and-gold surfaces on a cream site. Each block below re-maps the
+   palette tokens, so everything inside it reads light-on-black. */
+.site-header,
+.mobile-menu,
+.utility-bar,
+.landing-hero,
+.hero-visual,
+.philosophy-feature,
+.site-footer,
+.wide-photo,
+.pricing-featured,
+.training-path-featured,
+.merch-banner,
+.landing-quote,
+.instructor-nameplate,
+.byline-mark {
+  color-scheme: dark;
+  --canvas: #0e0e0e;
+  --paper: #181818;
+  --card: #202020;
+  --ink: #f5f3ec;
+  --muted: #b9b6ad;
+  --border: #3d3b35;
+  --border-strong: #79766d;
+  --gold-dark: #e5b812;
+  --white: #f5f3ec;
+  color: var(--ink);
+}
+.mobile-menu {
+  background: var(--canvas);
+}
+.training-path.training-path-featured {
+  background: var(--canvas);
+  border-color: var(--gold);
+}
+.training-path.training-path-featured .path-index > span:first-child,
+.training-path.training-path-featured .training-path-detail {
+  color: var(--gold);
 }

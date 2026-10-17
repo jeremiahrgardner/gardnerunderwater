@@ -6,7 +6,7 @@ import { PageIntro, Arrow } from "@/components/SiteUI";
 
 export const metadata: Metadata = pageMetadata(
   "Book a Course | Gardner Underwater, San Diego",
-  "Book a scuba course or coaching with Gardner Underwater in San Diego. Call +1 (619) 880-0684 or send a message.",
+  "Book technical dive training, a training day, or a UTD course with Gardner Underwater in San Diego. Call +1 (619) 880-0684 or send a message.",
   "/contact",
 );
 export default async function ContactPage({
@@ -28,16 +28,16 @@ export default async function ContactPage({
         eyebrow="Let’s start a conversation"
         title={
           <>
-            Better diving.
+            Let’s find your
             <br />
-            <span className="serif-accent">Starts here.</span>
+            <span className="serif-accent">next level.</span>
           </>
         }
       >
         <p>
-          Not sure which course is right for you? Start with a free 15-minute
-          consultation. We’ll talk about your experience and arrange training
-          that fits.
+          Not sure where to start? Book a free 15-minute call. Tell me what
+          you’ve done, what you want to do next, and what’s getting in the
+          way.
         </p>
         <span className="intro-note">
           Request a call by email. We’ll agree on a time together.
@@ -101,11 +101,11 @@ export default async function ContactPage({
         <div className="container">
           <div className="section-heading">
             <div>
-              <div className="eyebrow">From the dive team</div>
+              <div className="eyebrow">In their words</div>
               <h2>
-                Training that
+                Better divers.
                 <br />
-                makes a difference.
+                Better teammates.
               </h2>
             </div>
           </div>

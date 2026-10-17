@@ -2,11 +2,11 @@ export const courses = [
   // ── Technical Training ─────────────────────────────────────────────
   {
     category: "Technical Training",
-    title: "Tech 1",
-    slug: "tech-1",
+    title: "Essentials of Tech",
+    slug: "essentials-of-tech",
     tagline: "",
-    desc: "Tech 1 develops deeper decompression diving to 160 feet/48 meters with trimix 25/25, 21/35 or 18/45 and one decompression bottle of oxygen or nitrox 50. Oxygen decompression is limited to one 15-minute cycle, or 30 minutes when using nitrox 50. A stage bottle requires stage training. As depth and decompression obligations increase, so do the demands of proper gas management, team awareness, and precision execution. This course uses a critical skills approach where dives are treated as real dives with real objectives and evolving failures that require the team to problem-solve together under pressure. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills, and handling failures away from the bottom — building the comfort, awareness, and confidence required for more advanced technical diving. Prerequisites include a minimum age of 21, 75 dives beyond open water, and UTD Essentials of Tech, Rec 2 with Doubles MINI, Techreational, or equivalent with assessment. The instructor verifies all general, fitness and rescue prerequisites before training.",
-    duration: "",
+    desc: "Essentials of Tech is a personal skills class that prepares you for technical diving by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and decompression bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
+    duration: "4 Days*",
     bullets: null,
   },
   {
@@ -20,11 +20,11 @@ export const courses = [
   },
   {
     category: "Technical Training",
-    title: "Essentials of Tech",
-    slug: "essentials-of-tech",
+    title: "Tech 1",
+    slug: "tech-1",
     tagline: "",
-    desc: "Essentials of Tech is a personal skills class that prepares you for technical diving by advancing your control of buoyancy, trim, and propulsion, while introducing you to more advanced air sharing procedures and decompression bottle handling protocols. The class also introduces you to more advanced gas planning and more complicated ascent strategies.",
-    duration: "4 Days*",
+    desc: "Tech 1 develops deeper decompression diving to 160 feet/48 meters with trimix 25/25, 21/35 or 18/45 and one decompression bottle of oxygen or nitrox 50. Oxygen decompression is limited to one 15-minute cycle, or 30 minutes when using nitrox 50. A stage bottle requires stage training. As depth and decompression obligations increase, so do the demands of proper gas management, team awareness, and precision execution. This course uses a critical skills approach where dives are treated as real dives with real objectives and evolving failures that require the team to problem-solve together under pressure. Training focuses heavily on mid-water control, ascent discipline, gas switches, valve drills, and handling failures away from the bottom — building the comfort, awareness, and confidence required for more advanced technical diving. Prerequisites include a minimum age of 21, 75 dives beyond open water, and UTD Essentials of Tech, Rec 2 with Doubles MINI, Techreational, or equivalent with assessment. The instructor verifies all general, fitness and rescue prerequisites before training.",
+    duration: "",
     bullets: null,
   },
   {
@@ -214,23 +214,23 @@ export const courses = [
 ];
 
 export const courseCategories = [
+  { name: "Technical Training", label: "Technical", id: "technical-training" },
   {
     name: "Foundational Training",
     label: "Foundational",
     id: "foundational-training",
-  },
-  { name: "Technical Training", label: "Technical", id: "technical-training" },
-  { name: "Scuba Coaching", label: "Coaching", id: "scuba-coaching" },
-  {
-    name: "DAN First Aid Training",
-    label: "DAN first aid",
-    id: "dan-first-aid-training",
   },
   {
     name: "Extensions & Specialties",
     label: "Specialties",
     id: "extensions-specialties",
   },
+  {
+    name: "DAN First Aid Training",
+    label: "DAN first aid",
+    id: "dan-first-aid-training",
+  },
+  { name: "Scuba Coaching", label: "Coaching", id: "scuba-coaching" },
 ];
 
 export function courseSlug(title: string) {

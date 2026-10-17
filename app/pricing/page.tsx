@@ -4,30 +4,33 @@ import Link from "next/link";
 import { Arrow, ConsultationCTA, PageIntro } from "@/components/SiteUI";
 
 export const metadata: Metadata = pageMetadata(
-  "Scuba Training & Coaching Pricing",
-  "Explore Gardner Underwater pricing: $300 per training day, $129 monthly scuba coaching and $300 DAN first aid courses. Start with a consultation.",
+  "Dive Training Pricing",
+  "Gardner Underwater pricing: technical courses and training days at $300 per day, DAN first aid at $300 per course, and $129 monthly coaching. Start with a free call.",
   "/pricing",
 );
 const options = [
   {
-    title: "In-water training",
-    type: "Build your skills",
+    id: "training-days",
+    title: "Courses & training days",
+    type: "In the water",
     amount: "300",
     unit: "/ day",
     note: "Minimum 1 day",
-    text: "Focused instruction for foundational and technical diving. Train for the skills you need and the dives you want to do.",
-    interest: "In-water training",
+    text: "Essentials of Tech, the rest of the technical path, foundational courses, and stand-alone training days. All priced by the day, because skill takes the time it takes.",
+    interest: "Training days",
   },
   {
+    id: "coaching",
     title: "Scuba coaching",
-    type: "Build your momentum",
+    type: "Between your dives",
     amount: "129",
     unit: "/ month",
     note: "No minimum commitment",
-    text: "A consistent approach to developing your diving, with regular communication, video review, and feedback from your coach.",
+    text: "Keep progressing between courses, with regular check-ins, video review, and honest feedback.",
     interest: "Scuba Coaching",
   },
   {
+    id: "dan-first-aid",
     title: "DAN first aid",
     type: "Be ready to respond",
     amount: "300",
@@ -51,8 +54,8 @@ export default function PricingPage() {
         }
       >
         <p>
-          No hidden fees, upselling, or false discounts. Our prices reflect the
-          expertise, attention, and work that good training deserves.
+          No hidden fees. No upselling. No fake discounts. The price reflects the
+          time, attention, and work that good training takes.
         </p>
         <span className="intro-note">
           You pay for training. You earn certification.
@@ -64,7 +67,8 @@ export default function PricingPage() {
             {options.map((option, i) => (
               <article
                 key={option.title}
-                className={`pricing-card ${i === 1 ? "pricing-featured" : ""}`}
+                id={option.id}
+                className={`pricing-card ${i === 0 ? "pricing-featured" : ""}`}
               >
                 <div className="card-topline">
                   <span>0{i + 1}</span>
@@ -79,7 +83,7 @@ export default function PricingPage() {
                 </div>
                 <span className="price-note">{option.note}</span>
                 <Link
-                  className={`btn ${i === 1 ? "btn-primary" : "btn-outline"}`}
+                  className={`btn ${i === 0 ? "btn-primary" : "btn-outline"}`}
                   href={`/contact?course=${encodeURIComponent(option.interest)}#consultation`}
                 >
                   Let’s talk <Arrow />
@@ -90,9 +94,9 @@ export default function PricingPage() {
           <div className="pricing-explainer">
             <span className="eyebrow">Plan before you commit</span>
             <p>
-              Start with a free 15-minute consultation. We’ll discuss your
-              experience, goals, training days, and any equipment or other costs
-              before you book training.
+              Start with a free 15-minute call. We’ll talk through your
+              experience, your goals, how many days it will likely take, and any
+              equipment costs before you book.
             </p>
             <Link href="/shop" className="text-link">
               Explore equipment rentals <Arrow />

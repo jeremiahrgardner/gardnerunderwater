@@ -10,28 +10,28 @@ export const metadata: Metadata = pageMetadata(
 );
 const approach = [
   [
-    "Individual attention",
-    "All courses have a maximum student-to-instructor ratio of 3:1. A personal, engaged, and focused training environment gives you space to learn.",
+    "Three students. Maximum.",
+    "Every course caps at three students to one instructor. Enough to train as a team. Few enough that I see everything.",
   ],
   [
-    "Real-world application",
-    "Every skill, procedure, and theory is presented in the context of real diving. Connect what you practice to the dives you actually want to do.",
+    "Real dives, real objectives",
+    "Every skill is taught inside a real dive. Drills build the reflexes. Understanding is what you use when the dive stops following the script.",
   ],
   [
-    "A team diving mindset",
-    "The team is your backup: gas, equipment, and brain. Learn to operate, think, and make decisions together.",
+    "The team is the backup",
+    "Gas, equipment, and brain. You learn to operate, communicate, and decide together. No “trust me” dives.",
   ],
   [
     "One consistent system",
-    "A unified, consistent, scalable, and interchangeable diving system helps you build on your skills as your goals evolve.",
+    "Same configuration, same procedures, from your first skills day to your first decompression dive. You never start over. You build.",
   ],
   [
     "In trim. Switched on.",
-    "We dive how we teach, and teach how we dive: neutrally buoyant, in trim, and with our brains switched on.",
+    "I dive how I teach and teach how I dive: neutrally buoyant, in trim, and with my brain switched on.",
   ],
   [
     "Train where you dive",
-    "Train at our home base in San Diego, at your home base, or somewhere new. Your learning belongs in the environment where you’ll use it.",
+    "Train at my home base in San Diego, at yours, or somewhere new. Your training belongs in the water where you’ll use it.",
   ],
 ];
 const principles = [
@@ -61,21 +61,21 @@ export default function TrainingPage() {
   return (
     <>
       <PageIntro
-        eyebrow="The way we train"
+        eyebrow="The way I train"
         title={
           <>
-            Train with
+            One standard.
             <br />
-            <span className="serif-accent">intention.</span>
+            <span className="serif-accent">Every dive.</span>
           </>
         }
       >
         <p>
-          You pay for training. You earn certification. Our focus is the process
-          of building skills, confidence, and awareness that stay with you.
+          Most training is built to sell the next card. Mine is built to change
+          how you dive. You pay for training. You earn certification.
         </p>
         <span className="intro-note">
-          The outcome is a more capable, thinking diver.
+          The outcome is a thinking diver.
         </span>
       </PageIntro>
       <section className="wide-photo training-expedition-photo">
@@ -97,14 +97,13 @@ export default function TrainingPage() {
             <div>
               <div className="eyebrow">The how</div>
               <h2>
-                Intentional training.
+                Consistent by design.
                 <br />
                 Built around you.
               </h2>
             </div>
             <p>
-              A deliberate approach, from the first conversation to the last
-              debrief.
+              A deliberate approach, from the first call to the last debrief.
             </p>
           </div>
           <div className="approach-grid">

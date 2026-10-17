@@ -16,18 +16,19 @@ export default function CoursesPage() {
         eyebrow="The curriculum"
         title={
           <>
-            Your next
+            Earn your
             <br />
-            <span className="serif-accent">plateau.</span>
+            <span className="serif-accent">next level.</span>
           </>
         }
       >
         <p>
-          From your first foundations to your next technical challenge. Find
-          training that moves your diving forward.
+          The technical path starts with Essentials of Tech and builds from
+          there. Foundations, specialties, and first aid fill in the rest. One
+          standard throughout, so every step builds on the last.
         </p>
         <span className="intro-note">
-          Small teams. Individual attention. Real-world skills.
+          Teams of three or fewer. Real dives. You earn the card.
         </span>
       </PageIntro>
       <CourseCatalog />
