@@ -33,7 +33,7 @@ export default function AboutPage() {
               Let’s find your next level.
             </p>
             <span className="intro-note">
-              UTD Instructor #225 · Former UTD co-owner · San Diego
+              UTD Instructor #08 · Former UTD co-owner · San Diego
             </span>
           </div>
           <div className="about-portrait">
@@ -106,7 +106,7 @@ export default function AboutPage() {
               >
                 Unified Team Diving
               </a>{" "}
-              instructor (#225). I was also a co-owner and Director of
+              instructor (#08). I was also a co-owner and Director of
               Development at UTD, so I know this system from the inside: how
               it’s built, why each piece is there, and how it should be taught.
             </p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               >
                 internationally recognized speaker
               </a>{" "}
-              and coach, and co-host of{" "}
+              and coach, and former co-host of{" "}
               <a
                 href="https://www.thedivetable.com/"
                 target="_blank"
@@ -143,7 +143,7 @@ export default function AboutPage() {
       <section className="section">
         <div className="container podcast-feature">
           <div>
-            <div className="eyebrow">Pull up a chair</div>
+            <div className="eyebrow">From the archive</div>
             <h2>The Dive Table.</h2>
             <p className="large-copy">
               Good conversations about the world beneath the surface.
@@ -151,9 +151,10 @@ export default function AboutPage() {
           </div>
           <div>
             <p>
-              Recreational and technical diving, travel, equipment, training,
-              instruction, and the industry around it. Join the conversation on
-              your favorite podcast platform.
+              I co-hosted The Dive Table, a podcast about recreational and
+              technical diving, travel, equipment, training, instruction, and
+              the industry around it. We’re no longer recording new episodes,
+              but the archive is still there to explore.
             </p>
             <a
               href="https://www.thedivetable.com/episodes/"
@@ -161,7 +162,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="text-link"
             >
-              Listen to the show <Arrow diagonal />
+              Listen to the archive <Arrow diagonal />
             </a>
           </div>
         </div>

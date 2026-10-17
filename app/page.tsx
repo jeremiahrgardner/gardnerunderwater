@@ -220,8 +220,8 @@ export default function HomePage() {
               If you know DIR, you probably know GUE. UTD grew from the same
               roots: the same configuration, the same team focus, the same
               fundamentals. It unifies backmount, sidemount, and rebreathers in
-              one system, from your first skills course to decompression, cave,
-              and CCR.
+              one system, from your first skills course through decompression
+              diving.
             </p>
             <p>
               <Link href="/learn/technical-diving-san-diego" className="text-link">
@@ -268,8 +268,8 @@ export default function HomePage() {
               cave diving, and exploration. Now I do that for other divers.
             </p>
             <p>
-              I’m Jay: UTD instructor #225, former UTD co-owner, cave diver, DAN
-              instructor, and co-host of The Dive Table. You train directly with
+              I’m Jay: UTD instructor #08, former UTD co-owner, cave diver, and
+              DAN instructor. You train directly with
               me, in a team of three or fewer, with time to understand the why
               behind every skill.
             </p>

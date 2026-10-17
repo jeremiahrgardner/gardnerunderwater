@@ -7,7 +7,7 @@ const agencies = [
   {
     name: "Unified Team Diving",
     shortName: "UTD",
-    credential: "UTD Instructor #225",
+    credential: "UTD Instructor #08",
     href: "https://utdscubadiving.com/",
     file: "utd-logo",
   },
