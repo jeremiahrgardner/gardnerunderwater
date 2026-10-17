@@ -19,7 +19,7 @@ export async function GET(
         })();
   if (!item) return Response.json({ error: "Unknown download." }, { status: 404 });
   if ((await cookies()).get(LIBRARY_COOKIE)?.value !== "1")
-    return Response.redirect(new URL("/resources#library", request.url), 303);
+    return Response.redirect(new URL("/tools#library", request.url), 303);
   const file = await readFile(
     path.join(process.cwd(), "resources/files", item.file),
   );

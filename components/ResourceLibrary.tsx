@@ -7,11 +7,14 @@ import { LibraryUnlockForm } from "./LibraryUnlockForm";
 
 const EMAIL_INPUT = "library-email";
 
-// The /resources page body: one unlock form, then every download.
+// The downloads on /tools: one unlock form, then every download.
 export function ResourceLibrary({
   related,
+  online = {},
 }: {
   related: Record<string, { href: string; label: string }>;
+  /** Downloads that also have an online tool. */
+  online?: Record<string, { href: string; label: string }>;
 }) {
   const unlocked = useLibraryUnlocked();
   const focusForm = () => {
@@ -25,7 +28,7 @@ export function ResourceLibrary({
         {unlocked ? (
           <>
             <span className="learn-resource-kicker">Library unlocked</span>
-            <h2>You’re in. Download anything below.</h2>
+            <h3>You’re in. Download anything below.</h3>
             <p>
               Or grab all {resources.length} at once. Your library stays
               unlocked on this device; on another device, enter the same email.
@@ -45,7 +48,7 @@ export function ResourceLibrary({
             <span className="learn-resource-kicker">
               Free · {resources.length} PDFs · one email
             </span>
-            <h2>Get the whole library.</h2>
+            <h3>Get the whole library.</h3>
             <p>
               Enter your email once and every download on this page is yours.
               No account. No password.
@@ -72,6 +75,12 @@ export function ResourceLibrary({
             >
               {unlocked ? "Download the PDF" : "Unlock to download"}
             </button>
+            {online[r.slug] && (
+              <p className="resource-related">
+                Use it online:{" "}
+                <Link href={online[r.slug].href}>{online[r.slug].label}</Link>
+              </p>
+            )}
             {related[r.slug] && (
               <p className="resource-related">
                 Read next:{" "}

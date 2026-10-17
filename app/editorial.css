@@ -1690,7 +1690,7 @@
 /* On phones, keep diagram labels legible: scroll the figure sideways or tap to open it full size. */
 @media (max-width: 640px) { .learn-reading .article-prose .learn-figure img { width: 640px; max-width: none; } }
 .learn-figure figcaption { display: block; margin-top: .75rem; font-size: .9rem; line-height: 1.55; font-weight: 400; color: var(--muted, #5f5d55); }
-/* Email-gated downloads (components/ResourceDownload.tsx, app/resources). */
+/* Email-gated downloads (components/ResourceDownload.tsx, app/tools). */
 .learn-resource { margin: 2.25rem 0; padding: clamp(1.25rem, 3vw, 1.75rem); background: var(--paper, #eeede6); border: 1px solid var(--border, #dad8ce); border-left: 4px solid var(--gold, #E5B812); }
 .learn-resource-kicker { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-dark, #7a6100); margin-bottom: .5rem; }
 .learn-resource h3 { margin: 0 0 .4rem; font-size: 1.25rem; line-height: 1.25; }
@@ -1725,6 +1725,111 @@
 .learn-downloads-link a { font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold, #E5B812); text-underline-offset: 4px; }
 .calculator-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; margin: 1.5rem 0; }
 .learn-calculator input, .learn-calculator select { max-width: 100%; }
+
+/* Dive planning tools (components/tools, app/tools). */
+.tool { margin: 2rem 0; padding: clamp(1.25rem, 3vw, 2rem); background: var(--card); border: 1px solid var(--border); border-top: 4px solid var(--gold); }
+.tool + .tool { margin-top: 1.5rem; }
+.tool h2 { font-size: clamp(1.3rem, 3vw, 1.6rem); margin: 0 0 .25rem; }
+.tool-intro { color: var(--muted); margin: 0; }
+.tool-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 0 1rem; margin: 1.25rem 0 0; }
+.tool .form-field { display: flex; flex-direction: column; margin-bottom: 1rem; }
+.tool .form-field label { flex: 1; display: flex; flex-wrap: wrap; align-items: flex-end; column-gap: .35em; }
+.tool .form-field input, .tool .form-field select { font-size: 1rem; font-variant-numeric: tabular-nums; }
+.tool-field-wide { grid-column: 1 / -1; }
+.tool .form-field input, .tool .form-field select { height: 52px; min-height: 52px; }
+.tool-subhead { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; margin: .5rem 0 .75rem; }
+.tool-team { display: grid; gap: .5rem; }
+.tool-team-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr) auto; gap: 0 1rem; align-items: end; border-bottom: 1px solid var(--border); }
+.tool-team-row .form-field label { flex: none; }
+.tool-remove { min-height: 48px; margin-bottom: 1rem; padding: 0 .25rem; background: none; border: 0; color: var(--gold-dark); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; font-size: .85rem; font-weight: 600; cursor: pointer; }
+@media (max-width: 720px) {
+  .tool-team-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .tool-team-row > :nth-child(-n + 2) { grid-column: 1 / -1; }
+  .tool-remove { justify-self: start; }
+}
+.tool-add { margin-top: 1rem; }
+.tool-assumptions { margin: 1.25rem 0 0; border-top: 1px solid var(--border); padding-top: 1rem; }
+.tool-assumptions summary { justify-content: flex-start; gap: .6rem; padding-block: 4px; font-size: .9rem; }
+.tool-assumptions summary > span { color: var(--gold-dark); }
+.tool-assumptions > p { color: var(--muted); font-size: .9rem; margin: .75rem 0 0; }
+.tool-toggle { display: flex; gap: .6rem; align-items: flex-start; margin: 1.5rem 0 0; padding: .9rem 1rem; background: var(--paper); border: 1px solid var(--border); font-size: .9rem; line-height: 1.5; cursor: pointer; }
+.tool-toggle input { width: 18px; height: 18px; margin: .15rem 0 0; accent-color: var(--ink); flex: none; }
+.tool-toggle-inline { align-self: end; align-items: center; min-height: 48px; margin: 0 0 1rem; padding: 0 1rem; }
+.tool-toggle-inline input { margin: 0; }
+.tool-check { margin-top: 1rem; padding: 1rem 1.25rem; border-left: 4px solid var(--gold); background: var(--paper); }
+.tool-check > p { margin: 0; }
+.tool-check .tool-fields { margin-top: 1rem; }
+.tool-verdicts { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .5rem; }
+.tool-verdicts li { display: grid; gap: .15rem; padding: .75rem 1rem; border-left: 4px solid; background: var(--paper); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.tool-verdict-match { border-color: #2e7d4f !important; }
+.tool-verdict-close { border-color: var(--gold) !important; }
+.tool-verdict-off { border-color: #8a1c1c !important; }
+.tool-results { margin-top: 1.5rem; }
+.tool-headline { color: var(--ink); font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin: 0 0 1rem; }
+.tool-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); margin: 0 0 1.25rem; background: var(--paper); border: 1px solid var(--border); }
+.tool-stat { margin: 0 -1px -1px 0; padding: .9rem 1rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.tool-stat dt { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.tool-stat dd { margin: .3rem 0 0; font-size: 1.35rem; font-weight: 600; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.tool-stat dd small { display: block; margin-top: .2rem; font-size: .78rem; font-weight: 400; color: var(--muted); }
+.tool-table-wrap { overflow-x: auto; margin: 0 0 1.25rem; }
+.tool-table { width: 100%; border-collapse: collapse; font-size: .88rem; font-variant-numeric: tabular-nums; }
+.tool-table th, .tool-table td { padding: .55rem .6rem; border-bottom: 1px solid var(--border); text-align: left; white-space: nowrap; }
+.tool-table thead th { font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.tool-table thead th:last-child { text-align: left; }
+.tool-table tbody th { color: var(--ink); font-weight: 600; line-height: inherit; }
+.tool-notice { margin: 0 0 1rem; padding: .75rem 1rem; border-left: 4px solid #8a1c1c; background: #f8ecea; font-size: .92rem; }
+.tool-notice-info { border-left-color: var(--gold); background: var(--paper); }
+.tool-note { margin: 0 0 1.25rem; color: var(--muted); font-size: .9rem; }
+.tool-hint { margin: -.25rem 0 0; color: var(--muted); font-size: .82rem; }
+.tool-print { margin: 1.5rem 0; padding: 1.25rem; background: var(--paper); border: 1px solid var(--border); border-left: 4px solid var(--gold); }
+.tool-print h3 { margin: 0 0 .3rem; font-size: 1.15rem; }
+.tool-print > p { margin: 0 0 1rem; }
+.tool-work { margin: 1.25rem 0; }
+.tool-work h3 { margin: 0 0 .6rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+.tool-work ol { display: grid; gap: .6rem; margin: 0; padding-left: 1.4rem; }
+.tool-work li { padding-left: .25rem; }
+.tool-work-label { display: block; font-size: .85rem; font-weight: 600; }
+.tool-work-math { display: block; font-size: .92rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.tool-presets { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1rem 0 0; }
+.tool-presets button { min-height: 40px; padding: .4rem .75rem; border: 1px solid var(--border-strong); border-radius: 2px; background: var(--card); font-size: .82rem; cursor: pointer; }
+.tool-presets button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.tool-link-button { margin: 0 0 .5rem; padding: 0; background: none; border: 0; color: var(--gold-dark); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; font-size: .88rem; font-weight: 600; cursor: pointer; }
+.tool-disclaimer { margin: -1rem 0 2rem; color: var(--muted); font-size: .85rem; }
+.tool-more { margin-top: 2rem; }
+.tool-more a { font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+.learn-reading .article-prose table th[scope="row"] { white-space: nowrap; }
+.tools-section { margin: 0 0 3rem; }
+.tools-section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1.5rem; margin-bottom: 1.5rem; padding-bottom: .6rem; border-bottom: 1px solid var(--ink); }
+.tools-section-head h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+.tools-section-head p { margin: 0; color: var(--muted); }
+.tool-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1rem; }
+.tool-card { display: flex; flex-direction: column; gap: .35rem; padding: 1.4rem; background: var(--card); border: 1px solid var(--border); border-top: 4px solid var(--gold); color: inherit; text-decoration: none; }
+.tool-card:hover, .tool-card:focus-visible { border-color: var(--ink); border-top-color: var(--gold); }
+.tool-card h3 { margin: 0; font-size: 1.2rem; }
+.tool-card p { margin: 0 0 .75rem; color: var(--muted); font-size: .92rem; }
+.tool-card-cta { display: inline-flex; align-items: center; gap: .4rem; margin-top: auto; font-size: .9rem; font-weight: 600; }
+
+/* Printable gas plan: when the sheet is mounted, only the sheet prints. */
+.print-sheet { display: none; }
+@media print {
+  body:has(> .print-sheet) > *:not(.print-sheet) { display: none !important; }
+  body:has(> .print-sheet) { background: #fff; }
+  .print-sheet { display: block; color: #000; font-size: 10.5pt; line-height: 1.45; }
+  .print-sheet h1 { margin: 0 0 8pt; font-size: 20pt; }
+  .print-sheet h2 { margin: 14pt 0 6pt; font-size: 12pt; }
+  .print-sheet p, .print-sheet li, .print-sheet strong { margin: 0 0 8pt; color: #000; }
+  .print-brand { font-size: 8pt; letter-spacing: .1em; text-transform: uppercase; }
+  .print-blanks { display: flex; gap: 12pt; margin: 6pt 0 12pt; }
+  .print-blanks span { flex: 1; padding-bottom: 16pt; border-bottom: 1px solid #000; font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; }
+  .print-sheet .tool-table-wrap { overflow: visible; margin: 0 0 10pt; }
+  .print-sheet table { width: 100%; border-collapse: collapse; }
+  .print-sheet th, .print-sheet td { padding: 4pt 5pt; border: 1px solid #000; color: #000; font-size: 9.5pt; text-align: left; white-space: normal; }
+  .print-sheet ol { margin: 0; padding-left: 14pt; }
+  .print-sheet li { margin-bottom: 3pt; break-inside: avoid; }
+  .print-notes { height: 90pt; border: 1px solid #000; }
+  .print-fine { margin-top: 10pt; font-size: 8pt; }
+  @page { margin: 14mm; }
+}
 
 /* Original supplied artwork; preserve logo colors on light and dark surfaces. */
 .brand-emblem { flex: 0 0 auto; object-fit: contain; filter: none; }

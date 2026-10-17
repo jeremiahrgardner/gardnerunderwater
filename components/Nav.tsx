@@ -10,6 +10,7 @@ const links = [
   { href: "/courses", label: "Training" },
   { href: "/training", label: "Our approach" },
   { href: "/learn", label: "Learn" },
+  { href: "/tools", label: "Tools" },
   { href: "/about", label: "Meet Jay" },
 ];
 

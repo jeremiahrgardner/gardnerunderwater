@@ -46,7 +46,7 @@ export function Footer() {
             <h2 className="footer-label">Beyond the water</h2>
             <nav aria-label="Resources">
               <Link href="/learn">Learn about diving</Link>
-              <Link href="/resources">Free downloads</Link>
+              <Link href="/tools">Dive planning tools</Link>
               <Link href="/shop">Gear & rentals</Link>
               <Link href="/merch">Merchandise</Link>
               <a

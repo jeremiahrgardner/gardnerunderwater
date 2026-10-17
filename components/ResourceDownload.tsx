@@ -29,7 +29,7 @@ export function ResourceDownload({ resource }: { resource: string }) {
           >
             Download the PDF
           </button>
-          <Link href="/resources" className="learn-resource-more">
+          <Link href="/tools#downloads" className="learn-resource-more">
             All {resources.length} downloads
           </Link>
         </div>

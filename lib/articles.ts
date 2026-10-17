@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { extractInternalLinks } from "./content-links.ts";
 import { courses } from "./courses.ts";
 import { getResource } from "./resources.ts";
+import { toolPaths } from "./tools.ts";
 
 const plan = JSON.parse(
   fs.readFileSync(path.join(process.cwd(), "docs/seo/articles.json"), "utf8"),
@@ -46,7 +47,7 @@ const publicPages = new Set([
   "/merch",
   "/courses",
   "/learn",
-  "/resources",
+  ...toolPaths,
   "/privacy",
 ]);
 const validDate = (value: unknown): value is string =>

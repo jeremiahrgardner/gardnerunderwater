@@ -19,6 +19,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/:path((?!ingest(?:/|$)).+)/", destination: "/:path", permanent: true },
       { source: "/articles", destination: "/learn", permanent: true },
+      // The downloads page became the tools hub in October 2026.
+      { source: "/resources", destination: "/tools", permanent: true },
       {
         source: "/articles/feed.xml",
         destination: "/learn/feed.xml",
