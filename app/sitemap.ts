@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/contact",
       "/shop",
       "/merch",
+      "/privacy",
     ].map((route) => ({ url: absoluteUrl(route) })),
     ...courses.map((course) => ({
       url: absoluteUrl(`/courses/${courseSlug(course.title)}`),

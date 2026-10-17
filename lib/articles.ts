@@ -47,6 +47,7 @@ const publicPages = new Set([
   "/courses",
   "/learn",
   "/resources",
+  "/privacy",
 ]);
 const validDate = (value: unknown): value is string =>
   typeof value === "string" &&

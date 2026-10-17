@@ -90,6 +90,7 @@ export function Footer() {
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Gardner Underwater</span>
           <span>Eyes open. Brain on. Unified team.</span>
+          <Link href="/privacy">Privacy</Link>
         </div>
       </div>
     </footer>

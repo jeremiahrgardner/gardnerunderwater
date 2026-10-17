@@ -51,6 +51,15 @@ tr.group td {{ background: var(--paper) !important; }}
 .step .tick {{ width: 13px; height: 13px; border: 1.5px solid var(--ink); margin-top: 3px; }}
 .script {{ border-left: 4px solid var(--gold); background: #faf9f4; padding: 8px 12px; font-style: italic; margin: 4px 0 6px; }}
 footer.doc {{ position: fixed; bottom: 0; left: 0; right: 0; border-top: 1px solid var(--border); padding-top: 4px; font-size: 7.5pt; color: var(--muted); display: flex; justify-content: space-between; background: #fff; }}
+.ws {{ border: 1px solid var(--border); border-left: 4px solid var(--gold); padding: 6px 12px; margin: 0 0 7px; break-inside: avoid; }}
+.ws h2 {{ margin: 0 0 4px; font-size: 11.5pt; }}
+.ws .q {{ font-size: 8.5pt; color: var(--muted); margin: 0 0 2px; }}
+.eq {{ display: flex; flex-wrap: wrap; align-items: flex-end; gap: 6px 8px; font-size: 10pt; margin: 2px 0 4px; }}
+.eq .b {{ display: inline-flex; flex-direction: column; align-items: center; }}
+.eq .b span.l {{ border-bottom: 1.2px solid var(--ink); min-width: 62px; height: 18px; display: inline-block; }}
+.eq .b small {{ font-size: 7pt; color: var(--muted); margin-top: 1px; }}
+.eq .fixed {{ font-weight: 700; padding-bottom: 12px; }}
+.eq .op {{ padding-bottom: 12px; font-weight: 700; }}
 .pb {{ break-after: page; }}
 table.compact {{ font-size: 8pt; }}
 table.compact td {{ padding: 1.5px 5px; }}
@@ -407,7 +416,63 @@ def eap():
     return doc("Emergency Action Plan", "", b, "Emergency Action Plan")
 
 
+
+# ---------------------------------------------------------------- Gas planning worksheet
+def gas_planning():
+    def b(label, value=""):
+        inner = f'<span class="l" style="text-align:center;font-weight:700">{value}</span>' if value else '<span class="l"></span>'
+        return f'<span class="b">{inner}<small>{label}</small></span>'
+
+    def op(x):
+        return f'<span class="op">{x}</span>'
+
+    def fixed(x, label):
+        return f'<span class="b"><span class="fixed">{x}</span><small>{label}</small></span>'
+
+    sections = [
+        ("1. What is my rock bottom?",
+         "The gas two divers need to solve a problem at depth and reach the surface or the next gas, at a stressed breathing rate.",
+         [b("ascent min, incl. 1 min to solve") + op("×") + b("cu ft/min, stressed", "1.0") + op("×") + b("divers", "2") + op("×") + b("average ascent ATA") + op("=") + b("cu ft"),
+          b("cu ft") + op("÷") + b("tank factor") + op("× 100 =") + b("psi") + op("→ round up:") + b("rock bottom psi")]),
+        ("2. How much gas do I have?", "Start pressure, as volume.",
+         [b("start psi") + op("÷ 100 ×") + b("tank factor") + op("=") + b("cu ft")]),
+        ("3. What is my usable gas?", "Everything above rock bottom.",
+         [b("start psi") + op("−") + b("rock bottom psi") + op("=") + b("usable psi")]),
+        ("4. When do I turn?", "All usable for a drift or live-boat pickup. Halves for a shore or anchored boat dive. Thirds when you must return to the start.",
+         [b("start psi") + op("− (") + b("usable psi") + op("÷") + b("1, 2 or 3") + op(") =") + b("turn pressure psi")]),
+        ("5. Do I have enough gas for this dive?", "Use your working SAC rate for the dive, then add rock bottom.",
+         [b("bottom time, min") + op("×") + b("SAC, cu ft/min") + op("×") + b("average ATA") + op("=") + b("cu ft for the dive"),
+          b("cu ft for the dive") + op("+") + b("rock bottom cu ft") + op("=") + b("cu ft needed") + op("vs.") + b("cu ft I have (2)")]),
+        ("6. How much bottom time does my gas give me?", "",
+         [b("usable cu ft") + op("÷") + b("SAC, cu ft/min") + op("÷") + b("average ATA") + op("=") + b("minutes")]),
+        ("7. How fast will my gauge move at depth?", "",
+         [b("SAC, cu ft/min") + op("×") + b("ATA") + op("÷") + b("tank factor") + op("× 100 =") + b("psi per minute")]),
+        ("8. What is my SAC rate?", "From a real dive: gas used, time and average depth.",
+         [b("psi used") + op("÷ 100 ×") + b("tank factor") + op("÷") + b("minutes") + op("÷") + b("average ATA") + op("=") + b("cu ft/min")]),
+    ]
+    body = head("Gas Planning Worksheet", "Gas planning · Imperial units",
+                "Fill it in before every dive, for every diver on the team. ATA = (depth in feet ÷ 33) + 1. Tank factor = cubic feet per 100 psi.")
+    for title, q, eqs in sections:
+        qline = f'<p class="q">{q}</p>' if q else ""
+        body += f'<div class="ws"><h2>{title}</h2>{qline}' + "".join(f'<div class="eq">{e}</div>' for e in eqs) + "</div>"
+    body += '<h2>Team gas plan</h2><p class="example">Plan around the diver whose cylinder reaches rock bottom first.</p>'
+    body += "<table><thead><tr><th>Diver</th><th>Cylinder</th><th>Tank factor</th><th>Start psi</th><th>Rock bottom psi</th><th>Usable psi</th><th>Turn psi</th></tr></thead><tbody>"
+    body += "".join("<tr>" + "<td>&nbsp;</td>" * 7 + "</tr>" for _ in range(4)) + "</tbody></table>"
+    # worked example, matching the site's rock bottom calculator
+    tf = 77.4 / 3000 * 100
+    rb = 5 * 1.0 * 2 * 2.0
+    rb_psi = rb / 77.4 * 3000
+    body += f"""<h2>Worked example: 60 feet on an aluminum 80</h2>
+<p class="example">Problem at 60 ft. One minute to solve it, a minute to ascend to 30 ft, then one-minute stops at 30, 20 and 10 ft: 5 minutes, averaging about 33 ft, or 2.0 ATA.</p>
+<div class="eq">{b("ascent min", "5")}{op("×")}{b("cu ft/min", "1.0")}{op("×")}{b("divers", "2")}{op("×")}{b("ATA", "2.0")}{op("=")}{b("cu ft", f"{rb:.0f}")}</div>
+<div class="eq">{b("cu ft", f"{rb:.0f}")}{op("÷")}{b("tank factor", f"{tf:.2f}")}{op("× 100 =")}{b("psi", f"{rb_psi:.0f}")}{op("→ round up:")}{b("rock bottom", "800")}</div>
+<div class="eq">{b("start psi", "3,000")}{op("−")}{b("rock bottom", "800")}{op("=")}{b("usable psi", "2,200")}</div>
+<div class="eq">{b("start psi", "3,000")}{op("− (")}{b("usable psi", "2,200")}{op("÷")}{b("halves", "2")}{op(") =")}{b("turn psi", "1,900")}</div>
+<p class="note" style="margin-top:10px">Based on UTD's gas planning method, using a stressed breathing rate of 1.0 cubic foot per minute per diver for rock bottom. For training and planning practice; learn and verify it with your instructor.</p>"""
+    return doc("Gas Planning Worksheet", "", body, "Gas Planning Worksheet")
+
 FILES = {
+    "gas-planning-worksheet": gas_planning,
     "gas-math-formulas": formulas,
     "gas-consumption-table": consumption,
     "tank-factors": tank_factors,
