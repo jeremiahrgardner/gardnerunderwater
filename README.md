@@ -56,13 +56,15 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 | `/shop`              | Equipment rentals and student essentials                                      |
 | `/merch`             | Apparel with links to Square                                                  |
 | `/about`             | Jay's story and The Dive Table                                                |
-| `/contact`           | Consultation email requests, direct contact, and student feedback             |
+| `/contact`           | Direct consultation requests, contact details, and student feedback             |
 
 ## Content and consultation requests
 
 Course descriptions are in `lib/courses.ts`, rental prices in `lib/rentals.ts`, and merchandise listings in `lib/merch.ts`. Shared page introductions, arrows, and consultation calls to action are in `components/SiteUI.tsx`.
 
-No scheduling provider is connected yet. The consultation form prepares a URL-encoded email draft to Jay. Visitors review and send it in their own email app, then arrange a time with Jay. The form does not send email itself, store submissions, or confirm appointments. Course links carry the selected course into the request. Direct phone and email links provide alternatives.
+The consultation form submits to `/api/contact`, which emails Jay at `jay@gardnerunderwater.com` and sets the visitor's validated address as Reply-To. Success appears only after the email provider accepts the message. The form preserves details on failure and offers a direct email link. It does not confirm appointments or add inquiries to the newsletter.
+
+Configure server-only production credentials as described in `docs/contact-delivery.md`. Without them, submission returns an explicit error; it never claims to send a message or silently opens an email draft.
 
 MDX publishing is implemented in `content/learn/`, with an article index, individual reading pages, related training, RSS, and a sitemap. See [the publishing guide](content/README.md) for draft handling and deployment steps. Run `npm test` for the article and content validation checks (Node.js 24 in the prepared environment).
 

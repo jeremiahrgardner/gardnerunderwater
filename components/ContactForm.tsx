@@ -11,30 +11,51 @@ export function ContactForm({
   selectedCourse?: string;
   courseSlug?: string;
 }) {
-  const [draftHref, setDraftHref] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [error, setError] = useState("");
   return (
     <form
       className="contact-form"
-      onChange={() => setDraftHref("")}
-      onSubmit={(event) => {
+      aria-busy={status === "sending"}
+      onSubmit={async (event) => {
         event.preventDefault();
+        if (status === "sending" || status === "sent") return;
         const data = new FormData(event.currentTarget);
         let sourcePath = "/contact";
         try {
           sourcePath = sessionStorage.getItem("booking_source") || sourcePath;
         } catch {}
-        track("contact_form_submit", {
-          source_path: sourcePath,
-          course: courseSlug,
-          delivery_mode: "mailto_draft",
-        });
-        const subject = `Consultation request: ${data.get("interest") || "Dive training"}`;
-        const body = `Hi Jay,\n\nI'd like to arrange a free consultation.\n\nName: ${data.get("name")}\nEmail: ${data.get("email")}\nExperience: ${data.get("experience") || "Not specified"}\nFound us via: ${data.get("discovery")}\nReferring path: ${sourcePath}\nTraining interest: ${data.get("interest") || "Not sure yet"}\n\nGoals and availability:\n${data.get("message")}\n`;
-        setDraftHref(
-          `mailto:jay@gardnerunderwater.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
-        );
+        setStatus("sending");
+        setError("");
+        try {
+          const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...Object.fromEntries(data), sourcePath }),
+          });
+          const result = await response.json();
+          if (!response.ok || result.success !== true) {
+            throw new Error(typeof result.error === "string" ? result.error : "Your request was not sent. Please try again or email Jay.");
+          }
+          setStatus("sent");
+          // Analytics must never turn an accepted inquiry into a failure/retry.
+          try {
+            track("contact_form_submit", {
+              source_path: sourcePath,
+              course: courseSlug,
+              delivery_mode: "server_email",
+            });
+          } catch {}
+        } catch (error) {
+          setStatus("error");
+          setError(error instanceof Error ? error.message : "Your request was not sent. Please try again or email Jay.");
+        }
       }}
     >
+      <div hidden aria-hidden="true">
+        <label htmlFor="contact-website">Leave this empty</label>
+        <input id="contact-website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="form-heading">
         <span className="eyebrow">A good place to start</span>
         <h2>Tell me about your diving.</h2>
@@ -124,24 +145,23 @@ export function ContactForm({
         </select>
       </div>
       <div className="form-submit">
-        <button className="btn btn-dark" type="submit">
-          Prepare consultation email <Arrow />
+        <button className="btn btn-dark" type="submit" disabled={status === "sending" || status === "sent"}>
+          {status === "sending" ? "Sending…" : status === "sent" ? "Request sent" : "Send consultation request"} <Arrow />
         </button>
-        <p>
-          This prepares an email to Jay. You’ll review and send it in your email
-          app.
-        </p>
+        <p>Your request goes directly to Jay. He’ll reply by email to arrange a time.</p>
       </div>
-      {draftHref && (
-        <div className="form-feedback" role="status">
-          <h3>Your email draft is ready.</h3>
-          <p>
-            Open the draft below and press Send in your email app. Jay will
-            reply to arrange a time. No appointment is confirmed yet.
-          </p>
-          <a className="btn btn-dark" href={draftHref}>
-            Open email draft <Arrow diagonal />
-          </a>
+      <div aria-live="polite" aria-atomic="true">
+        {status === "sent" && (
+          <div className="form-feedback" role="status">
+            <h3>Your request has been sent.</h3>
+            <p>Jay will reply to arrange a time. No appointment is confirmed yet.</p>
+          </div>
+        )}
+      </div>
+      {status === "error" && (
+        <div className="form-feedback" role="alert">
+          <p>{error}</p>
+          <a className="text-link" href="mailto:jay@gardnerunderwater.com">Email Jay directly</a>
         </div>
       )}
     </form>

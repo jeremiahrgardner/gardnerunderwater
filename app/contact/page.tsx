@@ -40,7 +40,7 @@ export default async function ContactPage({
           way.
         </p>
         <span className="intro-note">
-          Request a call by email. We’ll agree on a time together.
+          Send your request below. We’ll agree on a time by email.
         </span>
       </PageIntro>
       <section className="section" id="consultation">
