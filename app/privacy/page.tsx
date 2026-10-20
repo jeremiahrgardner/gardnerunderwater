@@ -8,7 +8,7 @@ export const metadata = pageMetadata(
   "/privacy",
 );
 
-const UPDATED = "October 17, 2026";
+const UPDATED = "October 19, 2026";
 
 export default function PrivacyPage() {
   return (
@@ -33,9 +33,10 @@ export default function PrivacyPage() {
             enter.
           </p>
           <p>
-            <strong>What you send us.</strong> Our contact form opens a
-            pre-filled message in your own email app. We receive only what you
-            choose to send, by email.
+            <strong>What you send us.</strong> Our contact form sends your name, email address, training interests,
+            goals, availability and how you found us to Jay by email. Our email
+            delivery provider processes these details to deliver the message.
+            Submitting an inquiry does not subscribe you to our newsletter.
           </p>
           <p>
             <strong>Usage information.</strong> Like most websites, we collect
