@@ -98,7 +98,7 @@ export const diveSites: DiveSite[] = [
       "Beach entry at the south end of the Shores. At high tide there's little or no beach in front of the seawall, so the tide decides where and when you get in.",
     depth: "Shallow. Most of the dive is on sand and along the reef edge.",
     watch: [
-      { label: "Tide", text: "Check the tide table below before you go. A high tide can leave you no beach to get in or out on." },
+      { label: "Tide", text: "Check the tide table above before you go. A high tide can leave you no beach to get in or out on." },
       { label: "Shore break", text: "Waves against the seawall make the entry and exit harder. Watch a few sets before you commit." },
       { label: "Shallow water", text: "Shallow sand stirs easily. Good trim and a frog kick keep the bottom where it belongs." },
     ],
