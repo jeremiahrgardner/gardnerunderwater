@@ -3,6 +3,7 @@ import { getArticles, clusters } from "@/lib/articles";
 import { courses, courseSlug } from "@/lib/courses";
 import { absoluteUrl } from "@/lib/site";
 import { toolPaths } from "@/lib/tools";
+import { conditionPaths } from "@/lib/dive-sites";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getArticles();
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       "/about",
       "/learn",
       ...toolPaths,
+      ...conditionPaths,
       // Topic hubs are listed once they have at least one published article.
       ...clusters
         .filter((c) => articles.some((a) => a.cluster === c.slug))

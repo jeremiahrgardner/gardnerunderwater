@@ -47,6 +47,7 @@ export function Footer() {
             <nav aria-label="Resources">
               <Link href="/learn">Learn about diving</Link>
               <Link href="/tools">Dive planning tools</Link>
+              <Link href="/conditions">La Jolla dive conditions</Link>
               <Link href="/shop">Gear & rentals</Link>
               <Link href="/merch">Merchandise</Link>
               <a

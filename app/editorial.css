@@ -1909,3 +1909,37 @@ h1 .serif-accent, h2 .serif-accent, h3 .serif-accent { font-family: var(--displa
   text-decoration-color: var(--gold);
   text-underline-offset: 4px;
 }
+
+/* Live dive conditions */
+.cond-crumbs { margin: 0 0 1rem; font-size: .85rem; color: var(--muted); }
+.cond-crumbs a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+.cond-panel { margin: 0 0 3rem; }
+.cond-panel-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1.5rem; margin-bottom: 1.25rem; padding-bottom: .6rem; border-bottom: 1px solid var(--ink); }
+.cond-panel-head h2 { margin: 0; font-size: clamp(1.5rem, 3vw, 2rem); }
+.cond-panel-head p { margin: 0; color: var(--muted); font-size: .9rem; }
+.cond-alerts { margin: 0 0 1rem; padding: .75rem 1rem; border-left: 4px solid #8a1c1c; background: #f8ecea; }
+.cond-alerts p { margin: 0 0 .35rem; font-size: .92rem; }
+.cond-alerts p:last-child { margin: 0; }
+.cond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.cond-grid-wide { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+.cond-card { padding: 1.2rem 1.3rem; background: var(--card); border: 1px solid var(--border); border-top: 4px solid var(--gold); }
+.cond-card h3 { margin: 0 0 .5rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+.cond-value { margin: 0 0 .4rem; font-family: var(--display); font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.cond-detail { margin: 0 0 .6rem; font-size: .92rem; }
+.cond-time { margin: 0; color: var(--muted); font-size: .8rem; }
+.cond-stale { color: #8a1c1c; }
+.cond-missing { margin: 0; color: var(--muted); font-size: .92rem; }
+.cond-tides { width: 100%; border-collapse: collapse; margin: 0 0 .6rem; font-variant-numeric: tabular-nums; }
+.cond-tides th, .cond-tides td { padding: .35rem .25rem; border-bottom: 1px solid var(--border); text-align: left; font-size: .92rem; }
+.cond-tides td:last-child { text-align: right; }
+.cond-sources { color: var(--muted); font-size: .82rem; }
+.cond-sources a, .cond-links a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+.cond-site { max-width: 70ch; margin: 0 0 2.5rem; }
+.cond-site h2 { font-size: 1.5rem; margin: 0 0 1rem; }
+.cond-watch { display: grid; gap: .9rem; margin: 0 0 1.25rem; }
+.cond-watch dt { font-weight: 700; }
+.cond-watch dd { margin: .15rem 0 0; }
+.cond-site-facts p { margin: 0 0 .6rem; }
+.cond-faq h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
+.cond-faq p { margin: 0 0 1rem; }
+.cond-links { margin: 0; padding-left: 1.2rem; display: grid; gap: .35rem; }
