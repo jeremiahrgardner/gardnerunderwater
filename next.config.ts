@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
       { source: "/articles", destination: "/learn", permanent: true },
       // The downloads page became the tools hub in October 2026.
       { source: "/resources", destination: "/tools", permanent: true },
+      // Cave marker article withdrawn; cave training isn't offered here.
+      { source: "/learn/line-marker-pigtail", destination: "/learn/dir-gear-configuration", permanent: true },
       {
         source: "/articles/feed.xml",
         destination: "/learn/feed.xml",

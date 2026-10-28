@@ -214,3 +214,11 @@ Leave placeholders for these, keep working, and list them in the PR description:
 - YouTube IDs and upload dates for Dive Table videos to embed in specific articles.
 - Confirmation of the rock bottom calculator defaults.
 - Article copy (`description`, `answer`, `faqs`, body) for each article before it's set to `draft: false`.
+
+## Standards and procedures rule (October 2026)
+
+- Defer to UTD standards and procedures only. Never use another agency's procedures or standards (GUE, TDI, SSI, PADI and the like), manufacturer or retailer specs, or "best practice" compilations as the source for any procedure, configuration spec or standard. Comparison articles may describe other agencies; they never borrow their procedures.
+- Articles teach the why and the what, not the how. No numbered step-by-step drills, skill sequences, rigging builds or failure responses. Describe what a skill is for, what good looks like, the common mistakes and where it's taught, then point to the course.
+- Keep only specs that UTD sets or that are on Gardner Underwater's own equipment list (for example the 7-foot long hose). Everything else is "fitted to you in class."
+- Gas math and planning concepts (rock bottom, SAC, tank factors, turn pressures, the tools) stay, because they're public, they're the differentiator and they sell training.
+- Cave procedures aren't covered; Gardner Underwater doesn't teach cave courses.
