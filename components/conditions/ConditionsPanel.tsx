@@ -83,6 +83,9 @@ export function ConditionsPanel({ data }: { data: Conditions }) {
             <>
               <p className="cond-value">{Math.round(waterTemp)}°F</p>
               <p className="cond-detail">
+                {data.pierWaterTempF !== null && swell?.waterTempF != null && (
+                  <>Scripps Pier {Math.round(data.pierWaterTempF)}°F, {SOURCES.buoyName} {Math.round(swell.waterTempF)}°F. </>
+                )}
                 At the surface. It’s usually colder below the thermocline, sometimes a lot colder.
               </p>
               <p className="cond-time">

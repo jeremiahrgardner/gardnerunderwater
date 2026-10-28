@@ -177,6 +177,31 @@ export function parseRain(json: unknown): Rain | null {
   return { inches: Math.round(mm * MM_TO_IN * 100) / 100, hoursReported: reported };
 }
 
+/** Tide events from one hour ago onward, at most six. CO-OPS times are San Diego local strings. */
+export function upcomingTides(tides: TideEvent[] | null, now: Date, max = 6): TideEvent[] | null {
+  if (!tides) return null;
+  const cutoff = localStamp(new Date(now.getTime() - 3600 * 1000));
+  return tides.filter((t) => t.time >= cutoff).slice(0, max);
+}
+
+/** A San Diego local time as "YYYY-MM-DD HH:mm", matching CO-OPS output. */
+export function localStamp(d: Date): string {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Los_Angeles",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23",
+    })
+      .formatToParts(d)
+      .map((p) => [p.type, p.value]),
+  );
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
+}
+
 const COMPASS = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
 export function compass(deg: number | null): string | null {
   if (deg === null) return null;
@@ -225,7 +250,7 @@ export async function getConditions(): Promise<Conditions> {
   const [txt, spec, tidesJson, tempJson, pointJson, alertsJson, rainJson] = await Promise.all([
     getText(`https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.txt`),
     getText(`https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.spec`),
-    getJson(`${coops}?product=predictions&datum=MLLW&interval=hilo&begin_date=${localDateStamp(now)}&range=48&${coopsCommon}`),
+    getJson(`${coops}?product=predictions&datum=MLLW&interval=hilo&begin_date=${localDateStamp(now)}&range=72&${coopsCommon}`),
     getJson(`${coops}?product=water_temperature&date=latest&${coopsCommon}`),
     getJson(`https://api.weather.gov/points/${point.lat},${point.lon}`, NWS_HEADERS),
     getJson(`https://api.weather.gov/alerts/active?point=${point.lat},${point.lon}`, NWS_HEADERS),
@@ -241,7 +266,7 @@ export async function getConditions(): Promise<Conditions> {
     swell: parseBuoy(txt, spec),
     pierWaterTempF: water?.tempF ?? null,
     pierWaterTempAt: water?.time ?? null,
-    tides: parseTides(tidesJson),
+    tides: upcomingTides(parseTides(tidesJson), now),
     wind: parseWind(hourlyJson),
     alerts: parseAlerts(alertsJson),
     rain: parseRain(rainJson),

@@ -102,3 +102,15 @@ test("compass points", () => {
   assert.equal(compass(359), "N");
   assert.equal(compass(null), null);
 });
+
+test("upcomingTides drops events more than an hour old", async () => {
+  const { upcomingTides, localStamp } = await import("../lib/conditions.ts");
+  const now = new Date("2026-10-28T06:14:00Z"); // 11:14 PM PDT on the 27th
+  assert.equal(localStamp(now), "2026-10-27 23:14");
+  const tides = [
+    { time: "2026-10-27 16:57", heightFt: -0.8, type: "Low" },
+    { time: "2026-10-27 23:23", heightFt: 3.8, type: "High" },
+    { time: "2026-10-28 04:01", heightFt: 2.0, type: "Low" },
+  ];
+  assert.deepEqual(upcomingTides(tides, now).map((t) => t.time), ["2026-10-27 23:23", "2026-10-28 04:01"]);
+});
