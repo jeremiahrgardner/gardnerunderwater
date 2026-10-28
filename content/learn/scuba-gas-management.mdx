@@ -16,11 +16,11 @@ extraLinks: []
 answer: Gas management means planning, before the dive, how much gas you can use and how much you must keep in reserve. That reserve, called rock bottom, lets two divers sharing one supply reach the surface, or the next gas source, from the worst point of the dive. Everything above it is usable gas.
 faqs:
 - q: Is 500 psi enough to end a recreational dive?
-  a: As a surface arrival target, it can be. As a reserve at depth, it usually isn't. The worked 60-foot example calculates 800 psi in an aluminum 80 under the stated emergency-profile assumptions. It is not a universal reserve or a guarantee.
+  a: As a number to surface with, maybe. As a reserve at depth, usually not. At 60 feet in an aluminum 80, rock bottom is 800 psi, and it climbs as you go deeper.
 - q: What is the difference between rock bottom and minimum gas?
   a: They mean the same thing. Different agencies and instructors use different names, including minimum gas and minimum gas reserve.
 - q: When should I use halves instead of thirds?
-  a: Use halves when returning to your starting point is preferred but not required, like most shore and anchored boat dives. Use thirds of usable gas when you must return to the start, as in an overhead environment; the plan must also cover emergency exit travel.
+  a: Use halves when returning to your starting point is preferred but not required, like most shore and anchored boat dives. Use thirds of usable gas when you must return to the start.
 - q: Does rock bottom change with a steel tank?
   a: Yes. The gas needed is the same, but each psi holds a different amount of gas in different cylinders, so the pressure changes. The calculator article shows both aluminum 80 and HP100 values.
 video:
@@ -48,9 +48,9 @@ UTD's dive-planning method calculates reserve gas from the emergency profile:
 
 **Rock bottom = ascent time × stressed breathing rate × 2 divers × average depth (ATA)**
 
-- **Emergency profile time** includes one minute to solve the problem at depth plus the planned ascent. The worked examples below model travel to half maximum depth and one-minute stop intervals. Travel between stops is included in the next stop minute. A different ascent obligation requires its own gas calculation.
-- **Stressed breathing rate:** Gardner Underwater uses **1.0 cubic foot per minute per diver** for rock-bottom planning. Earlier UTD teaching materials also distinguish resting and swimming rates, but those lower rates are not substituted for the stressed emergency-planning rate here. If the team or conditions call for a higher rate, use the higher value.
-- **Average depth** is the time-weighted average of the modeled emergency profile, including the problem-solving minute, converted to atmospheres absolute (ATA). In salt water, ATA is approximately depth in feet ÷ 33 + 1.
+- **Ascent time** is one minute to solve the problem at depth, the ascent to half your maximum depth, then one-minute stops every 10 feet to the surface.
+- **Stressed breathing rate** is **1.0 cubic foot per minute per diver**, UTD's emergency planning rate. UTD plans with 0.5 at rest and 0.75 while swimming, but rock bottom plans for the emergency.
+- **Average depth** is the average of that ascent, in atmospheres absolute (ATA): depth in feet ÷ 33 + 1.
 
 ### Worked example: 60 feet on an aluminum 80
 
@@ -59,7 +59,7 @@ UTD's dive-planning method calculates reserve gas from the emergency profile:
 3. **Gas needed:** 5 × 1.0 × 2 divers × 2.0 = **20 cubic feet.**
 4. **Convert to psi:** an aluminum 80 holds 77.4 cubic feet at 3,000 psi. 20 ÷ 77.4 × 3,000 = 775 psi. **Round up: rock bottom is 800 psi at 60 feet.**
 
-For calculated examples by depth and cylinder, see the [Rock Bottom Calculator](/learn/rock-bottom-calculator). These pressures use Gardner Underwater's confirmed 1.0 cu ft/min stressed rate and depend on the modeled profile and cylinder rating. They are illustrations, not fixed minimum-gas numbers for every team or environment.
+For more depths and cylinders, see the [Rock Bottom Calculator](/learn/rock-bottom-calculator), or run your own numbers in the [gas planner](/tools/gas-planner).
 
 | Max depth | Rock bottom, aluminum 80 |
 | --- | --- |
@@ -88,7 +88,7 @@ UTD uses three rules, chosen by whether you need to get back to where you starte
 
 - **All usable:** when navigation doesn't matter, like a drift dive with a live boat, all the gas above rock bottom is usable. Start the ascent when you reach rock bottom.
 - **Halves:** when it's good to return to the start but not required, like a shore dive or an anchored boat dive, spend half your usable gas going out. Turn at 3,000 − 1,100 = 1,900 psi.
-- **Thirds:** when you must return to the start, UTD divides usable gas into thirds after deducting rock bottom. The arithmetic example gives 3,000 − 733 = 2,267 psi, rounded up to 2,300. This is an illustration, not a cave or wreck plan: emergency return travel while sharing gas, delays, gas matching and overhead training must all be accounted for.
+- **Thirds:** when you must return to the start, UTD divides usable gas into thirds after setting rock bottom aside. Here, 3,000 − 733 = 2,267 psi, rounded up to 2,300.
 
 Thirds come from cave diving, where the exit is the only way out. In UTD planning, thirds are always taken from usable gas, after rock bottom is set aside. Thirds without rock bottom don't hold up in the ocean.
 
@@ -96,25 +96,25 @@ Thirds come from cave diving, where the exit is the only way out. In UTD plannin
 
 Rock bottom answers a gas question. Min Deco answers a time-and-ascent question. Having gas left does not extend the Min Deco limit, and staying within that limit does not replace a gas plan.
 
-| Depth | Air | Nitrox 32 or 25/25 | Total ascent time |
-| --- | --- | --- | --- |
-| 10 ft / 3 m | 100 min | 110 min | 1 min |
-| 20 ft / 6 m | 90 min | 100 min | 2 min |
-| 30 ft / 10 m | 80 min | 90 min | 2 min |
-| 40 ft / 12 m | 70 min | 80 min | 3 min |
-| 50 ft / 15 m | 60 min | 70 min | 4 min |
-| 60 ft / 18 m | 50 min | 60 min | 4 min |
-| 70 ft / 21 m | 35 min | 45 min | 5 min |
-| 80 ft / 24 m | 30 min | 40 min | 6 min |
-| 90 ft / 27 m | 25 min | 35 min | 7 min |
-| 100 ft / 30 m | 20 min | 30 min | 7 min |
-| 110 ft / 33 m | — | 25 min* | 7 min |
-| 120 ft / 36 m | — | 20 min* | 8 min |
-| 130 ft / 39 m | — | 15 min* | 8 min |
+| Depth | Air | Nitrox 32 or 25/25 |
+| --- | --- | --- |
+| 10 ft / 3 m | 100 min | 110 min |
+| 20 ft / 6 m | 90 min | 100 min |
+| 30 ft / 10 m | 80 min | 90 min |
+| 40 ft / 12 m | 70 min | 80 min |
+| 50 ft / 15 m | 60 min | 70 min |
+| 60 ft / 18 m | 50 min | 60 min |
+| 70 ft / 21 m | 35 min | 45 min |
+| 80 ft / 24 m | 30 min | 40 min |
+| 90 ft / 27 m | 25 min | 35 min |
+| 100 ft / 30 m | 20 min | 30 min |
+| 110 ft / 33 m | — | 25 min* |
+| 120 ft / 36 m | — | 20 min* |
+| 130 ft / 39 m | — | 15 min* |
 
-**\*25/25 only.** The entries deeper than 100 feet/30 meters do not authorize air or nitrox 32 at those depths. Gas choice, depth and time must remain within your training and the team's plan.
+**\*25/25 only.** Air and nitrox 32 stop at 100 feet.
 
-UTD's recreational ascent strategy begins at 50% of average depth, or 50% of maximum depth when you are deeper than average at the end of the dive. The initial ascent is approximately 30 feet/10 meters per minute. From the first stop, use one-minute intervals every 10 feet/3 meters; travel to the next stop is included in that next minute. Use the trained profile and the table together rather than deriving a new schedule from the total ascent-time column alone.
+UTD's recreational ascent strategy goes to 50% of your average depth, or of your maximum depth if you're deeper than average when the dive ends, at about 30 feet a minute. Then it's one-minute stops every 10 feet to the surface, with the travel between stops included in each minute.
 
 These are Min Deco limits, not planned staged-decompression schedules. Repetitive dives and accidentally exceeding a limit require the specific procedures taught in training. Emergency Ratio Deco is a contingency for an accidental exceedance, not a way to plan a longer recreational dive.
 
@@ -139,7 +139,7 @@ The [gas planner](/tools/gas-planner) runs rock bottom, usable gas and turn pres
 
 ## SAC rate: the number behind the plan
 
-UTD's planning material uses surface consumption rate (SCR). For volume-based planning, express it in cubic feet or liters per minute at the surface; this is also commonly called RMV. If your log or computer reports SAC in psi or bar per minute, convert using the cylinder rating before comparing different cylinders. Measure gas used, elapsed time and average depth on representative dives, then normalize to surface pressure.
+UTD calls it surface consumption rate (SCR): the gas you breathe per minute at the surface, in cubic feet or liters. Measure it from real dives: gas used, time and average depth. The [SAC rate calculator](/tools/sac-rate-calculator) does the arithmetic and shows the work.
 
 Knowing your SAC turns gas planning from guesswork into arithmetic. It also shows you when something is off: a dive where you breathe far more than usual is a signal to slow down and ask why.
 
