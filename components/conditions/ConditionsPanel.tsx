@@ -1,4 +1,6 @@
 import { compass, SOURCES, type Conditions } from "@/lib/conditions";
+import { estimateVisibility, visInputs, type VisEstimate } from "@/lib/visibility";
+import type { VisReport } from "@/lib/vis-reports";
 
 const TZ = "America/Los_Angeles";
 
@@ -22,7 +24,74 @@ function Unavailable() {
   return <p className="cond-missing">Not available right now. The source didn’t respond.</p>;
 }
 
-export function ConditionsPanel({ data }: { data: Conditions }) {
+function sdDay(date: string) {
+  const [y, m, d] = date.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d, 12)).toLocaleDateString("en-US", { weekday: "long", timeZone: "UTC" });
+}
+
+function VisibilityBlock({ estimate, reports, siteName }: { estimate: VisEstimate; reports: VisReport[]; siteName: string | null }) {
+  const ft = reports.map((r) => r.feet).sort((a, b) => a - b);
+  const median = ft.length ? (ft.length % 2 ? ft[(ft.length - 1) / 2] : Math.round((ft[ft.length / 2 - 1] + ft[ft.length / 2]) / 2)) : null;
+  return (
+    <div className="cond-vis">
+      <div className="cond-vis-main">
+        <h3>Visibility estimate</h3>
+        {estimate.rangeFt ? (
+          <>
+            <p className="cond-value">
+              {estimate.rangeFt[0] === 0 ? `Under ${estimate.rangeFt[1]}` : `${estimate.rangeFt[0]}–${estimate.rangeFt[1]}`} ft
+              <span className={`cond-vis-label cond-vis-${estimate.label.toLowerCase()}`}>{estimate.label}</span>
+            </p>
+            <ul className="cond-vis-factors">
+              {estimate.factors.map((f) => (
+                <li key={f.name}>
+                  <strong>{f.name}.</strong> {f.note}
+                </li>
+              ))}
+            </ul>
+            <p className="cond-time">
+              An estimate from swell, rain and plankton, not a measurement. We’re checking it against diver
+              reports, so treat it as a starting point.
+              {estimate.missing.length > 0 && <> Missing right now: {estimate.missing.join(", ")}.</>}
+            </p>
+          </>
+        ) : (
+          <p className="cond-missing">Not enough data for an estimate right now.</p>
+        )}
+      </div>
+      <div className="cond-vis-side">
+        <h3>What divers saw</h3>
+        {median !== null ? (
+          <>
+            <p className="cond-value">{median} ft</p>
+            <p className="cond-detail">
+              {reports.length === 1 ? "One report" : `Middle of ${reports.length} reports`}
+              {siteName ? ` from ${siteName}` : " across La Jolla"} in the last three days. Latest: {reports[0].feet} ft on{" "}
+              {sdDay(reports[0].date)}.
+            </p>
+          </>
+        ) : (
+          <p className="cond-detail">No diver reports in the last three days. Dived recently? Add yours below.</p>
+        )}
+        <p className="cond-detail">
+          <a href={SOURCES.pierCamUrl}>Look for yourself on the Scripps Pier camera.</a> It sits in about 13 feet of
+          water. If you can see the piling 11 feet away, that’s 11 feet of visibility. The far one is 30 feet.
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export function ConditionsPanel({
+  data,
+  reports = [],
+  siteName = null,
+}: {
+  data: Conditions;
+  reports?: VisReport[];
+  siteName?: string | null;
+}) {
+  const estimate = estimateVisibility(visInputs(data));
   const { swell, tides, wind, alerts, rain } = data;
   const stale = swell && hoursAgo(swell.observedAt, data.fetchedAt) > 6;
   const direction = swell?.swellDirection ?? compass(swell?.meanDirectionDeg ?? null);
@@ -48,6 +117,8 @@ export function ConditionsPanel({ data }: { data: Conditions }) {
           ))}
         </div>
       )}
+
+      <VisibilityBlock estimate={estimate} reports={reports} siteName={siteName} />
 
       <div className="cond-grid">
         <div className="cond-card">
@@ -158,16 +229,6 @@ export function ConditionsPanel({ data }: { data: Conditions }) {
           <p className="cond-time">Predicted at {SOURCES.tideName}. Heights above mean lower low water.</p>
         </div>
 
-        <div className="cond-card">
-          <h3>Visibility</h3>
-          <p className="cond-value">Not measured</p>
-          <p className="cond-detail">
-            No instrument measures visibility here, so we won’t guess a number. Three things drive it: swell
-            stirring the bottom, runoff after rain, and plankton blooms, most often in late spring and early summer.
-            Small swell and no recent rain are a good start. The only real answer is a diver who was just in
-            the water.
-          </p>
-        </div>
       </div>
 
       <p className="cond-sources">

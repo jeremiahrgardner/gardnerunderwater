@@ -1943,3 +1943,22 @@ h1 .serif-accent, h2 .serif-accent, h3 .serif-accent { font-family: var(--displa
 .cond-faq h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
 .cond-faq p { margin: 0 0 1rem; }
 .cond-links { margin: 0; padding-left: 1.2rem; display: grid; gap: .35rem; }
+.cond-vis { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 0; margin: 0 0 1rem; background: var(--card); border: 1px solid var(--border); border-top: 4px solid var(--ink); }
+.cond-vis-main, .cond-vis-side { padding: 1.3rem 1.4rem; }
+.cond-vis-side { border-left: 1px solid var(--border); background: var(--paper); }
+.cond-vis h3 { margin: 0 0 .5rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+.cond-vis .cond-value { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .75rem; }
+.cond-vis-label { padding: .2rem .55rem; border-radius: 2px; font-family: var(--body); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.cond-vis-good { background: var(--gold); color: var(--ink-dark); }
+.cond-vis-fair { background: var(--paper); border: 1px solid var(--border-strong); color: var(--ink); }
+.cond-vis-poor { background: #8a1c1c; color: #fff; }
+.cond-vis-factors { margin: .25rem 0 .75rem; padding-left: 1.1rem; display: grid; gap: .3rem; font-size: .92rem; }
+.cond-vis-side a { color: inherit; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+@media (max-width: 720px) { .cond-vis { grid-template-columns: 1fr; } .cond-vis-side { border-left: 0; border-top: 1px solid var(--border); } }
+.vis-form { margin-top: 1rem; }
+.vis-form .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 1rem; }
+.vis-form .form-field { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+.vis-form label { font-size: .85rem; font-weight: 600; }
+.vis-form label span { color: var(--muted); font-weight: 400; }
+.vis-form input, .vis-form select { min-height: 44px; padding: .5rem .65rem; border: 1px solid var(--border-strong); border-radius: 2px; background: var(--card); font: inherit; }
+.vis-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }

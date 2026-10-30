@@ -4,6 +4,8 @@ import { getConditions } from "@/lib/conditions";
 import { diveSites } from "@/lib/dive-sites";
 import { absoluteUrl, jsonLd, site } from "@/lib/site";
 import { ConditionsPanel } from "@/components/conditions/ConditionsPanel";
+import { VisReportForm } from "@/components/conditions/VisReportForm";
+import { recentReports } from "@/lib/vis-reports";
 import { Arrow } from "@/components/SiteUI";
 
 // Rebuilt in the background at most every 30 minutes.
@@ -16,7 +18,7 @@ const description =
 export const metadata = pageMetadata(title, description, "/conditions");
 
 export default async function ConditionsPage() {
-  const data = await getConditions();
+  const [data, reports] = await Promise.all([getConditions(), recentReports()]);
   const graph = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -41,9 +43,9 @@ export default async function ConditionsPage() {
         <span className="eyebrow">Dive conditions</span>
         <h1>La Jolla, right now.</h1>
         <p>
-          The numbers that decide a shore dive here: swell, water temperature, tide, wind and rain.
-          Pulled from NOAA and the National Weather Service. No guesses. Look at the water before you
-          commit.
+          The numbers that decide a shore dive here: swell, water temperature, tide, wind and rain,
+          from NOAA and the National Weather Service. Plus a visibility estimate, checked against what
+          divers report. Look at the water before you commit.
         </p>
       </header>
 
@@ -66,7 +68,16 @@ export default async function ConditionsPage() {
         </div>
       </section>
 
-      <ConditionsPanel data={data} />
+      <ConditionsPanel data={data} reports={reports} />
+
+      <section className="cond-site" aria-labelledby="report-title">
+        <h2 id="report-title">How was the visibility?</h2>
+        <p>
+          Dived La Jolla in the last three days? Tell us what you saw. Every report helps the next diver,
+          and it’s how we check the estimate above against the real thing.
+        </p>
+        <VisReportForm sites={diveSites.map((s) => ({ slug: s.slug, name: s.name }))} />
+      </section>
 
       <section className="resource-note">
         <h2>Conditions don’t make the call. Your team does.</h2>
