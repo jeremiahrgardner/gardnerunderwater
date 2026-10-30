@@ -54,11 +54,13 @@ export function estimateVisibility(i: VisInputs): VisEstimate {
 
   if (i.swellPeakFt !== null) {
     const pts = swellPoints(i.swellPeakFt, i.swellPeakPeriodS);
-    const size = pts === 0 ? "Small" : pts <= 1 ? "Moderate" : pts <= 3 ? "Large" : "Very large";
+    const ft = i.swellPeakFt;
+    const size = ft < 2 ? "Small" : ft < 4.5 ? "Moderate" : ft < 6 ? "Large" : "Very large";
+    const long = i.swellPeakPeriodS !== null && i.swellPeakPeriodS >= 14 && ft >= 2;
     factors.push({
       name: "Swell",
       points: pts,
-      note: `${size}. Up to ${i.swellPeakFt} ft${i.swellPeakPeriodS !== null ? ` at ${i.swellPeakPeriodS} s` : ""} in the last 24 hours.`,
+      note: `${size}${long ? ", long period, so it reaches deeper" : ""}. Up to ${i.swellPeakFt} ft${i.swellPeakPeriodS !== null ? ` at ${i.swellPeakPeriodS} s` : ""} in the last 24 hours.`,
     });
   } else missing.push("swell");
 
