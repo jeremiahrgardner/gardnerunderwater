@@ -11,6 +11,10 @@ export const SOURCES = {
   // Nearest airport weather station with hourly rain reports.
   rainStation: "KSAN",
   rainName: "San Diego airport",
+  // SCCOOS automated shore station on Scripps Pier (chlorophyll every few minutes, about 5 m deep).
+  pierSensorDataset: "ism-cencoos-scripps-pier-automat-1",
+  // Scripps underwater camera on the pier.
+  pierCamUrl: "https://coollab.ucsd.edu/pierviz/",
   // A point at La Jolla Shores for the NWS forecast and alerts.
   point: { lat: 32.8572, lon: -117.2569 },
 } as const;
@@ -52,7 +56,12 @@ export type Conditions = {
   wind: WindHour[] | null;
   alerts: Alert[] | null;
   rain: Rain | null;
+  swellPeak24h: SwellPeak | null;
+  chlorophyll: Chlorophyll | null;
 };
+
+export type SwellPeak = { heightFt: number; periodS: number | null; at: string };
+export type Chlorophyll = { ugL: number; samples: number; latestAt: string };
 
 const M_TO_FT = 3.28084;
 const MM_TO_IN = 1 / 25.4;
@@ -105,6 +114,51 @@ export function parseBuoy(txt: string | null, spec: string | null): Swell | null
     meanDirectionDeg: tv("MWD") ?? num(sv("MWD")),
     waterTempF: wtmp === null ? null : cToF(wtmp),
   };
+}
+
+/** Largest combined wave height in the NDBC standard met file over the last `hours`, with its dominant period. */
+export function parseSwellPeak(txt: string | null, now: Date, hours = 24): SwellPeak | null {
+  if (!txt) return null;
+  const lines = txt.split("\n");
+  const head = lines[0]?.replace(/^#/, "").trim().split(/\s+/) ?? [];
+  const iH = head.indexOf("WVHT");
+  const iP = head.indexOf("DPD");
+  if (iH < 0) return null;
+  const cutoff = now.getTime() - hours * 3600 * 1000;
+  let best: SwellPeak | null = null;
+  for (const line of lines) {
+    if (!line.trim() || line.startsWith("#")) continue;
+    const cols = line.trim().split(/\s+/);
+    const at = rowTime(cols);
+    const t = Date.parse(at);
+    if (!Number.isFinite(t) || t < cutoff) continue;
+    const h = num(cols[iH]);
+    if (h === null) continue;
+    const ft = round1(h * M_TO_FT);
+    if (!best || ft > best.heightFt) best = { heightFt: ft, periodS: iP >= 0 ? num(cols[iP]) : null, at };
+  }
+  return best;
+}
+
+/** Median chlorophyll (µg/L) from an ERDDAP CSV of time and one chlorophyll column. */
+export function parseChlorophyll(csv: string | null): Chlorophyll | null {
+  if (!csv) return null;
+  const rows = csv.trim().split("\n").slice(2);
+  const vals: number[] = [];
+  let latestAt = "";
+  for (const r of rows) {
+    const [time, v] = r.split(",");
+    const n = Number(v);
+    if (v && Number.isFinite(n) && n >= 0) {
+      vals.push(n);
+      if (time > latestAt) latestAt = time;
+    }
+  }
+  if (!vals.length) return null;
+  vals.sort((a, b) => a - b);
+  const mid = Math.floor(vals.length / 2);
+  const median = vals.length % 2 ? vals[mid] : (vals[mid - 1] + vals[mid]) / 2;
+  return { ugL: Math.round(median * 100) / 100, samples: vals.length, latestAt };
 }
 
 /** Parse NOAA CO-OPS high/low tide predictions. */
@@ -247,7 +301,7 @@ export async function getConditions(): Promise<Conditions> {
   const now = new Date();
   const start = new Date(now.getTime() - 72 * 3600 * 1000).toISOString();
 
-  const [txt, spec, tidesJson, tempJson, pointJson, alertsJson, rainJson] = await Promise.all([
+  const [txt, spec, tidesJson, tempJson, pointJson, alertsJson, rainJson, chlCsv] = await Promise.all([
     getText(`https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.txt`),
     getText(`https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.spec`),
     getJson(`${coops}?product=predictions&datum=MLLW&interval=hilo&begin_date=${localDateStamp(now)}&range=72&${coopsCommon}`),
@@ -255,6 +309,9 @@ export async function getConditions(): Promise<Conditions> {
     getJson(`https://api.weather.gov/points/${point.lat},${point.lon}`, NWS_HEADERS),
     getJson(`https://api.weather.gov/alerts/active?point=${point.lat},${point.lon}`, NWS_HEADERS),
     getJson(`https://api.weather.gov/stations/${rainStation}/observations?start=${encodeURIComponent(start)}`, NWS_HEADERS),
+    getText(
+      `https://erddap.sensors.ioos.us/erddap/tabledap/${SOURCES.pierSensorDataset}.csv?time,mass_concentration_of_chlorophyll_in_sea_water_eco&time%3E=now-6hours`,
+    ),
   ]);
 
   const hourlyUrl = (pointJson as { properties?: { forecastHourly?: string } })?.properties?.forecastHourly;
@@ -270,5 +327,7 @@ export async function getConditions(): Promise<Conditions> {
     wind: parseWind(hourlyJson),
     alerts: parseAlerts(alertsJson),
     rain: parseRain(rainJson),
+    swellPeak24h: parseSwellPeak(txt, now),
+    chlorophyll: parseChlorophyll(chlCsv),
   };
 }

@@ -46,7 +46,7 @@ export const diveSites: DiveSite[] = [
       },
       {
         q: "What's the visibility at La Jolla Shores today?",
-        a: "Nobody measures it, so we don't guess. Swell, recent rain and plankton drive it. Small swell, no recent rain and no bloom usually mean better visibility. The only real answer is a diver who was just in the water.",
+        a: "Nobody measures it directly, so we estimate it from the three things that drive it: swell, recent rain and plankton at Scripps Pier. Then we check the estimate against what divers report. The Scripps Pier camera is the best way to see it for yourself.",
       },
     ],
   },
@@ -80,7 +80,7 @@ export const diveSites: DiveSite[] = [
       },
       {
         q: "What's the visibility at La Jolla Cove today?",
-        a: "Nobody measures it, so we don't guess. Swell, recent rain and plankton drive it. The only real answer is a diver who was just in the water.",
+        a: "Nobody measures it directly, so we estimate it from the three things that drive it: swell, recent rain and plankton at Scripps Pier. Then we check the estimate against what divers report. The Scripps Pier camera is the best way to see it for yourself.",
       },
     ],
   },

@@ -5,6 +5,8 @@ import { getConditions } from "@/lib/conditions";
 import { diveSites, siteBySlug } from "@/lib/dive-sites";
 import { absoluteUrl, jsonLd, site as siteInfo } from "@/lib/site";
 import { ConditionsPanel } from "@/components/conditions/ConditionsPanel";
+import { VisReportForm } from "@/components/conditions/VisReportForm";
+import { recentReports } from "@/lib/vis-reports";
 
 export const revalidate = 1800;
 export const dynamicParams = false;
@@ -22,7 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ site: str
 export default async function SiteConditionsPage({ params }: { params: Promise<{ site: string }> }) {
   const s = siteBySlug((await params).site);
   if (!s) notFound();
-  const data = await getConditions();
+  const [data, allReports] = await Promise.all([getConditions(), recentReports()]);
+  const reports = allReports.filter((r) => r.site === s.slug);
   const url = absoluteUrl(`/conditions/${s.slug}`);
   const graph = {
     "@context": "https://schema.org",
@@ -62,7 +65,16 @@ export default async function SiteConditionsPage({ params }: { params: Promise<{
         <p>{s.intro}</p>
       </header>
 
-      <ConditionsPanel data={data} />
+      <ConditionsPanel data={data} reports={reports} siteName={s.name} />
+
+      <section className="cond-site" aria-labelledby="report-title">
+        <h2 id="report-title">Dived {s.name} lately?</h2>
+        <p>
+          Tell us what the visibility was. Every report helps the next diver, and it’s how we check the
+          estimate above against the real thing.
+        </p>
+        <VisReportForm sites={diveSites.map((d) => ({ slug: d.slug, name: d.name }))} site={s.slug} />
+      </section>
 
       <section className="cond-site" aria-labelledby="site-title">
         <h2 id="site-title">What to watch at {s.name}</h2>
