@@ -25,9 +25,19 @@ export async function POST(request: Request) {
   const isBot = typeof body.website === "string" && body.website !== "";
   if (!isBot) {
     try {
-      const saved = await subscribe(email, [SITE_TAG, `${SITE_TAG}: Downloads`]);
+      const page = (() => {
+        try {
+          return new URL(request.headers.get("referer") ?? "").pathname;
+        } catch {
+          return "";
+        }
+      })();
+      const saved = await subscribe(email, [SITE_TAG, `${SITE_TAG}: Downloads`], {
+        signup_source: "gardnerunderwater.com:downloads",
+        signup_page: page,
+      });
       if (!saved)
-        console.warn("library_unlock: KIT_API_KEY is not set; signup not saved");
+        console.error("library_unlock: KIT_API_KEY is not set; signup not saved");
     } catch (error) {
       if (error instanceof KitError && error.status === 422)
         return Response.json(

@@ -35,10 +35,15 @@ async function tagId(name: string, key: string) {
 }
 
 /** Adds (or updates) a subscriber and applies each tag. Returns false when no API key is set. */
-export async function subscribe(email: string, tags: string[]) {
+export async function subscribe(
+  email: string,
+  tags: string[],
+  fields: Record<string, string> = {},
+) {
   const key = process.env.KIT_API_KEY;
   if (!key) return false;
-  await kit("/subscribers", { email_address: email }, key);
+  // `fields` uses Kit custom field keys, e.g. signup_source and signup_page.
+  await kit("/subscribers", { email_address: email, fields }, key);
   for (const name of tags) {
     const id = await tagId(name, key);
     await kit(`/tags/${id}/subscribers`, { email_address: email }, key);
