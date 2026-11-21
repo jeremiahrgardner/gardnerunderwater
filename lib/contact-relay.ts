@@ -6,7 +6,7 @@
 export type RelayConfirmation = { subject: string; text: string; replyTo?: string; fromName?: string };
 
 export type RelayInquiry = {
-  site: 'jeremiahgardner.com' | 'gardnerunderwater.com';
+  site: 'jeremiahgardner.com' | 'gardnerunderwater.com' | 'gardnerexpedition.co' | 'deckhub.co';
   reference: string;
   submittedAt: string;
   name: string;
