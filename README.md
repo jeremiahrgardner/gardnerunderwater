@@ -64,7 +64,7 @@ Course descriptions are in `lib/courses.ts`, rental prices in `lib/rentals.ts`, 
 
 The consultation form submits to `/api/contact`, which emails Jay at `jay@gardnerunderwater.com` and sets the visitor's validated address as Reply-To. Success appears only after the email provider accepts the message. The form preserves details on failure and offers a direct email link. It does not confirm appointments or add inquiries to the newsletter.
 
-Configure server-only production credentials as described in `docs/contact-delivery.md`. Without them, submission returns an explicit error; it never claims to send a message or silently opens an email draft.
+Submissions are saved privately and relayed to the shared contact forms sheet; see `docs/contact-delivery.md`. If neither works, the visitor sees an explicit error; the form never claims a request was sent when it wasn't.
 
 MDX publishing is implemented in `content/learn/`, with an article index, individual reading pages, related training, RSS, and a sitemap. See [the publishing guide](content/README.md) for draft handling and deployment steps. Run `npm test` for the article and content validation checks (Node.js 24 in the prepared environment).
 
