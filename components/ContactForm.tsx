@@ -13,6 +13,7 @@ export function ContactForm({
 }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
+  const [reference, setReference] = useState("");
   return (
     <form
       className="contact-form"
@@ -37,13 +38,14 @@ export function ContactForm({
           if (!response.ok || result.success !== true) {
             throw new Error(typeof result.error === "string" ? result.error : "Your request was not sent. Please try again or email Jay.");
           }
+          setReference(typeof result.reference === "string" ? result.reference : "");
           setStatus("sent");
           // Analytics must never turn an accepted inquiry into a failure/retry.
           try {
             track("contact_form_submit", {
               source_path: sourcePath,
               course: courseSlug,
-              delivery_mode: "server_email",
+              delivery_mode: "saved_and_relayed",
             });
           } catch {}
         } catch (error) {
@@ -155,6 +157,7 @@ export function ContactForm({
           <div className="form-feedback" role="status">
             <h3>Your request has been sent.</h3>
             <p>Jay will reply to arrange a time. No appointment is confirmed yet.</p>
+            {reference && <p>Reference: {reference.slice(0, 8)}</p>}
           </div>
         )}
       </div>
