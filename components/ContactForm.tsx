@@ -3,6 +3,7 @@
 import { track } from "@/lib/track";
 import { useState } from "react";
 import { Arrow } from "./SiteUI";
+import { HumanCheck, humanFields, resetHumanCheck } from "./HumanCheck";
 
 export function ContactForm({
   selectedCourse = "",
@@ -29,10 +30,11 @@ export function ContactForm({
         setStatus("sending");
         setError("");
         try {
+          const human = await humanFields();
           const response = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...Object.fromEntries(data), sourcePath }),
+            body: JSON.stringify({ ...Object.fromEntries(data), sourcePath, ...human }),
           });
           const result = await response.json();
           if (!response.ok || result.success !== true) {
@@ -49,6 +51,7 @@ export function ContactForm({
             });
           } catch {}
         } catch (error) {
+          resetHumanCheck();
           setStatus("error");
           setError(error instanceof Error ? error.message : "Your request was not sent. Please try again or email Jay.");
         }
@@ -146,6 +149,7 @@ export function ContactForm({
           ))}
         </select>
       </div>
+      <HumanCheck />
       <div className="form-submit">
         <button className="btn btn-dark" type="submit" disabled={status === "sending" || status === "sent"}>
           {status === "sending" ? "Sending…" : status === "sent" ? "Request sent" : "Send consultation request"} <Arrow />
