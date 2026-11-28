@@ -71,3 +71,24 @@ test('relay needs URL and secret, only talks to Apps Script, and requires ok:tru
     Object.assign(process.env, env);
   }
 });
+
+test('with Turnstile on: bots are rejected unsaved; Cloudflare outages keep the inquiry but send no confirmation', async () => {
+  const realFetch = global.fetch;
+  process.env.TURNSTILE_SECRET_KEY = 'secret';
+  try {
+    let calls = 0;
+    const deps = { save: async () => { calls++; }, relay: async (inquiry) => { calls++; deps.last = inquiry; return { notified: true, confirmed: false }; } };
+    const bot = await handleContact(request(fresh()), deps);
+    assert.equal(bot.status, 403);
+    assert.equal(calls, 0);
+    global.fetch = async () => { throw new Error('down'); };
+    const kept = await quiet(() => handleContact(request({ ...fresh(), 'cf-turnstile-response': 't', formMs: 9000 }), deps));
+    assert.equal(kept.status, 200);
+    assert.equal(deps.last.confirmation, undefined);
+    assert.match(deps.last.subject, /^\[Unverified\] /);
+    global.fetch = async () => new Response('{"success":true}');
+    await handleContact(request({ ...fresh(), 'cf-turnstile-response': 't', formMs: 9000 }), deps);
+    assert.ok(deps.last.confirmation);
+    assert.doesNotMatch(deps.last.subject, /Unverified/);
+  } finally { global.fetch = realFetch; delete process.env.TURNSTILE_SECRET_KEY; }
+});

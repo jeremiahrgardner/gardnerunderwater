@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from "node:crypto";
 import type { RelayInquiry, RelayResult } from "./contact-relay.ts";
 import type { StoredContact } from "./contact-store.ts";
+import { checkHuman } from "./human-check.ts";
 
 class InvalidForm extends Error {
   status: number;
@@ -82,6 +83,8 @@ export async function handleContact(request: Request, deps: ContactDeps) {
     const experience = field(body, "experience", 100) || "Not specified";
     const sourcePath = field(body, "sourcePath", 500) || "/contact";
     limit(email);
+    const human = await checkHuman(body, request);
+    if (!human.ok) throw new InvalidForm("We couldn't confirm this was sent by a person. Please refresh the page and try again, or email jay@gardnerunderwater.com.", 403);
 
     const reference = randomUUID();
     const submittedAt = new Date().toISOString();
@@ -90,12 +93,13 @@ export async function handleContact(request: Request, deps: ContactDeps) {
     const relayed = await deps.relay({
       site: "gardnerunderwater.com",
       reference, submittedAt, name, email,
-      subject: `Gardner Underwater consultation: ${interest}`,
+      subject: `${human.verified ? "" : "[Unverified] "}Gardner Underwater consultation: ${interest}`,
       fields: [
         ["Experience", experience], ["Training interest", interest], ["Found us via", discovery],
         ["Referring path", sourcePath], ["Goals and availability", message],
       ],
-      confirmation: process.env.CONTACT_CONFIRMATION_ENABLED === "false" ? undefined : {
+      // No confirmation unless the human check passed: bots use forms to flood strangers' inboxes.
+      confirmation: process.env.CONTACT_CONFIRMATION_ENABLED === "false" || !human.verified ? undefined : {
         subject: "We received your consultation request",
         text: CONFIRMATION_TEXT(name),
         replyTo: process.env.CONTACT_REPLY_TO || "jay@gardnerunderwater.com",
